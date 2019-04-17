@@ -1,6 +1,6 @@
 package com.CarRental.domain;
 
-public class Admin {
+public class BranchLocation {
 
     private String id;
     private String name;

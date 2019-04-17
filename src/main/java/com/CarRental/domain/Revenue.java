@@ -1,6 +1,6 @@
 package com.CarRental.domain;
 
-public class RentalTerm {
+public class Revenue {
 
     private String rentalId;
     private String rentalNumber;

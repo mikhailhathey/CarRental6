@@ -1,6 +1,6 @@
 package com.CarRental.domain;
 
-public class Address {
+public class Client {
 
     private String id;
     private String houseNumber;

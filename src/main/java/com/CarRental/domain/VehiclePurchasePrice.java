@@ -1,6 +1,6 @@
 package com.CarRental.domain;
 
-public class Car {
+public class VehiclePurchasePrice {
 
     private String carId;
     private String vinNumber;

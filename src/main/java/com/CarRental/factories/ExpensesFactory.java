@@ -2,7 +2,7 @@ package com.CarRental.factories;
 
 import com.CarRental.domain.Admin;
 
-public class AdminFactory {
+public class ExpensesFactory {
 
     public static Admin buildAdmin(String id, String name, String password)
     {

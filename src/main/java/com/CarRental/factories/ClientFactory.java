@@ -2,7 +2,7 @@ package com.CarRental.factories;
 
 import com.CarRental.domain.Address;
 
-public class AddressFactory {
+public class ClientFactory {
 
     public static Address buildAddress(String id, String houseNumber, String streetName, String suburb, String postalCode, String city)
     {

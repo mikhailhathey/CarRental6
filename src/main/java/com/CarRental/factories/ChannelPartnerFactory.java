@@ -2,7 +2,7 @@ package com.CarRental.factories;
 
 import com.CarRental.domain.Car;
 
-public class CarFactory {
+public class ChannelPartnerFactory {
 
     public static Car buildCar(String carId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
     {

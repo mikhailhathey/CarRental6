@@ -2,7 +2,7 @@ package com.CarRental.factories;
 
 import com.CarRental.domain.Contact;
 
-public class ContactFactory {
+public class AssetsFactory {
 
     //Changes to be made, in future iteration remove String assetId and have the String assetId generated.
     public static Contact buildContact(String assetId, String assetName, String assetLocation, String assetType)

@@ -1,6 +1,6 @@
 package com.CarRental.domain;
 
-public class Contact {
+public class ChannelPartner {
 
 
     private String id;

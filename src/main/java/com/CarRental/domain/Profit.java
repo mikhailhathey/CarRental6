@@ -1,6 +1,6 @@
 package com.CarRental.domain;
 
-public class Admin {
+public class Profit {
 
     private String id;
     private String name;

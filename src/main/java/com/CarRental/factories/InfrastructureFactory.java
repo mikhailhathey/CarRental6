@@ -2,7 +2,7 @@ package com.CarRental.factories;
 
 import com.CarRental.domain.RentalTerm;
 
-public class RentalTermFactory {
+public class InfrastructureFactory {
 
     public static RentalTerm buildRentalTerm(String rentalId, String rentalNumber, String rentalClass, String rentalDays, String rentalContact, String rentalBranch)
     {
