@@ -4,7 +4,7 @@ import com.CarRental.domain.BranchLocation;
 
 public class BranchLocationFactory {
 
-    public static BranchLocation buildCar(String branchLocationId, String branchName, String branchManager)
+    public static BranchLocation buildBranchLocation(String branchLocationId, String branchName, String branchManager)
     {
         BranchLocation branchLocation = new BranchLocation.Builder()
                 .branchLocationId(branchLocationId)

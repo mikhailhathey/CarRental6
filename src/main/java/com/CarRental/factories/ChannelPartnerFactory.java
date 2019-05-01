@@ -4,7 +4,7 @@ import com.CarRental.domain.ChannelPartner;
 
 public class ChannelPartnerFactory {
 
-    public static ChannelPartner buildCar(String channelPartnerId, String channelPartnerName, String channelPartnerContact, String channelPartnerEmail)
+    public static ChannelPartner buildChannelPartner(String channelPartnerId, String channelPartnerName, String channelPartnerContact, String channelPartnerEmail)
     {
         ChannelPartner channelPartner = new ChannelPartner.Builder()
                 .channelPartnerId(channelPartnerId)
