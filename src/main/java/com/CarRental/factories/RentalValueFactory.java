@@ -4,15 +4,12 @@ import com.CarRental.domain.RentalValue;
 
 public class RentalValueFactory {
 
-    public static RentalValue buildRentalValue(String rentalValueId, String houseNumber, String streetName, String suburb, String postalCode, String city)
+    public static RentalValue buildRentalValue(String rentalValueId, String rentalValueClass, String rentalValueAmount)
     {
         RentalValue rentalValue = new RentalValue.Builder()
                 .rentalValueId(rentalValueId)
-                .houseNumber(houseNumber)
-                .streetName(streetName)
-                .suburb(suburb)
-                .postalCode(postalCode)
-                .city(city)
+                .rentalValueClass(rentalValueClass)
+                .rentalValueAmount(rentalValueAmount)
                 .build();
         return rentalValue;
     }

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ContactFactoryTest {
+public class ChannelPartnerFactoryTest {
 
     @Before
     public void setUp() throws Exception {
@@ -17,6 +17,6 @@ public class ContactFactoryTest {
     }
 
     @Test
-    public void buildContact() {
+    public void buildCar() {
     }
 }

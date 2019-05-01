@@ -4,15 +4,15 @@ import com.CarRental.domain.Client;
 
 public class ClientFactory {
 
-    public static Client buildClient(String id, String houseNumber, String streetName, String suburb, String postalCode, String city)
+    public static Client buildClient(String clientId, String clientCell, String clientName, String clientEmail, String clientWebsite, String clientAddress)
     {
         Client client = new Client.Builder()
-                .clientId(id)
-                .houseNumber(houseNumber)
-                .streetName(streetName)
-                .suburb(suburb)
-                .postalCode(postalCode)
-                .city(city)
+                .clientId(clientId)
+                .clientCell(clientCell)
+                .clientName(clientName)
+                .clientEmail(clientEmail)
+                .clientWebsite(clientWebsite)
+                .clientAddress(clientAddress)
                 .build();
         return client;
     }

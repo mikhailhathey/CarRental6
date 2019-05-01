@@ -5,13 +5,12 @@ import com.CarRental.domain.StaffType;
 public class StaffTypeFactory {
 
     //Changes to be made, in future iteration remove String id and have the String id generated.
-    public static StaffType buildStaffType(String staffTypeId, String cell, String home, String email)
+    public static StaffType buildStaffType(String staffTypeId, String staffTypeJobRole, String staffTypeJobRoleSalary)
     {
         StaffType staffType = new StaffType.Builder()
                 .staffTypeId(staffTypeId)
-                .cell(cell)
-                .home(home)
-                .email(email)
+                .staffTypeJobRole(staffTypeJobRole)
+                .staffTypeJobRoleSalary(staffTypeJobRoleSalary)
                 .build();
         return staffType;
     }

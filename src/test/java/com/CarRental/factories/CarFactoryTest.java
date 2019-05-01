@@ -1,9 +1,22 @@
 package com.CarRental.factories;
 
-import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-public class CarFactoryTest extends TestCase {
+import static org.junit.Assert.*;
 
-    public void testBuildCar() {
+public class CarFactoryTest {
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void buildCar() {
     }
 }

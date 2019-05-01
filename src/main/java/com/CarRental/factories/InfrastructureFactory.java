@@ -4,15 +4,13 @@ import com.CarRental.domain.Infrastructure;
 
 public class InfrastructureFactory {
 
-    public static Infrastructure buildInfrastructure(String infrastructureId, String infrastructureNumber, String infrastructureClass, String infrastructureDays, String infrastructureContact, String infrastructureBranch)
+    public static Infrastructure buildInfrastructure(String infrastructureId, String infrastructureVendor, String infrastructureName, String infrastructureCost)
     {
         Infrastructure infrastructure = new Infrastructure.Builder()
                 .infrastructureId(infrastructureId)
-                .infrastructureNumber(infrastructureNumber)
-                .infrastructureClass(infrastructureClass)
-                .infrastructureDays(infrastructureDays)
-                .infrastructureContact(infrastructureContact)
-                .infrastructureBranch(infrastructureBranch)
+                .infrastructureVendor(infrastructureVendor)
+                .infrastructureName(infrastructureName)
+                .infrastructureCost(infrastructureCost)
                 .build();
         return infrastructure;
     }

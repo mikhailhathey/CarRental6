@@ -4,12 +4,12 @@ import com.CarRental.domain.Profit;
 
 public class ProfitFactory {
 
-    public static Profit buildProfit(String profitId, String name, String password)
+    public static Profit buildProfit(String profitId, String profitProjected, String profitActual)
     {
         Profit profit = new Profit.Builder()
                 .profitId(profitId)
-                .name(name)
-                .password(password)
+                .profitProjected(profitProjected)
+                .profitActual(profitActual)
                 .build();
         return profit;
     }

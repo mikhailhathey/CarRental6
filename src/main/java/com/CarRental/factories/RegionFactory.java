@@ -4,14 +4,12 @@ import com.CarRental.domain.Region;
 
 public class RegionFactory {
 
-    public static Region buildRegion(String regionId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
+    public static Region buildRegion(String regionId, String regionName, String regionLocation)
     {
         Region region = new Region.Builder()
                 .regionId(regionId)
-                .vinNumber(vinNumber)
-                .manufacturerName(manufacturerName)
-                .modelName(modelName)
-                .yearModel(yearModel)
+                .regionName(regionName)
+                .regionLocation(regionLocation)
                 .build();
         return region;
     }

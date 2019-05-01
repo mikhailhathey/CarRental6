@@ -3,11 +3,8 @@ package com.CarRental.domain;
 public class Hardware {
 
     private String hardwareId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String hardwareName;
+    private String hardwarePrice;
 
     public String getHardwareId() {
         return hardwareId;
@@ -17,38 +14,21 @@ public class Hardware {
         this.hardwareId = hardwareId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getHardwareName() {
+        return hardwareName;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setHardwareName(String hardwareName) {
+        this.hardwareName = hardwareName;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getHardwarePrice() {
+        return hardwarePrice;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setHardwarePrice(String hardwarePrice) {
+        this.hardwarePrice = hardwarePrice;
     }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public String getYearModel() {
-        return yearModel;
-    }
-
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
-    }
-
 
     private Hardware(){
 
@@ -56,19 +36,15 @@ public class Hardware {
 
     public Hardware(Builder builder) {
         this.hardwareId = builder.hardwareId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+        this.hardwareName = builder.hardwareName;
+        this.hardwarePrice = builder.hardwarePrice;
     }
 
     public static class Builder{
 
         private String hardwareId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String hardwareName;
+        private String hardwarePrice;
 
         public Builder hardwareId(String value)
         {
@@ -76,27 +52,15 @@ public class Hardware {
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder hardwareName(String value)
         {
-            this.vinNumber = value;
+            this.hardwareName = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder hardwarePrice(String value)
         {
-            this.manufacturerName = value;
-            return this;
-        }
-
-        public Builder modelName(String value)
-        {
-            this.modelName = value;
-            return this;
-        }
-
-        public Builder yearModel(String value)
-        {
-            this.yearModel = value;
+            this.hardwarePrice = value;
             return this;
         }
 

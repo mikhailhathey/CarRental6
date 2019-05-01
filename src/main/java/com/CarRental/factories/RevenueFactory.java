@@ -4,12 +4,14 @@ import com.CarRental.domain.Revenue;
 
 public class RevenueFactory {
 
-    public static Revenue buildRevenue(String revenueId, String name, String password)
+    public static Revenue buildRevenue(String revenueId, String revenueMonth, String revenuePeriod, String revenueAmount, String revenueBranch)
     {
         Revenue revenue = new Revenue.Builder()
                 .revenueId(revenueId)
-                .name(name)
-                .password(password)
+                .revenueMonth(revenueMonth)
+                .revenuePeriod(revenuePeriod)
+                .revenueAmount(revenueAmount)
+                .revenueBranch(revenueBranch)
                 .build();
         return revenue;
     }
