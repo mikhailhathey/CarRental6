@@ -3,61 +3,61 @@ package com.CarRental.domain;
 public class Assets {
 
 
-    private String assetId;
-    private String assetName;
-    private String assetLocation;
-    private String assetType;
+    private String assetsId;
+    private String assetsName;
+    private String assetsLocation;
+    private String assetsType;
 
-    public String getAssetId() {
-        return assetId;
+    public String getAssetsId() {
+        return assetsId;
     }
 
-    public String getAssetName() {
-        return assetName;
+    public String getAssetsName() {
+        return assetsName;
     }
 
-    public String getAssetLocation() {
-        return assetLocation;
+    public String getAssetsLocation() {
+        return assetsLocation;
     }
 
-    public String getAssetType() {
-        return assetType;
+    public String getAssetsType() {
+        return assetsType;
     }
 
     private Assets() {
     }
 
     public Assets(Builder builder) {
-        this.assetId = builder.assetId;
-        this.assetName = builder.assetName;
-        this.assetLocation = builder.assetLocation;
-        this.assetType = builder.assetType;
+        this.assetsId = builder.assetsId;
+        this.assetsName = builder.assetsName;
+        this.assetsLocation = builder.assetsLocation;
+        this.assetsType = builder.assetsType;
     }
 
     public static class Builder{
 
-        private String assetId;
-        private String assetName;
-        private String assetLocation;
-        private String assetType;
+        private String assetsId;
+        private String assetsName;
+        private String assetsLocation;
+        private String assetsType;
 
-        public Builder assetId(String value){
-            this.assetId = value;
+        public Builder assetsId(String value){
+            this.assetsId = value;
             return this;
         }
 
-        public Builder assetName(String value){
-            this.assetName = value;
+        public Builder assetsName(String value){
+            this.assetsName = value;
             return this;
         }
 
-        public Builder assetLocation(String value){
-            this.assetLocation = value;
+        public Builder assetsLocation(String value){
+            this.assetsLocation = value;
             return this;
         }
 
-        public Builder assetType(String value){
-            this.assetType = value;
+        public Builder assetsType(String value){
+            this.assetsType = value;
             return this;
         }
 

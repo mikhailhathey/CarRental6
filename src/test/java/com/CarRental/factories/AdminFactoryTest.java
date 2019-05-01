@@ -15,7 +15,7 @@ public class AdminFactoryTest extends TestCase {
 
     @Before
     public void setUp() throws Exception {
-        this.AdminTest = "AdminTest"
+        this.AdminTest = "AdminTest";
     }
 
     @Test

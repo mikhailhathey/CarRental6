@@ -4,16 +4,13 @@ import com.CarRental.domain.VehicleSellingPrice;
 
 public class VehicleSellingPriceFactory {
 
-    public static VehicleSellingPrice buildVehicleSellingPrice(String vehicleSellingPriceId, String houseNumber, String streetName, String suburb, String postalCode, String city)
+    public static VehicleSellingPrice buildVehicleSellingPrice(String vehicleSellingPriceId, String vehicleYearModel, String vehiclePrice)
     {
-        VehicleSellingPrice vehicleSellingPriceId = new VehicleSellingPrice.Builder()
+        VehicleSellingPrice vehicleSellingPrice = new VehicleSellingPrice.Builder()
                 .vehicleSellingPriceId(vehicleSellingPriceId)
-                .houseNumber(houseNumber)
-                .streetName(streetName)
-                .suburb(suburb)
-                .postalCode(postalCode)
-                .city(city)
+                .vehicleYearModel(vehicleYearModel)
+                .vehiclePrice(vehiclePrice)
                 .build();
-        return vehicleSellingPriceId;
+        return vehicleSellingPrice;
     }
 }

@@ -5,14 +5,14 @@ import com.CarRental.domain.Assets;
 public class AssetsFactory {
 
     //Changes to be made, in future iteration remove String assetId and have the String assetId generated.
-    public static Assets buildAssets(String assetId, String assetName, String assetLocation, String assetType)
+    public static Assets buildAssets(String assetsId, String assetsName, String assetsLocation, String assetsType)
     {
-        Assets asset = new Assets.Builder()
-                .assetId(assetId)
-                .assetName(assetName)
-                .assetLocation(assetLocation)
-                .assetType(assetType)
+        Assets assets = new Assets.Builder()
+                .assetsId(assetsId)
+                .assetsName(assetsName)
+                .assetsLocation(assetsLocation)
+                .assetsType(assetsType)
                 .build();
-        return asset;
+        return assets;
     }
 }

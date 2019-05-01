@@ -6,7 +6,7 @@ public class BranchLocation {
     private String branchName;
     private String branchManager;
 
-    public String getbranchLocationId() {
+    public String getBranchLocationId() {
         return branchLocationId;
     }
 

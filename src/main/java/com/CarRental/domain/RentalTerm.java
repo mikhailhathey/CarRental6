@@ -10,7 +10,7 @@ public class RentalTerm {
     private String rentalTermBranch;
 
     //rentalTermId, rentalTermNumber, rentalTermClass, rentalTermDays, rentalTermContact, rentalTermBranch
-    public String getRentalId() {
+    public String getRentalTermId() {
         return rentalTermId;
     }
 
@@ -18,43 +18,43 @@ public class RentalTerm {
         this.rentalTermId = rentalTermId;
     }
 
-    public String getRentalNumber() {
+    public String getRentalTermNumber() {
         return rentalTermNumber;
     }
 
-    public void setRentalNumber(String rentalTermNumber) {
+    public void setRentalTermNumber(String rentalTermNumber) {
         this.rentalTermNumber = rentalTermNumber;
     }
 
-    public String getRentalClass() {
+    public String getRentalTermClass() {
         return rentalTermClass;
     }
 
-    public void setRentalClass(String rentalTermClass) {
+    public void setRentalTermClass(String rentalTermClass) {
         this.rentalTermClass = rentalTermClass;
     }
 
-    public String getRentalDays() {
+    public String getRentalTermDays() {
         return rentalTermDays;
     }
 
-    public void setRentalDays(String rentalTermDays) {
+    public void setRentalTermDays(String rentalTermDays) {
         this.rentalTermDays = rentalTermDays;
     }
 
-    public String getRentalContact() {
+    public String getRentalTermContact() {
         return rentalTermContact;
     }
 
-    public void setRentalContact(String rentalTermContact) {
+    public void setRentalTermContact(String rentalTermContact) {
         this.rentalTermContact = rentalTermContact;
     }
 
-    public String getRentalBranch() {
+    public String getRentalTermBranch() {
         return rentalTermBranch;
     }
 
-    public void setRentalBranch(String rentalTermBranch) {
+    public void setRentalTermBranch(String rentalTermBranch) {
         this.rentalTermBranch = rentalTermBranch;
     }
 

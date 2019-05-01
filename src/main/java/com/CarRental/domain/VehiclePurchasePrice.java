@@ -3,9 +3,8 @@ package com.CarRental.domain;
 public class VehiclePurchasePrice {
 
     private String vehiclePurchasePriceId;
-    private String vehicleVehiclePurchasePrice;
     private String vehicleYearModel;
-    private String vehiclePurchasePrice;
+    private String vehiclePrice;
 
     public String getVehiclePurchasePriceId() {
         return vehiclePurchasePriceId;
@@ -13,14 +12,6 @@ public class VehiclePurchasePrice {
 
     public void setVehiclePurchasePriceId(String vehiclePurchasePriceId) {
         this.vehiclePurchasePriceId = vehiclePurchasePriceId;
-    }
-
-    public String getVehicleVehiclePurchasePrice() {
-        return vehicleVehiclePurchasePrice;
-    }
-
-    public void setVehicleVehiclePurchasePrice(String vehicleVehiclePurchasePrice) {
-        this.vehicleVehiclePurchasePrice = vehicleVehiclePurchasePrice;
     }
 
     public String getVehicleYearModel() {
@@ -31,12 +22,12 @@ public class VehiclePurchasePrice {
         this.vehicleYearModel = vehicleYearModel;
     }
 
-    public String getVehiclePurchasePrice() {
-        return vehiclePurchasePrice;
+    public String getVehiclePrice() {
+        return vehiclePrice;
     }
 
-    public void setVehiclePurchasePrice(String vehiclePurchasePrice) {
-        this.vehiclePurchasePrice = vehiclePurchasePrice;
+    public void setVehiclePrice(String vehiclePrice) {
+        this.vehiclePrice = vehiclePrice;
     }
 
     private VehiclePurchasePrice(){
@@ -45,27 +36,19 @@ public class VehiclePurchasePrice {
 
     public VehiclePurchasePrice(Builder builder) {
         this.vehiclePurchasePriceId = builder.vehiclePurchasePriceId;
-        this.vehicleVehiclePurchasePrice = builder.vehicleVehiclePurchasePrice;
         this.vehicleYearModel = builder.vehicleYearModel;
-        this.vehiclePurchasePrice = builder.vehiclePurchasePrice;
+        this.vehiclePrice = builder.vehiclePrice;
     }
 
     public static class Builder{
 
         private String vehiclePurchasePriceId;
-        private String vehicleVehiclePurchasePrice;
         private String vehicleYearModel;
-        private String vehiclePurchasePrice;
+        private String vehiclePrice;
 
         public Builder vehiclePurchasePriceId(String value)
         {
             this.vehiclePurchasePriceId = value;
-            return this;
-        }
-
-        public Builder vehicleVehiclePurchasePrice(String value)
-        {
-            this.vehicleVehiclePurchasePrice = value;
             return this;
         }
 
@@ -75,9 +58,9 @@ public class VehiclePurchasePrice {
             return this;
         }
 
-        public Builder vehiclePurchasePrice(String value)
+        public Builder vehiclePrice(String value)
         {
-            this.vehiclePurchasePrice = value;
+            this.vehiclePrice = value;
             return this;
         }
 

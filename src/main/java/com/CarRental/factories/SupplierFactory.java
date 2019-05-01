@@ -4,14 +4,13 @@ import com.CarRental.domain.Supplier;
 
 public class SupplierFactory {
 
-    public static Supplier buildSupplier(String supplierId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
+    public static Supplier buildSupplier(String supplierId, String supplierName, String supplierContact, String supplierEmail)
     {
         Supplier supplier = new Supplier.Builder()
                 .supplierId(supplierId)
-                .vinNumber(vinNumber)
-                .manufacturerName(manufacturerName)
-                .modelName(modelName)
-                .yearModel(yearModel)
+                .supplierName(supplierName)
+                .supplierContact(supplierContact)
+                .supplierEmail(supplierEmail)
                 .build();
         return supplier;
     }

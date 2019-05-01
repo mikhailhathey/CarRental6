@@ -3,9 +3,8 @@ package com.CarRental.domain;
 public class VehicleSellingPrice {
 
     private String vehicleSellingPriceId;
-    private String vehicleVehicleSellingPrice;
     private String vehicleYearModel;
-    private String vehicleSellingPrice;
+    private String vehiclePrice;
 
     public String getVehicleSellingPriceId() {
         return vehicleSellingPriceId;
@@ -13,14 +12,6 @@ public class VehicleSellingPrice {
 
     public void setVehicleSellingPriceId(String vehicleSellingPriceId) {
         this.vehicleSellingPriceId = vehicleSellingPriceId;
-    }
-
-    public String getVehicleVehicleSellingPrice() {
-        return vehicleVehicleSellingPrice;
-    }
-
-    public void setVehicleVehicleSellingPrice(String vehicleVehicleSellingPrice) {
-        this.vehicleVehicleSellingPrice = vehicleVehicleSellingPrice;
     }
 
     public String getVehicleYearModel() {
@@ -31,12 +22,12 @@ public class VehicleSellingPrice {
         this.vehicleYearModel = vehicleYearModel;
     }
 
-    public String getVehicleSellingPrice() {
-        return vehicleSellingPrice;
+    public String getVehiclePrice() {
+        return vehiclePrice;
     }
 
-    public void setVehicleSellingPrice(String vehicleSellingPrice) {
-        this.vehicleSellingPrice = vehicleSellingPrice;
+    public void setVehiclePrice(String vehiclePrice) {
+        this.vehiclePrice = vehiclePrice;
     }
 
     private VehicleSellingPrice(){
@@ -45,27 +36,19 @@ public class VehicleSellingPrice {
 
     public VehicleSellingPrice(Builder builder) {
         this.vehicleSellingPriceId = builder.vehicleSellingPriceId;
-        this.vehicleVehicleSellingPrice = builder.vehicleVehicleSellingPrice;
         this.vehicleYearModel = builder.vehicleYearModel;
-        this.vehicleSellingPrice = builder.vehicleSellingPrice;
+        this.vehiclePrice = builder.vehiclePrice;
     }
 
     public static class Builder{
 
         private String vehicleSellingPriceId;
-        private String vehicleVehicleSellingPrice;
         private String vehicleYearModel;
-        private String vehicleSellingPrice;
+        private String vehiclePrice;
 
         public Builder vehicleSellingPriceId(String value)
         {
             this.vehicleSellingPriceId = value;
-            return this;
-        }
-
-        public Builder vehicleVehicleSellingPrice(String value)
-        {
-            this.vehicleVehicleSellingPrice = value;
             return this;
         }
 
@@ -75,9 +58,9 @@ public class VehicleSellingPrice {
             return this;
         }
 
-        public Builder vehicleSellingPrice(String value)
+        public Builder vehiclePrice(String value)
         {
-            this.vehicleSellingPrice = value;
+            this.vehiclePrice = value;
             return this;
         }
 
