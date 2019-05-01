@@ -1,22 +1,27 @@
 package com.CarRental.factories;
 
-import org.junit.After;
+import com.CarRental.domain.FleetManager;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class FleetManagerFactoryTest {
+
+    public void testBuildFleetManager(){
+
+    }
+
+    private String FleetManagerTest;
 
     @Before
     public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
+        this.FleetManagerTest = "FleetManagerTest";
     }
 
     @Test
-    public void buildFleetManager() {
+    public void buildExpenses() {
+        FleetManager fleetManager = FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth");
+        System.out.println(fleetManager);
+        Assert.assertNotNull(fleetManager.getFleetManagerId());
     }
 }
