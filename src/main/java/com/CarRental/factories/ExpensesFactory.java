@@ -1,16 +1,16 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Admin;
+import com.CarRental.domain.Expenses;
 
 public class ExpensesFactory {
 
-    public static Admin buildAdmin(String id, String name, String password)
+    public static Expenses buildExpenses(String id, String name, String password)
     {
-        Admin admin = new Admin.Builder()
-                .id(id)
-                .name(name)
+        Expenses expenses = new Expenses.Builder()
+                .expensesId(id)
+                .expensesName(name)
                 .password(password)
                 .build();
-        return admin;
+        return expenses;
     }
 }

@@ -2,19 +2,19 @@ package com.CarRental.domain;
 
 public class Address {
 
-    private String id;
+    private String addressId;
     private String houseNumber;
     private String streetName;
     private String suburb;
     private String postalCode;
     private String city;
 
-    public String getId() {
-        return id;
+    public String getAddressId() {
+        return addressId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAddressId(String addressId) {
+        this.addressId = addressId;
     }
 
     public String getHouseNumber() {
@@ -62,7 +62,7 @@ public class Address {
     }
 
     public Address(Builder builder) {
-        this.id = builder.id;
+        this.addressId = builder.addressId;
         this.houseNumber = builder.houseNumber;
         this.streetName = builder.streetName;
         this.suburb = builder.suburb;
@@ -72,16 +72,16 @@ public class Address {
 
     public static class Builder{
 
-        private String id;
+        private String addressId;
         private String houseNumber;
         private String streetName;
         private String suburb;
         private String postalCode;
         private String city;
 
-        public Builder id(String value)
+        public Builder addressId(String value)
         {
-            this.id = value;
+            this.addressId = value;
             return this;
         }
 

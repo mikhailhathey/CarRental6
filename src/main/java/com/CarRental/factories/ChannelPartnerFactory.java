@@ -1,18 +1,17 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Car;
+import com.CarRental.domain.ChannelPartner;
 
 public class ChannelPartnerFactory {
 
-    public static Car buildCar(String carId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
+    public static ChannelPartner buildCar(String channelPartnerId, String channelPartnerName, String channelPartnerContact, String channelPartnerEmail)
     {
-        Car car = new Car.Builder()
-                .carId(carId)
-                .vinNumber(vinNumber)
-                .manufacturerName(manufacturerName)
-                .modelName(modelName)
-                .yearModel(yearModel)
+        ChannelPartner channelPartner = new ChannelPartner.Builder()
+                .channelPartnerId(channelPartnerId)
+                .channelPartnerName(channelPartnerName)
+                .channelPartnerContact(channelPartnerContact)
+                .channelPartnerEmail(channelPartnerEmail)
                 .build();
-        return car;
+        return channelPartner;
     }
 }

@@ -2,107 +2,89 @@ package com.CarRental.domain;
 
 public class Software {
 
-    private String carId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String softwareId;
+    private String softwareName;
+    private String softwareVersion;
+    private String softwarePrice;
 
-    public String getId() {
-        return carId;
+    public String getSoftwareId() {
+        return softwareId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setSoftwareId(String softwareId) {
+        this.softwareId = softwareId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getSoftwareName() {
+        return softwareName;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setSoftwareName(String softwareName) {
+        this.softwareName = softwareName;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getSoftwareVersion() {
+        return softwareVersion;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setSoftwareVersion(String softwareVersion) {
+        this.softwareVersion = softwareVersion;
     }
 
-    public String getModelName() {
-        return modelName;
+    public String getSoftwarePrice() {
+        return softwarePrice;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public String getYearModel() {
-        return yearModel;
-    }
-
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
+    public void setSoftwarePrice(String softwarePrice) {
+        this.softwarePrice = softwarePrice;
     }
 
 
-    private Car(){
+    private Software(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    public Software(Builder builder) {
+        this.softwareId = builder.softwareId;
+        this.softwareName = builder.softwareName;
+        this.softwareVersion = builder.softwareVersion;
+        this.softwarePrice = builder.softwarePrice;
     }
 
     public static class Builder{
 
-        private String carId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String softwareId;
+        private String softwareName;
+        private String softwareVersion;
+        private String softwarePrice;
 
-        public Builder carId(String value)
+        public Builder softwareId(String value)
         {
-            this.carId = value;
+            this.softwareId = value;
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder softwareName(String value)
         {
-            this.vinNumber = value;
+            this.softwareName = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder softwareVersion(String value)
         {
-            this.manufacturerName = value;
+            this.softwareVersion = value;
             return this;
         }
 
-        public Builder modelName(String value)
+        public Builder softwarePrice(String value)
         {
-            this.modelName = value;
+            this.softwarePrice = value;
             return this;
         }
 
-        public Builder yearModel(String value)
-        {
-            this.yearModel = value;
-            return this;
-        }
+        public Software build(){
 
-        public Car build(){
-
-            return new Car(this);
+            return new Software(this);
         }
     }
 }

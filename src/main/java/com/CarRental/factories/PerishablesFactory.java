@@ -1,19 +1,19 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.RentalTerm;
+import com.CarRental.domain.Perishables;
 
 public class PerishablesFactory {
 
-    public static RentalTerm buildRentalTerm(String rentalId, String rentalNumber, String rentalClass, String rentalDays, String rentalContact, String rentalBranch)
+    public static Perishables buildPerishables(String perishablesId, String perishablesNumber, String perishablesClass, String perishablesDays, String perishablesContact, String perishablesBranch)
     {
-        RentalTerm rentalTerm = new RentalTerm.Builder()
-                .rentalId(rentalId)
-                .rentalNumber(rentalNumber)
-                .rentalClass(rentalClass)
-                .rentalDays(rentalDays)
-                .rentalContact(rentalContact)
-                .rentalBranch(rentalBranch)
+        Perishables perishables = new Perishables.Builder()
+                .perishablesId(perishablesId)
+                .perishablesNumber(perishablesNumber)
+                .perishablesClass(perishablesClass)
+                .perishablesDays(perishablesDays)
+                .perishablesContact(perishablesContact)
+                .perishablesBranch(perishablesBranch)
                 .build();
-        return rentalTerm;
+        return perishables;
     }
 }

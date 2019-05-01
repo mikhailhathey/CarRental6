@@ -1,19 +1,17 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.RentalTerm;
+import com.CarRental.domain.Claims;
 
 public class ClaimsFactory {
 
-    public static RentalTerm buildRentalTerm(String rentalId, String rentalNumber, String rentalClass, String rentalDays, String rentalContact, String rentalBranch)
+    public static Claims buildClaims(String claimsId, String claimProvider, String claimValue, String claimReason)
     {
-        RentalTerm rentalTerm = new RentalTerm.Builder()
-                .rentalId(rentalId)
-                .rentalNumber(rentalNumber)
-                .rentalClass(rentalClass)
-                .rentalDays(rentalDays)
-                .rentalContact(rentalContact)
-                .rentalBranch(rentalBranch)
+        Claims claims = new Claims.Builder()
+                .claimsId(claimsId)
+                .claimProvider(claimProvider)
+                .claimValue(claimValue)
+                .claimReason(claimReason)
                 .build();
-        return rentalTerm;
+        return claims;
     }
 }

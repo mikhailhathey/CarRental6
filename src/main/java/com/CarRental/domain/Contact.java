@@ -3,61 +3,61 @@ package com.CarRental.domain;
 public class Contact {
 
 
-    private String id;
-    private String cell;
-    private String home;
-    private String email;
+    private String contactId;
+    private String contactCell;
+    private String contactHome;
+    private String contactEmail;
 
-    public String getId() {
-        return id;
+    public String getContactId() {
+        return contactId;
     }
 
-    public String getCell() {
-        return cell;
+    public String getContactCell() {
+        return contactCell;
     }
 
-    public String getHome() {
-        return home;
+    public String getContactHome() {
+        return contactHome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getContactEmail() {
+        return contactEmail;
     }
 
     private Contact() {
     }
 
     public Contact(Builder builder) {
-        this.id = builder.id;
-        this.cell = builder.cell;
-        this.home = builder.home;
-        this.email = builder.email;
+        this.contactId = builder.contactId;
+        this.contactCell = builder.contactCell;
+        this.contactHome = builder.contactHome;
+        this.contactEmail = builder.contactEmail;
     }
 
     public static class Builder{
 
-        private String id;
-        private String cell;
-        private String home;
-        private String email;
+        private String contactId;
+        private String contactCell;
+        private String contactHome;
+        private String contactEmail;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder contactId(String value){
+            this.contactId = value;
             return this;
         }
 
-        public Builder cell(String value){
-            this.cell = value;
+        public Builder contactCell(String value){
+            this.contactCell = value;
             return this;
         }
 
-        public Builder home(String value){
-            this.home = value;
+        public Builder contactHome(String value){
+            this.contactHome = value;
             return this;
         }
 
-        public Builder email(String value){
-            this.email = value;
+        public Builder contactEmail(String value){
+            this.contactEmail = value;
             return this;
         }
 

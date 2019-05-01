@@ -2,54 +2,54 @@ package com.CarRental.domain;
 
 public class BranchLocation {
 
-    private String id;
-    private String name;
-    private String password;
+    private String branchLocationId;
+    private String branchName;
+    private String branchManager;
 
-    public String getId() {
-        return id;
+    public String getbranchLocationId() {
+        return branchLocationId;
     }
 
-    public String getName() {
-        return name;
+    public String getBranchName() {
+        return branchName;
     }
 
-    public String getPassword() {
-        return password;
+    public String getBranchManager() {
+        return branchManager;
     }
 
-    private Admin() {
+    private BranchLocation() {
     }
 
-    public Admin(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.password = builder.password;
+    public BranchLocation(Builder builder) {
+        this.branchLocationId = builder.branchLocationId;
+        this.branchName = builder.branchName;
+        this.branchManager = builder.branchManager;
     }
 
     public static class Builder{
-        private String id;
-        private String name;
-        private String password;
+        private String branchLocationId;
+        private String branchName;
+        private String branchManager;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder branchLocationId(String value){
+            this.branchLocationId = value;
             return this;
         }
 
-        public Builder name(String value){
-            this.name = value;
+        public Builder branchName(String value){
+            this.branchName = value;
             return this;
         }
 
-        public Builder password(String value){
-            this.password = value;
+        public Builder branchManager(String value){
+            this.branchManager = value;
             return this;
         }
 
-        public Admin build(){
+        public BranchLocation build(){
 
-            return new Admin(this);
+            return new BranchLocation(this);
         }
 
     }

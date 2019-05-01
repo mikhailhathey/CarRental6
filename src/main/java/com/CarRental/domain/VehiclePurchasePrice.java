@@ -2,107 +2,88 @@ package com.CarRental.domain;
 
 public class VehiclePurchasePrice {
 
-    private String carId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String vehiclePurchasePriceId;
+    private String vehicleVehiclePurchasePrice;
+    private String vehicleYearModel;
+    private String vehiclePurchasePrice;
 
-    public String getId() {
-        return carId;
+    public String getVehiclePurchasePriceId() {
+        return vehiclePurchasePriceId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setVehiclePurchasePriceId(String vehiclePurchasePriceId) {
+        this.vehiclePurchasePriceId = vehiclePurchasePriceId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getVehicleVehiclePurchasePrice() {
+        return vehicleVehiclePurchasePrice;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setVehicleVehiclePurchasePrice(String vehicleVehiclePurchasePrice) {
+        this.vehicleVehiclePurchasePrice = vehicleVehiclePurchasePrice;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getVehicleYearModel() {
+        return vehicleYearModel;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setVehicleYearModel(String vehicleYearModel) {
+        this.vehicleYearModel = vehicleYearModel;
     }
 
-    public String getModelName() {
-        return modelName;
+    public String getVehiclePurchasePrice() {
+        return vehiclePurchasePrice;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
+    public void setVehiclePurchasePrice(String vehiclePurchasePrice) {
+        this.vehiclePurchasePrice = vehiclePurchasePrice;
     }
 
-    public String getYearModel() {
-        return yearModel;
-    }
-
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
-    }
-
-
-    private Car(){
+    private VehiclePurchasePrice(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    public VehiclePurchasePrice(Builder builder) {
+        this.vehiclePurchasePriceId = builder.vehiclePurchasePriceId;
+        this.vehicleVehiclePurchasePrice = builder.vehicleVehiclePurchasePrice;
+        this.vehicleYearModel = builder.vehicleYearModel;
+        this.vehiclePurchasePrice = builder.vehiclePurchasePrice;
     }
 
     public static class Builder{
 
-        private String carId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String vehiclePurchasePriceId;
+        private String vehicleVehiclePurchasePrice;
+        private String vehicleYearModel;
+        private String vehiclePurchasePrice;
 
-        public Builder carId(String value)
+        public Builder vehiclePurchasePriceId(String value)
         {
-            this.carId = value;
+            this.vehiclePurchasePriceId = value;
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder vehicleVehiclePurchasePrice(String value)
         {
-            this.vinNumber = value;
+            this.vehicleVehiclePurchasePrice = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder vehicleYearModel(String value)
         {
-            this.manufacturerName = value;
+            this.vehicleYearModel = value;
             return this;
         }
 
-        public Builder modelName(String value)
+        public Builder vehiclePurchasePrice(String value)
         {
-            this.modelName = value;
+            this.vehiclePurchasePrice = value;
             return this;
         }
 
-        public Builder yearModel(String value)
-        {
-            this.yearModel = value;
-            return this;
-        }
+        public VehiclePurchasePrice build(){
 
-        public Car build(){
-
-            return new Car(this);
+            return new VehiclePurchasePrice(this);
         }
     }
 }

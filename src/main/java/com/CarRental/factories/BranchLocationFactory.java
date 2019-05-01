@@ -1,18 +1,16 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Car;
+import com.CarRental.domain.BranchLocation;
 
 public class BranchLocationFactory {
 
-    public static Car buildCar(String carId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
+    public static BranchLocation buildCar(String branchLocationId, String branchName, String branchManager)
     {
-        Car car = new Car.Builder()
-                .carId(carId)
-                .vinNumber(vinNumber)
-                .manufacturerName(manufacturerName)
-                .modelName(modelName)
-                .yearModel(yearModel)
+        BranchLocation branchLocation = new BranchLocation.Builder()
+                .branchLocationId(branchLocationId)
+                .branchName(branchName)
+                .branchManager(branchManager)
                 .build();
-        return car;
+        return branchLocation;
     }
 }

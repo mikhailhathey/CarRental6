@@ -2,69 +2,88 @@ package com.CarRental.domain;
 
 public class VehicleSellingPrice {
 
+    private String vehicleSellingPriceId;
+    private String vehicleVehicleSellingPrice;
+    private String vehicleYearModel;
+    private String vehicleSellingPrice;
 
-    private String id;
-    private String cell;
-    private String home;
-    private String email;
-
-    public String getId() {
-        return id;
+    public String getVehicleSellingPriceId() {
+        return vehicleSellingPriceId;
     }
 
-    public String getCell() {
-        return cell;
+    public void setVehicleSellingPriceId(String vehicleSellingPriceId) {
+        this.vehicleSellingPriceId = vehicleSellingPriceId;
     }
 
-    public String getHome() {
-        return home;
+    public String getVehicleVehicleSellingPrice() {
+        return vehicleVehicleSellingPrice;
     }
 
-    public String getEmail() {
-        return email;
+    public void setVehicleVehicleSellingPrice(String vehicleVehicleSellingPrice) {
+        this.vehicleVehicleSellingPrice = vehicleVehicleSellingPrice;
     }
 
-    private Contact() {
+    public String getVehicleYearModel() {
+        return vehicleYearModel;
     }
 
-    public Contact(Builder builder) {
-        this.id = builder.id;
-        this.cell = builder.cell;
-        this.home = builder.home;
-        this.email = builder.email;
+    public void setVehicleYearModel(String vehicleYearModel) {
+        this.vehicleYearModel = vehicleYearModel;
+    }
+
+    public String getVehicleSellingPrice() {
+        return vehicleSellingPrice;
+    }
+
+    public void setVehicleSellingPrice(String vehicleSellingPrice) {
+        this.vehicleSellingPrice = vehicleSellingPrice;
+    }
+
+    private VehicleSellingPrice(){
+
+    }
+
+    public VehicleSellingPrice(Builder builder) {
+        this.vehicleSellingPriceId = builder.vehicleSellingPriceId;
+        this.vehicleVehicleSellingPrice = builder.vehicleVehicleSellingPrice;
+        this.vehicleYearModel = builder.vehicleYearModel;
+        this.vehicleSellingPrice = builder.vehicleSellingPrice;
     }
 
     public static class Builder{
 
-        private String id;
-        private String cell;
-        private String home;
-        private String email;
+        private String vehicleSellingPriceId;
+        private String vehicleVehicleSellingPrice;
+        private String vehicleYearModel;
+        private String vehicleSellingPrice;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder vehicleSellingPriceId(String value)
+        {
+            this.vehicleSellingPriceId = value;
             return this;
         }
 
-        public Builder cell(String value){
-            this.cell = value;
+        public Builder vehicleVehicleSellingPrice(String value)
+        {
+            this.vehicleVehicleSellingPrice = value;
             return this;
         }
 
-        public Builder home(String value){
-            this.home = value;
+        public Builder vehicleYearModel(String value)
+        {
+            this.vehicleYearModel = value;
             return this;
         }
 
-        public Builder email(String value){
-            this.email = value;
+        public Builder vehicleSellingPrice(String value)
+        {
+            this.vehicleSellingPrice = value;
             return this;
         }
 
-        public Contact build(){
+        public VehicleSellingPrice build(){
 
-            return new Contact(this);
+            return new VehicleSellingPrice(this);
         }
-
     }
 }

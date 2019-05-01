@@ -2,123 +2,55 @@ package com.CarRental.domain;
 
 public class Region {
 
-    private String rentalId;
-    private String rentalNumber;
-    private String rentalClass;
-    private String rentalDays;
-    private String rentalContact;
-    private String rentalBranch;
+    private String regionId;
+    private String regionName;
+    private String regionLocation;
 
-    //rentalId, rentalNumber, rentalClass, rentalDays, rentalContact, rentalBranch
-    public String getRentalId() {
-        return rentalId;
+    public String getRegionId() {
+        return regionId;
     }
 
-    public vorentalId setId(String rentalId) {
-        this.rentalId = rentalId;
+    public String getRegionName() {
+        return regionName;
     }
 
-    public String getRentalNumber() {
-        return rentalNumber;
+    public String getRegionLocation() {
+        return regionLocation;
     }
 
-    public vorentalId setRentalNumber(String rentalNumber) {
-        this.rentalNumber = rentalNumber;
+    private Region() {
     }
 
-    public String getRentalClass() {
-        return rentalClass;
-    }
-
-    public vorentalId setRentalClass(String rentalClass) {
-        this.rentalClass = rentalClass;
-    }
-
-    public String getRentalDays() {
-        return rentalDays;
-    }
-
-    public vorentalId setRentalDays(String rentalDays) {
-        this.rentalDays = rentalDays;
-    }
-
-    public String getRentalContact() {
-        return rentalContact;
-    }
-
-    public vorentalId setRentalContact(String rentalContact) {
-        this.rentalContact = rentalContact;
-    }
-
-    public String getRentalBranch() {
-        return rentalBranch;
-    }
-
-    public vorentalId setRentalBranch(String rentalBranch) {
-        this.rentalBranch = rentalBranch;
-    }
-
-    private RentalTerm(){
-
-    }
-
-    public RentalTerm(Builder builder) {
-        this.rentalId = builder.rentalId;
-        this.rentalNumber = builder.rentalNumber;
-        this.rentalClass = builder.rentalClass;
-        this.rentalDays = builder.rentalDays;
-        this.rentalContact = builder.rentalContact;
-        this.rentalBranch = builder.rentalBranch;
+    public Region(Builder builder) {
+        this.regionId = builder.regionId;
+        this.regionName = builder.regionName;
+        this.regionLocation = builder.regionLocation;
     }
 
     public static class Builder{
+        private String regionId;
+        private String regionName;
+        private String regionLocation;
 
-        private String rentalId;
-        private String rentalNumber;
-        private String rentalClass;
-        private String rentalDays;
-        private String rentalContact;
-        private String rentalBranch;
-
-        public Builder rentalId(String value)
-        {
-            this.rentalId = value;
+        public Builder regionId(String value){
+            this.regionId = value;
             return this;
         }
 
-        public Builder rentalNumber(String value)
-        {
-            this.rentalNumber = value;
+        public Builder regionName(String value){
+            this.regionName = value;
             return this;
         }
 
-        public Builder rentalClass(String value)
-        {
-            this.rentalClass = value;
+        public Builder regionLocation(String value){
+            this.regionLocation = value;
             return this;
         }
 
-        public Builder rentalDays(String value)
-        {
-            this.rentalDays = value;
-            return this;
+        public Region build(){
+
+            return new Region(this);
         }
 
-        public Builder rentalContact(String value)
-        {
-            this.rentalContact = value;
-            return this;
-        }
-
-        public Builder rentalBranch(String value)
-        {
-            this.rentalBranch = value;
-            return this;
-        }
-
-        public RentalTerm build(){
-
-            return new RentalTerm(this);
-        }
     }
 }

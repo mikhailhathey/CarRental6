@@ -1,19 +1,19 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.RentalTerm;
+import com.CarRental.domain.Infrastructure;
 
 public class InfrastructureFactory {
 
-    public static RentalTerm buildRentalTerm(String rentalId, String rentalNumber, String rentalClass, String rentalDays, String rentalContact, String rentalBranch)
+    public static Infrastructure buildInfrastructure(String infrastructureId, String infrastructureNumber, String infrastructureClass, String infrastructureDays, String infrastructureContact, String infrastructureBranch)
     {
-        RentalTerm rentalTerm = new RentalTerm.Builder()
-                .rentalId(rentalId)
-                .rentalNumber(rentalNumber)
-                .rentalClass(rentalClass)
-                .rentalDays(rentalDays)
-                .rentalContact(rentalContact)
-                .rentalBranch(rentalBranch)
+        Infrastructure infrastructure = new Infrastructure.Builder()
+                .infrastructureId(infrastructureId)
+                .infrastructureNumber(infrastructureNumber)
+                .infrastructureClass(infrastructureClass)
+                .infrastructureDays(infrastructureDays)
+                .infrastructureContact(infrastructureContact)
+                .infrastructureBranch(infrastructureBranch)
                 .build();
-        return rentalTerm;
+        return infrastructure;
     }
 }

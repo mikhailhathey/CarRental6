@@ -7,9 +7,8 @@ public class Car {
     private String manufacturerName;
     private String modelName;
     private String yearModel;
-    private String city;
 
-    public String getId() {
+    public String getCarId() {
         return carId;
     }
 

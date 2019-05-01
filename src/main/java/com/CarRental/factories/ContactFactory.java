@@ -8,7 +8,7 @@ public class ContactFactory {
     public static Contact buildContact(String id, String cell, String home, String email)
     {
         Contact contact = new Contact.Builder()
-                .id(id)
+                .contactId(id)
                 .cell(cell)
                 .home(home)
                 .email(email)

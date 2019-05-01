@@ -1,18 +1,18 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Contact;
+import com.CarRental.domain.Software;
 
 public class SoftwareFactory {
 
     //Changes to be made, in future iteration remove String id and have the String id generated.
-    public static Contact buildContact(String id, String cell, String home, String email)
+    public static Software buildContact(String softwareId, String cell, String home, String email)
     {
-        Contact contact = new Contact.Builder()
-                .id(id)
+        Software software = new Software.Builder()
+                .softwareId(softwareId)
                 .cell(cell)
                 .home(home)
                 .email(email)
                 .build();
-        return contact;
+        return software;
     }
 }

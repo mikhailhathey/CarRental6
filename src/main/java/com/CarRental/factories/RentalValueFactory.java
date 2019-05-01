@@ -1,19 +1,19 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Address;
+import com.CarRental.domain.RentalValue;
 
 public class RentalValueFactory {
 
-    public static Address buildAddress(String id, String houseNumber, String streetName, String suburb, String postalCode, String city)
+    public static RentalValue buildRentalValue(String rentalValueId, String houseNumber, String streetName, String suburb, String postalCode, String city)
     {
-        Address address = new Address.Builder()
-                .id(id)
+        RentalValue rentalValue = new RentalValue.Builder()
+                .rentalValueId(rentalValueId)
                 .houseNumber(houseNumber)
                 .streetName(streetName)
                 .suburb(suburb)
                 .postalCode(postalCode)
                 .city(city)
                 .build();
-        return address;
+        return rentalValue;
     }
 }

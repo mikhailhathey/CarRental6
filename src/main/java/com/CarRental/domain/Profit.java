@@ -2,54 +2,54 @@ package com.CarRental.domain;
 
 public class Profit {
 
-    private String id;
-    private String name;
-    private String password;
+    private String profitId;
+    private String profitProjected;
+    private String profitActual;
 
-    public String getId() {
-        return id;
+    public String getProfitId() {
+        return profitId;
     }
 
-    public String getName() {
-        return name;
+    public String getProfitProjected() {
+        return profitProjected;
     }
 
-    public String getPassword() {
-        return password;
+    public String getProfitActual() {
+        return profitActual;
     }
 
-    private Admin() {
+    private Profit() {
     }
 
-    public Admin(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.password = builder.password;
+    public Profit(Builder builder) {
+        this.profitId = builder.profitId;
+        this.profitProjected = builder.profitProjected;
+        this.profitActual = builder.profitActual;
     }
 
     public static class Builder{
-        private String id;
-        private String name;
-        private String password;
+        private String profitId;
+        private String profitProjected;
+        private String profitActual;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder profitId(String value){
+            this.profitId = value;
             return this;
         }
 
-        public Builder name(String value){
-            this.name = value;
+        public Builder profitProjected(String value){
+            this.profitProjected = value;
             return this;
         }
 
-        public Builder password(String value){
-            this.password = value;
+        public Builder profitActual(String value){
+            this.profitActual = value;
             return this;
         }
 
-        public Admin build(){
+        public Profit build(){
 
-            return new Admin(this);
+            return new Profit(this);
         }
 
     }

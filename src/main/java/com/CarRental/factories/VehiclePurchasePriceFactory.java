@@ -1,19 +1,19 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Address;
+import com.CarRental.domain.VehiclePurchasePrice;
 
 public class VehiclePurchasePriceFactory {
 
-    public static Address buildAddress(String id, String houseNumber, String streetName, String suburb, String postalCode, String city)
+    public static VehiclePurchasePrice buildVehiclePurchasePrice(String vehiclePurchasePriceId, String houseNumber, String streetName, String suburb, String postalCode, String city)
     {
-        Address address = new Address.Builder()
-                .id(id)
+        VehiclePurchasePrice vehiclePurchasePrice = new VehiclePurchasePrice.Builder()
+                .vehiclePurchasePriceId(vehiclePurchasePriceId)
                 .houseNumber(houseNumber)
                 .streetName(streetName)
                 .suburb(suburb)
                 .postalCode(postalCode)
                 .city(city)
                 .build();
-        return address;
+        return vehiclePurchasePrice;
     }
 }

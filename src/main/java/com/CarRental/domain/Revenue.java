@@ -2,123 +2,105 @@ package com.CarRental.domain;
 
 public class Revenue {
 
-    private String rentalId;
-    private String rentalNumber;
-    private String rentalClass;
-    private String rentalDays;
-    private String rentalContact;
-    private String rentalBranch;
+    private String revenueId;
+    private String revenueMonth;
+    private String revenuePeriod;
+    private String revenueAmount;
+    private String revenueBranch;
 
-    //rentalId, rentalNumber, rentalClass, rentalDays, rentalContact, rentalBranch
-    public String getRentalId() {
-        return rentalId;
+    public String getRevenueId() {
+        return revenueId;
     }
 
-    public vorentalId setId(String rentalId) {
-        this.rentalId = rentalId;
+    public void setId(String revenueId) {
+        this.revenueId = revenueId;
     }
 
-    public String getRentalNumber() {
-        return rentalNumber;
+    public String getRevenueMonth() {
+        return revenueMonth;
     }
 
-    public vorentalId setRentalNumber(String rentalNumber) {
-        this.rentalNumber = rentalNumber;
+    public void setRevenueMonth(String revenueMonth) {
+        this.revenueMonth = revenueMonth;
     }
 
-    public String getRentalClass() {
-        return rentalClass;
+    public String getRevenuePeriod() {
+        return revenuePeriod;
     }
 
-    public vorentalId setRentalClass(String rentalClass) {
-        this.rentalClass = rentalClass;
+    public void setRevenuePeriod(String revenuePeriod) {
+        this.revenuePeriod = revenuePeriod;
     }
 
-    public String getRentalDays() {
-        return rentalDays;
+    public String getRevenueAmount() {
+        return revenueAmount;
     }
 
-    public vorentalId setRentalDays(String rentalDays) {
-        this.rentalDays = rentalDays;
+    public void setRevenueAmount(String revenueAmount) {
+        this.revenueAmount = revenueAmount;
     }
 
-    public String getRentalContact() {
-        return rentalContact;
+    public String getRevenueBranch() {
+        return revenueBranch;
     }
 
-    public vorentalId setRentalContact(String rentalContact) {
-        this.rentalContact = rentalContact;
+    public void setRevenueBranch(String revenueBranch) {
+        this.revenueBranch = revenueBranch;
     }
 
-    public String getRentalBranch() {
-        return rentalBranch;
-    }
-
-    public vorentalId setRentalBranch(String rentalBranch) {
-        this.rentalBranch = rentalBranch;
-    }
-
-    private RentalTerm(){
+    private Revenue(){
 
     }
 
-    public RentalTerm(Builder builder) {
-        this.rentalId = builder.rentalId;
-        this.rentalNumber = builder.rentalNumber;
-        this.rentalClass = builder.rentalClass;
-        this.rentalDays = builder.rentalDays;
-        this.rentalContact = builder.rentalContact;
-        this.rentalBranch = builder.rentalBranch;
+    public Revenue(Builder builder) {
+        this.revenueId = builder.revenueId;
+        this.revenueMonth = builder.revenueMonth;
+        this.revenuePeriod = builder.revenuePeriod;
+        this.revenueAmount = builder.revenueAmount;
+        this.revenueBranch = builder.revenueBranch;
     }
 
     public static class Builder{
 
-        private String rentalId;
-        private String rentalNumber;
-        private String rentalClass;
-        private String rentalDays;
-        private String rentalContact;
-        private String rentalBranch;
+        private String revenueId;
+        private String revenueMonth;
+        private String revenuePeriod;
+        private String revenueAmount;
+        private String revenueBranch;
 
-        public Builder rentalId(String value)
+        public Builder revenueId(String value)
         {
-            this.rentalId = value;
+            this.revenueId = value;
             return this;
         }
 
-        public Builder rentalNumber(String value)
+        public Builder revenueMonth(String value)
         {
-            this.rentalNumber = value;
+            this.revenueMonth = value;
             return this;
         }
 
-        public Builder rentalClass(String value)
+        public Builder revenuePeriod(String value)
         {
-            this.rentalClass = value;
+            this.revenuePeriod = value;
             return this;
         }
 
-        public Builder rentalDays(String value)
+        public Builder revenueAmount(String value)
         {
-            this.rentalDays = value;
+            this.revenueAmount = value;
             return this;
         }
 
-        public Builder rentalContact(String value)
+        public Builder revenueBranch(String value)
         {
-            this.rentalContact = value;
+            this.revenueBranch = value;
             return this;
         }
 
-        public Builder rentalBranch(String value)
-        {
-            this.rentalBranch = value;
-            return this;
-        }
+        public Revenue build(){
 
-        public RentalTerm build(){
-
-            return new RentalTerm(this);
+            return new Revenue(this);
         }
     }
 }

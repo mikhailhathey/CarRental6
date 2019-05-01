@@ -3,67 +3,67 @@ package com.CarRental.domain;
 public class Claims {
 
 
-    private String id;
-    private String cell;
-    private String home;
-    private String email;
+    private String claimsId;
+    private String claimProvider;
+    private String claimValue;
+    private String claimReason;
 
-    public String getId() {
-        return id;
+    public String getClaimsId() {
+        return claimsId;
     }
 
-    public String getCell() {
-        return cell;
+    public String getClaimProvider() {
+        return claimProvider;
     }
 
-    public String getHome() {
-        return home;
+    public String getClaimValue() {
+        return claimValue;
     }
 
-    public String getEmail() {
-        return email;
+    public String getClaimReason() {
+        return claimReason;
     }
 
-    private Contact() {
+    private Claims() {
     }
 
-    public Contact(Builder builder) {
-        this.id = builder.id;
-        this.cell = builder.cell;
-        this.home = builder.home;
-        this.email = builder.email;
+    public Claims(Builder builder) {
+        this.claimsId = builder.claimsId;
+        this.claimProvider = builder.claimProvider;
+        this.claimValue = builder.claimValue;
+        this.claimReason = builder.claimReason;
     }
 
     public static class Builder{
 
-        private String id;
-        private String cell;
-        private String home;
-        private String email;
+        private String claimsId;
+        private String claimProvider;
+        private String claimValue;
+        private String claimReason;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder claimsId(String value){
+            this.claimsId = value;
             return this;
         }
 
-        public Builder cell(String value){
-            this.cell = value;
+        public Builder claimProvider(String value){
+            this.claimProvider = value;
             return this;
         }
 
-        public Builder home(String value){
-            this.home = value;
+        public Builder claimValue(String value){
+            this.claimValue = value;
             return this;
         }
 
-        public Builder email(String value){
-            this.email = value;
+        public Builder claimReason(String value){
+            this.claimReason = value;
             return this;
         }
 
-        public Contact build(){
+        public Claims build(){
 
-            return new Contact(this);
+            return new Claims(this);
         }
 
     }

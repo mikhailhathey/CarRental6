@@ -2,107 +2,88 @@ package com.CarRental.domain;
 
 public class Infrastructure {
 
-    private String carId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String infrastructureId;
+    private String infrastructureVendor;
+    private String infrastructureName;
+    private String infrastructureCost;
 
-    public String getId() {
-        return carId;
+    public String getInfrastructureId() {
+        return infrastructureId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setInfrastructureId(String infrastructureId) {
+        this.infrastructureId = infrastructureId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getInfrastructureVendor() {
+        return infrastructureVendor;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setInfrastructureVendor(String infrastructureVendor) {
+        this.infrastructureVendor = infrastructureVendor;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getInfrastructureName() {
+        return infrastructureName;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setInfrastructureName(String infrastructureName) {
+        this.infrastructureName = infrastructureName;
     }
 
-    public String getModelName() {
-        return modelName;
+    public String getInfrastructureCost() {
+        return infrastructureCost;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
+    public void setInfrastructureCost(String infrastructureCost) {
+        this.infrastructureCost = infrastructureCost;
     }
 
-    public String getYearModel() {
-        return yearModel;
-    }
-
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
-    }
-
-
-    private Car(){
+    private Infrastructure(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    public Infrastructure(Builder builder) {
+        this.infrastructureId = builder.infrastructureId;
+        this.infrastructureVendor = builder.infrastructureVendor;
+        this.infrastructureName = builder.infrastructureName;
+        this.infrastructureCost = builder.infrastructureCost;
     }
 
     public static class Builder{
 
-        private String carId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String infrastructureId;
+        private String infrastructureVendor;
+        private String infrastructureName;
+        private String infrastructureCost;
 
-        public Builder carId(String value)
+        public Builder infrastructureId(String value)
         {
-            this.carId = value;
+            this.infrastructureId = value;
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder infrastructureVendor(String value)
         {
-            this.vinNumber = value;
+            this.infrastructureVendor = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder infrastructureName(String value)
         {
-            this.manufacturerName = value;
+            this.infrastructureName = value;
             return this;
         }
 
-        public Builder modelName(String value)
+        public Builder infrastructureCost(String value)
         {
-            this.modelName = value;
+            this.infrastructureCost = value;
             return this;
         }
 
-        public Builder yearModel(String value)
-        {
-            this.yearModel = value;
-            return this;
-        }
+        public Infrastructure build(){
 
-        public Car build(){
-
-            return new Car(this);
+            return new Infrastructure(this);
         }
     }
 }

@@ -1,16 +1,16 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Admin;
+import com.CarRental.domain.Revenue;
 
 public class RevenueFactory {
 
-    public static Admin buildAdmin(String id, String name, String password)
+    public static Revenue buildRevenue(String revenueId, String name, String password)
     {
-        Admin admin = new Admin.Builder()
-                .id(id)
+        Revenue revenue = new Revenue.Builder()
+                .revenueId(revenueId)
                 .name(name)
                 .password(password)
                 .build();
-        return admin;
+        return revenue;
     }
 }

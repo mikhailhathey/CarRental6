@@ -2,107 +2,89 @@ package com.CarRental.domain;
 
 public class Perishables {
 
-    private String carId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String perishablesId;
+    private String perishableName;
+    private String perishableExpiryDate;
+    private String perishableQuantity;
 
-    public String getId() {
-        return carId;
+    public String getPerishablesId() {
+        return perishablesId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setPerishablesId(String perishablesId) {
+        this.perishablesId = perishablesId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getPerishableName() {
+        return perishableName;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setPerishableName(String perishableName) {
+        this.perishableName = perishableName;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getPerishableExpiryDate() {
+        return perishableExpiryDate;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setPerishableExpiryDate(String perishableExpiryDate) {
+        this.perishableExpiryDate = perishableExpiryDate;
     }
 
-    public String getModelName() {
-        return modelName;
+    public String getPerishableQuantity() {
+        return perishableQuantity;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public String getYearModel() {
-        return yearModel;
-    }
-
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
+    public void setPerishableQuantity(String perishableQuantity) {
+        this.perishableQuantity = perishableQuantity;
     }
 
 
-    private Car(){
+    private Perishables(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    public Perishables(Builder builder) {
+        this.perishablesId = builder.perishablesId;
+        this.perishableName = builder.perishableName;
+        this.perishableExpiryDate = builder.perishableExpiryDate;
+        this.perishableQuantity = builder.perishableQuantity;
     }
 
     public static class Builder{
 
-        private String carId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String perishablesId;
+        private String perishableName;
+        private String perishableExpiryDate;
+        private String perishableQuantity;
 
-        public Builder carId(String value)
+        public Builder perishablesId(String value)
         {
-            this.carId = value;
+            this.perishablesId = value;
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder perishableName(String value)
         {
-            this.vinNumber = value;
+            this.perishableName = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder perishableExpiryDate(String value)
         {
-            this.manufacturerName = value;
+            this.perishableExpiryDate = value;
             return this;
         }
 
-        public Builder modelName(String value)
+        public Builder perishableQuantity(String value)
         {
-            this.modelName = value;
+            this.perishableQuantity = value;
             return this;
         }
 
-        public Builder yearModel(String value)
-        {
-            this.yearModel = value;
-            return this;
-        }
+        public Perishables build(){
 
-        public Car build(){
-
-            return new Car(this);
+            return new Perishables(this);
         }
     }
 }

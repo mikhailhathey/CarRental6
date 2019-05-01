@@ -1,18 +1,18 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Car;
+import com.CarRental.domain.Supplier;
 
 public class SupplierFactory {
 
-    public static Car buildCar(String carId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
+    public static Supplier buildSupplier(String supplierId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
     {
-        Car car = new Car.Builder()
-                .carId(carId)
+        Supplier supplier = new Supplier.Builder()
+                .supplierId(supplierId)
                 .vinNumber(vinNumber)
                 .manufacturerName(manufacturerName)
                 .modelName(modelName)
                 .yearModel(yearModel)
                 .build();
-        return car;
+        return supplier;
     }
 }

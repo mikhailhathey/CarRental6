@@ -2,54 +2,54 @@ package com.CarRental.domain;
 
 public class RentalValue {
 
-    private String id;
-    private String name;
-    private String password;
+    private String rentalValueId;
+    private String rentalValueClass;
+    private String rentalValueAmount;
 
-    public String getId() {
-        return id;
+    public String getRentalValueId() {
+        return rentalValueId;
     }
 
-    public String getName() {
-        return name;
+    public String getRentalValueClass() {
+        return rentalValueClass;
     }
 
-    public String getPassword() {
-        return password;
+    public String getRentalValueAmount() {
+        return rentalValueAmount;
     }
 
-    private Admin() {
+    private RentalValue() {
     }
 
-    public Admin(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.password = builder.password;
+    public RentalValue(Builder builder) {
+        this.rentalValueId = builder.rentalValueId;
+        this.rentalValueClass = builder.rentalValueClass;
+        this.rentalValueAmount = builder.rentalValueAmount;
     }
 
     public static class Builder{
-        private String id;
-        private String name;
-        private String password;
+        private String rentalValueId;
+        private String rentalValueClass;
+        private String rentalValueAmount;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder rentalValueId(String value){
+            this.rentalValueId = value;
             return this;
         }
 
-        public Builder name(String value){
-            this.name = value;
+        public Builder rentalValueClass(String value){
+            this.rentalValueClass = value;
             return this;
         }
 
-        public Builder password(String value){
-            this.password = value;
+        public Builder rentalValueAmount(String value){
+            this.rentalValueAmount = value;
             return this;
         }
 
-        public Admin build(){
+        public RentalValue build(){
 
-            return new Admin(this);
+            return new RentalValue(this);
         }
 
     }

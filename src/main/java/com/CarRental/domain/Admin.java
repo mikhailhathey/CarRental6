@@ -2,48 +2,48 @@ package com.CarRental.domain;
 
 public class Admin {
 
-    private String id;
-    private String name;
-    private String password;
+    private String adminId;
+    private String adminName;
+    private String adminPassword;
 
-    public String getId() {
-        return id;
+    public String getAdminId() {
+        return adminId;
     }
 
     public String getName() {
-        return name;
+        return adminName;
     }
 
     public String getPassword() {
-        return password;
+        return adminPassword;
     }
 
     private Admin() {
     }
 
     public Admin(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.password = builder.password;
+        this.adminId = builder.adminId;
+        this.adminName = builder.adminName;
+        this.adminPassword = builder.adminPassword;
     }
 
     public static class Builder{
-        private String id;
-        private String name;
-        private String password;
+        private String adminId;
+        private String adminName;
+        private String adminPassword;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder adminId(String value){
+            this.adminId = value;
             return this;
         }
 
-        public Builder name(String value){
-            this.name = value;
+        public Builder adminName(String value){
+            this.adminName = value;
             return this;
         }
 
-        public Builder password(String value){
-            this.password = value;
+        public Builder adminPassword(String value){
+            this.adminPassword = value;
             return this;
         }
 

@@ -2,107 +2,88 @@ package com.CarRental.domain;
 
 public class Supplier {
 
-    private String carId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String supplierId;
+    private String supplierName;
+    private String supplierContact;
+    private String supplierEmail;
 
-    public String getId() {
-        return carId;
+    public String getSupplierId() {
+        return supplierId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setSupplierId(String supplierId) {
+        this.supplierId = supplierId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getSupplierName() {
+        return supplierName;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setSupplierName(String supplierName) {
+        this.supplierName = supplierName;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getSupplierContact() {
+        return supplierContact;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setSupplierContact(String supplierContact) {
+        this.supplierContact = supplierContact;
     }
 
-    public String getModelName() {
-        return modelName;
+    public String getSupplierEmail() {
+        return supplierEmail;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
+    public void setSupplierEmail(String supplierEmail) {
+        this.supplierEmail = supplierEmail;
     }
 
-    public String getYearModel() {
-        return yearModel;
-    }
-
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
-    }
-
-
-    private Car(){
+    private Supplier(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    public Supplier(Builder builder) {
+        this.supplierId = builder.supplierId;
+        this.supplierName = builder.supplierName;
+        this.supplierContact = builder.supplierContact;
+        this.supplierEmail = builder.supplierEmail;
     }
 
     public static class Builder{
 
-        private String carId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String supplierId;
+        private String supplierName;
+        private String supplierContact;
+        private String supplierEmail;
 
-        public Builder carId(String value)
+        public Builder supplierId(String value)
         {
-            this.carId = value;
+            this.supplierId = value;
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder supplierName(String value)
         {
-            this.vinNumber = value;
+            this.supplierName = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder supplierContact(String value)
         {
-            this.manufacturerName = value;
+            this.supplierContact = value;
             return this;
         }
 
-        public Builder modelName(String value)
+        public Builder supplierEmail(String value)
         {
-            this.modelName = value;
+            this.supplierEmail = value;
             return this;
         }
 
-        public Builder yearModel(String value)
-        {
-            this.yearModel = value;
-            return this;
-        }
+        public Supplier build(){
 
-        public Car build(){
-
-            return new Car(this);
+            return new Supplier(this);
         }
     }
 }

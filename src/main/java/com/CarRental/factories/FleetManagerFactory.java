@@ -1,16 +1,16 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Admin;
+import com.CarRental.domain.FleetManager;
 
 public class FleetManagerFactory {
 
-    public static Admin buildAdmin(String id, String name, String password)
+    public static FleetManager buildFleetManager(String id, String name, String password)
     {
-        Admin admin = new Admin.Builder()
-                .id(id)
+        FleetManager fleetManager = new FleetManager.Builder()
+                .fleetManagerId(id)
                 .name(name)
                 .password(password)
                 .build();
-        return admin;
+        return fleetManager;
     }
 }

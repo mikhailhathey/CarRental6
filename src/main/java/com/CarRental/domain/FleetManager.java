@@ -2,123 +2,123 @@ package com.CarRental.domain;
 
 public class FleetManager {
 
-    private String rentalId;
-    private String rentalNumber;
-    private String rentalClass;
-    private String rentalDays;
-    private String rentalContact;
-    private String rentalBranch;
+    private String fleetManagerId;
+    private String fleetManagerNumber;
+    private String fleetManagerClass;
+    private String fleetManagerDays;
+    private String fleetManagerContact;
+    private String fleetManagerBranch;
 
-    //rentalId, rentalNumber, rentalClass, rentalDays, rentalContact, rentalBranch
-    public String getRentalId() {
-        return rentalId;
+    //fleetManagerId, fleetManagerNumber, fleetManagerClass, fleetManagerDays, fleetManagerContact, fleetManagerBranch
+    public String getFleetManagerId() {
+        return fleetManagerId;
     }
 
-    public vorentalId setId(String rentalId) {
-        this.rentalId = rentalId;
+    public void setId(String fleetManagerId) {
+        this.fleetManagerId = fleetManagerId;
     }
 
-    public String getRentalNumber() {
-        return rentalNumber;
+    public String getFleetManagerNumber() {
+        return fleetManagerNumber;
     }
 
-    public vorentalId setRentalNumber(String rentalNumber) {
-        this.rentalNumber = rentalNumber;
+    public void setFleetManagerNumber(String fleetManagerNumber) {
+        this.fleetManagerNumber = fleetManagerNumber;
     }
 
-    public String getRentalClass() {
-        return rentalClass;
+    public String getFleetManagerClass() {
+        return fleetManagerClass;
     }
 
-    public vorentalId setRentalClass(String rentalClass) {
-        this.rentalClass = rentalClass;
+    public void setFleetManagerClass(String fleetManagerClass) {
+        this.fleetManagerClass = fleetManagerClass;
     }
 
-    public String getRentalDays() {
-        return rentalDays;
+    public String getFleetManagerDays() {
+        return fleetManagerDays;
     }
 
-    public vorentalId setRentalDays(String rentalDays) {
-        this.rentalDays = rentalDays;
+    public void setFleetManagerDays(String fleetManagerDays) {
+        this.fleetManagerDays = fleetManagerDays;
     }
 
-    public String getRentalContact() {
-        return rentalContact;
+    public String getFleetManagerContact() {
+        return fleetManagerContact;
     }
 
-    public vorentalId setRentalContact(String rentalContact) {
-        this.rentalContact = rentalContact;
+    public void setFleetManagerContact(String fleetManagerContact) {
+        this.fleetManagerContact = fleetManagerContact;
     }
 
-    public String getRentalBranch() {
-        return rentalBranch;
+    public String getFleetManagerBranch() {
+        return fleetManagerBranch;
     }
 
-    public vorentalId setRentalBranch(String rentalBranch) {
-        this.rentalBranch = rentalBranch;
+    public void setFleetManagerBranch(String fleetManagerBranch) {
+        this.fleetManagerBranch = fleetManagerBranch;
     }
 
-    private RentalTerm(){
+    private FleetManager(){
 
     }
 
-    public RentalTerm(Builder builder) {
-        this.rentalId = builder.rentalId;
-        this.rentalNumber = builder.rentalNumber;
-        this.rentalClass = builder.rentalClass;
-        this.rentalDays = builder.rentalDays;
-        this.rentalContact = builder.rentalContact;
-        this.rentalBranch = builder.rentalBranch;
+    public FleetManager(Builder builder) {
+        this.fleetManagerId = builder.fleetManagerId;
+        this.fleetManagerNumber = builder.fleetManagerNumber;
+        this.fleetManagerClass = builder.fleetManagerClass;
+        this.fleetManagerDays = builder.fleetManagerDays;
+        this.fleetManagerContact = builder.fleetManagerContact;
+        this.fleetManagerBranch = builder.fleetManagerBranch;
     }
 
     public static class Builder{
 
-        private String rentalId;
-        private String rentalNumber;
-        private String rentalClass;
-        private String rentalDays;
-        private String rentalContact;
-        private String rentalBranch;
+        private String fleetManagerId;
+        private String fleetManagerNumber;
+        private String fleetManagerClass;
+        private String fleetManagerDays;
+        private String fleetManagerContact;
+        private String fleetManagerBranch;
 
-        public Builder rentalId(String value)
+        public Builder fleetManagerId(String value)
         {
-            this.rentalId = value;
+            this.fleetManagerId = value;
             return this;
         }
 
-        public Builder rentalNumber(String value)
+        public Builder fleetManagerNumber(String value)
         {
-            this.rentalNumber = value;
+            this.fleetManagerNumber = value;
             return this;
         }
 
-        public Builder rentalClass(String value)
+        public Builder fleetManagerClass(String value)
         {
-            this.rentalClass = value;
+            this.fleetManagerClass = value;
             return this;
         }
 
-        public Builder rentalDays(String value)
+        public Builder fleetManagerDays(String value)
         {
-            this.rentalDays = value;
+            this.fleetManagerDays = value;
             return this;
         }
 
-        public Builder rentalContact(String value)
+        public Builder fleetManagerContact(String value)
         {
-            this.rentalContact = value;
+            this.fleetManagerContact = value;
             return this;
         }
 
-        public Builder rentalBranch(String value)
+        public Builder fleetManagerBranch(String value)
         {
-            this.rentalBranch = value;
+            this.fleetManagerBranch = value;
             return this;
         }
 
-        public RentalTerm build(){
+        public FleetManager build(){
 
-            return new RentalTerm(this);
+            return new FleetManager(this);
         }
     }
 }

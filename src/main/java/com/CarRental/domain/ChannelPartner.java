@@ -3,67 +3,67 @@ package com.CarRental.domain;
 public class ChannelPartner {
 
 
-    private String id;
-    private String cell;
-    private String home;
-    private String email;
+    private String channelPartnerId;
+    private String channelPartnerName;
+    private String channelPartnerContact;
+    private String channelPartnerEmail;
 
-    public String getId() {
-        return id;
+    public String getChannelPartnerId() {
+        return channelPartnerId;
     }
 
-    public String getCell() {
-        return cell;
+    public String getChannelPartnerName() {
+        return channelPartnerName;
     }
 
-    public String getHome() {
-        return home;
+    public String getChannelPartnerContact() {
+        return channelPartnerContact;
     }
 
-    public String getEmail() {
-        return email;
+    public String getChannelPartnerEmail() {
+        return channelPartnerEmail;
     }
 
-    private Contact() {
+    private ChannelPartner() {
     }
 
-    public Contact(Builder builder) {
-        this.id = builder.id;
-        this.cell = builder.cell;
-        this.home = builder.home;
-        this.email = builder.email;
+    public ChannelPartner(Builder builder) {
+        this.channelPartnerId = builder.channelPartnerId;
+        this.channelPartnerName = builder.channelPartnerName;
+        this.channelPartnerContact = builder.channelPartnerContact;
+        this.channelPartnerEmail = builder.channelPartnerEmail;
     }
 
     public static class Builder{
 
-        private String id;
-        private String cell;
-        private String home;
-        private String email;
+        private String channelPartnerId;
+        private String channelPartnerName;
+        private String channelPartnerContact;
+        private String channelPartnerEmail;
 
-        public Builder id(String value){
-            this.id = value;
+        public Builder channelPartnerId(String value){
+            this.channelPartnerId = value;
             return this;
         }
 
-        public Builder cell(String value){
-            this.cell = value;
+        public Builder channelPartnerName(String value){
+            this.channelPartnerName = value;
             return this;
         }
 
-        public Builder home(String value){
-            this.home = value;
+        public Builder channelPartnerContact(String value){
+            this.channelPartnerContact = value;
             return this;
         }
 
-        public Builder email(String value){
-            this.email = value;
+        public Builder channelPartnerEmail(String value){
+            this.channelPartnerEmail = value;
             return this;
         }
 
-        public Contact build(){
+        public ChannelPartner build(){
 
-            return new Contact(this);
+            return new ChannelPartner(this);
         }
 
     }

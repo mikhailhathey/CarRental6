@@ -4,10 +4,10 @@ import com.CarRental.domain.Address;
 
 public class AddressFactory {
 
-    public static Address buildAddress(String id, String houseNumber, String streetName, String suburb, String postalCode, String city)
+    public static Address buildAddress(String addressId, String houseNumber, String streetName, String suburb, String postalCode, String city)
     {
         Address address = new Address.Builder()
-                .id(id)
+                .addressId(addressId)
                 .houseNumber(houseNumber)
                 .streetName(streetName)
                 .suburb(suburb)

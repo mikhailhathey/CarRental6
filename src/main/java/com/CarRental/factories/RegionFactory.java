@@ -1,18 +1,18 @@
 package com.CarRental.factories;
 
-import com.CarRental.domain.Car;
+import com.CarRental.domain.Region;
 
 public class RegionFactory {
 
-    public static Car buildCar(String carId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
+    public static Region buildRegion(String regionId, String vinNumber, String manufacturerName, String modelName, String yearModel, String city)
     {
-        Car car = new Car.Builder()
-                .carId(carId)
+        Region region = new Region.Builder()
+                .regionId(regionId)
                 .vinNumber(vinNumber)
                 .manufacturerName(manufacturerName)
                 .modelName(modelName)
                 .yearModel(yearModel)
                 .build();
-        return car;
+        return region;
     }
 }

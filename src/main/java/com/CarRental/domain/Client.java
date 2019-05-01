@@ -2,122 +2,122 @@ package com.CarRental.domain;
 
 public class Client {
 
-    private String id;
-    private String houseNumber;
-    private String streetName;
-    private String suburb;
-    private String postalCode;
-    private String city;
+    private String clientId;
+    private String clientCell;
+    private String clientName;
+    private String clientEmail;
+    private String clientWebsite;
+    private String clientAddress;
 
-    public String getId() {
-        return id;
+    public String getClientId() {
+        return clientId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 
-    public String getHouseNumber() {
-        return houseNumber;
+    public String getClientCell() {
+        return clientCell;
     }
 
-    public void setHouseNumber(String houseNumber) {
-        this.houseNumber = houseNumber;
+    public void setClientCell(String clientCell) {
+        this.clientCell = clientCell;
     }
 
-    public String getStreetName() {
-        return streetName;
+    public String getClientName() {
+        return clientName;
     }
 
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
     }
 
-    public String getSuburb() {
-        return suburb;
+    public String getClientEmail() {
+        return clientEmail;
     }
 
-    public void setSuburb(String suburb) {
-        this.suburb = suburb;
+    public void setClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
     }
 
-    public String getPostalCode() {
-        return postalCode;
+    public String getClientWebsite() {
+        return clientWebsite;
     }
 
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+    public void setClientWebsite(String clientWebsite) {
+        this.clientWebsite = clientWebsite;
     }
 
-    public String getCity() {
-        return city;
+    public String getClientAddress() {
+        return clientAddress;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setClientAddress(String clientAddress) {
+        this.clientAddress = clientAddress;
     }
 
-    private Address(){
+    private Client(){
 
     }
 
-    public Address(Builder builder) {
-        this.id = builder.id;
-        this.houseNumber = builder.houseNumber;
-        this.streetName = builder.streetName;
-        this.suburb = builder.suburb;
-        this.postalCode = builder.postalCode;
-        this.city = builder.city;
+    public Client(Builder builder) {
+        this.clientId = builder.clientId;
+        this.clientCell = builder.clientCell;
+        this.clientName = builder.clientName;
+        this.clientEmail = builder.clientEmail;
+        this.clientWebsite = builder.clientWebsite;
+        this.clientAddress = builder.clientAddress;
     }
 
     public static class Builder{
 
-        private String id;
-        private String houseNumber;
-        private String streetName;
-        private String suburb;
-        private String postalCode;
-        private String city;
+        private String clientId;
+        private String clientCell;
+        private String clientName;
+        private String clientEmail;
+        private String clientWebsite;
+        private String clientAddress;
 
-        public Builder id(String value)
+        public Builder clientId(String value)
         {
-            this.id = value;
+            this.clientId = value;
             return this;
         }
 
-        public Builder houseNumber(String value)
+        public Builder clientCell(String value)
         {
-            this.houseNumber = value;
+            this.clientCell = value;
             return this;
         }
 
-        public Builder streetName(String value)
+        public Builder clientName(String value)
         {
-            this.streetName = value;
+            this.clientName = value;
             return this;
         }
 
-        public Builder suburb(String value)
+        public Builder clientEmail(String value)
         {
-            this.suburb = value;
+            this.clientEmail = value;
             return this;
         }
 
-        public Builder postalCode(String value)
+        public Builder clientWebsite(String value)
         {
-            this.postalCode = value;
+            this.clientWebsite = value;
             return this;
         }
 
-        public Builder city(String value)
+        public Builder clientAddress(String value)
         {
-            this.city = value;
+            this.clientAddress = value;
             return this;
         }
 
-        public Address build(){
+        public Client build(){
 
-            return new Address(this);
+            return new Client(this);
         }
     }
 }

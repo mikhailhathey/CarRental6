@@ -2,107 +2,106 @@ package com.CarRental.domain;
 
 public class Staff {
 
-    private String carId;
-    private String vinNumber;
-    private String manufacturerName;
-    private String modelName;
-    private String yearModel;
-    private String city;
+    private String staffId;
+    private String staffName;
+    private String staffContact;
+    private String staffEmail;
+    private String staffIDNumber;
 
-    public String getId() {
-        return carId;
+    public String getStaffId() {
+        return staffId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setStaffId(String staffId) {
+        this.staffId = staffId;
     }
 
-    public String getVinNumber() {
-        return vinNumber;
+    public String getStaffName() {
+        return staffName;
     }
 
-    public void setVinNumber(String vinNumber) {
-        this.vinNumber = vinNumber;
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
     }
 
-    public String getManufacturerName() {
-        return manufacturerName;
+    public String getStaffContact() {
+        return staffContact;
     }
 
-    public void setManufacturerName(String manufacturerName) {
-        this.manufacturerName = manufacturerName;
+    public void setStaffContact(String staffContact) {
+        this.staffContact = staffContact;
     }
 
-    public String getModelName() {
-        return modelName;
+    public String getStaffEmail() {
+        return staffEmail;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
+    public void setStaffEmail(String staffEmail) {
+        this.staffEmail = staffEmail;
     }
 
-    public String getYearModel() {
-        return yearModel;
+    public String getStaffIDNumber() {
+        return staffIDNumber;
     }
 
-    public void setYearModel(String yearModel) {
-        this.yearModel = yearModel;
+    public void setStaffIDNumber(String staffIDNumber) {
+        this.staffIDNumber = staffIDNumber;
     }
 
 
-    private Car(){
+    private Staff(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    public Staff(Builder builder) {
+        this.staffId = builder.staffId;
+        this.staffName = builder.staffName;
+        this.staffContact = builder.staffContact;
+        this.staffEmail = builder.staffEmail;
+        this.staffIDNumber = builder.staffIDNumber;
     }
 
     public static class Builder{
 
-        private String carId;
-        private String vinNumber;
-        private String manufacturerName;
-        private String modelName;
-        private String yearModel;
+        private String staffId;
+        private String staffName;
+        private String staffContact;
+        private String staffEmail;
+        private String staffIDNumber;
 
-        public Builder carId(String value)
+        public Builder staffId(String value)
         {
-            this.carId = value;
+            this.staffId = value;
             return this;
         }
 
-        public Builder vinNumber(String value)
+        public Builder staffName(String value)
         {
-            this.vinNumber = value;
+            this.staffName = value;
             return this;
         }
 
-        public Builder manufacturerName(String value)
+        public Builder staffContact(String value)
         {
-            this.manufacturerName = value;
+            this.staffContact = value;
             return this;
         }
 
-        public Builder modelName(String value)
+        public Builder staffEmail(String value)
         {
-            this.modelName = value;
+            this.staffEmail = value;
             return this;
         }
 
-        public Builder yearModel(String value)
+        public Builder staffIDNumber(String value)
         {
-            this.yearModel = value;
+            this.staffIDNumber = value;
             return this;
         }
 
-        public Car build(){
+        public Staff build(){
 
-            return new Car(this);
+            return new Staff(this);
         }
     }
 }

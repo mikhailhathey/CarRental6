@@ -3,13 +3,13 @@ package com.CarRental.domain;
 public class Assets {
 
 
-    private String assetAssetId;
+    private String assetId;
     private String assetName;
     private String assetLocation;
     private String assetType;
 
     public String getAssetId() {
-        return assetAssetId;
+        return assetId;
     }
 
     public String getAssetName() {
@@ -24,11 +24,11 @@ public class Assets {
         return assetType;
     }
 
-    private Contact() {
+    private Assets() {
     }
 
-    public Contact(Builder builder) {
-        this.assetAssetId = builder.assetAssetId;
+    public Assets(Builder builder) {
+        this.assetId = builder.assetId;
         this.assetName = builder.assetName;
         this.assetLocation = builder.assetLocation;
         this.assetType = builder.assetType;
@@ -36,13 +36,13 @@ public class Assets {
 
     public static class Builder{
 
-        private String assetAssetId;
+        private String assetId;
         private String assetName;
         private String assetLocation;
         private String assetType;
 
-        public Builder assetAssetId(String value){
-            this.assetAssetId = value;
+        public Builder assetId(String value){
+            this.assetId = value;
             return this;
         }
 
@@ -61,9 +61,9 @@ public class Assets {
             return this;
         }
 
-        public Contact build(){
+        public Assets build(){
 
-            return new Contact(this);
+            return new Assets(this);
         }
 
     }

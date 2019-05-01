@@ -2,19 +2,19 @@ package com.CarRental.domain;
 
 public class Hardware {
 
-    private String carId;
+    private String hardwareId;
     private String vinNumber;
     private String manufacturerName;
     private String modelName;
     private String yearModel;
     private String city;
 
-    public String getId() {
-        return carId;
+    public String getHardwareId() {
+        return hardwareId;
     }
 
-    public void setCarId(String carId) {
-        this.carId = carId;
+    public void setHardwareId(String hardwareId) {
+        this.hardwareId = hardwareId;
     }
 
     public String getVinNumber() {
@@ -50,12 +50,12 @@ public class Hardware {
     }
 
 
-    private Car(){
+    private Hardware(){
 
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
+    public Hardware(Builder builder) {
+        this.hardwareId = builder.hardwareId;
         this.vinNumber = builder.vinNumber;
         this.manufacturerName = builder.manufacturerName;
         this.modelName = builder.modelName;
@@ -64,15 +64,15 @@ public class Hardware {
 
     public static class Builder{
 
-        private String carId;
+        private String hardwareId;
         private String vinNumber;
         private String manufacturerName;
         private String modelName;
         private String yearModel;
 
-        public Builder carId(String value)
+        public Builder hardwareId(String value)
         {
-            this.carId = value;
+            this.hardwareId = value;
             return this;
         }
 
@@ -100,9 +100,9 @@ public class Hardware {
             return this;
         }
 
-        public Car build(){
+        public Hardware build(){
 
-            return new Car(this);
+            return new Hardware(this);
         }
     }
 }

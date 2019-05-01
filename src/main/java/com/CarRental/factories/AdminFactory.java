@@ -4,12 +4,12 @@ import com.CarRental.domain.Admin;
 
 public class AdminFactory {
 
-    public static Admin buildAdmin(String id, String name, String password)
+    public static Admin buildAdmin(String adminId, String adminName, String adminPassword)
     {
         Admin admin = new Admin.Builder()
-                .id(id)
-                .name(name)
-                .password(password)
+                .adminId(adminId)
+                .adminName(adminName)
+                .adminPassword(adminPassword)
                 .build();
         return admin;
     }

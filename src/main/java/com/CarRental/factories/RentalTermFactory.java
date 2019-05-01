@@ -4,15 +4,15 @@ import com.CarRental.domain.RentalTerm;
 
 public class RentalTermFactory {
 
-    public static RentalTerm buildRentalTerm(String rentalId, String rentalNumber, String rentalClass, String rentalDays, String rentalContact, String rentalBranch)
+    public static RentalTerm buildRentalTerm(String rentalTermId, String rentalTermNumber, String rentalTermClass, String rentalTermDays, String rentalTermContact, String rentalTermBranch)
     {
         RentalTerm rentalTerm = new RentalTerm.Builder()
-                .rentalId(rentalId)
-                .rentalNumber(rentalNumber)
-                .rentalClass(rentalClass)
-                .rentalDays(rentalDays)
-                .rentalContact(rentalContact)
-                .rentalBranch(rentalBranch)
+                .rentalTermId(rentalTermId)
+                .rentalTermNumber(rentalTermNumber)
+                .rentalTermClass(rentalTermClass)
+                .rentalTermDays(rentalTermDays)
+                .rentalTermContact(rentalTermContact)
+                .rentalTermBranch(rentalTermBranch)
                 .build();
         return rentalTerm;
     }
