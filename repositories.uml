@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.CarRental.repositories</OriginalElement>
+  <nodes>
+    <node x="178.0" y="264.0">com.CarRental.repositories.StaffRepository</node>
+    <node x="527.0" y="264.0">com.CarRental.repositories.FleetManagerRepository</node>
+    <node x="747.0" y="264.0">com.CarRental.repositories.ContactRepository</node>
+    <node x="1400.0" y="264.0">com.CarRental.repositories.PerishablesRepository</node>
+    <node x="932.0" y="264.0">com.CarRental.repositories.ChannelPartnerRepository</node>
+    <node x="1166.0" y="264.0">com.CarRental.repositories.BranchLocationRepository</node>
+    <node x="4151.0" y="264.0">com.CarRental.repositories.RegionRepository</node>
+    <node x="2429.9999999999995" y="0.0">com.CarRental.repositories.CrudRepository</node>
+    <node x="4542.0" y="264.0">com.CarRental.repositories.VehiclePurchasePriceRepository</node>
+    <node x="2992.0" y="264.0">com.CarRental.repositories.VehicleSellingPriceRepository</node>
+    <node x="4329.0" y="264.0">com.CarRental.repositories.RentalValueRepository</node>
+    <node x="3261.0" y="264.0">com.CarRental.repositories.HardwareRepository</node>
+    <node x="3453.0" y="264.0">com.CarRental.repositories.CarRepository</node>
+    <node x="1613.0" y="264.0">com.CarRental.repositories.SupplierRepository</node>
+    <node x="1805.0" y="264.0">com.CarRental.repositories.RevenueRepository</node>
+    <node x="4818.0" y="264.0">com.CarRental.repositories.ExpensesRepository</node>
+    <node x="3959.0" y="264.0">com.CarRental.repositories.SoftwareRepository</node>
+    <node x="3610.0" y="264.0">com.CarRental.repositories.AdminRepository</node>
+    <node x="2814.0" y="264.0">com.CarRental.repositories.ClaimsRepository</node>
+    <node x="1990.0" y="264.0">com.CarRental.repositories.RentalTermRepository</node>
+    <node x="2445.0" y="462.0">com.CarRental.repositories.impl</node>
+    <node x="0.0" y="264.0">com.CarRental.repositories.ClientRepository</node>
+    <node x="349.0" y="264.0">com.CarRental.repositories.ProfitRepository</node>
+    <node x="3781.0" y="264.0">com.CarRental.repositories.AssetsRepository</node>
+    <node x="2196.0" y="264.0">com.CarRental.repositories.StaffTypeRepository</node>
+    <node x="2629.0" y="264.0">com.CarRental.repositories.AddressRepository</node>
+    <node x="2395.0" y="264.0">com.CarRental.repositories.InfrastructureRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.SupplierRepository">
+      <point x="-18.23999999999978" y="-13.0" />
+      <point x="2483.76" y="362.0" />
+      <point x="1699.0" y="362.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.ProfitRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="428.0" y="154.0" />
+      <point x="2444.3999999999996" y="154.0" />
+      <point x="-57.59999999999991" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.RevenueRepository">
+      <point x="-13.679999999999836" y="-13.0" />
+      <point x="2488.32" y="352.0" />
+      <point x="1887.5" y="352.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.ChannelPartnerRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="1039.0" y="184.0" />
+      <point x="2461.6799999999994" y="184.0" />
+      <point x="-40.320000000000164" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.StaffTypeRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="2285.5" y="244.0" />
+      <point x="2496.2399999999993" y="244.0" />
+      <point x="-5.760000000000218" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.SupplierRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="1699.0" y="214.0" />
+      <point x="2478.9599999999996" y="214.0" />
+      <point x="-23.039999999999964" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.CarRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="3521.5" y="204.0" />
+      <point x="2530.7999999999997" y="204.0" />
+      <point x="28.800000000000182" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.HardwareRepository">
+      <point x="18.23999999999978" y="-13.0" />
+      <point x="2520.24" y="362.0" />
+      <point x="3347.0" y="362.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.HardwareRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="3347.0" y="214.0" />
+      <point x="2525.0399999999995" y="214.0" />
+      <point x="23.039999999999964" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.RentalValueRepository">
+      <point x="45.59999999999991" y="-13.0" />
+      <point x="2547.6" y="422.0" />
+      <point x="4425.5" y="422.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.RegionRepository">
+      <point x="41.039999999999964" y="-13.0" />
+      <point x="2543.04" y="412.0" />
+      <point x="4230.0" y="412.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.AdminRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="3685.5" y="194.0" />
+      <point x="2536.5599999999995" y="194.0" />
+      <point x="34.559999999999945" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.StaffRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="253.5" y="144.0" />
+      <point x="2438.6399999999994" y="144.0" />
+      <point x="-63.36000000000013" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.SoftwareRepository">
+      <point x="36.48000000000002" y="-13.0" />
+      <point x="2538.48" y="402.0" />
+      <point x="4045.0" y="402.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.ContactRepository">
+      <point x="-36.48000000000002" y="-13.0" />
+      <point x="2465.52" y="402.0" />
+      <point x="829.5" y="402.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.ExpensesRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="4904.0" y="134.0" />
+      <point x="2571.1199999999994" y="134.0" />
+      <point x="69.11999999999989" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.RevenueRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="1887.5" y="224.0" />
+      <point x="2484.7199999999993" y="224.0" />
+      <point x="-17.2800000000002" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.RentalTermRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="2083.0" y="234.0" />
+      <point x="2490.4799999999996" y="234.0" />
+      <point x="-11.519999999999982" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.BranchLocationRepository">
+      <point x="-27.360000000000127" y="-13.0" />
+      <point x="2474.64" y="382.0" />
+      <point x="1273.0" y="382.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.ClientRepository">
+      <point x="-54.720000000000255" y="-13.0" />
+      <point x="2447.2799999999997" y="442.0" />
+      <point x="79.0" y="442.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.PerishablesRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="1496.5" y="204.0" />
+      <point x="2473.1999999999994" y="204.0" />
+      <point x="-28.800000000000182" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.AddressRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="2711.5" y="244.0" />
+      <point x="2507.7599999999998" y="244.0" />
+      <point x="5.760000000000218" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.ClientRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="79.0" y="134.0" />
+      <point x="2432.8799999999997" y="134.0" />
+      <point x="-69.11999999999989" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.FleetManagerRepository">
+      <point x="-41.039999999999964" y="-13.0" />
+      <point x="2460.96" y="412.0" />
+      <point x="627.0" y="412.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.BranchLocationRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="1273.0" y="194.0" />
+      <point x="2467.4399999999996" y="194.0" />
+      <point x="-34.559999999999945" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.InfrastructureRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="0.0" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.ChannelPartnerRepository">
+      <point x="-31.920000000000073" y="-13.0" />
+      <point x="2470.08" y="392.0" />
+      <point x="1039.0" y="392.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.SoftwareRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="4045.0" y="174.0" />
+      <point x="2548.0799999999995" y="174.0" />
+      <point x="46.07999999999993" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.VehiclePurchasePriceRepository">
+      <point x="50.159999999999854" y="-13.0" />
+      <point x="2552.16" y="432.0" />
+      <point x="4670.0" y="432.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.VehicleSellingPriceRepository">
+      <point x="13.679999999999836" y="-13.0" />
+      <point x="2515.68" y="352.0" />
+      <point x="3116.5" y="352.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.AssetsRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="3860.0" y="184.0" />
+      <point x="2542.3199999999997" y="184.0" />
+      <point x="40.320000000000164" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.ClaimsRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="2893.0" y="234.0" />
+      <point x="2513.5199999999995" y="234.0" />
+      <point x="11.519999999999982" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.ClaimsRepository">
+      <point x="9.11999999999989" y="-13.0" />
+      <point x="2511.12" y="342.0" />
+      <point x="2893.0" y="342.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.AssetsRepository">
+      <point x="31.920000000000073" y="-13.0" />
+      <point x="2533.92" y="392.0" />
+      <point x="3860.0" y="392.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.InfrastructureRepository">
+      <point x="0.0" y="-13.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.CarRepository">
+      <point x="22.800000000000182" y="-13.0" />
+      <point x="2524.8" y="372.0" />
+      <point x="3521.5" y="372.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.ProfitRepository">
+      <point x="-45.59999999999991" y="-13.0" />
+      <point x="2456.4" y="422.0" />
+      <point x="428.0" y="422.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.RegionRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="4230.0" y="164.0" />
+      <point x="2553.8399999999997" y="164.0" />
+      <point x="51.840000000000146" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.AdminRepository">
+      <point x="27.360000000000127" y="-13.0" />
+      <point x="2529.36" y="382.0" />
+      <point x="3685.5" y="382.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.RentalValueRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="4425.5" y="154.0" />
+      <point x="2559.5999999999995" y="154.0" />
+      <point x="57.59999999999991" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.VehiclePurchasePriceRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="4670.0" y="144.0" />
+      <point x="2565.3599999999997" y="144.0" />
+      <point x="63.36000000000013" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.ExpensesRepository">
+      <point x="54.7199999999998" y="-13.0" />
+      <point x="2556.72" y="442.0" />
+      <point x="4904.0" y="442.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.RentalTermRepository">
+      <point x="-9.11999999999989" y="-13.0" />
+      <point x="2492.88" y="342.0" />
+      <point x="2083.0" y="342.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.AddressRepository">
+      <point x="4.559999999999945" y="-13.0" />
+      <point x="2506.56" y="332.0" />
+      <point x="2711.5" y="332.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.StaffRepository">
+      <point x="-50.159999999999854" y="-13.0" />
+      <point x="2451.84" y="432.0" />
+      <point x="253.5" y="432.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.StaffTypeRepository">
+      <point x="-4.559999999999945" y="-13.0" />
+      <point x="2497.44" y="332.0" />
+      <point x="2285.5" y="332.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.impl" target="com.CarRental.repositories.PerishablesRepository">
+      <point x="-22.800000000000182" y="-13.0" />
+      <point x="2479.2" y="372.0" />
+      <point x="1496.5" y="372.0" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.ContactRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="829.5" y="174.0" />
+      <point x="2455.9199999999996" y="174.0" />
+      <point x="-46.07999999999993" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.VehicleSellingPriceRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="3116.5" y="224.0" />
+      <point x="2519.2799999999997" y="224.0" />
+      <point x="17.2800000000002" y="57.0" />
+    </edge>
+    <edge source="com.CarRental.repositories.FleetManagerRepository" target="com.CarRental.repositories.CrudRepository">
+      <point x="0.0" y="-24.0" />
+      <point x="627.0" y="164.0" />
+      <point x="2450.1599999999994" y="164.0" />
+      <point x="-51.840000000000146" y="57.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3067864271457086" x="2495.0" y="189.0" />
+  <SelectedNodes>
+    <node>com.CarRental.repositories.InfrastructureRepository</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

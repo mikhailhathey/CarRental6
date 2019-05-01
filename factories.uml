@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.CarRental.factories</OriginalElement>
+  <nodes>
+    <node x="1165.5" y="1388.0">com.CarRental.factories.AdminFactoryTest</node>
+    <node x="593.0" y="356.0">com.CarRental.factories.InfrastructureFactoryTest</node>
+    <node x="491.0" y="1130.0">com.CarRental.factories.ContactFactoryTest</node>
+    <node x="1199.5" y="98.0">com.CarRental.factories.VehiclePurchasePriceFactoryTest</node>
+    <node x="821.0" y="1388.0">com.CarRental.factories.RegionFactoryTest</node>
+    <node x="445.5" y="1646.0">com.CarRental.factories.ChannelPartnerFactoryTest</node>
+    <node x="0.0" y="0.0">com.CarRental.factories.FleetManagerFactory</node>
+    <node x="94.5" y="356.0">com.CarRental.factories.VehicleSellingPriceFactoryTest</node>
+    <node x="1361.5" y="872.0">com.CarRental.factories.SupplierFactoryTest</node>
+    <node x="95.5" y="872.0">com.CarRental.factories.PerishablesFactoryTest</node>
+    <node x="55.0" y="1646.0">com.CarRental.factories.ProfitFactoryTest</node>
+    <node x="330.0" y="1548.0">com.CarRental.factories.ChannelPartnerFactory</node>
+    <node x="447.0" y="774.0">com.CarRental.factories.SoftwareFactory</node>
+    <node x="701.0" y="98.0">com.CarRental.factories.RentalTermFactoryTest</node>
+    <node x="0.0" y="774.0">com.CarRental.factories.PerishablesFactory</node>
+    <node x="467.0" y="516.0">com.CarRental.factories.RevenueFactory</node>
+    <node x="1096.0" y="0.0">com.CarRental.factories.VehiclePurchasePriceFactory</node>
+    <node x="1293.5" y="1130.0">com.CarRental.factories.ClaimsFactoryTest</node>
+    <node x="1276.0" y="774.0">com.CarRental.factories.SupplierFactory</node>
+    <node x="449.5" y="1388.0">com.CarRental.factories.HardwareFactoryTest</node>
+    <node x="1009.5" y="614.0">com.CarRental.factories.BranchLocationFactoryTest</node>
+    <node x="0.0" y="258.0">com.CarRental.factories.VehicleSellingPriceFactory</node>
+    <node x="0.0" y="516.0">com.CarRental.factories.ClientFactory</node>
+    <node x="811.0" y="1032.0">com.CarRental.factories.CarFactory</node>
+    <node x="967.0" y="258.0">com.CarRental.factories.ExpensesFactory</node>
+    <node x="1079.5" y="356.0">com.CarRental.factories.ExpensesFactoryTest</node>
+    <node x="923.0" y="516.0">com.CarRental.factories.BranchLocationFactory</node>
+    <node x="1205.0" y="1032.0">com.CarRental.factories.ClaimsFactory</node>
+    <node x="0.0" y="1548.0">com.CarRental.factories.ProfitFactory</node>
+    <node x="864.0" y="774.0">com.CarRental.factories.StaffFactory</node>
+    <node x="827.0" y="1548.0">com.CarRental.factories.AddressFactory</node>
+    <node x="535.0" y="872.0">com.CarRental.factories.SoftwareFactoryTest</node>
+    <node x="146.5" y="98.0">com.CarRental.factories.FleetManagerFactoryTest</node>
+    <node x="123.0" y="614.0">com.CarRental.factories.ClientFactoryTest</node>
+    <node x="1326.0" y="1548.0">com.CarRental.factories.AssetsFactory</node>
+    <node x="0.0" y="1290.0">com.CarRental.factories.StaffTypeFactory</node>
+    <node x="490.0" y="258.0">com.CarRental.factories.InfrastructureFactory</node>
+    <node x="762.0" y="1290.0">com.CarRental.factories.RegionFactory</node>
+    <node x="74.0" y="1130.0">com.CarRental.factories.RentalValueFactoryTest</node>
+    <node x="68.0" y="1388.0">com.CarRental.factories.StaffTypeFactoryTest</node>
+    <node x="406.0" y="1032.0">com.CarRental.factories.ContactFactory</node>
+    <node x="576.0" y="614.0">com.CarRental.factories.RevenueFactoryTest</node>
+    <node x="962.0" y="872.0">com.CarRental.factories.StaffFactoryTest</node>
+    <node x="561.0" y="0.0">com.CarRental.factories.RentalTermFactory</node>
+    <node x="382.0" y="1290.0">com.CarRental.factories.HardwareFactory</node>
+    <node x="0.0" y="1032.0">com.CarRental.factories.RentalValueFactory</node>
+    <node x="1108.0" y="1290.0">com.CarRental.factories.AdminFactory</node>
+    <node x="904.5" y="1130.0">com.CarRental.factories.CarFactoryTest</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.CarRental.factories.ContactFactoryTest" target="com.CarRental.factories.ContactFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.AdminFactoryTest" target="com.CarRental.factories.AdminFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.ClaimsFactoryTest" target="com.CarRental.factories.ClaimsFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.VehicleSellingPriceFactoryTest" target="com.CarRental.factories.VehicleSellingPriceFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.SoftwareFactoryTest" target="com.CarRental.factories.SoftwareFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.ProfitFactoryTest" target="com.CarRental.factories.ProfitFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.SupplierFactoryTest" target="com.CarRental.factories.SupplierFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.RevenueFactoryTest" target="com.CarRental.factories.RevenueFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.StaffTypeFactoryTest" target="com.CarRental.factories.StaffTypeFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.StaffFactoryTest" target="com.CarRental.factories.StaffFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.ChannelPartnerFactoryTest" target="com.CarRental.factories.ChannelPartnerFactory">
+      <point x="0.0" y="-46.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.FleetManagerFactoryTest" target="com.CarRental.factories.FleetManagerFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.InfrastructureFactoryTest" target="com.CarRental.factories.InfrastructureFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.HardwareFactoryTest" target="com.CarRental.factories.HardwareFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.ExpensesFactoryTest" target="com.CarRental.factories.ExpensesFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.VehiclePurchasePriceFactoryTest" target="com.CarRental.factories.VehiclePurchasePriceFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.RegionFactoryTest" target="com.CarRental.factories.RegionFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.RentalTermFactoryTest" target="com.CarRental.factories.RentalTermFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.ClientFactoryTest" target="com.CarRental.factories.ClientFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.PerishablesFactoryTest" target="com.CarRental.factories.PerishablesFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.BranchLocationFactoryTest" target="com.CarRental.factories.BranchLocationFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.CarFactoryTest" target="com.CarRental.factories.CarFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+    <edge source="com.CarRental.factories.RentalValueFactoryTest" target="com.CarRental.factories.RentalValueFactory">
+      <point x="0.0" y="-57.5" />
+      <point x="0.0" y="24.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3526108927568782" x="836.0" y="880.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
