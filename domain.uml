@@ -3,355 +3,161 @@
   <ID>JAVA</ID>
   <OriginalElement>com.CarRental.domain</OriginalElement>
   <nodes>
-    <node x="1496.375" y="478.0">com.CarRental.domain.Assets</node>
+    <node x="1490.0" y="478.0">com.CarRental.domain.Assets</node>
     <node x="0.0" y="275.0">com.CarRental.domain.FleetManager.Builder</node>
-    <node x="11.875" y="478.0">com.CarRental.domain.Staff</node>
-    <node x="1504.75" y="1077.0">com.CarRental.domain.BranchLocation.Builder</node>
-    <node x="1025.375" y="687.0">com.CarRental.domain.Software.Builder</node>
+    <node x="8.0" y="478.0">com.CarRental.domain.Staff</node>
+    <node x="1500.0" y="1077.0">com.CarRental.domain.BranchLocation.Builder</node>
+    <node x="1019.0" y="687.0">com.CarRental.domain.Software.Builder</node>
     <node x="21.0" y="1258.0">com.CarRental.domain.Admin</node>
-    <node x="1433.0" y="231.0">com.CarRental.domain.Expenses.Builder</node>
-    <node x="1033.375" y="478.0">com.CarRental.domain.Software</node>
-    <node x="1191.0" y="0.0">com.CarRental.domain.Car</node>
-    <node x="433.75" y="890.0">com.CarRental.domain.VehiclePurchasePrice</node>
-    <node x="1441.0" y="0.0">com.CarRental.domain.Expenses</node>
-    <node x="680.625" y="1445.0">com.CarRental.domain.Hardware.Builder</node>
-    <node x="225.875" y="687.0">com.CarRental.domain.ChannelPartner.Builder</node>
-    <node x="960.625" y="0.0">com.CarRental.domain.Revenue</node>
-    <node x="507.875" y="478.0">com.CarRental.domain.Infrastructure</node>
-    <node x="952.625" y="253.0">com.CarRental.domain.Revenue.Builder</node>
-    <node x="232.625" y="1445.0">com.CarRental.domain.Region.Builder</node>
-    <node x="1251.75" y="1077.0">com.CarRental.domain.RentalValue.Builder</node>
-    <node x="1183.0" y="231.0">com.CarRental.domain.Car.Builder</node>
-    <node x="769.875" y="478.0">com.CarRental.domain.Perishables</node>
-    <node x="761.875" y="687.0">com.CarRental.domain.Perishables.Builder</node>
-    <node x="688.625" y="1258.0">com.CarRental.domain.Hardware</node>
-    <node x="4.75" y="1099.0">com.CarRental.domain.Contact.Builder</node>
-    <node x="736.625" y="253.0">com.CarRental.domain.Client.Builder</node>
-    <node x="233.875" y="478.0">com.CarRental.domain.ChannelPartner</node>
-    <node x="12.75" y="890.0">com.CarRental.domain.Contact</node>
-    <node x="240.625" y="1258.0">com.CarRental.domain.Region</node>
-    <node x="989.75" y="890.0">com.CarRental.domain.VehicleSellingPrice</node>
-    <node x="261.75" y="275.0">com.CarRental.domain.RentalTerm.Builder</node>
-    <node x="456.625" y="1445.0">com.CarRental.domain.Profit.Builder</node>
-    <node x="1488.375" y="687.0">com.CarRental.domain.Assets.Builder</node>
-    <node x="720.75" y="890.0">com.CarRental.domain.StaffType</node>
-    <node x="1258.375" y="687.0">com.CarRental.domain.Supplier.Builder</node>
-    <node x="712.75" y="1077.0">com.CarRental.domain.StaffType.Builder</node>
-    <node x="1501.75" y="890.0">com.CarRental.domain.BranchLocation</node>
-    <node x="521.0" y="0.0">com.CarRental.domain.Address</node>
-    <node x="1259.75" y="890.0">com.CarRental.domain.RentalValue</node>
-    <node x="744.625" y="0.0">com.CarRental.domain.Client</node>
-    <node x="3.875" y="709.0">com.CarRental.domain.Staff.Builder</node>
-    <node x="464.625" y="1258.0">com.CarRental.domain.Profit</node>
-    <node x="219.75" y="1099.0">com.CarRental.domain.Claims.Builder</node>
-    <node x="993.25" y="1077.0">com.CarRental.domain.VehicleSellingPrice.Builder</node>
-    <node x="1266.375" y="478.0">com.CarRental.domain.Supplier</node>
-    <node x="269.75" y="0.0">com.CarRental.domain.RentalTerm</node>
-    <node x="513.0" y="253.0">com.CarRental.domain.Address.Builder</node>
+    <node x="1027.0" y="478.0">com.CarRental.domain.Software</node>
+    <node x="1423.0" y="231.0">com.CarRental.domain.Expenses.Builder</node>
+    <node x="1181.0" y="0.0">com.CarRental.domain.Car</node>
+    <node x="429.0" y="890.0">com.CarRental.domain.VehiclePurchasePrice</node>
+    <node x="1431.0" y="0.0">com.CarRental.domain.Expenses</node>
+    <node x="229.0" y="1445.0">com.CarRental.domain.Hardware.Builder</node>
+    <node x="222.0" y="687.0">com.CarRental.domain.ChannelPartner.Builder</node>
+    <node x="951.0" y="0.0">com.CarRental.domain.Revenue</node>
+    <node x="504.0" y="478.0">com.CarRental.domain.Infrastructure</node>
+    <node x="943.0" y="253.0">com.CarRental.domain.Revenue.Builder</node>
+    <node x="453.0" y="1445.0">com.CarRental.domain.Region.Builder</node>
+    <node x="1247.0" y="1077.0">com.CarRental.domain.RentalValue.Builder</node>
+    <node x="766.0" y="478.0">com.CarRental.domain.Perishables</node>
+    <node x="1173.0" y="231.0">com.CarRental.domain.Car.Builder</node>
+    <node x="237.0" y="1258.0">com.CarRental.domain.Hardware</node>
+    <node x="758.0" y="687.0">com.CarRental.domain.Perishables.Builder</node>
+    <node x="0.0" y="1099.0">com.CarRental.domain.Contact.Builder</node>
+    <node x="230.0" y="478.0">com.CarRental.domain.ChannelPartner</node>
+    <node x="727.0" y="253.0">com.CarRental.domain.Client.Builder</node>
+    <node x="8.0" y="890.0">com.CarRental.domain.Contact</node>
+    <node x="461.0" y="1258.0">com.CarRental.domain.Region</node>
+    <node x="985.0" y="890.0">com.CarRental.domain.VehicleSellingPrice</node>
+    <node x="261.0" y="275.0">com.CarRental.domain.RentalTerm.Builder</node>
+    <node x="677.0" y="1445.0">com.CarRental.domain.Profit.Builder</node>
+    <node x="1482.0" y="687.0">com.CarRental.domain.Assets.Builder</node>
+    <node x="716.0" y="890.0">com.CarRental.domain.StaffType</node>
+    <node x="1252.0" y="687.0">com.CarRental.domain.Supplier.Builder</node>
+    <node x="1255.0" y="890.0">com.CarRental.domain.RentalValue</node>
+    <node x="1497.0" y="890.0">com.CarRental.domain.BranchLocation</node>
+    <node x="516.0" y="0.0">com.CarRental.domain.Address</node>
+    <node x="708.0" y="1077.0">com.CarRental.domain.StaffType.Builder</node>
+    <node x="735.0" y="0.0">com.CarRental.domain.Client</node>
+    <node x="0.0" y="709.0">com.CarRental.domain.Staff.Builder</node>
+    <node x="685.0" y="1258.0">com.CarRental.domain.Profit</node>
+    <node x="215.0" y="1099.0">com.CarRental.domain.Claims.Builder</node>
+    <node x="988.5" y="1077.0">com.CarRental.domain.VehicleSellingPrice.Builder</node>
+    <node x="1260.0" y="478.0">com.CarRental.domain.Supplier</node>
+    <node x="269.0" y="0.0">com.CarRental.domain.RentalTerm</node>
+    <node x="508.0" y="253.0">com.CarRental.domain.Address.Builder</node>
     <node x="0.0" y="1445.0">com.CarRental.domain.Admin.Builder</node>
-    <node x="499.875" y="687.0">com.CarRental.domain.Infrastructure.Builder</node>
-    <node x="437.25" y="1077.0">com.CarRental.domain.VehiclePurchasePrice.Builder</node>
-    <node x="227.75" y="890.0">com.CarRental.domain.Claims</node>
+    <node x="496.0" y="687.0">com.CarRental.domain.Infrastructure.Builder</node>
+    <node x="432.5" y="1077.0">com.CarRental.domain.VehiclePurchasePrice.Builder</node>
+    <node x="223.0" y="890.0">com.CarRental.domain.Claims</node>
     <node x="8.0" y="0.0">com.CarRental.domain.FleetManager</node>
   </nodes>
   <notes />
   <edges>
     <edge source="com.CarRental.domain.RentalValue.Builder" target="com.CarRental.domain.RentalValue">
-      <point x="25.625" y="-46.0" />
-      <point x="1379.875" y="1052.0" />
-      <point x="1377.875" y="1052.0" />
-      <point x="23.625" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.VehicleSellingPrice.Builder" target="com.CarRental.domain.VehicleSellingPrice">
-      <point x="-26.25" y="-46.0" />
-      <point x="-27.125" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.Perishables.Builder" target="com.CarRental.domain.Perishables">
-      <point x="-27.0" y="-57.0" />
-      <point x="842.875" y="662.0" />
-      <point x="844.875" y="662.0" />
-      <point x="-25.0" y="79.5" />
-    </edge>
-    <edge source="com.CarRental.domain.FleetManager" target="com.CarRental.domain.FleetManager.Builder">
-      <point x="75.0" y="112.5" />
-      <point x="183.0" y="250.0" />
-      <point x="189.0" y="250.0" />
-      <point x="81.0" y="-79.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Staff" target="com.CarRental.domain.Staff.Builder">
-      <point x="60.375" y="90.5" />
-      <point x="152.75" y="684.0" />
-      <point x="158.75" y="684.0" />
-      <point x="66.375" y="-68.0" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
     <edge source="com.CarRental.domain.Hardware.Builder" target="com.CarRental.domain.Hardware">
-      <point x="-22.375" y="-46.0" />
-      <point x="747.75" y="1420.0" />
-      <point x="749.75" y="1420.0" />
-      <point x="-20.375" y="68.5" />
-    </edge>
-    <edge source="com.CarRental.domain.StaffType" target="com.CarRental.domain.StaffType.Builder">
-      <point x="81.0" y="68.5" />
-      <point x="909.75" y="1052.0" />
-      <point x="915.75" y="1052.0" />
-      <point x="87.0" y="-46.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Assets" target="com.CarRental.domain.Assets.Builder">
-      <point x="61.5" y="79.5" />
-      <point x="1639.875" y="662.0" />
-      <point x="1645.875" y="662.0" />
-      <point x="67.5" y="-57.0" />
-    </edge>
-    <edge source="com.CarRental.domain.VehiclePurchasePrice" target="com.CarRental.domain.VehiclePurchasePrice.Builder">
-      <point x="87.75" y="68.5" />
-      <point x="638.5" y="1052.0" />
-      <point x="635.875" y="1052.0" />
-      <point x="85.125" y="-46.0" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.VehiclePurchasePrice.Builder" target="com.CarRental.domain.VehiclePurchasePrice">
-      <point x="28.375" y="-46.0" />
-      <point x="29.25" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.StaffType.Builder" target="com.CarRental.domain.StaffType">
-      <point x="29.0" y="-46.0" />
-      <point x="857.75" y="1052.0" />
-      <point x="855.75" y="1052.0" />
-      <point x="27.0" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.Admin.Builder" target="com.CarRental.domain.Admin">
-      <point x="-23.0" y="-46.0" />
-      <point x="69.0" y="1420.0" />
-      <point x="74.25" y="1420.0" />
-      <point x="-17.75" y="68.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Client" target="com.CarRental.domain.Client.Builder">
-      <point x="58.125" y="101.5" />
-      <point x="880.25" y="228.0" />
-      <point x="886.25" y="228.0" />
-      <point x="64.125" y="-79.0" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.Profit.Builder" target="com.CarRental.domain.Profit">
-      <point x="22.375" y="-46.0" />
-      <point x="568.5" y="1420.0" />
-      <point x="566.5" y="1420.0" />
-      <point x="20.375" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.BranchLocation.Builder" target="com.CarRental.domain.BranchLocation">
-      <point x="24.25" y="-46.0" />
-      <point x="25.0" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.ChannelPartner.Builder" target="com.CarRental.domain.ChannelPartner">
-      <point x="-28.625" y="-57.0" />
-      <point x="311.75" y="662.0" />
-      <point x="313.75" y="662.0" />
-      <point x="-26.625" y="79.5" />
-    </edge>
-    <edge source="com.CarRental.domain.RentalTerm" target="com.CarRental.domain.RentalTerm.Builder">
-      <point x="69.75" y="112.5" />
-      <point x="432.5" y="250.0" />
-      <point x="438.5" y="250.0" />
-      <point x="75.75" y="-79.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Software" target="com.CarRental.domain.Software.Builder">
-      <point x="64.5" y="79.5" />
-      <point x="1183.875" y="662.0" />
-      <point x="1189.875" y="662.0" />
-      <point x="70.5" y="-57.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Perishables" target="com.CarRental.domain.Perishables.Builder">
-      <point x="75.0" y="79.5" />
-      <point x="944.875" y="662.0" />
-      <point x="950.875" y="662.0" />
-      <point x="81.0" y="-57.0" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
     <edge source="com.CarRental.domain.RentalTerm.Builder" target="com.CarRental.domain.RentalTerm">
-      <point x="25.25" y="-79.0" />
-      <point x="388.0" y="250.0" />
-      <point x="386.0" y="250.0" />
-      <point x="23.25" y="112.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Address" target="com.CarRental.domain.Address.Builder">
-      <point x="59.25" y="101.5" />
-      <point x="659.25" y="228.0" />
-      <point x="665.25" y="228.0" />
-      <point x="65.25" y="-79.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Supplier" target="com.CarRental.domain.Supplier.Builder">
-      <point x="63.375" y="79.5" />
-      <point x="1414.25" y="662.0" />
-      <point x="1420.25" y="662.0" />
-      <point x="69.375" y="-57.0" />
+      <point x="0.0" y="-79.0" />
+      <point x="0.0" y="112.5" />
     </edge>
     <edge source="com.CarRental.domain.Supplier.Builder" target="com.CarRental.domain.Supplier">
-      <point x="-23.125" y="-57.0" />
-      <point x="1327.75" y="662.0" />
-      <point x="1329.75" y="662.0" />
-      <point x="-21.125" y="79.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Claims" target="com.CarRental.domain.Claims.Builder">
-      <point x="57.375" y="79.5" />
-      <point x="361.625" y="1074.0" />
-      <point x="367.625" y="1074.0" />
-      <point x="63.375" y="-57.0" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
     <edge source="com.CarRental.domain.Staff.Builder" target="com.CarRental.domain.Staff">
-      <point x="-22.125" y="-68.0" />
-      <point x="70.25" y="684.0" />
-      <point x="72.25" y="684.0" />
-      <point x="-20.125" y="90.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Car" target="com.CarRental.domain.Car.Builder">
-      <point x="70.875" y="90.5" />
-      <point x="1356.375" y="206.0" />
-      <point x="1362.375" y="206.0" />
-      <point x="76.875" y="-68.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Hardware" target="com.CarRental.domain.Hardware.Builder">
-      <point x="61.125" y="68.5" />
-      <point x="831.25" y="1420.0" />
-      <point x="837.25" y="1420.0" />
-      <point x="67.125" y="-46.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Region" target="com.CarRental.domain.Region.Builder">
-      <point x="61.125" y="68.5" />
-      <point x="383.25" y="1420.0" />
-      <point x="389.25" y="1420.0" />
-      <point x="67.125" y="-46.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Profit" target="com.CarRental.domain.Profit.Builder">
-      <point x="61.125" y="68.5" />
-      <point x="607.25" y="1420.0" />
-      <point x="613.25" y="1420.0" />
-      <point x="67.125" y="-46.0" />
+      <point x="0.0" y="-68.0" />
+      <point x="0.0" y="90.5" />
     </edge>
     <edge source="com.CarRental.domain.Contact.Builder" target="com.CarRental.domain.Contact">
-      <point x="21.25" y="-57.0" />
-      <point x="111.0" y="1074.0" />
-      <point x="109.0" y="1074.0" />
-      <point x="19.25" y="79.5" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
     <edge source="com.CarRental.domain.FleetManager.Builder" target="com.CarRental.domain.FleetManager">
-      <point x="-81.0" y="-79.0" />
-      <point x="27.0" y="250.0" />
-      <point x="33.0" y="250.0" />
-      <point x="-75.0" y="112.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Address.Builder" target="com.CarRental.domain.Address">
-      <point x="21.75" y="-79.0" />
-      <point x="621.75" y="228.0" />
-      <point x="619.75" y="228.0" />
-      <point x="19.75" y="101.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Car.Builder" target="com.CarRental.domain.Car">
-      <point x="-76.875" y="-68.0" />
-      <point x="1208.625" y="206.0" />
-      <point x="1214.625" y="206.0" />
-      <point x="-70.875" y="90.5" />
+      <point x="0.0" y="-79.0" />
+      <point x="0.0" y="112.5" />
     </edge>
     <edge source="com.CarRental.domain.Software.Builder" target="com.CarRental.domain.Software">
-      <point x="23.5" y="-57.0" />
-      <point x="1142.875" y="662.0" />
-      <point x="1140.875" y="662.0" />
-      <point x="21.5" y="79.5" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
-    <edge source="com.CarRental.domain.Revenue" target="com.CarRental.domain.Revenue.Builder">
-      <point x="63.375" y="101.5" />
-      <point x="1108.5" y="228.0" />
-      <point x="1114.5" y="228.0" />
-      <point x="69.375" y="-68.0" />
+    <edge source="com.CarRental.domain.Car.Builder" target="com.CarRental.domain.Car">
+      <point x="0.0" y="-68.0" />
+      <point x="0.0" y="90.5" />
+    </edge>
+    <edge source="com.CarRental.domain.Address.Builder" target="com.CarRental.domain.Address">
+      <point x="0.0" y="-79.0" />
+      <point x="0.0" y="101.5" />
     </edge>
     <edge source="com.CarRental.domain.Region.Builder" target="com.CarRental.domain.Region">
-      <point x="22.375" y="-46.0" />
-      <point x="344.5" y="1420.0" />
-      <point x="342.5" y="1420.0" />
-      <point x="20.375" y="68.5" />
+      <point x="0.0" y="-46.0" />
+      <point x="0.0" y="68.5" />
     </edge>
     <edge source="com.CarRental.domain.Expenses.Builder" target="com.CarRental.domain.Expenses">
-      <point x="-24.25" y="-68.0" />
-      <point x="1505.75" y="206.0" />
-      <point x="1507.75" y="206.0" />
-      <point x="-22.25" y="90.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Expenses" target="com.CarRental.domain.Expenses.Builder">
-      <point x="66.75" y="90.5" />
-      <point x="1596.75" y="206.0" />
-      <point x="1602.75" y="206.0" />
-      <point x="72.75" y="-68.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Contact" target="com.CarRental.domain.Contact.Builder">
-      <point x="57.75" y="79.5" />
-      <point x="147.5" y="1074.0" />
-      <point x="153.5" y="1074.0" />
-      <point x="63.75" y="-57.0" />
+      <point x="0.0" y="-68.0" />
+      <point x="0.0" y="90.5" />
     </edge>
     <edge source="com.CarRental.domain.Revenue.Builder" target="com.CarRental.domain.Revenue">
-      <point x="23.125" y="-68.0" />
-      <point x="1068.25" y="228.0" />
-      <point x="1066.25" y="228.0" />
-      <point x="21.125" y="101.5" />
-    </edge>
-    <edge source="com.CarRental.domain.BranchLocation" target="com.CarRental.domain.BranchLocation.Builder">
-      <point x="75.0" y="68.5" />
-      <point x="1676.75" y="1052.0" />
-      <point x="1674.5" y="1052.0" />
-      <point x="72.75" y="-46.0" />
-    </edge>
-    <edge source="com.CarRental.domain.VehicleSellingPrice" target="com.CarRental.domain.VehicleSellingPrice.Builder">
-      <point x="81.375" y="68.5" />
-      <point x="1179.625" y="1052.0" />
-      <point x="1177.0" y="1052.0" />
-      <point x="78.75" y="-46.0" />
+      <point x="0.0" y="-68.0" />
+      <point x="0.0" y="101.5" />
     </edge>
     <edge source="com.CarRental.domain.Claims.Builder" target="com.CarRental.domain.Claims">
-      <point x="21.125" y="-57.0" />
-      <point x="325.375" y="1074.0" />
-      <point x="323.375" y="1074.0" />
-      <point x="19.125" y="79.5" />
-    </edge>
-    <edge source="com.CarRental.domain.RentalValue" target="com.CarRental.domain.RentalValue.Builder">
-      <point x="70.875" y="68.5" />
-      <point x="1425.125" y="1052.0" />
-      <point x="1431.125" y="1052.0" />
-      <point x="76.875" y="-46.0" />
-    </edge>
-    <edge source="com.CarRental.domain.Infrastructure" target="com.CarRental.domain.Infrastructure.Builder">
-      <point x="75.375" y="79.5" />
-      <point x="683.75" y="662.0" />
-      <point x="689.75" y="662.0" />
-      <point x="81.375" y="-57.0" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
     <edge source="com.CarRental.domain.Infrastructure.Builder" target="com.CarRental.domain.Infrastructure">
-      <point x="-27.125" y="-57.0" />
-      <point x="581.25" y="662.0" />
-      <point x="583.25" y="662.0" />
-      <point x="-25.125" y="79.5" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
     <edge source="com.CarRental.domain.Client.Builder" target="com.CarRental.domain.Client">
-      <point x="-21.375" y="-79.0" />
-      <point x="800.75" y="228.0" />
-      <point x="802.75" y="228.0" />
-      <point x="-19.375" y="101.5" />
-    </edge>
-    <edge source="com.CarRental.domain.Admin" target="com.CarRental.domain.Admin.Builder">
-      <point x="53.25" y="68.5" />
-      <point x="145.25" y="1420.0" />
-      <point x="161.0" y="1420.0" />
-      <point x="69.0" y="-46.0" />
+      <point x="0.0" y="-79.0" />
+      <point x="0.0" y="101.5" />
     </edge>
     <edge source="com.CarRental.domain.Assets.Builder" target="com.CarRental.domain.Assets">
-      <point x="-67.5" y="-57.0" />
-      <point x="1510.875" y="662.0" />
-      <point x="1516.875" y="662.0" />
-      <point x="-61.5" y="79.5" />
-    </edge>
-    <edge source="com.CarRental.domain.ChannelPartner" target="com.CarRental.domain.ChannelPartner.Builder">
-      <point x="79.875" y="79.5" />
-      <point x="420.25" y="662.0" />
-      <point x="426.25" y="662.0" />
-      <point x="85.875" y="-57.0" />
+      <point x="0.0" y="-57.0" />
+      <point x="0.0" y="79.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="748.4999999999998" y="503.33333333333326" />
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="768.4999999999998" y="314.0" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
