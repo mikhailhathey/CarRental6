@@ -52,5 +52,12 @@ public class RentalValue {
             return new RentalValue(this);
         }
 
+        public Builder copy(RentalValue savedRentalValue) {
+            this.rentalValueId = savedRentalValue.rentalValueId;
+            this.rentalValueClass = savedRentalValue.rentalValueClass;
+            this.rentalValueAmount = savedRentalValue.rentalValueAmount;
+
+            return this;
+        }
     }
 }

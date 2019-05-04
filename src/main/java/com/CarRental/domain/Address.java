@@ -119,5 +119,17 @@ public class Address {
 
             return new Address(this);
         }
+
+        public Builder copy(Address savedAddress) {
+            this.addressId = savedAddress.addressId;
+            this.addressId = savedAddress.addressId;
+            this.houseNumber = savedAddress.houseNumber;
+            this.streetName = savedAddress.streetName;
+            this.suburb = savedAddress.suburb;
+            this.postalCode = savedAddress.postalCode;
+            this.city = savedAddress.city;
+
+            return this;
+        }
     }
 }

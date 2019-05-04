@@ -66,5 +66,13 @@ public class Assets {
             return new Assets(this);
         }
 
+        public Builder copy(Assets savedAssets) {
+            this.assetsId = savedAssets.assetsId;
+            this.assetsName = savedAssets.assetsName;
+            this.assetsLocation = savedAssets.assetsLocation;
+            this.assetsType = savedAssets.assetsType;
+
+            return this;
+        }
     }
 }

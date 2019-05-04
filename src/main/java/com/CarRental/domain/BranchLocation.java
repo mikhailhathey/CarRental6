@@ -52,5 +52,12 @@ public class BranchLocation {
             return new BranchLocation(this);
         }
 
+        public Builder copy(BranchLocation savedBranchLocation) {
+            this.branchLocationId = savedBranchLocation.branchLocationId;
+            this.branchName = savedBranchLocation.branchName;
+            this.branchManager = savedBranchLocation.branchManager;
+
+            return this;
+        }
     }
 }

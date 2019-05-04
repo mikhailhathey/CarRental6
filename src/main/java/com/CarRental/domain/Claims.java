@@ -66,5 +66,13 @@ public class Claims {
             return new Claims(this);
         }
 
+        public Builder copy(Claims savedClaims) {
+            this.claimsId = savedClaims.claimsId;
+            this.claimProvider = savedClaims.claimProvider;
+            this.claimValue = savedClaims.claimValue;
+            this.claimReason = savedClaims.claimReason;
+
+            return this;
+        }
     }
 }

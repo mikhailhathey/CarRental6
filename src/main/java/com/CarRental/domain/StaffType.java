@@ -68,5 +68,13 @@ public class StaffType {
 
             return new StaffType(this);
         }
+
+        public Builder copy(StaffType savedStaffType) {
+            this.staffTypeId = savedStaffType.staffTypeId;
+            this.staffTypeJobRole = savedStaffType.staffTypeJobRole;
+            this.staffTypeJobRoleSalary = savedStaffType.staffTypeJobRoleSalary;
+
+            return this;
+        }
     }
 }

@@ -68,5 +68,13 @@ public class Hardware {
 
             return new Hardware(this);
         }
+
+        public Builder copy(Hardware savedHardware) {
+            this.hardwareId = savedHardware.hardwareId;
+            this.hardwareName = savedHardware.hardwareName;
+            this.hardwarePrice = savedHardware.hardwarePrice;
+
+            return this;
+        }
     }
 }

@@ -103,5 +103,15 @@ public class Car {
 
             return new Car(this);
         }
+
+        public Builder copy(Car savedCar) {
+            this.carId = savedCar.carId;
+            this.vinNumber = savedCar.vinNumber;
+            this.manufacturerName = savedCar.manufacturerName;
+            this.modelName = savedCar.modelName;
+            this.yearModel = savedCar.yearModel;
+
+            return this;
+        }
     }
 }

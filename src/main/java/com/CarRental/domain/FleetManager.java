@@ -120,5 +120,16 @@ public class FleetManager {
 
             return new FleetManager(this);
         }
+
+        public Builder copy(FleetManager savedFleetManager) {
+            this.fleetManagerId = savedFleetManager.fleetManagerId;
+            this.fleetManagerNumber = savedFleetManager.fleetManagerNumber;
+            this.fleetManagerClass = savedFleetManager.fleetManagerClass;
+            this.fleetManagerDays = savedFleetManager.fleetManagerDays;
+            this.fleetManagerContact = savedFleetManager.fleetManagerContact;
+            this.fleetManagerBranch = savedFleetManager.fleetManagerBranch;
+
+            return this;
+        }
     }
 }

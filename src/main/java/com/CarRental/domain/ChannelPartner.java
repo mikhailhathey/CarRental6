@@ -66,5 +66,13 @@ public class ChannelPartner {
             return new ChannelPartner(this);
         }
 
+        public Builder copy(ChannelPartner savedChannelPartner) {
+            this.channelPartnerId = savedChannelPartner.channelPartnerId;
+            this.channelPartnerName = savedChannelPartner.channelPartnerName;
+            this.channelPartnerContact = savedChannelPartner.channelPartnerContact;
+            this.channelPartnerEmail = savedChannelPartner.channelPartnerEmail;
+
+            return this;
+        }
     }
 }

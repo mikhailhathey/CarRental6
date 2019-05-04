@@ -85,5 +85,14 @@ public class Supplier {
 
             return new Supplier(this);
         }
+
+        public Builder copy(Supplier savedSupplier) {
+            this.supplierId = savedSupplier.supplierId;
+            this.supplierName = savedSupplier.supplierName;
+            this.supplierContact = savedSupplier.supplierContact;
+            this.supplierEmail = savedSupplier.supplierEmail;
+
+            return this;
+        }
     }
 }

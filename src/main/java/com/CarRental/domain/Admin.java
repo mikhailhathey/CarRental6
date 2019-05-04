@@ -52,5 +52,12 @@ public class Admin {
             return new Admin(this);
         }
 
+        public Builder copy(Admin savedAdmin) {
+            this.adminId = savedAdmin.adminId;
+            this.adminName = savedAdmin.adminName;
+            this.adminPassword = savedAdmin.adminPassword;
+
+            return this;
+        }
     }
 }

@@ -102,5 +102,15 @@ public class Revenue {
 
             return new Revenue(this);
         }
+
+        public Builder copy(Revenue savedRevenue) {
+            this.revenueId = savedRevenue.revenueId;
+            this.revenueMonth = savedRevenue.revenueMonth;
+            this.revenuePeriod = savedRevenue.revenuePeriod;
+            this.revenueAmount = savedRevenue.revenueAmount;
+            this.revenueBranch = savedRevenue.revenueBranch;
+
+            return this;
+        }
     }
 }

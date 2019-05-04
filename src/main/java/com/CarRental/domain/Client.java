@@ -119,5 +119,16 @@ public class Client {
 
             return new Client(this);
         }
+
+        public Builder copy(Client savedClient) {
+            this.clientId = savedClient.clientId;
+            this.clientCell = savedClient.clientCell;
+            this.clientName = savedClient.clientName;
+            this.clientEmail = savedClient.clientEmail;
+            this.clientWebsite = savedClient.clientWebsite;
+            this.clientAddress = savedClient.clientAddress;
+
+            return this;
+        }
     }
 }

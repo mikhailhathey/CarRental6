@@ -68,5 +68,13 @@ public class VehiclePurchasePrice {
 
             return new VehiclePurchasePrice(this);
         }
+
+        public Builder copy(VehiclePurchasePrice savedVehiclePurchasePrice) {
+            this.vehiclePurchasePriceId = savedVehiclePurchasePrice.vehiclePurchasePriceId;
+            this.vehicleYearModel = savedVehiclePurchasePrice.vehicleYearModel;
+            this.vehiclePrice = savedVehiclePurchasePrice.vehiclePrice;
+
+            return this;
+        }
     }
 }

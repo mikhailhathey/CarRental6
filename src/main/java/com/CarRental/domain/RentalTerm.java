@@ -120,5 +120,16 @@ public class RentalTerm {
 
             return new RentalTerm(this);
         }
+
+        public Builder copy(RentalTerm savedRentalTerm) {
+            this.rentalTermId = savedRentalTerm.rentalTermId;
+            this.rentalTermNumber = savedRentalTerm.rentalTermNumber;
+            this.rentalTermClass = savedRentalTerm.rentalTermClass;
+            this.rentalTermDays = savedRentalTerm.rentalTermDays;
+            this.rentalTermContact = savedRentalTerm.rentalTermContact;
+            this.rentalTermBranch = savedRentalTerm.rentalTermBranch;
+
+            return this;
+        }
     }
 }

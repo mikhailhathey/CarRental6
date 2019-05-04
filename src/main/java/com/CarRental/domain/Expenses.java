@@ -104,5 +104,15 @@ public class Expenses {
 
             return new Expenses(this);
         }
+
+        public Builder copy(Expenses savedExpenses) {
+            this.expensesId = savedExpenses.expensesId;
+            this.expensesAmount = savedExpenses.expensesAmount;
+            this.expensesDate = savedExpenses.expensesDate;
+            this.expensesContact = savedExpenses.expensesContact;
+            this.expensesDept = savedExpenses.expensesDept;
+
+            return this;
+        }
     }
 }

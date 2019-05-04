@@ -68,5 +68,13 @@ public class VehicleSellingPrice {
 
             return new VehicleSellingPrice(this);
         }
+
+        public Builder copy(VehicleSellingPrice savedVehicleSellingPrice) {
+            this.vehicleSellingPriceId = savedVehicleSellingPrice.vehicleSellingPriceId;
+            this.vehicleYearModel = savedVehicleSellingPrice.vehicleYearModel;
+            this.vehiclePrice = savedVehicleSellingPrice.vehiclePrice;
+
+            return this;
+        }
     }
 }

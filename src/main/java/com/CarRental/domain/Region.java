@@ -52,5 +52,12 @@ public class Region {
             return new Region(this);
         }
 
+        public Builder copy(Region savedRegion) {
+            this.regionId = savedRegion.regionId;
+            this.regionName = savedRegion.regionName;
+            this.regionLocation = savedRegion.regionLocation;
+
+            return this;
+        }
     }
 }

@@ -86,5 +86,14 @@ public class Perishables {
 
             return new Perishables(this);
         }
+
+        public Builder copy(Perishables savedPerishables) {
+            this.perishablesId = savedPerishables.perishablesId;
+            this.perishableName = savedPerishables.perishableName;
+            this.perishableExpiryDate = savedPerishables.perishableExpiryDate;
+            this.perishableQuantity = savedPerishables.perishableQuantity;
+
+            return this;
+        }
     }
 }

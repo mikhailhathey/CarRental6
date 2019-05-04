@@ -66,5 +66,13 @@ public class Contact {
             return new Contact(this);
         }
 
+        public Builder copy(Contact savedContact) {
+            this.contactId = savedContact.contactId;
+            this.contactCell = savedContact.contactCell;
+            this.contactHome = savedContact.contactHome;
+            this.contactEmail = savedContact.contactEmail;
+
+            return this;
+        }
     }
 }

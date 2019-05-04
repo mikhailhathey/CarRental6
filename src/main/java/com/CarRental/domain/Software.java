@@ -86,5 +86,14 @@ public class Software {
 
             return new Software(this);
         }
+
+        public Builder copy(Software savedSoftware) {
+            this.softwareId = savedSoftware.softwareId;
+            this.softwareName = savedSoftware.softwareName;
+            this.softwareVersion = savedSoftware.softwareVersion;
+            this.softwarePrice = savedSoftware.softwarePrice;
+
+            return this;
+        }
     }
 }

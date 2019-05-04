@@ -52,5 +52,12 @@ public class Profit {
             return new Profit(this);
         }
 
+        public Builder copy(Profit savedProfit) {
+            this.profitId = savedProfit.profitId;
+            this.profitProjected = savedProfit.profitProjected;
+            this.profitActual = savedProfit.profitActual;
+
+            return this;
+        }
     }
 }

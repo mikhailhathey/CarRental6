@@ -103,5 +103,15 @@ public class Staff {
 
             return new Staff(this);
         }
+
+        public Builder copy(Staff savedStaff) {
+            this.staffId = savedStaff.staffId;
+            this.staffName = savedStaff.staffName;
+            this.staffContact = savedStaff.staffContact;
+            this.staffEmail = savedStaff.staffEmail;
+            this.staffIDNumber = savedStaff.staffIDNumber;
+
+            return this;
+        }
     }
 }

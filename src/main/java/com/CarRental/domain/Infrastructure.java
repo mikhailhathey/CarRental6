@@ -85,5 +85,14 @@ public class Infrastructure {
 
             return new Infrastructure(this);
         }
+
+        public Builder copy(Infrastructure savedInfrastructure) {
+            this.infrastructureId = savedInfrastructure.infrastructureId;
+            this.infrastructureVendor = savedInfrastructure.infrastructureVendor;
+            this.infrastructureName = savedInfrastructure.infrastructureName;
+            this.infrastructureCost = savedInfrastructure.infrastructureCost;
+
+            return this;
+        }
     }
 }
