@@ -2,110 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c9000a4-8f86-4915-b269-90b31b4810c3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/util/Misc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/factories/AddressFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/factories/AssetsFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AddressRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AdminRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AssetsRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/BranchLocationRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/CarRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ChannelPartnerRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ClaimsRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ClientRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ContactRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ExpensesRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/FleetManagerRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/HardwareRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/InfrastructureRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/PerishablesRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ProfitRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RegionRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalTermRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalValueRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RevenueRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/SoftwareRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffTypeRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/SupplierRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehiclePurchasePriceRepositoryImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehicleSellingPriceRepositoryImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/CarRentalApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/controller/AddressController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/controller/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/service/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AddressServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AdminServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AssetsServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/BranchLocationServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/CarServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ChannelPartnerServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ClaimsServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ClientServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ContactServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ExpensesServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/FleetManagerServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/HardwareServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/InfrastructureServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/PerishablesServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ProfitServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RegionServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RentalTermServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RentalValueServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RevenueServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/SoftwareServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/StaffServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/StaffTypeServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/SupplierServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/VehiclePurchasePriceServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/VehicleSellingPriceServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_7_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_7_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Address.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/BranchLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/BranchLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/ChannelPartner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/ChannelPartner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Claims.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Claims.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Expenses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Expenses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/FleetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/FleetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Hardware.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Hardware.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Infrastructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Infrastructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Perishables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Perishables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Profit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Profit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Region.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalTerm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalTerm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Revenue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Revenue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Software.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Software.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/StaffType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/StaffType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehiclePurchasePrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehiclePurchasePrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehicleSellingPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehicleSellingPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Address$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Address$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Admin$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Admin$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Assets$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Assets$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Assets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/BranchLocation$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/BranchLocation$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/BranchLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/BranchLocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Car$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Car$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/ChannelPartner$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/ChannelPartner$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/ChannelPartner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/ChannelPartner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Claims$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Claims$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Claims.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Claims.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Client$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Client$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Contact$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Contact$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Contact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Expenses$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Expenses$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Expenses.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Expenses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/FleetManager$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/FleetManager$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/FleetManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/FleetManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Hardware$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Hardware$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Hardware.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Hardware.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Infrastructure$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Infrastructure$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Infrastructure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Infrastructure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Perishables$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Perishables$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Perishables.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Perishables.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Profit$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Profit$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Profit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Profit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Region$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Region$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Region.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Region.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalTerm$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalTerm$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalTerm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalTerm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalValue$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalValue$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/RentalValue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Revenue$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Revenue$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Revenue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Revenue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Software$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Software$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Software.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Software.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Staff$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Staff$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Staff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/StaffType$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/StaffType$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/StaffType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/StaffType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Supplier$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Supplier$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Supplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/Supplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehiclePurchasePrice$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehiclePurchasePrice$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehiclePurchasePrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehiclePurchasePrice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehicleSellingPrice$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehicleSellingPrice$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehicleSellingPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/domain/VehicleSellingPrice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRental.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CarRental.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AddressRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AddressRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AdminRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AdminRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/repositories/impl/AddressRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/repositories/impl/AddressRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/CarRental/repositories/impl/AdminRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/CarRental/repositories/impl/AdminRepositoryImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -127,19 +100,106 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ContactRepositoryImplTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/CarRentalApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            <state relative-caret-position="270">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#438#439#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ExpensesRepositoryImplTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#288#289#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/AddressService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/controller/AdminController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/controller/AddressController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-319">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AddressServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AssetsServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -150,17 +210,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
+        <option value="Kotlin File" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Address</find>
-      <find>Admin</find>
-      <find>addresss</find>
-      <find>admin</find>
       <find>city</find>
       <find>email</find>
       <find>expensesBranch</find>
@@ -185,16 +242,14 @@
       <find>staff</find>
       <find>Purchase</find>
       <find>Staff</find>
-      <find>address</find>
       <find>clients</find>
+      <find>course</find>
+      <find>caniksea</find>
+      <find>expense</find>
+      <find>student</find>
+      <find>address</find>
     </findStrings>
     <replaceStrings>
-      <replace>revenueAmount</replace>
-      <replace>revenueMonth</replace>
-      <replace>softwarePrice</replace>
-      <replace>staffContact</replace>
-      <replace>StaffAddress</replace>
-      <replace>staffTypeJobRoleSalary</replace>
       <replace>supplierEmail</replace>
       <replace>vehicleYearModel</replace>
       <replace>vehiclePurchasePrice</replace>
@@ -219,6 +274,12 @@
       <replace>VehiclePurchasePrice</replace>
       <replace>assets</replace>
       <replace>client</replace>
+      <replace>Address</replace>
+      <replace>CarRental</replace>
+      <replace>xpenses</replace>
+      <replace>expenses</replace>
+      <replace>address</replace>
+      <replace>admin</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -227,57 +288,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/factories/AssetsFactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ClientRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AssetsRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ChannelPartnerRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/HardwareRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/InfrastructureRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RegionRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/SoftwareRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/SupplierRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Admin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Assets.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/BranchLocation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/ChannelPartner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Claims.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Contact.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ContactRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Expenses.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/FleetManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Hardware.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Infrastructure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Perishables.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/PerishablesRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Profit.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ProfitRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Region.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalTerm.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalTermRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalValue.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalValueRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Revenue.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RevenueRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Software.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Staff.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/StaffType.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffTypeRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/Supplier.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehiclePurchasePriceRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehiclePurchasePrice.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehicleSellingPriceRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehicleSellingPrice.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AddressRepositoryImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/BranchLocationRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/CarRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ClaimsRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AdminRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/FleetManagerRepositoryImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ExpensesRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ContactRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/PerishablesRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ProfitRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalTermRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalValueRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RevenueRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffTypeRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehiclePurchasePriceRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehicleSellingPriceRepositoryImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/service/AddressService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AddressServiceImpl.kt" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AddressServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AdminServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/CarRentalApp.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AssetsServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/BranchLocationServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/CarServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ChannelPartnerServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ClaimsServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ClientServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ContactServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ExpensesServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/FleetManagerServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/HardwareServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/InfrastructureServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/PerishablesServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ProfitServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RegionServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RentalTermServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RentalValueServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RevenueServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/SoftwareServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/StaffServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/StaffTypeServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/SupplierServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/VehiclePurchasePriceServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/VehicleSellingPriceServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AdminRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AddressRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AddressServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/controller/AddressController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/CarRental/controller/IndexController.java" />
       </list>
     </option>
   </component>
@@ -288,10 +349,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
-    <option name="height" value="715" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -301,6 +361,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,56 +402,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="CarRental" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CarRental" type="b2602c69:ProjectViewProjectNode" />
               <item name="CarRental6" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CarRental" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarRental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarRental6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarRental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarRental6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarRental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarRental6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CarRental" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CarRental" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CarRental6" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CarRental" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -403,8 +435,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.CarRental.service.impl" />
       <recent name="com.CarRental.factories" />
       <recent name="com.CarRental.repositories.impl" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.CarRental" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.CarRental.controller" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -422,32 +461,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.CarRental in CarRental">
-    <configuration name="AdminRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.CarRentalApp">
+    <configuration name="AddressServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CarRental" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.CarRental.*" />
+          <option name="PATTERN" value="com.CarRental.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.CarRental.repositories.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.CarRental.repositories.impl.AdminRepositoryImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClaimsRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CarRental" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.CarRental.repositories.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.CarRental.repositories.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.CarRental.repositories.impl.ClaimsRepositoryImplTest" />
+      <option name="PACKAGE_NAME" value="com.CarRental.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.CarRental.service.impl.AddressServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -497,13 +521,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CarRentalApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="CarRental" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.CarRental.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.CarRental.CarRentalApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.CarRentalApp" />
         <item itemvalue="JUnit.com.CarRental in CarRental" />
+        <item itemvalue="JUnit.AddressServiceImplTest" />
         <item itemvalue="JUnit.ContactRepositoryImplTest" />
         <item itemvalue="JUnit.FleetManagerRepositoryImplTest" />
-        <item itemvalue="JUnit.AdminRepositoryImplTest" />
-        <item itemvalue="JUnit.ClaimsRepositoryImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -530,29 +567,17 @@
       <workItem from="1556980844558" duration="420000" />
       <workItem from="1556982247221" duration="73000" />
       <workItem from="1556983431587" duration="120000" />
-      <workItem from="1556984277453" duration="3067000" />
+      <workItem from="1556984277453" duration="4263000" />
+      <workItem from="1557259972093" duration="703000" />
+      <workItem from="1557264550662" duration="954000" />
+      <workItem from="1557266519450" duration="312000" />
+      <workItem from="1557422878439" duration="49000" />
+      <workItem from="1557766991044" duration="3161000" />
+      <workItem from="1557936912501" duration="5602000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BranchLocationRepositoryImplTest - 2019.05.04 at 18h 49m 59s.xml">
-      <configuration name="BranchLocationRepositoryImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BranchLocationRepositoryImplTest - 2019.05.04 at 18h 50m 35s.xml">
-      <configuration name="BranchLocationRepositoryImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BranchLocationRepositoryImplTest - 2019.05.04 at 18h 51m 03s.xml">
-      <configuration name="BranchLocationRepositoryImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CarRepositoryImplTest - 2019.05.04 at 18h 51m 09s.xml">
-      <configuration name="CarRepositoryImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ClaimsRepositoryImplTest - 2019.05.04 at 18h 52m 10s.xml">
-      <configuration name="ClaimsRepositoryImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="com_CarRental_in_CarRental - 2019.05.04 at 18h 52m 25s.xml">
-      <configuration name="com.CarRental in CarRental" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AdminRepositoryImplTest - 2019.05.04 at 18h 52m 44s.xml">
       <configuration name="AdminRepositoryImplTest" configurationId="JUnit" />
     </history-entry>
@@ -565,15 +590,33 @@
     <history-entry file="FleetManagerRepositoryImplTest - 2019.05.04 at 18h 53m 55s.xml">
       <configuration name="FleetManagerRepositoryImplTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ContactRepositoryImplTest - 2019.05.04 at 18h 54m 42s.xml">
+      <configuration name="ContactRepositoryImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_CarRental_in_CarRental - 2019.05.04 at 18h 54m 51s.xml">
+      <configuration name="com.CarRental in CarRental" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_CarRental_in_CarRental - 2019.05.04 at 18h 57m 02s.xml">
+      <configuration name="com.CarRental in CarRental" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_CarRental_in_CarRental - 2019.05.04 at 18h 59m 30s.xml">
+      <configuration name="com.CarRental in CarRental" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddressServiceImplTest - 2019.05.04 at 19h 11m 31s.xml">
+      <configuration name="AddressServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_CarRental_in_CarRental - 2019.05.04 at 19h 11m 47s.xml">
+      <configuration name="com.CarRental in CarRental" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35630000" />
+    <option name="totallyTimeSpent" value="47607000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28432956" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22455573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -581,22 +624,22 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" weight="0.32852563" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46153846" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2630137" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990461" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.29637307" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2948718" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="12" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32692307" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32465753" />
+      <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.32852563" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -617,304 +660,330 @@
     <SUITE FILE_PATH="coverage/CarRental$AdminFactoryTest.ic" NAME="AdminFactoryTest Coverage Results" MODIFIED="1556817045630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.CarRental.factories.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CarRental$com_CarRental_in_CarRental.ic" NAME="com.CarRental in CarRental Coverage Results" MODIFIED="1556988739549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CarRental$com_CarRental_in_CarRental.ic" NAME="com.CarRental in CarRental Coverage Results" MODIFIED="1556989166423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.CarRental.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CarRental$All_in_CarRental.ic" NAME="All in CarRental Coverage Results" MODIFIED="1556816843481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AssetsRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/StaffServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+        <state relative-caret-position="75">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/BranchLocation.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/StaffTypeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="60" column="9" lean-forward="true" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        <state relative-caret-position="75">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/SupplierServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="113" column="24" lean-forward="true" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
+        <state relative-caret-position="75">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Package domain.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" selection-start-line="9" selection-end-line="9" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/VehiclePurchasePriceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/ChannelPartner.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/VehicleSellingPriceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        <state relative-caret-position="75">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ChannelPartnerRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/AssetsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Claims.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/VehicleSellingPriceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="119" column="36" lean-forward="true" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ClientRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Contact.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AdminServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="74" column="24" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="24" />
+        <state relative-caret-position="-152">
+          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Expenses.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AssetsServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="114" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="114" selection-end-column="24" />
+        <state relative-caret-position="269">
+          <caret line="26" column="90" selection-start-line="26" selection-start-column="90" selection-end-line="26" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/FleetManager.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/BranchLocationServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="129" column="75" lean-forward="true" selection-start-line="129" selection-start-column="75" selection-end-line="129" selection-end-column="75" />
+        <state relative-caret-position="255">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/HardwareRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/CarServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="58" column="52" lean-forward="true" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+        <state relative-caret-position="286">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Hardware.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ChannelPartnerServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="26" column="121" selection-start-line="26" selection-start-column="121" selection-end-line="26" selection-end-column="121" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Infrastructure.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ClaimsServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="92" column="77" lean-forward="true" selection-start-line="92" selection-start-column="77" selection-end-line="92" selection-end-column="77" />
+        <state relative-caret-position="254">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/InfrastructureRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ClientServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="58" column="71" selection-start-line="58" selection-start-column="71" selection-end-line="58" selection-end-column="71" />
+        <state relative-caret-position="232">
+          <caret line="26" column="141" selection-start-line="26" selection-start-column="141" selection-end-line="26" selection-end-column="141" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/PerishablesRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ContactServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="68" column="56" lean-forward="true" selection-start-line="68" selection-start-column="56" selection-end-line="68" selection-end-column="56" />
+        <state relative-caret-position="182">
+          <caret line="26" column="109" selection-start-line="26" selection-start-column="109" selection-end-line="26" selection-end-column="109" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Perishables.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ExpensesServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="93" column="54" selection-start-line="93" selection-start-column="54" selection-end-line="93" selection-end-column="54" />
+        <state relative-caret-position="101">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ProfitRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/FleetManagerServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        <state relative-caret-position="250">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Profit.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/HardwareServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+        <state relative-caret-position="197">
+          <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Region.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/InfrastructureServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="383">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RegionRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/PerishablesServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+        <state relative-caret-position="316">
+          <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalTerm.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/ProfitServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="128" column="71" lean-forward="true" selection-start-line="128" selection-start-column="71" selection-end-line="128" selection-end-column="71" />
+        <state relative-caret-position="316">
+          <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalTermRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RentalTermServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="58" column="97" selection-start-line="58" selection-start-column="97" selection-end-line="58" selection-end-column="97" />
+        <state relative-caret-position="360">
+          <caret line="26" column="121" selection-start-line="26" selection-start-column="121" selection-end-line="26" selection-end-column="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/RentalValue.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RentalValueServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="331">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RentalValueRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RegionServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="58" column="102" selection-start-line="58" selection-start-column="102" selection-end-line="58" selection-end-column="102" />
+        <state relative-caret-position="316">
+          <caret line="26" column="77" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Revenue.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/RevenueServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="110" column="60" lean-forward="true" selection-start-line="110" selection-start-column="60" selection-end-line="110" selection-end-column="60" />
+        <state relative-caret-position="303">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/RevenueRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/SoftwareServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="58" column="82" selection-start-line="58" selection-start-column="82" selection-end-line="58" selection-end-column="82" />
+        <state relative-caret-position="316">
+          <caret line="26" column="85" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Software.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/StaffServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="95" column="24" selection-start-line="95" selection-start-column="24" selection-end-line="95" selection-end-column="24" />
+        <state relative-caret-position="337">
+          <caret line="26" column="92" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/SoftwareRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/StaffTypeServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+        <state relative-caret-position="286">
+          <caret line="26" column="89" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Staff.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/VehiclePurchasePriceServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
+        <state relative-caret-position="294">
+          <caret line="26" column="113" selection-start-line="26" selection-start-column="113" selection-end-line="26" selection-end-column="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/SupplierServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="58" column="45" lean-forward="true" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+        <state relative-caret-position="246">
+          <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/StaffType.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/VehicleSellingPriceServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        <state relative-caret-position="331">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/StaffTypeRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/service/impl/AddressServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
+        <state relative-caret-position="420">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Supplier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/repositories/AddressRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/SupplierRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="58" column="52" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehiclePurchasePrice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehiclePurchasePriceRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/VehicleSellingPrice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/VehicleSellingPriceRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="58" column="84" lean-forward="true" selection-start-line="58" selection-start-column="84" selection-end-line="58" selection-end-column="84" />
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-568">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/domain/Assets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
@@ -926,62 +995,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AddressRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/repositories/AdminRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="75">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/BranchLocationRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/AdminService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/CarRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ClaimsRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/AdminRepositoryImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ContactRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AddressRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        <state relative-caret-position="165">
+          <caret line="11" column="65" lean-forward="true" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#1590#1591#0" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/FleetManagerRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/repositories/impl/AdminRepositoryImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="58" column="111" selection-start-line="58" selection-start-column="111" selection-end-line="58" selection-end-column="111" />
+        <state relative-caret-position="-33">
+          <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/CarRental/repositories/impl/ExpensesRepositoryImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AdminServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        <state relative-caret-position="374">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#911#912#0" expanded="true" />
+            <element signature="e#961#962#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1145#1146#0" expanded="true" />
+            <element signature="e#1192#1193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AssetsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/BranchLocationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/AddressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/service/impl/AddressServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/CarRentalApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/controller/AddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/CarRental/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

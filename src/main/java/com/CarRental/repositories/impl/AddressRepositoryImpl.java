@@ -2,11 +2,13 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Address;
 import com.CarRental.repositories.AddressRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
 
+@Repository
 public class AddressRepositoryImpl implements AddressRepository {
 
     private static AddressRepositoryImpl repository = null;

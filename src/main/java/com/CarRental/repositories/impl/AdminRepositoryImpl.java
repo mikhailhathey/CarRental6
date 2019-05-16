@@ -2,11 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Admin;
 import com.CarRental.repositories.AdminRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Repository
 public class AdminRepositoryImpl implements AdminRepository {
 
     private static AdminRepositoryImpl repository = null;
