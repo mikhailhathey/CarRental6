@@ -1,4 +1,4 @@
-Assetspackage com.CarRental.controller;
+package com.CarRental.controller;
 
 import com.CarRental.domain.Assets;
 import com.CarRental.service.AssetsService;
@@ -42,7 +42,7 @@ public class AssetsController {
 
     @GetMapping("/read/all")
     @ResponseBody
-    public Set<Address> getAll() {
+    public Set<Assets> getAll() {
         return service.getAll();
     }
 

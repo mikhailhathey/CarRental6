@@ -4,12 +4,14 @@ import com.CarRental.domain.BranchLocation;
 import com.CarRental.repositories.BranchLocationRepository;
 import com.CarRental.repositories.impl.BranchLocationRepositoryImpl;
 import com.CarRental.service.BranchLocationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("BranchLocationServiceImpl")
 public class BranchLocationServiceImpl implements BranchLocationService {
+    @Autowired
 
     private static BranchLocationServiceImpl service = null;
     private BranchLocationRepository repository;

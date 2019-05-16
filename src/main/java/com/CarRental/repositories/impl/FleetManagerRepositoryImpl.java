@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.FleetManager;
 import com.CarRental.repositories.FleetManagerRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class FleetManagerRepositoryImpl implements FleetManagerRepository {
 
     private static FleetManagerRepositoryImpl repository = null;

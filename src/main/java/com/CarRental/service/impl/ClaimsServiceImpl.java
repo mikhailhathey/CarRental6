@@ -4,13 +4,14 @@ import com.CarRental.domain.Claims;
 import com.CarRental.repositories.ClaimsRepository;
 import com.CarRental.repositories.impl.ClaimsRepositoryImpl;
 import com.CarRental.service.ClaimsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("ClaimsServiceImpl")
 public class ClaimsServiceImpl implements ClaimsService {
-
+    @Autowired
     private static ClaimsServiceImpl service = null;
     private ClaimsRepository repository;
 

@@ -4,12 +4,14 @@ import com.CarRental.domain.Staff;
 import com.CarRental.repositories.StaffRepository;
 import com.CarRental.repositories.impl.StaffRepositoryImpl;
 import com.CarRental.service.StaffService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("StaffServiceImpl")
 public class StaffServiceImpl implements StaffService {
+    @Autowired
 
     private static StaffServiceImpl service = null;
     private StaffRepository repository;

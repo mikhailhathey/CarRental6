@@ -4,12 +4,14 @@ import com.CarRental.domain.Supplier;
 import com.CarRental.repositories.SupplierRepository;
 import com.CarRental.repositories.impl.SupplierRepositoryImpl;
 import com.CarRental.service.SupplierService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("SupplierServiceImpl")
 public class SupplierServiceImpl implements SupplierService {
+    @Autowired
 
     private static SupplierServiceImpl service = null;
     private SupplierRepository repository;

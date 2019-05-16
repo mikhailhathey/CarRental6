@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Client;
 import com.CarRental.repositories.ClientRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class ClientRepositoryImpl implements ClientRepository {
 
     private static ClientRepositoryImpl repository = null;

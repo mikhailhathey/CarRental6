@@ -4,12 +4,14 @@ import com.CarRental.domain.Region;
 import com.CarRental.repositories.RegionRepository;
 import com.CarRental.repositories.impl.RegionRepositoryImpl;
 import com.CarRental.service.RegionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("RegionServiceImpl")
 public class RegionServiceImpl implements RegionService {
+    @Autowired
 
     private static RegionServiceImpl service = null;
     private RegionRepository repository;

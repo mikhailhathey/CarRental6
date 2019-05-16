@@ -4,12 +4,14 @@ import com.CarRental.domain.Perishables;
 import com.CarRental.repositories.PerishablesRepository;
 import com.CarRental.repositories.impl.PerishablesRepositoryImpl;
 import com.CarRental.service.PerishablesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("PerishablesServiceImpl")
 public class PerishablesServiceImpl implements PerishablesService {
+    @Autowired
 
     private static PerishablesServiceImpl service = null;
     private PerishablesRepository repository;

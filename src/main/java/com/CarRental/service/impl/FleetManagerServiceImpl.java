@@ -4,12 +4,14 @@ import com.CarRental.domain.FleetManager;
 import com.CarRental.repositories.FleetManagerRepository;
 import com.CarRental.repositories.impl.FleetManagerRepositoryImpl;
 import com.CarRental.service.FleetManagerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("FleetManagerServiceImpl")
 public class FleetManagerServiceImpl implements FleetManagerService {
+    @Autowired
 
     private static FleetManagerServiceImpl service = null;
     private FleetManagerRepository repository;

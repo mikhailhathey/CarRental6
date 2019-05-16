@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Staff;
 import com.CarRental.repositories.StaffRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class StaffRepositoryImpl implements StaffRepository {
 
     private static StaffRepositoryImpl repository = null;

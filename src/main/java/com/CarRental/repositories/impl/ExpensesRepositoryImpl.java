@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Expenses;
 import com.CarRental.repositories.ExpensesRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class ExpensesRepositoryImpl implements ExpensesRepository {
 
     private static ExpensesRepositoryImpl repository = null;

@@ -4,12 +4,14 @@ import com.CarRental.domain.Software;
 import com.CarRental.repositories.SoftwareRepository;
 import com.CarRental.repositories.impl.SoftwareRepositoryImpl;
 import com.CarRental.service.SoftwareService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("SoftwareServiceImpl")
 public class SoftwareServiceImpl implements SoftwareService {
+    @Autowired
 
     private static SoftwareServiceImpl service = null;
     private SoftwareRepository repository;

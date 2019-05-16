@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Hardware;
 import com.CarRental.repositories.HardwareRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class HardwareRepositoryImpl implements HardwareRepository {
 
     private static HardwareRepositoryImpl repository = null;

@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Perishables;
 import com.CarRental.repositories.PerishablesRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class PerishablesRepositoryImpl implements PerishablesRepository {
 
     private static PerishablesRepositoryImpl repository = null;

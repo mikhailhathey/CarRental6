@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Infrastructure;
 import com.CarRental.repositories.InfrastructureRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class InfrastructureRepositoryImpl implements InfrastructureRepository {
 
     private static InfrastructureRepositoryImpl repository = null;

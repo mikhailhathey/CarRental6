@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Software;
 import com.CarRental.repositories.SoftwareRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class SoftwareRepositoryImpl implements SoftwareRepository {
 
 

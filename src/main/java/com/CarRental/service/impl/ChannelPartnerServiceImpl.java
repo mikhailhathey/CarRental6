@@ -4,12 +4,14 @@ import com.CarRental.domain.ChannelPartner;
 import com.CarRental.repositories.ChannelPartnerRepository;
 import com.CarRental.repositories.impl.ChannelPartnerRepositoryImpl;
 import com.CarRental.service.ChannelPartnerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("ChannelPartnerServiceImpl")
 public class ChannelPartnerServiceImpl implements ChannelPartnerService {
+    @Autowired
 
     private static ChannelPartnerServiceImpl service = null;
     private ChannelPartnerRepository repository;

@@ -4,12 +4,14 @@ import com.CarRental.domain.Infrastructure;
 import com.CarRental.repositories.InfrastructureRepository;
 import com.CarRental.repositories.impl.InfrastructureRepositoryImpl;
 import com.CarRental.service.InfrastructureService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("InfrastructureServiceImpl")
 public class InfrastructureServiceImpl implements InfrastructureService {
+    @Autowired
 
     private static InfrastructureServiceImpl service = null;
     private InfrastructureRepository repository;

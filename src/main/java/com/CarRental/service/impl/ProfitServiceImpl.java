@@ -4,12 +4,14 @@ import com.CarRental.domain.Profit;
 import com.CarRental.repositories.ProfitRepository;
 import com.CarRental.repositories.impl.ProfitRepositoryImpl;
 import com.CarRental.service.ProfitService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("ProfitServiceImpl")
 public class ProfitServiceImpl implements ProfitService {
+    @Autowired
 
     private static ProfitServiceImpl service = null;
     private ProfitRepository repository;

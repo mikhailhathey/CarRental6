@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Region;
 import com.CarRental.repositories.RegionRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class RegionRepositoryImpl implements RegionRepository {
 
     private static RegionRepositoryImpl repository = null;

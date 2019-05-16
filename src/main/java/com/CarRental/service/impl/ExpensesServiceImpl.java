@@ -4,12 +4,14 @@ import com.CarRental.domain.Expenses;
 import com.CarRental.repositories.ExpensesRepository;
 import com.CarRental.repositories.impl.ExpensesRepositoryImpl;
 import com.CarRental.service.ExpensesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("ExpensesServiceImpl")
 public class ExpensesServiceImpl implements ExpensesService {
+    @Autowired
 
     private static ExpensesServiceImpl service = null;
     private ExpensesRepository repository;

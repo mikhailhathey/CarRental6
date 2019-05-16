@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Claims;
 import com.CarRental.repositories.ClaimsRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class ClaimsRepositoryImpl implements ClaimsRepository {
 
     private static ClaimsRepositoryImpl repository = null;

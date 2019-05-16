@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.ChannelPartner;
 import com.CarRental.repositories.ChannelPartnerRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class ChannelPartnerRepositoryImpl implements ChannelPartnerRepository {
 
     private static ChannelPartnerRepositoryImpl repository = null;

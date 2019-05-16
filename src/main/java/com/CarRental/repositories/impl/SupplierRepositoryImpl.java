@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Supplier;
 import com.CarRental.repositories.SupplierRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class SupplierRepositoryImpl implements SupplierRepository {
 
     private static SupplierRepositoryImpl repository = null;

@@ -4,12 +4,14 @@ import com.CarRental.domain.Contact;
 import com.CarRental.repositories.ContactRepository;
 import com.CarRental.repositories.impl.ContactRepositoryImpl;
 import com.CarRental.service.ContactService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("ContactServiceImpl")
 public class ContactServiceImpl implements ContactService {
+    @Autowired
 
     private static ContactServiceImpl service = null;
     private ContactRepository repository;

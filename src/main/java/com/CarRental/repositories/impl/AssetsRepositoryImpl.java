@@ -2,11 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.Assets;
 import com.CarRental.repositories.AssetsRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Repository
 public class AssetsRepositoryImpl implements AssetsRepository {
 
     private static AssetsRepositoryImpl repository = null;

@@ -4,12 +4,14 @@ import com.CarRental.domain.Car;
 import com.CarRental.repositories.CarRepository;
 import com.CarRental.repositories.impl.CarRepositoryImpl;
 import com.CarRental.service.CarService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("CarServiceImpl")
 public class CarServiceImpl implements CarService {
+    @Autowired
 
     private static CarServiceImpl service = null;
     private CarRepository repository;

@@ -4,12 +4,14 @@ import com.CarRental.domain.RentalTerm;
 import com.CarRental.repositories.RentalTermRepository;
 import com.CarRental.repositories.impl.RentalTermRepositoryImpl;
 import com.CarRental.service.RentalTermService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Service("RentalTermServiceImpl")
 public class RentalTermServiceImpl implements RentalTermService {
+    @Autowired
 
     private static RentalTermServiceImpl service = null;
     private RentalTermRepository repository;

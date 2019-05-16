@@ -2,10 +2,12 @@ package com.CarRental.repositories.impl;
 
 import com.CarRental.domain.RentalTerm;
 import com.CarRental.repositories.RentalTermRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Repository
 public class RentalTermRepositoryImpl implements RentalTermRepository {
 
     private static RentalTermRepositoryImpl repository = null;
