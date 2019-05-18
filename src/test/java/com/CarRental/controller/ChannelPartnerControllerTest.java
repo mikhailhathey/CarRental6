@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.ChannelPartner;
 import com.CarRental.factories.ChannelPartnerFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class ChannelPartnerControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetChannelPartnerById() {
         ChannelPartner channelPartner = restTemplate.getForObject(baseURL + "/channelPartner/1", ChannelPartner.class);
         System.out.println(channelPartner.getChannelPartnerId());
         assertNotNull(channelPartner);
     }
 
-    @Ignore
+    @Test
     public void testCreateChannelPartner() {
         ChannelPartner channelPartner = ChannelPartnerFactory.buildChannelPartner("1234", "Microsoft", "John", "john@microsoft.com");
         ResponseEntity<ChannelPartner> postResponse = restTemplate.postForEntity(baseURL + "/create", channelPartner, ChannelPartner.class);
@@ -48,7 +47,7 @@ public class ChannelPartnerControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateChannelPartner() {
         int id = 1;
         ChannelPartner channelPartner = restTemplate.getForObject(baseURL + "/channelPartner/" + id, ChannelPartner.class);
@@ -58,7 +57,7 @@ public class ChannelPartnerControllerTest {
         assertNotNull(updatedChannelPartner);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         ChannelPartner channelPartner = restTemplate.getForObject(baseURL + "/channelPartner/" + id, ChannelPartner.class);

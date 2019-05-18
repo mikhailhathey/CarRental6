@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Admin;
 import com.CarRental.factories.AdminFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class AdminControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetAdminById() {
         Admin admin = restTemplate.getForObject(baseURL + "/admin/1", Admin.class);
         System.out.println(admin.getAdminId());
         assertNotNull(admin);
     }
 
-    @Ignore
+    @Test
     public void testCreateAdmin() {
         Admin admin = AdminFactory.buildAdmin("123", "AdminUser", "Password123");
         ResponseEntity<Admin> postResponse = restTemplate.postForEntity(baseURL + "/create", admin, Admin.class);
@@ -48,7 +47,7 @@ public class AdminControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateAdmin() {
         int id = 1;
         Admin admin = restTemplate.getForObject(baseURL + "/admin/" + id, Admin.class);
@@ -58,7 +57,7 @@ public class AdminControllerTest {
         assertNotNull(updatedAdmin);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Admin admin = restTemplate.getForObject(baseURL + "/admin/" + id, Admin.class);

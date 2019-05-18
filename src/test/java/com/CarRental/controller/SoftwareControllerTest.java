@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Software;
 import com.CarRental.factories.SoftwareFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class SoftwareControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetSoftwareById() {
         Software software = restTemplate.getForObject(baseURL + "/software/1", Software.class);
         System.out.println(software.getSoftwareId());
         assertNotNull(software);
     }
 
-    @Ignore
+    @Test
     public void testCreateSoftware() {
         Software software = SoftwareFactory.buildSoftware("769", "Pascal", "2.6", "3000");
         ResponseEntity<Software> postResponse = restTemplate.postForEntity(baseURL + "/create", software, Software.class);
@@ -48,7 +47,7 @@ public class SoftwareControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateSoftware() {
         int id = 1;
         Software software = restTemplate.getForObject(baseURL + "/software/" + id, Software.class);
@@ -58,7 +57,7 @@ public class SoftwareControllerTest {
         assertNotNull(updatedSoftware);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Software software = restTemplate.getForObject(baseURL + "/software/" + id, Software.class);

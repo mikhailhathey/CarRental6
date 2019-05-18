@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Hardware;
 import com.CarRental.factories.HardwareFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class HardwareControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetHardwareById() {
         Hardware hardware = restTemplate.getForObject(baseURL + "/hardware/1", Hardware.class);
         System.out.println(hardware.getHardwareId());
         assertNotNull(hardware);
     }
 
-    @Ignore
+    @Test
     public void testCreateHardware() {
         Hardware hardware = HardwareFactory.buildHardware("456", "Laptop", "4500");
         ResponseEntity<Hardware> postResponse = restTemplate.postForEntity(baseURL + "/create", hardware, Hardware.class);
@@ -48,7 +47,7 @@ public class HardwareControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateHardware() {
         int id = 1;
         Hardware hardware = restTemplate.getForObject(baseURL + "/hardware/" + id, Hardware.class);
@@ -58,7 +57,7 @@ public class HardwareControllerTest {
         assertNotNull(updatedHardware);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Hardware hardware = restTemplate.getForObject(baseURL + "/hardware/" + id, Hardware.class);

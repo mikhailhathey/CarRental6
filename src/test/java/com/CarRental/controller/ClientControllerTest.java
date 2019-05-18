@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Client;
 import com.CarRental.factories.ClientFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class ClientControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetClientById() {
         Client client = restTemplate.getForObject(baseURL + "/client/1", Client.class);
         System.out.println(client.getClientId());
         assertNotNull(client);
     }
 
-    @Ignore
+    @Test
     public void testCreateClient() {
         Client client = ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Street Road");
         ResponseEntity<Client> postResponse = restTemplate.postForEntity(baseURL + "/create", client, Client.class);
@@ -48,7 +47,7 @@ public class ClientControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateClient() {
         int id = 1;
         Client client = restTemplate.getForObject(baseURL + "/client/" + id, Client.class);
@@ -58,7 +57,7 @@ public class ClientControllerTest {
         assertNotNull(updatedClient);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Client client = restTemplate.getForObject(baseURL + "/client/" + id, Client.class);

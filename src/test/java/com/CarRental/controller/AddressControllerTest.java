@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Address;
 import com.CarRental.factories.AddressFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class AddressControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetAddressById() {
         Address address = restTemplate.getForObject(baseURL + "/address/1", Address.class);
         System.out.println(address.getAddressId());
         assertNotNull(address);
     }
 
-    @Ignore
+    @Test
     public void testCreateAddress() {
         Address address = AddressFactory.buildAddress("123", "81", "Main Road", "Kenwyn", "7780", "Cape Town");
         ResponseEntity<Address> postResponse = restTemplate.postForEntity(baseURL + "/create", address, Address.class);
@@ -48,7 +47,7 @@ public class AddressControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateAddress() {
         int id = 1;
         Address address = restTemplate.getForObject(baseURL + "/address/" + id, Address.class);
@@ -58,7 +57,7 @@ public class AddressControllerTest {
         assertNotNull(updatedAddress);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Address address = restTemplate.getForObject(baseURL + "/address/" + id, Address.class);

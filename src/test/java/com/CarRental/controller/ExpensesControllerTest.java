@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Expenses;
 import com.CarRental.factories.ExpensesFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class ExpensesControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetExpensesById() {
         Expenses expenses = restTemplate.getForObject(baseURL + "/expenses/1", Expenses.class);
         System.out.println(expenses.getExpensesId());
         assertNotNull(expenses);
     }
 
-    @Ignore
+    @Test
     public void testCreateExpenses() {
         Expenses expenses = ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales");
         ResponseEntity<Expenses> postResponse = restTemplate.postForEntity(baseURL + "/create", expenses, Expenses.class);
@@ -48,7 +47,7 @@ public class ExpensesControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateExpenses() {
         int id = 1;
         Expenses expenses = restTemplate.getForObject(baseURL + "/expenses/" + id, Expenses.class);
@@ -58,7 +57,7 @@ public class ExpensesControllerTest {
         assertNotNull(updatedExpenses);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Expenses expenses = restTemplate.getForObject(baseURL + "/expenses/" + id, Expenses.class);

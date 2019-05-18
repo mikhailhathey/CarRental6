@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.StaffType;
 import com.CarRental.factories.StaffTypeFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class StaffTypeControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetStaffTypeById() {
         StaffType staffType = restTemplate.getForObject(baseURL + "/staffType/1", StaffType.class);
         System.out.println(staffType.getStaffTypeId());
         assertNotNull(staffType);
     }
 
-    @Ignore
+    @Test
     public void testCreateStaffType() {
         StaffType staffType = StaffTypeFactory.buildStaffType("765", "Customer Care", "200000");
         ResponseEntity<StaffType> postResponse = restTemplate.postForEntity(baseURL + "/create", staffType, StaffType.class);
@@ -48,7 +47,7 @@ public class StaffTypeControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateStaffType() {
         int id = 1;
         StaffType staffType = restTemplate.getForObject(baseURL + "/staffType/" + id, StaffType.class);
@@ -58,7 +57,7 @@ public class StaffTypeControllerTest {
         assertNotNull(updatedStaffType);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         StaffType staffType = restTemplate.getForObject(baseURL + "/staffType/" + id, StaffType.class);

@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Region;
 import com.CarRental.factories.RegionFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class RegionControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetRegionById() {
         Region region = restTemplate.getForObject(baseURL + "/region/1", Region.class);
         System.out.println(region.getRegionId());
         assertNotNull(region);
     }
 
-    @Ignore
+    @Test
     public void testCreateRegion() {
         Region region = RegionFactory.buildRegion("765", "Hatfield", "Pretoria");
         ResponseEntity<Region> postResponse = restTemplate.postForEntity(baseURL + "/create", region, Region.class);
@@ -48,7 +47,7 @@ public class RegionControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateRegion() {
         int id = 1;
         Region region = restTemplate.getForObject(baseURL + "/region/" + id, Region.class);
@@ -58,7 +57,7 @@ public class RegionControllerTest {
         assertNotNull(updatedRegion);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Region region = restTemplate.getForObject(baseURL + "/region/" + id, Region.class);

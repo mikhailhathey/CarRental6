@@ -2,7 +2,7 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Profit;
 import com.CarRental.factories.ProfitFactory;
-import org.junit.Ignore;
+import org.junit.Test;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +33,14 @@ public class ProfitControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetProfitById() {
         Profit profit = restTemplate.getForObject(baseURL + "/profit/1", Profit.class);
         System.out.println(profit.getProfitId());
         assertNotNull(profit);
     }
 
-    @Ignore
+    @Test
     public void testCreateProfit() {
         Profit profit = ProfitFactory.buildProfit("789", "100000", "120000");
         ResponseEntity<Profit> postResponse = restTemplate.postForEntity(baseURL + "/create", profit, Profit.class);
@@ -48,7 +48,7 @@ public class ProfitControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateProfit() {
         int id = 1;
         Profit profit = restTemplate.getForObject(baseURL + "/profit/" + id, Profit.class);
@@ -58,7 +58,7 @@ public class ProfitControllerTest {
         assertNotNull(updatedProfit);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Profit profit = restTemplate.getForObject(baseURL + "/profit/" + id, Profit.class);

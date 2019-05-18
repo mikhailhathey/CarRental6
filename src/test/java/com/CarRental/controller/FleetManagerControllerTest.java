@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.FleetManager;
 import com.CarRental.factories.FleetManagerFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class FleetManagerControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetFleetManagerById() {
         FleetManager fleetManager = restTemplate.getForObject(baseURL + "/fleetManager/1", FleetManager.class);
         System.out.println(fleetManager.getFleetManagerId());
         assertNotNull(fleetManager);
     }
 
-    @Ignore
+    @Test
     public void testCreateFleetManager() {
         FleetManager fleetManager = FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth");
         ResponseEntity<FleetManager> postResponse = restTemplate.postForEntity(baseURL + "/create", fleetManager, FleetManager.class);
@@ -48,7 +47,7 @@ public class FleetManagerControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateFleetManager() {
         int id = 1;
         FleetManager fleetManager = restTemplate.getForObject(baseURL + "/fleetManager/" + id, FleetManager.class);
@@ -58,7 +57,7 @@ public class FleetManagerControllerTest {
         assertNotNull(updatedFleetManager);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         FleetManager fleetManager = restTemplate.getForObject(baseURL + "/fleetManager/" + id, FleetManager.class);

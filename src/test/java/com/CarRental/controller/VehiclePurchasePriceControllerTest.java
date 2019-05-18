@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.VehiclePurchasePrice;
 import com.CarRental.factories.VehiclePurchasePriceFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class VehiclePurchasePriceControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetVehiclePurchasePriceById() {
         VehiclePurchasePrice vehiclePurchasePrice = restTemplate.getForObject(baseURL + "/vehiclePurchasePrice/1", VehiclePurchasePrice.class);
         System.out.println(vehiclePurchasePrice.getVehiclePurchasePriceId());
         assertNotNull(vehiclePurchasePrice);
     }
 
-    @Ignore
+    @Test
     public void testCreateVehiclePurchasePrice() {
         VehiclePurchasePrice vehiclePurchasePrice = VehiclePurchasePriceFactory.buildVehiclePurchasePrice("452", "2016", "160000");
         ResponseEntity<VehiclePurchasePrice> postResponse = restTemplate.postForEntity(baseURL + "/create", vehiclePurchasePrice, VehiclePurchasePrice.class);
@@ -48,7 +47,7 @@ public class VehiclePurchasePriceControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateVehiclePurchasePrice() {
         int id = 1;
         VehiclePurchasePrice vehiclePurchasePrice = restTemplate.getForObject(baseURL + "/vehiclePurchasePrice/" + id, VehiclePurchasePrice.class);
@@ -58,7 +57,7 @@ public class VehiclePurchasePriceControllerTest {
         assertNotNull(updatedVehiclePurchasePrice);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         VehiclePurchasePrice vehiclePurchasePrice = restTemplate.getForObject(baseURL + "/vehiclePurchasePrice/" + id, VehiclePurchasePrice.class);

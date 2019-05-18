@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.BranchLocation;
 import com.CarRental.factories.BranchLocationFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class BranchLocationControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetBranchLocationById() {
         BranchLocation branchLocation = restTemplate.getForObject(baseURL + "/branchLocation/1", BranchLocation.class);
         System.out.println(branchLocation.getBranchLocationId());
         assertNotNull(branchLocation);
     }
 
-    @Ignore
+    @Test
     public void testCreateBranchLocation() {
         BranchLocation branchLocation = BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager");
         ResponseEntity<BranchLocation> postResponse = restTemplate.postForEntity(baseURL + "/create", branchLocation, BranchLocation.class);
@@ -48,7 +47,7 @@ public class BranchLocationControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateBranchLocation() {
         int id = 1;
         BranchLocation branchLocation = restTemplate.getForObject(baseURL + "/branchLocation/" + id, BranchLocation.class);
@@ -58,7 +57,7 @@ public class BranchLocationControllerTest {
         assertNotNull(updatedBranchLocation);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         BranchLocation branchLocation = restTemplate.getForObject(baseURL + "/branchLocation/" + id, BranchLocation.class);

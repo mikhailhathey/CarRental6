@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.RentalValue;
 import com.CarRental.factories.RentalValueFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class RentalValueControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetRentalValueById() {
         RentalValue rentalValue = restTemplate.getForObject(baseURL + "/rentalValue/1", RentalValue.class);
         System.out.println(rentalValue.getRentalValueId());
         assertNotNull(rentalValue);
     }
 
-    @Ignore
+    @Test
     public void testCreateRentalValue() {
         RentalValue rentalValue = RentalValueFactory.buildRentalValue("902", "Bus", "4000");
         ResponseEntity<RentalValue> postResponse = restTemplate.postForEntity(baseURL + "/create", rentalValue, RentalValue.class);
@@ -48,7 +47,7 @@ public class RentalValueControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateRentalValue() {
         int id = 1;
         RentalValue rentalValue = restTemplate.getForObject(baseURL + "/rentalValue/" + id, RentalValue.class);
@@ -58,7 +57,7 @@ public class RentalValueControllerTest {
         assertNotNull(updatedRentalValue);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         RentalValue rentalValue = restTemplate.getForObject(baseURL + "/rentalValue/" + id, RentalValue.class);

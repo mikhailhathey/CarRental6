@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Infrastructure;
 import com.CarRental.factories.InfrastructureFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class InfrastructureControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetInfrastructureById() {
         Infrastructure infrastructure = restTemplate.getForObject(baseURL + "/infrastructure/1", Infrastructure.class);
         System.out.println(infrastructure.getInfrastructureId());
         assertNotNull(infrastructure);
     }
 
-    @Ignore
+    @Test
     public void testCreateInfrastructure() {
         Infrastructure infrastructure = InfrastructureFactory.buildInfrastructure("789", "Dimension Data", "Network Servers", "50000");
         ResponseEntity<Infrastructure> postResponse = restTemplate.postForEntity(baseURL + "/create", infrastructure, Infrastructure.class);
@@ -48,7 +47,7 @@ public class InfrastructureControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdateInfrastructure() {
         int id = 1;
         Infrastructure infrastructure = restTemplate.getForObject(baseURL + "/infrastructure/" + id, Infrastructure.class);
@@ -58,7 +57,7 @@ public class InfrastructureControllerTest {
         assertNotNull(updatedInfrastructure);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Infrastructure infrastructure = restTemplate.getForObject(baseURL + "/infrastructure/" + id, Infrastructure.class);

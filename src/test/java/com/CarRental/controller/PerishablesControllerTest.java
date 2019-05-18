@@ -2,7 +2,6 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Perishables;
 import com.CarRental.factories.PerishablesFactory;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +32,14 @@ public class PerishablesControllerTest {
         assertNotNull(response.getBody());
     }
 
-    @Ignore
+    @Test
     public void testGetPerishablesById() {
         Perishables perishables = restTemplate.getForObject(baseURL + "/perishables/1", Perishables.class);
         System.out.println(perishables.getPerishablesId());
         assertNotNull(perishables);
     }
 
-    @Ignore
+    @Test
     public void testCreatePerishables() {
         Perishables perishables = PerishablesFactory.buildPerishables("567", "Bread", "12/05/2019", "5");
         ResponseEntity<Perishables> postResponse = restTemplate.postForEntity(baseURL + "/create", perishables, Perishables.class);
@@ -48,7 +47,7 @@ public class PerishablesControllerTest {
         assertNotNull(postResponse.getBody());
     }
 
-    @Ignore
+    @Test
     public void testUpdatePerishables() {
         int id = 1;
         Perishables perishables = restTemplate.getForObject(baseURL + "/perishables/" + id, Perishables.class);
@@ -58,7 +57,7 @@ public class PerishablesControllerTest {
         assertNotNull(updatedPerishables);
     }
 
-    @Ignore
+    @Test
     public void testDeleteEmployee() {
         int id = 2;
         Perishables perishables = restTemplate.getForObject(baseURL + "/perishables/" + id, Perishables.class);
