@@ -61,7 +61,7 @@ public class AddressServiceImplTest {
 
     @Test
     public void d_getAll() {
-        Set<Address> addresss = this.repository.getAll();
-        System.out.println("In getall, all = " + addresss);
+        Set<Address> address = this.repository.getAll();
+        System.out.println("In getall, all = " + address);
     }
 }
