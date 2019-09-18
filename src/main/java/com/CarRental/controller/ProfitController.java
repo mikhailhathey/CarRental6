@@ -15,13 +15,13 @@ public class ProfitController {
     @Qualifier("ProfitServiceImpl")
     private ProfitService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Profit create(Profit profit) {
         return service.create(profit);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Profit update(Profit profit) {
         return service.update(profit);
@@ -40,7 +40,7 @@ public class ProfitController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Profit> getAll() {
         return service.getAll();

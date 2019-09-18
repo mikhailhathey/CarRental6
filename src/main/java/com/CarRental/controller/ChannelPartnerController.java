@@ -15,13 +15,13 @@ public class ChannelPartnerController {
     @Qualifier("ChannelPartnerServiceImpl")
     private ChannelPartnerService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public ChannelPartner create(ChannelPartner channelPartner) {
         return service.create(channelPartner);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public ChannelPartner update(ChannelPartner channelPartner) {
         return service.update(channelPartner);
@@ -40,7 +40,7 @@ public class ChannelPartnerController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<ChannelPartner> getAll() {
         return service.getAll();

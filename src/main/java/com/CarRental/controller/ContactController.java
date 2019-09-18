@@ -15,13 +15,13 @@ public class ContactController {
     @Qualifier("ContactServiceImpl")
     private ContactService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Contact create(Contact contact) {
         return service.create(contact);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Contact update(Contact contact) {
         return service.update(contact);
@@ -40,7 +40,7 @@ public class ContactController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Contact> getAll() {
         return service.getAll();

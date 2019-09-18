@@ -15,13 +15,13 @@ public class AdminController {
     @Qualifier("AdminServiceImpl")
     private AdminService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Admin create(Admin admin) {
         return service.create(admin);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Admin update(Admin admin) {
         return service.update(admin);
@@ -40,7 +40,7 @@ public class AdminController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Admin> getAll() {
         return service.getAll();

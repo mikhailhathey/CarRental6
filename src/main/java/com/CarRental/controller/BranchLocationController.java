@@ -15,13 +15,13 @@ public class BranchLocationController {
     @Qualifier("BranchLocationServiceImpl")
     private BranchLocationService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public BranchLocation create(BranchLocation branchLocation) {
         return service.create(branchLocation);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public BranchLocation update(BranchLocation branchLocation) {
         return service.update(branchLocation);
@@ -40,7 +40,7 @@ public class BranchLocationController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<BranchLocation> getAll() {
         return service.getAll();

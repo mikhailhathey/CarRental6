@@ -15,13 +15,13 @@ public class ExpensesController {
     @Qualifier("ExpensesServiceImpl")
     private ExpensesService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Expenses create(Expenses expenses) {
         return service.create(expenses);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Expenses update(Expenses expenses) {
         return service.update(expenses);
@@ -40,7 +40,7 @@ public class ExpensesController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Expenses> getAll() {
         return service.getAll();

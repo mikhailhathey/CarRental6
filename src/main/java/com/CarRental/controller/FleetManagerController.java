@@ -15,13 +15,13 @@ public class FleetManagerController {
     @Qualifier("FleetManagerServiceImpl")
     private FleetManagerService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public FleetManager create(FleetManager fleetManager) {
         return service.create(fleetManager);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public FleetManager update(FleetManager fleetManager) {
         return service.update(fleetManager);
@@ -40,7 +40,7 @@ public class FleetManagerController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<FleetManager> getAll() {
         return service.getAll();

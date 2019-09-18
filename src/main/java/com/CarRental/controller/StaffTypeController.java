@@ -15,13 +15,13 @@ public class StaffTypeController {
     @Qualifier("StaffTypeServiceImpl")
     private StaffTypeService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public StaffType create(StaffType staffType) {
         return service.create(staffType);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public StaffType update(StaffType staffType) {
         return service.update(staffType);
@@ -40,7 +40,7 @@ public class StaffTypeController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<StaffType> getAll() {
         return service.getAll();

@@ -55,6 +55,10 @@ public class AddressRepositoryImpl implements AddressRepository {
         return null;
     }
 
+    @Override
+    public Address retrieveByDesc(String addressDesc) {
+        return this.address.stream().filter(address -> address.getHouseNumber().equalsIgnoreCase(addressDesc)).findAny().orElse(null);
+    }
 
     public Set<Address> getAll(){
         return this.address;

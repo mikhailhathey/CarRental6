@@ -15,13 +15,13 @@ public class ClientController {
     @Qualifier("ClientServiceImpl")
     private ClientService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Client create(Client client) {
         return service.create(client);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Client update(Client client) {
         return service.update(client);
@@ -40,7 +40,7 @@ public class ClientController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Client> getAll() {
         return service.getAll();

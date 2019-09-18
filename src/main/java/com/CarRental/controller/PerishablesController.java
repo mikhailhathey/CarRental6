@@ -15,13 +15,13 @@ public class PerishablesController {
     @Qualifier("PerishablesServiceImpl")
     private PerishablesService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Perishables create(Perishables perishables) {
         return service.create(perishables);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Perishables update(Perishables perishables) {
         return service.update(perishables);
@@ -40,7 +40,7 @@ public class PerishablesController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Perishables> getAll() {
         return service.getAll();

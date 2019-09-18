@@ -15,13 +15,13 @@ public class SoftwareController {
     @Qualifier("SoftwareServiceImpl")
     private SoftwareService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Software create(Software software) {
         return service.create(software);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Software update(Software software) {
         return service.update(software);
@@ -40,7 +40,7 @@ public class SoftwareController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Software> getAll() {
         return service.getAll();

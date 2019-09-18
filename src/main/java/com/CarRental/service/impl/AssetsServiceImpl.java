@@ -14,10 +14,10 @@ public class AssetsServiceImpl implements AssetsService {
     @Autowired
 
     private static AssetsServiceImpl service = null;
-    private AssetsRepository repository;
+    private AssetsRepository assetsRepository;
 
     private AssetsServiceImpl() {
-        this.repository = AssetsRepositoryImpl.getRepository();
+        this.assetsRepository = AssetsRepositoryImpl.getRepository();
     }
 
     public static AssetsServiceImpl getService(){
@@ -27,26 +27,31 @@ public class AssetsServiceImpl implements AssetsService {
 
     @Override
     public Assets create(Assets assets) {
-        return this.repository.create(assets);
+        return this.assetsRepository.create(assets);
     }
 
     @Override
     public Assets update(Assets assets) {
-        return this.repository.update(assets);
+        return this.assetsRepository.update(assets);
     }
 
     @Override
     public void delete(String s) {
-        this.repository.delete(s);
+        this.assetsRepository.delete(s);
     }
 
     @Override
     public Assets read(String s) {
-        return this.repository.read(s);
+        return this.assetsRepository.read(s);
+    }
+
+    @Override
+    public Assets retrieveByDesc(String assetsDesc) {
+        return this.assetsRepository.retrieveByDesc(assetsDesc);
     }
 
     @Override
     public Set<Assets> getAll() {
-        return this.repository.getAll();
+        return this.assetsRepository.getAll();
     }
 }

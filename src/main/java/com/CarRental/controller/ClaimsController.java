@@ -15,13 +15,13 @@ public class ClaimsController {
     @Qualifier("ClaimsServiceImpl")
     private ClaimsService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Claims create(Claims claims) {
         return service.create(claims);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Claims update(Claims claims) {
         return service.update(claims);
@@ -40,7 +40,7 @@ public class ClaimsController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Claims> getAll() {
         return service.getAll();

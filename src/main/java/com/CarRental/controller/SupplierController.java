@@ -15,13 +15,13 @@ public class SupplierController {
     @Qualifier("SupplierServiceImpl")
     private SupplierService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Supplier create(Supplier supplier) {
         return service.create(supplier);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Supplier update(Supplier supplier) {
         return service.update(supplier);
@@ -40,7 +40,7 @@ public class SupplierController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Supplier> getAll() {
         return service.getAll();

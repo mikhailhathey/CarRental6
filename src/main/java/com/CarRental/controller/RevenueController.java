@@ -15,13 +15,13 @@ public class RevenueController {
     @Qualifier("RevenueServiceImpl")
     private RevenueService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Revenue create(Revenue revenue) {
         return service.create(revenue);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Revenue update(Revenue revenue) {
         return service.update(revenue);
@@ -40,7 +40,7 @@ public class RevenueController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Revenue> getAll() {
         return service.getAll();

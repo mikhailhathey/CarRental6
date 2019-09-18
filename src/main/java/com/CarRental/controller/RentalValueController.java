@@ -15,13 +15,13 @@ public class RentalValueController {
     @Qualifier("RentalValueServiceImpl")
     private RentalValueService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public RentalValue create(RentalValue rentalValue) {
         return service.create(rentalValue);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public RentalValue update(RentalValue rentalValue) {
         return service.update(rentalValue);
@@ -40,7 +40,7 @@ public class RentalValueController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<RentalValue> getAll() {
         return service.getAll();

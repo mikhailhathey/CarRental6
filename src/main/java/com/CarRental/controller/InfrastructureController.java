@@ -15,13 +15,13 @@ public class InfrastructureController {
     @Qualifier("InfrastructureServiceImpl")
     private InfrastructureService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Infrastructure create(Infrastructure infrastructure) {
         return service.create(infrastructure);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Infrastructure update(Infrastructure infrastructure) {
         return service.update(infrastructure);
@@ -40,7 +40,7 @@ public class InfrastructureController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Infrastructure> getAll() {
         return service.getAll();

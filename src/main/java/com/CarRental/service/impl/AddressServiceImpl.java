@@ -12,12 +12,12 @@ import java.util.Set;
 @Service("AddressServiceImpl")
 public class AddressServiceImpl implements AddressService {
     @Autowired
-    private AddressRepository repository;
+    private AddressRepository addressRepository;
 
     private static AddressServiceImpl service = null;
 
     private AddressServiceImpl() {
-        this.repository = AddressRepositoryImpl.getRepository();
+        this.addressRepository = AddressRepositoryImpl.getRepository();
     }
 
     public static AddressServiceImpl getService(){
@@ -27,26 +27,31 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public Address create(Address address) {
-        return this.repository.create(address);
+        return this.addressRepository.create(address);
     }
 
     @Override
     public Address update(Address address) {
-        return this.repository.update(address);
+        return this.addressRepository.update(address);
     }
 
     @Override
     public void delete(String s) {
-        this.repository.delete(s);
+        this.addressRepository.delete(s);
     }
 
     @Override
     public Address read(String s) {
-        return this.repository.read(s);
+        return this.addressRepository.read(s);
+    }
+
+    @Override
+    public Address retrieveByDesc(String addressDesc) {
+        return this.addressRepository.retrieveByDesc(addressDesc);
     }
 
     @Override
     public Set<Address> getAll() {
-        return this.repository.getAll();
+        return this.addressRepository.getAll();
     }
 }

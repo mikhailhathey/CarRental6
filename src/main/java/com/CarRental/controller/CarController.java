@@ -15,13 +15,13 @@ public class CarController {
     @Qualifier("CarServiceImpl")
     private CarService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Car create(Car car) {
         return service.create(car);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Car update(Car car) {
         return service.update(car);
@@ -40,7 +40,7 @@ public class CarController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Car> getAll() {
         return service.getAll();

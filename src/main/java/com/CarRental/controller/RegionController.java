@@ -15,13 +15,13 @@ public class RegionController {
     @Qualifier("RegionServiceImpl")
     private RegionService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Region create(Region region) {
         return service.create(region);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Region update(Region region) {
         return service.update(region);
@@ -40,7 +40,7 @@ public class RegionController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Region> getAll() {
         return service.getAll();

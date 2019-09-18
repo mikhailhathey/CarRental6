@@ -15,13 +15,13 @@ public class VehicleSellingPriceController {
     @Qualifier("VehicleSellingPriceServiceImpl")
     private VehicleSellingPriceService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public VehicleSellingPrice create(VehicleSellingPrice vehicleSellingPrice) {
         return service.create(vehicleSellingPrice);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public VehicleSellingPrice update(VehicleSellingPrice vehicleSellingPrice) {
         return service.update(vehicleSellingPrice);
@@ -40,7 +40,7 @@ public class VehicleSellingPriceController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<VehicleSellingPrice> getAll() {
         return service.getAll();

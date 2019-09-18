@@ -11,8 +11,7 @@ import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @RunWith(SpringRunner.class)
@@ -20,53 +19,81 @@ public class AssetsControllerTest {
     @Autowired
 
     private TestRestTemplate restTemplate;
-    private String baseURL="http://localhost:8080/assets";
-
+    private static final String BASE_URL = "http://localhost:8080/assets/lookup/assets";
 
     @Test
     public void testGetAllAssets() {
         HttpHeaders headers = new HttpHeaders();
 
         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-        ResponseEntity<String> response = restTemplate.exchange(baseURL + "/read/all", HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> response = restTemplate.exchange(BASE_URL + "/getAll", HttpMethod.GET, entity, String.class);
         assertNotNull(response.getBody());
     }
 
     @Test
     public void testGetAssetsById() {
-        Assets assets = restTemplate.getForObject(baseURL + "/assets/1", Assets.class);
+        Assets assets = restTemplate.getForObject(BASE_URL + "/assets/1", Assets.class);
         System.out.println(assets.getAssetsId());
         assertNotNull(assets);
     }
 
+
     @Test
-    public void testCreateAssets() {
-        Assets assets = AssetsFactory.buildAssets("123", "DSLR Camera", "Cupboard", "Camera");
-        ResponseEntity<Assets> postResponse = restTemplate.postForEntity(baseURL + "/create", assets, Assets.class);
-        assertNotNull(postResponse);
-        assertNotNull(postResponse.getBody());
+    public void createAssets() {
+        Assets assets = AssetsFactory.buildAssets("456", "Volkswagen Polo", "Cape Town CBD", "Vehicle");
+        ResponseEntity<Assets> result = restTemplate.withBasicAuth("admin", "admin")
+                .postForEntity(BASE_URL + "/create/newAssets", assets, Assets.class);
+        System.out.println(result.getBody());
+        assertEquals(HttpStatus.OK, result.getStatusCode());
+        assertNotNull(result);
+        assertNotNull(result.getBody());
+    }
+
+    @Test
+    public void createUserAssets() {
+        ResponseEntity<Assets> result = null;
+        try{
+            Assets assets = AssetsFactory.buildAssets("456", "Volkswagen Polo", "Cape Town CBD", "Vehicle");
+            result = restTemplate.withBasicAuth("user", "admin")
+                    .postForEntity(BASE_URL + "/create/newAssets", assets, Assets.class);
+
+        }catch (Exception e){
+            System.out.println("Error from server : " + e.getMessage());
+
+            assertNull("Successfully validated user not authenticated",result);
+        }
+        assertNull("Failed to validate user is not authenticated",result);
     }
 
     @Test
     public void testUpdateAssets() {
         int id = 1;
-        Assets assets = restTemplate.getForObject(baseURL + "/assets/" + id, Assets.class);
+        Assets assets = restTemplate.getForObject(BASE_URL + "/assets/" + id, Assets.class);
 
-        restTemplate.put(baseURL + "/assets/" + id, assets);
-        Assets updatedAssets = restTemplate.getForObject(baseURL + "/Assets/" + id, Assets.class);
+        restTemplate.put(BASE_URL + "/assets/" + id, assets);
+        Assets updatedAssets = restTemplate.getForObject(BASE_URL + "/assets/" + id, Assets.class);
         assertNotNull(updatedAssets);
     }
 
     @Test
     public void testDeleteEmployee() {
         int id = 2;
-        Assets assets = restTemplate.getForObject(baseURL + "/assets/" + id, Assets.class);
+        Assets assets = restTemplate.getForObject(BASE_URL + "/assets/" + id, Assets.class);
         assertNotNull(assets);
-        restTemplate.delete(baseURL + "/assets/" + id);
+        restTemplate.delete(BASE_URL + "/assets/" + id);
         try {
-            assets = restTemplate.getForObject(baseURL + "/assets/" + id, Assets.class);
+            assets = restTemplate.getForObject(BASE_URL + "/assets/" + id, Assets.class);
         } catch (final HttpClientErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
         }
+    }
+
+
+    @Test
+    public void getAll() {
+        ResponseEntity<String> result = restTemplate.withBasicAuth("admin", "admin")
+                .getForEntity(BASE_URL + "/getall", String.class);
+        System.out.println(result.getBody());
+        assertEquals(HttpStatus.OK, result.getStatusCode());
     }
 }

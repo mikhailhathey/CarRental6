@@ -54,6 +54,10 @@ public class AssetsRepositoryImpl implements AssetsRepository {
         return null;
     }
 
+    @Override
+    public Assets retrieveByDesc(String assetsDesc) {
+        return this.assets.stream().filter(assets -> assets.getAssetsId().equalsIgnoreCase(assetsDesc)).findAny().orElse(null);
+    }
 
     public Set<Assets> getAll(){
         return this.assets;

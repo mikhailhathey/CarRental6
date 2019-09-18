@@ -15,13 +15,13 @@ public class HardwareController {
     @Qualifier("HardwareServiceImpl")
     private HardwareService service;
 
-    @PostMapping("/create")
+    @GetMapping("/create")
     @ResponseBody
     public Hardware create(Hardware hardware) {
         return service.create(hardware);
     }
 
-    @PostMapping("/update")
+    @GetMapping("/update")
     @ResponseBody
     public Hardware update(Hardware hardware) {
         return service.update(hardware);
@@ -40,7 +40,7 @@ public class HardwareController {
         return service.read(id);
     }
 
-    @GetMapping("/read/all")
+    @GetMapping("/getAll")
     @ResponseBody
     public Set<Hardware> getAll() {
         return service.getAll();
