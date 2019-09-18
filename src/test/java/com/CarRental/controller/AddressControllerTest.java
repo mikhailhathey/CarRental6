@@ -55,6 +55,7 @@ public class AddressControllerTest {
         assertEquals(HttpStatus.OK, result.getStatusCode());
         assertNotNull(result);
         assertNotNull(result.getBody());
+        System.out.println("Successfully validated user authenticated");
     }
 
     @Test
