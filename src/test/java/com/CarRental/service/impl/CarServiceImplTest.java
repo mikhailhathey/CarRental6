@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Car;
 import com.CarRental.factories.CarFactory;
-import com.CarRental.repositories.impl.CarRepositoryImpl;
+import com.CarRental.service.CarService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class CarServiceImplTest {
+  @Autowired
+  @Qualifier("CarServiceImpl")
+  private CarService carService;
+  private Car car;
+  private Set<Car> cars = new HashSet<>();
 
-    private CarRepositoryImpl repository;
-    private Car car;
+  @Before
+  public void setUp() {
+      car = carService.create(CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016"));
+      cars.add(car);
+  }
 
-    private Car getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Car createCar = carService.create(CarFactory.buildCar(
+              "123456", "13443975", "Ford", "Fiesta", "2016"));
+      cars.add(createCar);
+      Assert.assertEquals(createCar, carService.read(createCar.getCarId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = CarRepositoryImpl.getRepository();
-        this.car = CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016");
-    }
+  @Test
+  public void read() {
+      Car readTestCar = carService.create(CarFactory.buildCar(
+              "123456", "13443975", "Ford", "Fiesta", "2016"));
+      Assert.assertEquals(readTestCar, carService.read(readTestCar.getCarId()));
+  }
 
-    @Test
-    public void a_create() {
-        Car created = this.repository.create(this.car);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.car);
-    }
+  @Test
+  public void update() {
+      String newCarName = "Test";
+      Car updateCar = carService.update(new Car.Builder().copy(car).modelName(newCarName).build());
+      cars.add(updateCar);
+      Assert.assertEquals(updateCar, carService.read(updateCar.getCarId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newCarName = "Application Development Theory 3";
-        Car updated = new Car.Builder().copy(getSaved()).carId(newCarName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newCarName, updated.getCarId());
-    }
+  @Test
+  public void delete() {
+      cars.addAll(carService.getAll());
+      Car deleteCar = carService.create(CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016"));
+      cars.add(deleteCar);
+      cars.remove(deleteCar);
+      carService.delete(deleteCar.getCarId());
+      Assert.assertEquals(cars.size(), carService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Car saved = getSaved();
-        this.repository.delete(saved.getCarId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Car saved = getSaved();
-        Car read = this.repository.read(saved.getCarId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Car> cars = this.repository.getAll();
-        System.out.println("In getall, all = " + cars);
-    }
+  @Test
+  public void getAll() {
+      List<Car> carSet = carService.getAll();
+      Assert.assertEquals(carSet.size(), carService.getAll().size());
+  }
 }
+//"123456", "13443975", "Ford", "Fiesta", "2016"

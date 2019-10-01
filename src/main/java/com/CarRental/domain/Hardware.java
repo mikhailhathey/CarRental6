@@ -1,10 +1,19 @@
 package com.CarRental.domain;
 
-public class Hardware {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Hardware implements Comparable<Hardware>{
+
+    @Id
     private String hardwareId;
     private String hardwareName;
     private String hardwarePrice;
+
+    private Hardware(){
+    }
 
     public String getHardwareId() {
         return hardwareId;
@@ -30,14 +39,37 @@ public class Hardware {
         this.hardwarePrice = hardwarePrice;
     }
 
-    private Hardware(){
-
-    }
-
     public Hardware(Builder builder) {
         this.hardwareId = builder.hardwareId;
         this.hardwareName = builder.hardwareName;
         this.hardwarePrice = builder.hardwarePrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Hardware)) return false;
+        Hardware hardware = (Hardware) o;
+        return getHardwareId().equals(hardware.getHardwareId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getHardwareId());
+    }
+
+    @Override
+    public String toString() {
+        return "Hardware{" +
+                "hardwareId='" + hardwareId + '\'' +
+                ", hardwareName='" + hardwareName + '\'' +
+                ", hardwarePrice='" + hardwarePrice + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Hardware hardware) {
+        return this.hardwareId.compareTo(hardware.hardwareId);
     }
 
     public static class Builder{

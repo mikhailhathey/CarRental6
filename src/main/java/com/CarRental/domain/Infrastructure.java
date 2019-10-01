@@ -1,11 +1,20 @@
 package com.CarRental.domain;
 
-public class Infrastructure {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Infrastructure implements Comparable<Infrastructure>{
+
+    @Id
     private String infrastructureId;
     private String infrastructureVendor;
     private String infrastructureName;
     private String infrastructureCost;
+
+    private Infrastructure(){
+    }
 
     public String getInfrastructureId() {
         return infrastructureId;
@@ -39,15 +48,39 @@ public class Infrastructure {
         this.infrastructureCost = infrastructureCost;
     }
 
-    private Infrastructure(){
-
-    }
-
     public Infrastructure(Builder builder) {
         this.infrastructureId = builder.infrastructureId;
         this.infrastructureVendor = builder.infrastructureVendor;
         this.infrastructureName = builder.infrastructureName;
         this.infrastructureCost = builder.infrastructureCost;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Infrastructure)) return false;
+        Infrastructure infrastructure = (Infrastructure) o;
+        return getInfrastructureId().equals(infrastructure.getInfrastructureId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getInfrastructureId());
+    }
+
+    @Override
+    public String toString() {
+        return "Infrastructure{" +
+                "infrastructureId='" + infrastructureId + '\'' +
+                ", infrastructureVendor='" + infrastructureVendor + '\'' +
+                ", infrastructureName='" + infrastructureName + '\'' +
+                ", infrastructureCost='" + infrastructureCost + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Infrastructure infrastructure) {
+        return this.infrastructureId.compareTo(infrastructure.infrastructureId);
     }
 
     public static class Builder{

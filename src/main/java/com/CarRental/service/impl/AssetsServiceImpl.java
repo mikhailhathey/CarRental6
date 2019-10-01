@@ -2,56 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Assets;
 import com.CarRental.repositories.AssetsRepository;
-import com.CarRental.repositories.impl.AssetsRepositoryImpl;
 import com.CarRental.service.AssetsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("AssetsServiceImpl")
 public class AssetsServiceImpl implements AssetsService {
-    @Autowired
 
-    private static AssetsServiceImpl service = null;
+    @Autowired
     private AssetsRepository assetsRepository;
 
-    private AssetsServiceImpl() {
-        this.assetsRepository = AssetsRepositoryImpl.getRepository();
-    }
-
-    public static AssetsServiceImpl getService(){
-        if (service == null) service = new AssetsServiceImpl();
-        return service;
+    @Override
+    public List<Assets> getAll() {
+        return this.assetsRepository.findAll();
     }
 
     @Override
     public Assets create(Assets assets) {
-        return this.assetsRepository.create(assets);
+        return this.assetsRepository.save(assets);
+    }
+
+    @Override
+    public Assets read(String assetsId) {
+        Optional<Assets> byId = this.assetsRepository.findById(assetsId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public Assets update(Assets assets) {
-        return this.assetsRepository.update(assets);
+        return this.assetsRepository.save(assets);
     }
 
     @Override
-    public void delete(String s) {
-        this.assetsRepository.delete(s);
-    }
-
-    @Override
-    public Assets read(String s) {
-        return this.assetsRepository.read(s);
-    }
-
-    @Override
-    public Assets retrieveByDesc(String assetsDesc) {
-        return this.assetsRepository.retrieveByDesc(assetsDesc);
-    }
-
-    @Override
-    public Set<Assets> getAll() {
-        return this.assetsRepository.getAll();
+    public void delete(String assetsId) {
+        this.assetsRepository.deleteById(assetsId);
     }
 }

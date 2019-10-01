@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.RentalValue;
 import com.CarRental.factories.RentalValueFactory;
-import com.CarRental.repositories.impl.RentalValueRepositoryImpl;
+import com.CarRental.service.RentalValueService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class RentalValueServiceImplTest {
+  @Autowired
+  @Qualifier("RentalValueServiceImpl")
+  private RentalValueService rentalValueService;
+  private RentalValue rentalValue;
+  private Set<RentalValue> rentalValues = new HashSet<>();
 
-    private RentalValueRepositoryImpl repository;
-    private RentalValue rentalValue;
+  @Before
+  public void setUp() {
+      rentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue("902", "Bus", "4000"));
+      rentalValues.add(rentalValue);
+  }
 
-    private RentalValue getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      RentalValue createRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue(
+              "902", "Bus", "4000"));
+      rentalValues.add(createRentalValue);
+      Assert.assertEquals(createRentalValue, rentalValueService.read(createRentalValue.getRentalValueId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = RentalValueRepositoryImpl.getRepository();
-        this.rentalValue = RentalValueFactory.buildRentalValue("902", "Bus", "4000");
-    }
+  @Test
+  public void read() {
+      RentalValue readTestRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue(
+              "902", "Bus", "4000"));
+      Assert.assertEquals(readTestRentalValue, rentalValueService.read(readTestRentalValue.getRentalValueId()));
+  }
 
-    @Test
-    public void a_create() {
-        RentalValue created = this.repository.create(this.rentalValue);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.rentalValue);
-    }
+  @Test
+  public void update() {
+      String newRentalValueAmt = "Test";
+      RentalValue updateRentalValue = rentalValueService.update(new RentalValue.Builder().copy(rentalValue).rentalValueAmount(newRentalValueAmt).build());
+      rentalValues.add(updateRentalValue);
+      Assert.assertEquals(updateRentalValue, rentalValueService.read(updateRentalValue.getRentalValueId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newRentalValueName = "Application Development Theory 3";
-        RentalValue updated = new RentalValue.Builder().copy(getSaved()).rentalValueId(newRentalValueName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newRentalValueName, updated.getRentalValueId());
-    }
+  @Test
+  public void delete() {
+      rentalValues.addAll(rentalValueService.getAll());
+      RentalValue deleteRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue("902", "Bus", "4000"));
+      rentalValues.add(deleteRentalValue);
+      rentalValues.remove(deleteRentalValue);
+      rentalValueService.delete(deleteRentalValue.getRentalValueId());
+      Assert.assertEquals(rentalValues.size(), rentalValueService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        RentalValue saved = getSaved();
-        this.repository.delete(saved.getRentalValueId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        RentalValue saved = getSaved();
-        RentalValue read = this.repository.read(saved.getRentalValueId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<RentalValue> rentalValues = this.repository.getAll();
-        System.out.println("In getall, all = " + rentalValues);
-    }
+  @Test
+  public void getAll() {
+      List<RentalValue> rentalValueSet = rentalValueService.getAll();
+      Assert.assertEquals(rentalValueSet.size(), rentalValueService.getAll().size());
+  }
 }
+//"902", "Bus", "4000"

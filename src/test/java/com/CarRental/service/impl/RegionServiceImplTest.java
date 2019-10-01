@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Region;
 import com.CarRental.factories.RegionFactory;
-import com.CarRental.repositories.impl.RegionRepositoryImpl;
+import com.CarRental.service.RegionService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class RegionServiceImplTest {
+  @Autowired
+  @Qualifier("RegionServiceImpl")
+  private RegionService regionService;
+  private Region region;
+  private Set<Region> regions = new HashSet<>();
 
-    private RegionRepositoryImpl repository;
-    private Region region;
+  @Before
+  public void setUp() {
+      region = regionService.create(RegionFactory.buildRegion("765", "Hatfield", "Pretoria"));
+      regions.add(region);
+  }
 
-    private Region getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Region createRegion = regionService.create(RegionFactory.buildRegion(
+              "765", "Hatfield", "Pretoria"));
+      regions.add(createRegion);
+      Assert.assertEquals(createRegion, regionService.read(createRegion.getRegionId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = RegionRepositoryImpl.getRepository();
-        this.region = RegionFactory.buildRegion("765", "Hatfield", "Pretoria");
-    }
+  @Test
+  public void read() {
+      Region readTestRegion = regionService.create(RegionFactory.buildRegion(
+              "765", "Hatfield", "Pretoria"));
+      Assert.assertEquals(readTestRegion, regionService.read(readTestRegion.getRegionId()));
+  }
 
-    @Test
-    public void a_create() {
-        Region created = this.repository.create(this.region);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.region);
-    }
+  @Test
+  public void update() {
+      String newRegionName = "Test";
+      Region updateRegion = regionService.update(new Region.Builder().copy(region).regionName(newRegionName).build());
+      regions.add(updateRegion);
+      Assert.assertEquals(updateRegion, regionService.read(updateRegion.getRegionId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newRegionName = "Application Development Theory 3";
-        Region updated = new Region.Builder().copy(getSaved()).regionId(newRegionName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newRegionName, updated.getRegionId());
-    }
+  @Test
+  public void delete() {
+      regions.addAll(regionService.getAll());
+      Region deleteRegion = regionService.create(RegionFactory.buildRegion("765", "Hatfield", "Pretoria"));
+      regions.add(deleteRegion);
+      regions.remove(deleteRegion);
+      regionService.delete(deleteRegion.getRegionId());
+      Assert.assertEquals(regions.size(), regionService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Region saved = getSaved();
-        this.repository.delete(saved.getRegionId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Region saved = getSaved();
-        Region read = this.repository.read(saved.getRegionId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Region> regions = this.repository.getAll();
-        System.out.println("In getall, all = " + regions);
-    }
+  @Test
+  public void getAll() {
+      List<Region> regionSet = regionService.getAll();
+      Assert.assertEquals(regionSet.size(), regionService.getAll().size());
+  }
 }
+//"765", "Hatfield", "Pretoria"

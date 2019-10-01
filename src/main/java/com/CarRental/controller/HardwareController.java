@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Hardware;
 import com.CarRental.service.HardwareService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/hardware")
 public class HardwareController {
     @Autowired
-    @Qualifier("HardwareServiceImpl")
-    private HardwareService service;
+    private HardwareService hardwareService;
+    //@Qualifier("HardwareServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Hardware create(Hardware hardware) {
-        return service.create(hardware);
+    public Hardware create(@RequestBody Hardware hardware) {
+        return hardwareService.create(hardware);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Hardware update(Hardware hardware) {
-        return service.update(hardware);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Hardware update(@RequestBody Hardware hardware) {
+        return hardwareService.update(hardware);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Hardware read(@PathVariable String id) {
-        return service.read(id);
+        return hardwareService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Hardware> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        hardwareService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Hardware> getAll() {
+        return hardwareService.getAll();
     }
 
 }

@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.VehicleSellingPrice;
 
-import java.util.Set;
+import java.util.List;
 
-public interface VehicleSellingPriceService extends CrudService<VehicleSellingPrice, String>{
-    Set<VehicleSellingPrice> getAll();
+public interface VehicleSellingPriceService extends IService<VehicleSellingPrice, String>{
+    List<VehicleSellingPrice> getAll();
 }

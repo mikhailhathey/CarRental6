@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Expenses;
 import com.CarRental.factories.ExpensesFactory;
-import com.CarRental.repositories.impl.ExpensesRepositoryImpl;
+import com.CarRental.service.ExpensesService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class ExpensesServiceImplTest {
+  @Autowired
+  @Qualifier("ExpensesServiceImpl")
+  private ExpensesService expensesService;
+  private Expenses expenses;
+  private Set<Expenses> expensess = new HashSet<>();
 
-    private ExpensesRepositoryImpl repository;
-    private Expenses expenses;
+  @Before
+  public void setUp() {
+      expenses = expensesService.create(ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+      expensess.add(expenses);
+  }
 
-    private Expenses getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Expenses createExpenses = expensesService.create(ExpensesFactory.buildExpenses(
+              "123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+      expensess.add(createExpenses);
+      Assert.assertEquals(createExpenses, expensesService.read(createExpenses.getExpensesId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = ExpensesRepositoryImpl.getRepository();
-        this.expenses = ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales");
-    }
+  @Test
+  public void read() {
+      Expenses readTestExpenses = expensesService.create(ExpensesFactory.buildExpenses(
+              "123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+      Assert.assertEquals(readTestExpenses, expensesService.read(readTestExpenses.getExpensesId()));
+  }
 
-    @Test
-    public void a_create() {
-        Expenses created = this.repository.create(this.expenses);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.expenses);
-    }
+  @Test
+  public void update() {
+      String newExpenseContactName = "Test";
+      Expenses updateExpenses = expensesService.update(new Expenses.Builder().copy(expenses).expensesContact(newExpenseContactName).build());
+      expensess.add(updateExpenses);
+      Assert.assertEquals(updateExpenses, expensesService.read(updateExpenses.getExpensesId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newExpensesName = "Application Development Theory 3";
-        Expenses updated = new Expenses.Builder().copy(getSaved()).expensesId(newExpensesName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newExpensesName, updated.getExpensesId());
-    }
+  @Test
+  public void delete() {
+      expensess.addAll(expensesService.getAll());
+      Expenses deleteExpenses = expensesService.create(ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+      expensess.add(deleteExpenses);
+      expensess.remove(deleteExpenses);
+      expensesService.delete(deleteExpenses.getExpensesId());
+      Assert.assertEquals(expensess.size(), expensesService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Expenses saved = getSaved();
-        this.repository.delete(saved.getExpensesId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Expenses saved = getSaved();
-        Expenses read = this.repository.read(saved.getExpensesId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Expenses> expensess = this.repository.getAll();
-        System.out.println("In getall, all = " + expensess);
-    }
+  @Test
+  public void getAll() {
+      List<Expenses> expensesSet = expensesService.getAll();
+      Assert.assertEquals(expensesSet.size(), expensesService.getAll().size());
+  }
 }
+//"123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"

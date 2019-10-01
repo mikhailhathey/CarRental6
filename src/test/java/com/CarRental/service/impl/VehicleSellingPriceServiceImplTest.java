@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.VehicleSellingPrice;
 import com.CarRental.factories.VehicleSellingPriceFactory;
-import com.CarRental.repositories.impl.VehicleSellingPriceRepositoryImpl;
+import com.CarRental.service.VehicleSellingPriceService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class VehicleSellingPriceServiceImplTest {
+  @Autowired
+  @Qualifier("VehicleSellingPriceServiceImpl")
+  private VehicleSellingPriceService vehicleSellingPriceService;
+  private VehicleSellingPrice vehicleSellingPrice;
+  private Set<VehicleSellingPrice> vehicleSellingPrices = new HashSet<>();
 
-    private VehicleSellingPriceRepositoryImpl repository;
-    private VehicleSellingPrice vehicleSellingPrice;
+  @Before
+  public void setUp() {
+      vehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice("452", "2016", "180000"));
+      vehicleSellingPrices.add(vehicleSellingPrice);
+  }
 
-    private VehicleSellingPrice getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      VehicleSellingPrice createVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice(
+              "452", "2016", "180000"));
+      vehicleSellingPrices.add(createVehicleSellingPrice);
+      Assert.assertEquals(createVehicleSellingPrice, vehicleSellingPriceService.read(createVehicleSellingPrice.getVehicleSellingPriceId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = VehicleSellingPriceRepositoryImpl.getRepository();
-        this.vehicleSellingPrice = VehicleSellingPriceFactory.buildVehicleSellingPrice("452", "2016", "180000");
-    }
+  @Test
+  public void read() {
+      VehicleSellingPrice readTestVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice(
+              "452", "2016", "180000"));
+      Assert.assertEquals(readTestVehicleSellingPrice, vehicleSellingPriceService.read(readTestVehicleSellingPrice.getVehicleSellingPriceId()));
+  }
 
-    @Test
-    public void a_create() {
-        VehicleSellingPrice created = this.repository.create(this.vehicleSellingPrice);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.vehicleSellingPrice);
-    }
+  @Test
+  public void update() {
+      String newVehicleYearModel = "Test";
+      VehicleSellingPrice updateVehicleSellingPrice = vehicleSellingPriceService.update(new VehicleSellingPrice.Builder().copy(vehicleSellingPrice).vehicleYearModel(newVehicleYearModel).build());
+      vehicleSellingPrices.add(updateVehicleSellingPrice);
+      Assert.assertEquals(updateVehicleSellingPrice, vehicleSellingPriceService.read(updateVehicleSellingPrice.getVehicleSellingPriceId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newVehicleSellingPriceName = "Application Development Theory 3";
-        VehicleSellingPrice updated = new VehicleSellingPrice.Builder().copy(getSaved()).vehicleSellingPriceId(newVehicleSellingPriceName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newVehicleSellingPriceName, updated.getVehicleSellingPriceId());
-    }
+  @Test
+  public void delete() {
+      vehicleSellingPrices.addAll(vehicleSellingPriceService.getAll());
+      VehicleSellingPrice deleteVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice("452", "2016", "180000"));
+      vehicleSellingPrices.add(deleteVehicleSellingPrice);
+      vehicleSellingPrices.remove(deleteVehicleSellingPrice);
+      vehicleSellingPriceService.delete(deleteVehicleSellingPrice.getVehicleSellingPriceId());
+      Assert.assertEquals(vehicleSellingPrices.size(), vehicleSellingPriceService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        VehicleSellingPrice saved = getSaved();
-        this.repository.delete(saved.getVehicleSellingPriceId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        VehicleSellingPrice saved = getSaved();
-        VehicleSellingPrice read = this.repository.read(saved.getVehicleSellingPriceId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<VehicleSellingPrice> vehicleSellingPrices = this.repository.getAll();
-        System.out.println("In getall, all = " + vehicleSellingPrices);
-    }
+  @Test
+  public void getAll() {
+      List<VehicleSellingPrice> vehicleSellingPriceSet = vehicleSellingPriceService.getAll();
+      Assert.assertEquals(vehicleSellingPriceSet.size(), vehicleSellingPriceService.getAll().size());
+  }
 }
+//"452", "2016", "180000"

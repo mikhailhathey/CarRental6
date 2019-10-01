@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.ChannelPartner;
 import com.CarRental.service.ChannelPartnerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/channelPartner")
 public class ChannelPartnerController {
     @Autowired
-    @Qualifier("ChannelPartnerServiceImpl")
-    private ChannelPartnerService service;
+    private ChannelPartnerService channelPartnerService;
+    //@Qualifier("ChannelPartnerServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public ChannelPartner create(ChannelPartner channelPartner) {
-        return service.create(channelPartner);
+    public ChannelPartner create(@RequestBody ChannelPartner channelPartner) {
+        return channelPartnerService.create(channelPartner);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public ChannelPartner update(ChannelPartner channelPartner) {
-        return service.update(channelPartner);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public ChannelPartner update(@RequestBody ChannelPartner channelPartner) {
+        return channelPartnerService.update(channelPartner);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public ChannelPartner read(@PathVariable String id) {
-        return service.read(id);
+        return channelPartnerService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<ChannelPartner> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        channelPartnerService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<ChannelPartner> getAll() {
+        return channelPartnerService.getAll();
     }
 
 }

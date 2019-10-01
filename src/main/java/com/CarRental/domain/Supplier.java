@@ -1,11 +1,20 @@
 package com.CarRental.domain;
 
-public class Supplier {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Supplier implements Comparable<Supplier>{
+
+    @Id
     private String supplierId;
     private String supplierName;
     private String supplierContact;
     private String supplierEmail;
+
+    private Supplier(){
+    }
 
     public String getSupplierId() {
         return supplierId;
@@ -39,15 +48,39 @@ public class Supplier {
         this.supplierEmail = supplierEmail;
     }
 
-    private Supplier(){
-
-    }
-
     public Supplier(Builder builder) {
         this.supplierId = builder.supplierId;
         this.supplierName = builder.supplierName;
         this.supplierContact = builder.supplierContact;
         this.supplierEmail = builder.supplierEmail;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Supplier)) return false;
+        Supplier supplier = (Supplier) o;
+        return getSupplierId().equals(supplier.getSupplierId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getSupplierId());
+    }
+
+    @Override
+    public String toString() {
+        return "Supplier{" +
+                "supplierId='" + supplierId + '\'' +
+                ", supplierName='" + supplierName + '\'' +
+                ", supplierContact='" + supplierContact + '\'' +
+                ", supplierEmail='" + supplierEmail + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Supplier supplier) {
+        return this.supplierId.compareTo(supplier.supplierId);
     }
 
     public static class Builder{

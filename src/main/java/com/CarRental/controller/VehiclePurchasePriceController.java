@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.VehiclePurchasePrice;
 import com.CarRental.service.VehiclePurchasePriceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/vehiclePurchasePrice")
 public class VehiclePurchasePriceController {
     @Autowired
-    @Qualifier("VehiclePurchasePriceServiceImpl")
-    private VehiclePurchasePriceService service;
+    private VehiclePurchasePriceService vehiclePurchasePriceService;
+    //@Qualifier("VehiclePurchasePriceServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public VehiclePurchasePrice create(VehiclePurchasePrice vehiclePurchasePrice) {
-        return service.create(vehiclePurchasePrice);
+    public VehiclePurchasePrice create(@RequestBody VehiclePurchasePrice vehiclePurchasePrice) {
+        return vehiclePurchasePriceService.create(vehiclePurchasePrice);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public VehiclePurchasePrice update(VehiclePurchasePrice vehiclePurchasePrice) {
-        return service.update(vehiclePurchasePrice);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public VehiclePurchasePrice update(@RequestBody VehiclePurchasePrice vehiclePurchasePrice) {
+        return vehiclePurchasePriceService.update(vehiclePurchasePrice);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public VehiclePurchasePrice read(@PathVariable String id) {
-        return service.read(id);
+        return vehiclePurchasePriceService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<VehiclePurchasePrice> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        vehiclePurchasePriceService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<VehiclePurchasePrice> getAll() {
+        return vehiclePurchasePriceService.getAll();
     }
 
 }

@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.FleetManager;
 import com.CarRental.service.FleetManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/fleetManager")
 public class FleetManagerController {
     @Autowired
-    @Qualifier("FleetManagerServiceImpl")
-    private FleetManagerService service;
+    private FleetManagerService fleetManagerService;
+    //@Qualifier("FleetManagerServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public FleetManager create(FleetManager fleetManager) {
-        return service.create(fleetManager);
+    public FleetManager create(@RequestBody FleetManager fleetManager) {
+        return fleetManagerService.create(fleetManager);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public FleetManager update(FleetManager fleetManager) {
-        return service.update(fleetManager);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public FleetManager update(@RequestBody FleetManager fleetManager) {
+        return fleetManagerService.update(fleetManager);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public FleetManager read(@PathVariable String id) {
-        return service.read(id);
+        return fleetManagerService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<FleetManager> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        fleetManagerService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<FleetManager> getAll() {
+        return fleetManagerService.getAll();
     }
 
 }

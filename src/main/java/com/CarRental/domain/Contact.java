@@ -1,30 +1,51 @@
 package com.CarRental.domain;
 
-public class Contact {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Contact implements Comparable<Contact>{
 
+    @Id
     private String contactId;
     private String contactCell;
     private String contactHome;
     private String contactEmail;
 
+    private Contact() {
+    }
+
     public String getContactId() {
         return contactId;
+    }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
     }
 
     public String getContactCell() {
         return contactCell;
     }
 
+    public void setContactCell(String contactCell) {
+        this.contactCell = contactCell;
+    }
+
     public String getContactHome() {
         return contactHome;
+    }
+
+    public void setContactHome(String contactHome) {
+        this.contactHome = contactHome;
     }
 
     public String getContactEmail() {
         return contactEmail;
     }
 
-    private Contact() {
+    public void setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
     }
 
     public Contact(Builder builder) {
@@ -32,6 +53,34 @@ public class Contact {
         this.contactCell = builder.contactCell;
         this.contactHome = builder.contactHome;
         this.contactEmail = builder.contactEmail;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Contact)) return false;
+        Contact contact = (Contact) o;
+        return getContactId().equals(contact.getContactId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getContactId());
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "contactId='" + contactId + '\'' +
+                ", contactCell='" + contactCell + '\'' +
+                ", contactHome='" + contactHome + '\'' +
+                ", contactEmail='" + contactEmail + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Contact contact) {
+        return this.contactId.compareTo(contact.contactId);
     }
 
     public static class Builder{

@@ -6,11 +6,10 @@ public class VehicleSellingPriceFactory {
 
     public static VehicleSellingPrice buildVehicleSellingPrice(String vehicleSellingPriceId, String vehicleYearModel, String vehiclePrice)
     {
-        VehicleSellingPrice vehicleSellingPrice = new VehicleSellingPrice.Builder()
+        return new VehicleSellingPrice.Builder()
                 .vehicleSellingPriceId(vehicleSellingPriceId)
                 .vehicleYearModel(vehicleYearModel)
                 .vehiclePrice(vehiclePrice)
                 .build();
-        return vehicleSellingPrice;
     }
 }

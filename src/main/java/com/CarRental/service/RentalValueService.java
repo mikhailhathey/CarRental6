@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.RentalValue;
 
-import java.util.Set;
+import java.util.List;
 
-public interface RentalValueService extends CrudService<RentalValue, String>{
-    Set<RentalValue> getAll();
+public interface RentalValueService extends IService<RentalValue, String>{
+    List<RentalValue> getAll();
 }

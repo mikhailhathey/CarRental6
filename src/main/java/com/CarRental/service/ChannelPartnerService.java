@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.ChannelPartner;
 
-import java.util.Set;
+import java.util.List;
 
-public interface ChannelPartnerService extends CrudService<ChannelPartner, String>{
-    Set<ChannelPartner> getAll();
+public interface ChannelPartnerService extends IService<ChannelPartner, String>{
+    List<ChannelPartner> getAll();
 }

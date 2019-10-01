@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Client;
 import com.CarRental.factories.ClientFactory;
-import com.CarRental.repositories.impl.ClientRepositoryImpl;
+import com.CarRental.service.ClientService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class ClientServiceImplTest {
+  @Autowired
+  @Qualifier("ClientServiceImpl")
+  private ClientService clientService;
+  private Client client;
+  private Set<Client> clients = new HashSet<>();
 
-    private ClientRepositoryImpl repository;
-    private Client client;
+  @Before
+  public void setUp() {
+      client = clientService.create(ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+      clients.add(client);
+  }
 
-    private Client getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Client createClient = clientService.create(ClientFactory.buildClient(
+              "1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+      clients.add(createClient);
+      Assert.assertEquals(createClient, clientService.read(createClient.getClientId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = ClientRepositoryImpl.getRepository();
-        this.client = ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Street Road");
-    }
+  @Test
+  public void read() {
+      Client readTestClient = clientService.create(ClientFactory.buildClient(
+              "1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+      Assert.assertEquals(readTestClient, clientService.read(readTestClient.getClientId()));
+  }
 
-    @Test
-    public void a_create() {
-        Client created = this.repository.create(this.client);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.client);
-    }
+  @Test
+  public void update() {
+      String newClientName = "Test";
+      Client updateClient = clientService.update(new Client.Builder().copy(client).clientName(newClientName).build());
+      clients.add(updateClient);
+      Assert.assertEquals(updateClient, clientService.read(updateClient.getClientId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newClientName = "Application Development Theory 3";
-        Client updated = new Client.Builder().copy(getSaved()).clientId(newClientName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newClientName, updated.getClientId());
-    }
+  @Test
+  public void delete() {
+      clients.addAll(clientService.getAll());
+      Client deleteClient = clientService.create(ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+      clients.add(deleteClient);
+      clients.remove(deleteClient);
+      clientService.delete(deleteClient.getClientId());
+      Assert.assertEquals(clients.size(), clientService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Client saved = getSaved();
-        this.repository.delete(saved.getClientId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Client saved = getSaved();
-        Client read = this.repository.read(saved.getClientId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Client> clients = this.repository.getAll();
-        System.out.println("In getall, all = " + clients);
-    }
+  @Test
+  public void getAll() {
+      List<Client> clientSet = clientService.getAll();
+      Assert.assertEquals(clientSet.size(), clientService.getAll().size());
+  }
 }
+//"1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"

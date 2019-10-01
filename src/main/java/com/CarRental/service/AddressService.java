@@ -2,9 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Address;
 
-import java.util.Set;
+import java.util.List;
 
-public interface AddressService extends CrudService<Address, String>{
-    Address retrieveByDesc(String addressDesc);
-    Set<Address> getAll();
+public interface AddressService extends IService<Address, String> {
+    List<Address> getAll();
 }

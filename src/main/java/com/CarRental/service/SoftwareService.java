@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Software;
 
-import java.util.Set;
+import java.util.List;
 
-public interface SoftwareService extends CrudService<Software, String>{
-    Set<Software> getAll();
+public interface SoftwareService extends IService<Software, String>{
+    List<Software> getAll();
 }

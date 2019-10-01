@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Perishables;
 
-import java.util.Set;
+import java.util.List;
 
-public interface PerishablesService extends CrudService<Perishables, String>{
-    Set<Perishables> getAll();
+public interface PerishablesService extends IService<Perishables, String>{
+    List<Perishables> getAll();
 }

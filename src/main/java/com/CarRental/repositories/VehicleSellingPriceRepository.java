@@ -1,11 +1,11 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.VehicleSellingPrice;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface VehicleSellingPriceRepository extends JpaRepository<VehicleSellingPrice, String> {
 
-
-public interface VehicleSellingPriceRepository extends CrudRepository<VehicleSellingPrice, String> {
-
-    Set<VehicleSellingPrice> getAll();
+    //Set<VehicleSellingPrice> getAll();
 }

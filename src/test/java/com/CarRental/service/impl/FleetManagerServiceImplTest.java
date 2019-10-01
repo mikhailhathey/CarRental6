@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.FleetManager;
 import com.CarRental.factories.FleetManagerFactory;
-import com.CarRental.repositories.impl.FleetManagerRepositoryImpl;
+import com.CarRental.service.FleetManagerService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class FleetManagerServiceImplTest {
+  @Autowired
+  @Qualifier("FleetManagerServiceImpl")
+  private FleetManagerService fleetManagerService;
+  private FleetManager fleetManager;
+  private Set<FleetManager> fleetManagers = new HashSet<>();
 
-    private FleetManagerRepositoryImpl repository;
-    private FleetManager fleetManager;
+  @Before
+  public void setUp() {
+      fleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+      fleetManagers.add(fleetManager);
+  }
 
-    private FleetManager getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      FleetManager createFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager(
+              "123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+      fleetManagers.add(createFleetManager);
+      Assert.assertEquals(createFleetManager, fleetManagerService.read(createFleetManager.getFleetManagerId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = FleetManagerRepositoryImpl.getRepository();
-        this.fleetManager = FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth");
-    }
+  @Test
+  public void read() {
+      FleetManager readTestFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager(
+              "123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+      Assert.assertEquals(readTestFleetManager, fleetManagerService.read(readTestFleetManager.getFleetManagerId()));
+  }
 
-    @Test
-    public void a_create() {
-        FleetManager created = this.repository.create(this.fleetManager);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.fleetManager);
-    }
+  @Test
+  public void update() {
+      String newFleetManagerContactName = "Test";
+      FleetManager updateFleetManager = fleetManagerService.update(new FleetManager.Builder().copy(fleetManager).fleetManagerContact(newFleetManagerContactName).build());
+      fleetManagers.add(updateFleetManager);
+      Assert.assertEquals(updateFleetManager, fleetManagerService.read(updateFleetManager.getFleetManagerId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newFleetManagerName = "Application Development Theory 3";
-        FleetManager updated = new FleetManager.Builder().copy(getSaved()).fleetManagerId(newFleetManagerName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newFleetManagerName, updated.getFleetManagerId());
-    }
+  @Test
+  public void delete() {
+      fleetManagers.addAll(fleetManagerService.getAll());
+      FleetManager deleteFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+      fleetManagers.add(deleteFleetManager);
+      fleetManagers.remove(deleteFleetManager);
+      fleetManagerService.delete(deleteFleetManager.getFleetManagerId());
+      Assert.assertEquals(fleetManagers.size(), fleetManagerService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        FleetManager saved = getSaved();
-        this.repository.delete(saved.getFleetManagerId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        FleetManager saved = getSaved();
-        FleetManager read = this.repository.read(saved.getFleetManagerId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<FleetManager> fleetManagers = this.repository.getAll();
-        System.out.println("In getall, all = " + fleetManagers);
-    }
+  @Test
+  public void getAll() {
+      List<FleetManager> fleetManagerSet = fleetManagerService.getAll();
+      Assert.assertEquals(fleetManagerSet.size(), fleetManagerService.getAll().size());
+  }
 }
+//"123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"

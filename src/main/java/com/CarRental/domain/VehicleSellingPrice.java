@@ -1,10 +1,19 @@
 package com.CarRental.domain;
 
-public class VehicleSellingPrice {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class VehicleSellingPrice implements Comparable<VehicleSellingPrice>{
+
+    @Id
     private String vehicleSellingPriceId;
     private String vehicleYearModel;
     private String vehiclePrice;
+
+    private VehicleSellingPrice(){
+    }
 
     public String getVehicleSellingPriceId() {
         return vehicleSellingPriceId;
@@ -30,14 +39,37 @@ public class VehicleSellingPrice {
         this.vehiclePrice = vehiclePrice;
     }
 
-    private VehicleSellingPrice(){
-
-    }
-
     public VehicleSellingPrice(Builder builder) {
         this.vehicleSellingPriceId = builder.vehicleSellingPriceId;
         this.vehicleYearModel = builder.vehicleYearModel;
         this.vehiclePrice = builder.vehiclePrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof VehicleSellingPrice)) return false;
+        VehicleSellingPrice vehicleSellingPrice = (VehicleSellingPrice) o;
+        return getVehicleSellingPriceId().equals(vehicleSellingPrice.getVehicleSellingPriceId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getVehicleSellingPriceId());
+    }
+
+    @Override
+    public String toString() {
+        return "VehicleSellingPrice{" +
+                "vehicleSellingPriceId='" + vehicleSellingPriceId + '\'' +
+                ", vehicleYearModel='" + vehicleYearModel + '\'' +
+                ", vehiclePrice='" + vehiclePrice + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(VehicleSellingPrice vehicleSellingPrice) {
+        return this.vehicleSellingPriceId.compareTo(vehicleSellingPrice.vehicleSellingPriceId);
     }
 
     public static class Builder{

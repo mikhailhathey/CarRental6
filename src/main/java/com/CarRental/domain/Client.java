@@ -1,13 +1,22 @@
 package com.CarRental.domain;
 
-public class Client {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Client implements Comparable<Client>{
+
+    @Id
     private String clientId;
     private String clientCell;
     private String clientName;
     private String clientEmail;
     private String clientWebsite;
     private String clientAddress;
+
+    private Client(){
+    }
 
     public String getClientId() {
         return clientId;
@@ -49,16 +58,42 @@ public class Client {
         this.clientWebsite = clientWebsite;
     }
 
-    public String getClientAddress() {
+    public String getClientClient() {
         return clientAddress;
     }
 
-    public void setClientAddress(String clientAddress) {
+    public void setClientClient(String clientAddress) {
         this.clientAddress = clientAddress;
     }
 
-    private Client(){
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Client)) return false;
+        Client client = (Client) o;
+        return getClientId().equals(client.getClientId());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getClientId());
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "clientId='" + clientId + '\'' +
+                ", clientCell='" + clientCell + '\'' +
+                ", clientName='" + clientName + '\'' +
+                ", clientEmail='" + clientEmail + '\'' +
+                ", clientWebsite='" + clientWebsite + '\'' +
+                ", clientAddress='" + clientAddress + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Client client) {
+        return this.clientId.compareTo(client.clientId);
     }
 
     public Client(Builder builder) {

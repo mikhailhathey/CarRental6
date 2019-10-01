@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Infrastructure;
 import com.CarRental.service.InfrastructureService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/infrastructure")
 public class InfrastructureController {
     @Autowired
-    @Qualifier("InfrastructureServiceImpl")
-    private InfrastructureService service;
+    private InfrastructureService infrastructureService;
+    //@Qualifier("InfrastructureServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Infrastructure create(Infrastructure infrastructure) {
-        return service.create(infrastructure);
+    public Infrastructure create(@RequestBody Infrastructure infrastructure) {
+        return infrastructureService.create(infrastructure);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Infrastructure update(Infrastructure infrastructure) {
-        return service.update(infrastructure);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Infrastructure update(@RequestBody Infrastructure infrastructure) {
+        return infrastructureService.update(infrastructure);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Infrastructure read(@PathVariable String id) {
-        return service.read(id);
+        return infrastructureService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Infrastructure> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        infrastructureService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Infrastructure> getAll() {
+        return infrastructureService.getAll();
     }
 
 }

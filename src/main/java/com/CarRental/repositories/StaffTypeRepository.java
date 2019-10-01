@@ -1,11 +1,11 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.StaffType;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface StaffTypeRepository extends JpaRepository<StaffType, String> {
 
-
-public interface StaffTypeRepository extends CrudRepository<StaffType, String> {
-
-    Set<StaffType> getAll();
+    //Set<StaffType> getAll();
 }

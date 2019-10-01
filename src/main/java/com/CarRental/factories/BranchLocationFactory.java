@@ -6,11 +6,10 @@ public class BranchLocationFactory {
 
     public static BranchLocation buildBranchLocation(String branchLocationId, String branchName, String branchManager)
     {
-        BranchLocation branchLocation = new BranchLocation.Builder()
+        return new BranchLocation.Builder()
                 .branchLocationId(branchLocationId)
                 .branchName(branchName)
                 .branchManager(branchManager)
                 .build();
-        return branchLocation;
     }
 }

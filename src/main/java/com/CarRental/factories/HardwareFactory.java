@@ -6,11 +6,10 @@ public class HardwareFactory {
 
     public static Hardware buildHardware(String hardwareId, String hardwareName, String hardwarePrice)
     {
-        Hardware hardware = new Hardware.Builder()
+        return new Hardware.Builder()
                 .hardwareId(hardwareId)
                 .hardwareName(hardwareName)
                 .hardwarePrice(hardwarePrice)
                 .build();
-        return hardware;
     }
 }

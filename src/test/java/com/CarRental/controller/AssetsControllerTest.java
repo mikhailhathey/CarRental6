@@ -13,13 +13,13 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import static org.junit.Assert.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @RunWith(SpringRunner.class)
 public class AssetsControllerTest {
-    @Autowired
 
+    @Autowired
     private TestRestTemplate restTemplate;
-    private static final String BASE_URL = "http://localhost:8080/assets/lookup/assets";
+    private static final String BASE_URL = "http://localhost:8080/assets";
 
     @Test
     public void testGetAllAssets() {

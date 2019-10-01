@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Admin;
 import com.CarRental.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
     @Autowired
-    @Qualifier("AdminServiceImpl")
-    private AdminService service;
+    private AdminService adminService;
+    //@Qualifier("AdminServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Admin create(Admin admin) {
-        return service.create(admin);
+    public Admin create(@RequestBody Admin admin) {
+        return adminService.create(admin);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Admin update(Admin admin) {
-        return service.update(admin);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Admin update(@RequestBody Admin admin) {
+        return adminService.update(admin);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Admin read(@PathVariable String id) {
-        return service.read(id);
+        return adminService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Admin> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        adminService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Admin> getAll() {
+        return adminService.getAll();
     }
 
 }

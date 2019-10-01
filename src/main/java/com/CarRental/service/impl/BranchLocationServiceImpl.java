@@ -2,51 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.BranchLocation;
 import com.CarRental.repositories.BranchLocationRepository;
-import com.CarRental.repositories.impl.BranchLocationRepositoryImpl;
 import com.CarRental.service.BranchLocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("BranchLocationServiceImpl")
 public class BranchLocationServiceImpl implements BranchLocationService {
+
     @Autowired
+    private BranchLocationRepository branchLocationRepository;
 
-    private static BranchLocationServiceImpl service = null;
-    private BranchLocationRepository repository;
-
-    private BranchLocationServiceImpl() {
-        this.repository = BranchLocationRepositoryImpl.getRepository();
-    }
-
-    public static BranchLocationServiceImpl getService(){
-        if (service == null) service = new BranchLocationServiceImpl();
-        return service;
+    @Override
+    public List<BranchLocation> getAll() {
+        return this.branchLocationRepository.findAll();
     }
 
     @Override
     public BranchLocation create(BranchLocation branchLocation) {
-        return this.repository.create(branchLocation);
+        return this.branchLocationRepository.save(branchLocation);
+    }
+
+    @Override
+    public BranchLocation read(String branchLocationId) {
+        Optional<BranchLocation> byId = this.branchLocationRepository.findById(branchLocationId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public BranchLocation update(BranchLocation branchLocation) {
-        return this.repository.update(branchLocation);
+        return this.branchLocationRepository.save(branchLocation);
     }
 
     @Override
-    public void delete(String s) {
-        this.repository.delete(s);
-    }
-
-    @Override
-    public BranchLocation read(String s) {
-        return this.repository.read(s);
-    }
-
-    @Override
-    public Set<BranchLocation> getAll() {
-        return this.repository.getAll();
+    public void delete(String branchLocationId) {
+        this.branchLocationRepository.deleteById(branchLocationId);
     }
 }

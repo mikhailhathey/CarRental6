@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.StaffType;
 import com.CarRental.factories.StaffTypeFactory;
-import com.CarRental.repositories.impl.StaffTypeRepositoryImpl;
+import com.CarRental.service.StaffTypeService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class StaffTypeServiceImplTest {
+  @Autowired
+  @Qualifier("StaffTypeServiceImpl")
+  private StaffTypeService staffTypeService;
+  private StaffType staffType;
+  private Set<StaffType> staffTypes = new HashSet<>();
 
-    private StaffTypeRepositoryImpl repository;
-    private StaffType staffType;
+  @Before
+  public void setUp() {
+      staffType = staffTypeService.create(StaffTypeFactory.buildStaffType("765", "Customer Care", "200000"));
+      staffTypes.add(staffType);
+  }
 
-    private StaffType getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      StaffType createStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType(
+              "765", "Customer Care", "200000"));
+      staffTypes.add(createStaffType);
+      Assert.assertEquals(createStaffType, staffTypeService.read(createStaffType.getStaffTypeId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = StaffTypeRepositoryImpl.getRepository();
-        this.staffType = StaffTypeFactory.buildStaffType("765", "Customer Care", "200000");
-    }
+  @Test
+  public void read() {
+      StaffType readTestStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType(
+              "765", "Customer Care", "200000"));
+      Assert.assertEquals(readTestStaffType, staffTypeService.read(readTestStaffType.getStaffTypeId()));
+  }
 
-    @Test
-    public void a_create() {
-        StaffType created = this.repository.create(this.staffType);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.staffType);
-    }
+  @Test
+  public void update() {
+      String newStaffTypeRole = "Test";
+      StaffType updateStaffType = staffTypeService.update(new StaffType.Builder().copy(staffType).staffTypeJobRole(newStaffTypeRole).build());
+      staffTypes.add(updateStaffType);
+      Assert.assertEquals(updateStaffType, staffTypeService.read(updateStaffType.getStaffTypeId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newStaffTypeName = "Application Development Theory 3";
-        StaffType updated = new StaffType.Builder().copy(getSaved()).staffTypeId(newStaffTypeName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newStaffTypeName, updated.getStaffTypeId());
-    }
+  @Test
+  public void delete() {
+      staffTypes.addAll(staffTypeService.getAll());
+      StaffType deleteStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType("765", "Customer Care", "200000"));
+      staffTypes.add(deleteStaffType);
+      staffTypes.remove(deleteStaffType);
+      staffTypeService.delete(deleteStaffType.getStaffTypeId());
+      Assert.assertEquals(staffTypes.size(), staffTypeService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        StaffType saved = getSaved();
-        this.repository.delete(saved.getStaffTypeId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        StaffType saved = getSaved();
-        StaffType read = this.repository.read(saved.getStaffTypeId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<StaffType> staffTypes = this.repository.getAll();
-        System.out.println("In getall, all = " + staffTypes);
-    }
+  @Test
+  public void getAll() {
+      List<StaffType> staffTypeSet = staffTypeService.getAll();
+      Assert.assertEquals(staffTypeSet.size(), staffTypeService.getAll().size());
+  }
 }
+//"765", "Customer Care", "200000"

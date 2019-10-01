@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Revenue;
 import com.CarRental.service.RevenueService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/revenue")
 public class RevenueController {
     @Autowired
-    @Qualifier("RevenueServiceImpl")
-    private RevenueService service;
+    private RevenueService revenueService;
+    //@Qualifier("RevenueServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Revenue create(Revenue revenue) {
-        return service.create(revenue);
+    public Revenue create(@RequestBody Revenue revenue) {
+        return revenueService.create(revenue);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Revenue update(Revenue revenue) {
-        return service.update(revenue);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Revenue update(@RequestBody Revenue revenue) {
+        return revenueService.update(revenue);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Revenue read(@PathVariable String id) {
-        return service.read(id);
+        return revenueService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Revenue> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        revenueService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Revenue> getAll() {
+        return revenueService.getAll();
     }
 
 }

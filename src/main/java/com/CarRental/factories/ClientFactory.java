@@ -6,7 +6,7 @@ public class ClientFactory {
 
     public static Client buildClient(String clientId, String clientCell, String clientName, String clientEmail, String clientWebsite, String clientAddress)
     {
-        Client client = new Client.Builder()
+        return new Client.Builder()
                 .clientId(clientId)
                 .clientCell(clientCell)
                 .clientName(clientName)
@@ -14,6 +14,5 @@ public class ClientFactory {
                 .clientWebsite(clientWebsite)
                 .clientAddress(clientAddress)
                 .build();
-        return client;
     }
 }

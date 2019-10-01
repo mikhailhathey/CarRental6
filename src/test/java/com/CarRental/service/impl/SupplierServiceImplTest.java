@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Supplier;
 import com.CarRental.factories.SupplierFactory;
-import com.CarRental.repositories.impl.SupplierRepositoryImpl;
+import com.CarRental.service.SupplierService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class SupplierServiceImplTest {
+  @Autowired
+  @Qualifier("SupplierServiceImpl")
+  private SupplierService supplierService;
+  private Supplier supplier;
+  private Set<Supplier> suppliers = new HashSet<>();
 
-    private SupplierRepositoryImpl repository;
-    private Supplier supplier;
+  @Before
+  public void setUp() {
+      supplier = supplierService.create(SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com"));
+      suppliers.add(supplier);
+  }
 
-    private Supplier getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Supplier createSupplier = supplierService.create(SupplierFactory.buildSupplier(
+              "453", "Makro", "Johan", "johan@makro.com"));
+      suppliers.add(createSupplier);
+      Assert.assertEquals(createSupplier, supplierService.read(createSupplier.getSupplierId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = SupplierRepositoryImpl.getRepository();
-        this.supplier = SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com");
-    }
+  @Test
+  public void read() {
+      Supplier readTestSupplier = supplierService.create(SupplierFactory.buildSupplier(
+              "453", "Makro", "Johan", "johan@makro.com"));
+      Assert.assertEquals(readTestSupplier, supplierService.read(readTestSupplier.getSupplierId()));
+  }
 
-    @Test
-    public void a_create() {
-        Supplier created = this.repository.create(this.supplier);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.supplier);
-    }
+  @Test
+  public void update() {
+      String newSupplierName = "Test";
+      Supplier updateSupplier = supplierService.update(new Supplier.Builder().copy(supplier).supplierName(newSupplierName).build());
+      suppliers.add(updateSupplier);
+      Assert.assertEquals(updateSupplier, supplierService.read(updateSupplier.getSupplierId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newSupplierName = "Application Development Theory 3";
-        Supplier updated = new Supplier.Builder().copy(getSaved()).supplierId(newSupplierName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newSupplierName, updated.getSupplierId());
-    }
+  @Test
+  public void delete() {
+      suppliers.addAll(supplierService.getAll());
+      Supplier deleteSupplier = supplierService.create(SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com"));
+      suppliers.add(deleteSupplier);
+      suppliers.remove(deleteSupplier);
+      supplierService.delete(deleteSupplier.getSupplierId());
+      Assert.assertEquals(suppliers.size(), supplierService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Supplier saved = getSaved();
-        this.repository.delete(saved.getSupplierId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Supplier saved = getSaved();
-        Supplier read = this.repository.read(saved.getSupplierId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Supplier> suppliers = this.repository.getAll();
-        System.out.println("In getall, all = " + suppliers);
-    }
+  @Test
+  public void getAll() {
+      List<Supplier> supplierSet = supplierService.getAll();
+      Assert.assertEquals(supplierSet.size(), supplierService.getAll().size());
+  }
 }
+//"453", "Makro", "Johan", "johan@makro.com"

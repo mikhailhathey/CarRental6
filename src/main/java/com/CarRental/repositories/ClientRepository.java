@@ -1,13 +1,13 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.Client;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface ClientRepository extends JpaRepository<Client, String> {
 
-
-public interface ClientRepository extends CrudRepository<Client, String> {
-
-    Set<Client> getAll();
+    //Set<Client> getAll();
     //public List<Client> findByAge(int age);
     //public List<Client> findById(String id);
 

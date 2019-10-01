@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Claims;
 
-import java.util.Set;
+import java.util.List;
 
-public interface ClaimsService extends CrudService<Claims, String>{
-    Set<Claims> getAll();
+public interface ClaimsService extends IService<Claims, String>{
+    List<Claims> getAll();
 }

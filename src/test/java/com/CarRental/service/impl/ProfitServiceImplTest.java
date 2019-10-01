@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Profit;
 import com.CarRental.factories.ProfitFactory;
-import com.CarRental.repositories.impl.ProfitRepositoryImpl;
+import com.CarRental.service.ProfitService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class ProfitServiceImplTest {
+  @Autowired
+  @Qualifier("ProfitServiceImpl")
+  private ProfitService profitService;
+  private Profit profit;
+  private Set<Profit> profits = new HashSet<>();
 
-    private ProfitRepositoryImpl repository;
-    private Profit profit;
+  @Before
+  public void setUp() {
+      profit = profitService.create(ProfitFactory.buildProfit("789", "100000", "120000"));
+      profits.add(profit);
+  }
 
-    private Profit getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Profit createProfit = profitService.create(ProfitFactory.buildProfit(
+              "789", "100000", "120000"));
+      profits.add(createProfit);
+      Assert.assertEquals(createProfit, profitService.read(createProfit.getProfitId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = ProfitRepositoryImpl.getRepository();
-        this.profit = ProfitFactory.buildProfit("789", "100000", "120000");
-    }
+  @Test
+  public void read() {
+      Profit readTestProfit = profitService.create(ProfitFactory.buildProfit(
+              "789", "100000", "120000"));
+      Assert.assertEquals(readTestProfit, profitService.read(readTestProfit.getProfitId()));
+  }
 
-    @Test
-    public void a_create() {
-        Profit created = this.repository.create(this.profit);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.profit);
-    }
+  @Test
+  public void update() {
+      String newActualProfit = "Test";
+      Profit updateProfit = profitService.update(new Profit.Builder().copy(profit).profitActual(newActualProfit).build());
+      profits.add(updateProfit);
+      Assert.assertEquals(updateProfit, profitService.read(updateProfit.getProfitId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newProfitName = "Application Development Theory 3";
-        Profit updated = new Profit.Builder().copy(getSaved()).profitId(newProfitName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newProfitName, updated.getProfitId());
-    }
+  @Test
+  public void delete() {
+      profits.addAll(profitService.getAll());
+      Profit deleteProfit = profitService.create(ProfitFactory.buildProfit("789", "100000", "120000"));
+      profits.add(deleteProfit);
+      profits.remove(deleteProfit);
+      profitService.delete(deleteProfit.getProfitId());
+      Assert.assertEquals(profits.size(), profitService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Profit saved = getSaved();
-        this.repository.delete(saved.getProfitId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Profit saved = getSaved();
-        Profit read = this.repository.read(saved.getProfitId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Profit> profits = this.repository.getAll();
-        System.out.println("In getall, all = " + profits);
-    }
+  @Test
+  public void getAll() {
+      List<Profit> profitSet = profitService.getAll();
+      Assert.assertEquals(profitSet.size(), profitService.getAll().size());
+  }
 }
+//"789", "100000", "120000"

@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Hardware;
 import com.CarRental.factories.HardwareFactory;
-import com.CarRental.repositories.impl.HardwareRepositoryImpl;
+import com.CarRental.service.HardwareService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class HardwareServiceImplTest {
+  @Autowired
+  @Qualifier("HardwareServiceImpl")
+  private HardwareService hardwareService;
+  private Hardware hardware;
+  private Set<Hardware> hardwares = new HashSet<>();
 
-    private HardwareRepositoryImpl repository;
-    private Hardware hardware;
+  @Before
+  public void setUp() {
+      hardware = hardwareService.create(HardwareFactory.buildHardware("456", "Laptop", "4500"));
+      hardwares.add(hardware);
+  }
 
-    private Hardware getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Hardware createHardware = hardwareService.create(HardwareFactory.buildHardware(
+              "456", "Laptop", "4500"));
+      hardwares.add(createHardware);
+      Assert.assertEquals(createHardware, hardwareService.read(createHardware.getHardwareId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = HardwareRepositoryImpl.getRepository();
-        this.hardware = HardwareFactory.buildHardware("456", "Laptop", "4500");
-    }
+  @Test
+  public void read() {
+      Hardware readTestHardware = hardwareService.create(HardwareFactory.buildHardware(
+              "456", "Laptop", "4500"));
+      Assert.assertEquals(readTestHardware, hardwareService.read(readTestHardware.getHardwareId()));
+  }
 
-    @Test
-    public void a_create() {
-        Hardware created = this.repository.create(this.hardware);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.hardware);
-    }
+  @Test
+  public void update() {
+      String newHardwareName = "Test";
+      Hardware updateHardware = hardwareService.update(new Hardware.Builder().copy(hardware).hardwareName(newHardwareName).build());
+      hardwares.add(updateHardware);
+      Assert.assertEquals(updateHardware, hardwareService.read(updateHardware.getHardwareId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newHardwareName = "Application Development Theory 3";
-        Hardware updated = new Hardware.Builder().copy(getSaved()).hardwareId(newHardwareName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newHardwareName, updated.getHardwareId());
-    }
+  @Test
+  public void delete() {
+      hardwares.addAll(hardwareService.getAll());
+      Hardware deleteHardware = hardwareService.create(HardwareFactory.buildHardware("456", "Laptop", "4500"));
+      hardwares.add(deleteHardware);
+      hardwares.remove(deleteHardware);
+      hardwareService.delete(deleteHardware.getHardwareId());
+      Assert.assertEquals(hardwares.size(), hardwareService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Hardware saved = getSaved();
-        this.repository.delete(saved.getHardwareId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Hardware saved = getSaved();
-        Hardware read = this.repository.read(saved.getHardwareId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Hardware> hardwares = this.repository.getAll();
-        System.out.println("In getall, all = " + hardwares);
-    }
+  @Test
+  public void getAll() {
+      List<Hardware> hardwareSet = hardwareService.getAll();
+      Assert.assertEquals(hardwareSet.size(), hardwareService.getAll().size());
+  }
 }
+//"456", "Laptop", "4500"

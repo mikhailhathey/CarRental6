@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Region;
 import com.CarRental.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/region")
 public class RegionController {
     @Autowired
-    @Qualifier("RegionServiceImpl")
-    private RegionService service;
+    private RegionService regionService;
+    //@Qualifier("RegionServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Region create(Region region) {
-        return service.create(region);
+    public Region create(@RequestBody Region region) {
+        return regionService.create(region);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Region update(Region region) {
-        return service.update(region);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Region update(@RequestBody Region region) {
+        return regionService.update(region);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Region read(@PathVariable String id) {
-        return service.read(id);
+        return regionService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Region> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        regionService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Region> getAll() {
+        return regionService.getAll();
     }
 
 }

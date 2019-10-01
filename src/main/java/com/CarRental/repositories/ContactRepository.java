@@ -1,11 +1,11 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.Contact;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface ContactRepository extends JpaRepository<Contact, String> {
 
-
-public interface ContactRepository extends CrudRepository<Contact, String> {
-
-    Set<Contact> getAll();
+    //Set<Contact> getAll();
 }

@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Supplier;
 
-import java.util.Set;
+import java.util.List;
 
-public interface SupplierService extends CrudService<Supplier, String>{
-    Set<Supplier> getAll();
+public interface SupplierService extends IService<Supplier, String>{
+    List<Supplier> getAll();
 }

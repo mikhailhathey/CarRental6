@@ -1,7 +1,13 @@
 package com.CarRental.domain;
 
-public class RentalTerm {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class RentalTerm implements Comparable<RentalTerm>{
+
+    @Id
     private String rentalTermId;
     private String rentalTermNumber;
     private String rentalTermClass;
@@ -9,12 +15,15 @@ public class RentalTerm {
     private String rentalTermContact;
     private String rentalTermBranch;
 
+    private RentalTerm(){
+    }
+
     //rentalTermId, rentalTermNumber, rentalTermClass, rentalTermDays, rentalTermContact, rentalTermBranch
     public String getRentalTermId() {
         return rentalTermId;
     }
 
-    public void setId(String rentalTermId) {
+    public void setRentalTermId(String rentalTermId) {
         this.rentalTermId = rentalTermId;
     }
 
@@ -58,10 +67,6 @@ public class RentalTerm {
         this.rentalTermBranch = rentalTermBranch;
     }
 
-    private RentalTerm(){
-
-    }
-
     public RentalTerm(Builder builder) {
         this.rentalTermId = builder.rentalTermId;
         this.rentalTermNumber = builder.rentalTermNumber;
@@ -69,6 +74,36 @@ public class RentalTerm {
         this.rentalTermDays = builder.rentalTermDays;
         this.rentalTermContact = builder.rentalTermContact;
         this.rentalTermBranch = builder.rentalTermBranch;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof RentalTerm)) return false;
+        RentalTerm rentalTerm = (RentalTerm) o;
+        return getRentalTermId().equals(rentalTerm.getRentalTermId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getRentalTermId());
+    }
+
+    @Override
+    public String toString() {
+        return "RentalTerm{" +
+                "rentalTermId='" + rentalTermId + '\'' +
+                ", rentalTermNumber='" + rentalTermNumber + '\'' +
+                ", rentalTermClass='" + rentalTermClass + '\'' +
+                ", rentalTermDays='" + rentalTermDays + '\'' +
+                ", rentalTermContact='" + rentalTermContact + '\'' +
+                ", rentalTermBranch='" + rentalTermBranch + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(RentalTerm rentalTerm) {
+        return this.rentalTermId.compareTo(rentalTerm.rentalTermId);
     }
 
     public static class Builder{

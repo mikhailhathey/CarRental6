@@ -2,51 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Region;
 import com.CarRental.repositories.RegionRepository;
-import com.CarRental.repositories.impl.RegionRepositoryImpl;
 import com.CarRental.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("RegionServiceImpl")
 public class RegionServiceImpl implements RegionService {
+
     @Autowired
+    private RegionRepository regionRepository;
 
-    private static RegionServiceImpl service = null;
-    private RegionRepository repository;
-
-    private RegionServiceImpl() {
-        this.repository = RegionRepositoryImpl.getRepository();
-    }
-
-    public static RegionServiceImpl getService(){
-        if (service == null) service = new RegionServiceImpl();
-        return service;
+    @Override
+    public List<Region> getAll() {
+        return this.regionRepository.findAll();
     }
 
     @Override
     public Region create(Region region) {
-        return this.repository.create(region);
+        return this.regionRepository.save(region);
+    }
+
+    @Override
+    public Region read(String regionId) {
+        Optional<Region> byId = this.regionRepository.findById(regionId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public Region update(Region region) {
-        return this.repository.update(region);
+        return this.regionRepository.save(region);
     }
 
     @Override
-    public void delete(String s) {
-        this.repository.delete(s);
-    }
-
-    @Override
-    public Region read(String s) {
-        return this.repository.read(s);
-    }
-
-    @Override
-    public Set<Region> getAll() {
-        return this.repository.getAll();
+    public void delete(String regionId) {
+        this.regionRepository.deleteById(regionId);
     }
 }

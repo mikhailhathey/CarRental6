@@ -7,13 +7,12 @@ public class StaffFactory {
     //Changes to be made, in future iteration remove String staffId and have the String staffId generated.
     public static Staff buildStaff(String staffId, String staffName, String staffContact, String staffEmail, String staffIDNumber)
     {
-        Staff staff = new Staff.Builder()
+        return new Staff.Builder()
                 .staffId(staffId)
                 .staffName(staffName)
                 .staffContact(staffContact)
                 .staffEmail(staffEmail)
                 .staffIDNumber(staffIDNumber)
                 .build();
-        return staff;
     }
 }

@@ -6,7 +6,7 @@ public class AddressFactory {
 
     public static Address buildAddress(String addressId, String houseNumber, String streetName, String suburb, String postalCode, String city)
     {
-        Address address = new Address.Builder()
+        return new Address.Builder()
                 .addressId(addressId)
                 .houseNumber(houseNumber)
                 .streetName(streetName)
@@ -14,7 +14,6 @@ public class AddressFactory {
                 .postalCode(postalCode)
                 .city(city)
                 .build();
-        return address;
     }
 
 }

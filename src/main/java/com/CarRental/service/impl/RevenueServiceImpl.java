@@ -2,51 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Revenue;
 import com.CarRental.repositories.RevenueRepository;
-import com.CarRental.repositories.impl.RevenueRepositoryImpl;
 import com.CarRental.service.RevenueService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("RevenueServiceImpl")
 public class RevenueServiceImpl implements RevenueService {
+
     @Autowired
+    private RevenueRepository revenueRepository;
 
-    private static RevenueServiceImpl service = null;
-    private RevenueRepository repository;
-
-    private RevenueServiceImpl() {
-        this.repository = RevenueRepositoryImpl.getRepository();
-    }
-
-    public static RevenueServiceImpl getService(){
-        if (service == null) service = new RevenueServiceImpl();
-        return service;
+    @Override
+    public List<Revenue> getAll() {
+        return this.revenueRepository.findAll();
     }
 
     @Override
     public Revenue create(Revenue revenue) {
-        return this.repository.create(revenue);
+        return this.revenueRepository.save(revenue);
+    }
+
+    @Override
+    public Revenue read(String revenueId) {
+        Optional<Revenue> byId = this.revenueRepository.findById(revenueId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public Revenue update(Revenue revenue) {
-        return this.repository.update(revenue);
+        return this.revenueRepository.save(revenue);
     }
 
     @Override
-    public void delete(String s) {
-        this.repository.delete(s);
-    }
-
-    @Override
-    public Revenue read(String s) {
-        return this.repository.read(s);
-    }
-
-    @Override
-    public Set<Revenue> getAll() {
-        return this.repository.getAll();
+    public void delete(String revenueId) {
+        this.revenueRepository.deleteById(revenueId);
     }
 }

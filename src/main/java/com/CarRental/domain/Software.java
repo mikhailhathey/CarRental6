@@ -1,11 +1,20 @@
 package com.CarRental.domain;
 
-public class Software {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Software implements Comparable<Software>{
+
+    @Id
     private String softwareId;
     private String softwareName;
     private String softwareVersion;
     private String softwarePrice;
+
+    private Software(){
+    }
 
     public String getSoftwareId() {
         return softwareId;
@@ -39,16 +48,39 @@ public class Software {
         this.softwarePrice = softwarePrice;
     }
 
-
-    private Software(){
-
-    }
-
     public Software(Builder builder) {
         this.softwareId = builder.softwareId;
         this.softwareName = builder.softwareName;
         this.softwareVersion = builder.softwareVersion;
         this.softwarePrice = builder.softwarePrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Software)) return false;
+        Software software = (Software) o;
+        return getSoftwareId().equals(software.getSoftwareId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getSoftwareId());
+    }
+
+    @Override
+    public String toString() {
+        return "Software{" +
+                "softwareId='" + softwareId + '\'' +
+                ", softwareName='" + softwareName + '\'' +
+                ", softwareVersion='" + softwareVersion + '\'' +
+                ", softwarePrice='" + softwarePrice + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Software software) {
+        return this.softwareId.compareTo(software.softwareId);
     }
 
     public static class Builder{

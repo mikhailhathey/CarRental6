@@ -1,12 +1,21 @@
 package com.CarRental.domain;
 
-public class Expenses {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Expenses implements Comparable<Expenses>{
+
+    @Id
     private String expensesId;
     private String expensesAmount;
     private String expensesDate;
     private String expensesContact;
     private String expensesDept;
+
+    private Expenses(){
+    }
 
     //expensesId, expensesAmount, expensesDate, expensesDays, expensesContact, expensesDept
     public String getExpensesId() {
@@ -33,7 +42,7 @@ public class Expenses {
         this.expensesDate = expensesDate;
     }
 
-    
+
     public String getExpensesContact() {
         return expensesContact;
     }
@@ -50,16 +59,41 @@ public class Expenses {
         this.expensesDept = expensesDept;
     }
 
-    private Expenses(){
-
-    }
-
     public Expenses(Builder builder) {
         this.expensesId = builder.expensesId;
         this.expensesAmount = builder.expensesAmount;
         this.expensesDate = builder.expensesDate;
         this.expensesContact = builder.expensesContact;
         this.expensesDept = builder.expensesDept;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Expenses)) return false;
+        Expenses expenses = (Expenses) o;
+        return getExpensesId().equals(expenses.getExpensesId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getExpensesId());
+    }
+
+    @Override
+    public String toString() {
+        return "Expenses{" +
+                "expensesId='" + expensesId + '\'' +
+                ", expensesAmount='" + expensesAmount + '\'' +
+                ", expensesDate='" + expensesDate + '\'' +
+                ", expensesContact='" + expensesContact + '\'' +
+                ", expensesDept='" + expensesDept + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Expenses expenses) {
+        return this.expensesId.compareTo(expenses.expensesId);
     }
 
     public static class Builder{

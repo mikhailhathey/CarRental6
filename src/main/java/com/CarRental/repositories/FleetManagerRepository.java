@@ -1,11 +1,11 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.FleetManager;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface FleetManagerRepository extends JpaRepository<FleetManager, String> {
 
-
-public interface FleetManagerRepository extends CrudRepository<FleetManager, String> {
-
-    Set<FleetManager> getAll();
+    //Set<FleetManager> getAll();
 }

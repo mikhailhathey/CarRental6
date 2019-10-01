@@ -1,30 +1,79 @@
 package com.CarRental.domain;
 
-public class Claims {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Claims implements Comparable<Claims> {
 
+    @Id
     private String claimsId;
     private String claimProvider;
     private String claimValue;
     private String claimReason;
 
+    private Claims() {
+    }
+
     public String getClaimsId() {
         return claimsId;
+    }
+
+    public void setClaimsId(String claimsId) {
+        this.claimsId = claimsId;
     }
 
     public String getClaimProvider() {
         return claimProvider;
     }
 
+    public void setClaimProvider(String claimProvider) {
+        this.claimProvider = claimProvider;
+    }
+
     public String getClaimValue() {
         return claimValue;
+    }
+
+    public void setClaimValue(String claimValue) {
+        this.claimValue = claimValue;
     }
 
     public String getClaimReason() {
         return claimReason;
     }
 
-    private Claims() {
+    public void setClaimReason(String claimReason) {
+        this.claimReason = claimReason;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Claims)) return false;
+        Claims claims = (Claims) o;
+        return getClaimsId().equals(claims.getClaimsId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getClaimsId());
+    }
+
+    @Override
+    public String toString() {
+        return "Claims{" +
+                "claimsId='" + claimsId + '\'' +
+                ", claimProvider='" + claimProvider + '\'' +
+                ", claimValue='" + claimValue + '\'' +
+                ", claimReason='" + claimReason + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Claims claims) {
+        return this.claimsId.compareTo(claims.claimsId);
     }
 
     public Claims(Builder builder) {

@@ -7,12 +7,11 @@ public class SoftwareFactory {
     //Changes to be made, in future iteration remove String id and have the String id generated.
     public static Software buildSoftware(String softwareId, String softwareName, String softwareVersion, String softwarePrice)
     {
-        Software software = new Software.Builder()
+        return new Software.Builder()
                 .softwareId(softwareId)
                 .softwareName(softwareName)
                 .softwareVersion(softwareVersion)
                 .softwarePrice(softwarePrice)
                 .build();
-        return software;
     }
 }

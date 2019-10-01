@@ -1,18 +1,27 @@
 package com.CarRental.domain;
 
-public class Revenue {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Revenue implements Comparable<Revenue>{
+
+    @Id
     private String revenueId;
     private String revenueMonth;
     private String revenuePeriod;
     private String revenueAmount;
     private String revenueBranch;
 
+    private Revenue(){
+    }
+
     public String getRevenueId() {
         return revenueId;
     }
 
-    public void setId(String revenueId) {
+    public void setRevenueId(String revenueId) {
         this.revenueId = revenueId;
     }
 
@@ -48,9 +57,6 @@ public class Revenue {
         this.revenueBranch = revenueBranch;
     }
 
-    private Revenue(){
-
-    }
 
     public Revenue(Builder builder) {
         this.revenueId = builder.revenueId;
@@ -58,6 +64,35 @@ public class Revenue {
         this.revenuePeriod = builder.revenuePeriod;
         this.revenueAmount = builder.revenueAmount;
         this.revenueBranch = builder.revenueBranch;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Revenue)) return false;
+        Revenue revenue = (Revenue) o;
+        return getRevenueId().equals(revenue.getRevenueId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getRevenueId());
+    }
+
+    @Override
+    public String toString() {
+        return "Revenue{" +
+                "revenueId='" + revenueId + '\'' +
+                ", revenueMonth='" + revenueMonth + '\'' +
+                ", revenuePeriod='" + revenuePeriod + '\'' +
+                ", revenueAmount='" + revenueAmount + '\'' +
+                ", revenueBranch='" + revenueBranch + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Revenue revenue) {
+        return this.revenueId.compareTo(revenue.revenueId);
     }
 
     public static class Builder{

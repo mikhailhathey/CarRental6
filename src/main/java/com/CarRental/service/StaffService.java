@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Staff;
 
-import java.util.Set;
+import java.util.List;
 
-public interface StaffService extends CrudService<Staff, String>{
-    Set<Staff> getAll();
+public interface StaffService extends IService<Staff, String>{
+    List<Staff> getAll();
 }

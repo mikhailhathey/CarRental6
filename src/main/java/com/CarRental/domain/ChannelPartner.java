@@ -1,28 +1,17 @@
 package com.CarRental.domain;
 
-public class ChannelPartner {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class ChannelPartner implements Comparable<ChannelPartner> {
 
+    @Id
     private String channelPartnerId;
     private String channelPartnerName;
     private String channelPartnerContact;
     private String channelPartnerEmail;
-
-    public String getChannelPartnerId() {
-        return channelPartnerId;
-    }
-
-    public String getChannelPartnerName() {
-        return channelPartnerName;
-    }
-
-    public String getChannelPartnerContact() {
-        return channelPartnerContact;
-    }
-
-    public String getChannelPartnerEmail() {
-        return channelPartnerEmail;
-    }
 
     private ChannelPartner() {
     }
@@ -32,6 +21,58 @@ public class ChannelPartner {
         this.channelPartnerName = builder.channelPartnerName;
         this.channelPartnerContact = builder.channelPartnerContact;
         this.channelPartnerEmail = builder.channelPartnerEmail;
+    }
+
+    public String getChannelPartnerId() {
+        return channelPartnerId;
+    }
+
+    public void setChannelPartnerId(String channelPartnerId) {
+        this.channelPartnerId = channelPartnerId;
+    }
+
+    public String getChannelPartnerName() {
+        return channelPartnerName;
+    }
+
+    public void setChannelPartnerName(String channelPartnerName) {
+        this.channelPartnerName = channelPartnerName;
+    }
+
+    public String getChannelPartnerContact() {
+        return channelPartnerContact;
+    }
+
+    public void setChannelPartnerContact(String channelPartnerContact) {
+        this.channelPartnerContact = channelPartnerContact;
+    }
+
+    public String getChannelPartnerEmail() {
+        return channelPartnerEmail;
+    }
+
+    public void setChannelPartnerEmail(String channelPartnerEmail) {
+        this.channelPartnerEmail = channelPartnerEmail;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getChannelPartnerId());
+    }
+
+    @Override
+    public String toString() {
+        return "ChannelPartner{" +
+                "channelPartnerId='" + channelPartnerId + '\'' +
+                ", channelPartnerName='" + channelPartnerName + '\'' +
+                ", channelPartnerContact='" + channelPartnerContact + '\'' +
+                ", channelPartnerEmail='" + channelPartnerEmail + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(ChannelPartner channelPartner) {
+        return this.channelPartnerId.compareTo(channelPartner.channelPartnerId);
     }
 
     public static class Builder{

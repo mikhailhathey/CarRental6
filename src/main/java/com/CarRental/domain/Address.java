@@ -1,13 +1,31 @@
 package com.CarRental.domain;
 
-public class Address {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Address implements Comparable<Address> {
+
+    @Id
     private String addressId;
     private String houseNumber;
     private String streetName;
     private String suburb;
     private String postalCode;
     private String city;
+
+    private Address(){
+    }
+
+    public Address(Builder builder) {
+        this.addressId = builder.addressId;
+        this.houseNumber = builder.houseNumber;
+        this.streetName = builder.streetName;
+        this.suburb = builder.suburb;
+        this.postalCode = builder.postalCode;
+        this.city = builder.city;
+    }
 
     public String getAddressId() {
         return addressId;
@@ -57,17 +75,34 @@ public class Address {
         this.city = city;
     }
 
-    private Address(){
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Address)) return false;
+        Address address = (Address) o;
+        return getAddressId().equals(address.getAddressId());
     }
 
-    public Address(Builder builder) {
-        this.addressId = builder.addressId;
-        this.houseNumber = builder.houseNumber;
-        this.streetName = builder.streetName;
-        this.suburb = builder.suburb;
-        this.postalCode = builder.postalCode;
-        this.city = builder.city;
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAddressId());
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "addressId='" + addressId + '\'' +
+                ", houseNumber='" + houseNumber + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", suburb='" + suburb + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", city='" + city + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Address address) {
+        return this.addressId.compareTo(address.addressId);
     }
 
     public static class Builder{
@@ -116,7 +151,6 @@ public class Address {
         }
 
         public Address build(){
-
             return new Address(this);
         }
 

@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Infrastructure;
 
-import java.util.Set;
+import java.util.List;
 
-public interface InfrastructureService extends CrudService<Infrastructure, String>{
-    Set<Infrastructure> getAll();
+public interface InfrastructureService extends IService<Infrastructure, String>{
+    List<Infrastructure> getAll();
 }

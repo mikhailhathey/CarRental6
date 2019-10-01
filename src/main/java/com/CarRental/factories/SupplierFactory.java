@@ -6,12 +6,11 @@ public class SupplierFactory {
 
     public static Supplier buildSupplier(String supplierId, String supplierName, String supplierContact, String supplierEmail)
     {
-        Supplier supplier = new Supplier.Builder()
+        return new Supplier.Builder()
                 .supplierId(supplierId)
                 .supplierName(supplierName)
                 .supplierContact(supplierContact)
                 .supplierEmail(supplierEmail)
                 .build();
-        return supplier;
     }
 }

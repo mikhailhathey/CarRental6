@@ -6,7 +6,7 @@ public class FleetManagerFactory {
 
     public static FleetManager buildFleetManager(String fleetManagerId, String fleetManagerNumber, String fleetManagerClass, String fleetManagerDays, String fleetManagerContact, String fleetManagerBranch)
     {
-        FleetManager fleetManager = new FleetManager.Builder()
+        return new FleetManager.Builder()
                 .fleetManagerId(fleetManagerId)
                 .fleetManagerNumber(fleetManagerNumber)
                 .fleetManagerClass(fleetManagerClass)
@@ -14,6 +14,5 @@ public class FleetManagerFactory {
                 .fleetManagerContact(fleetManagerContact)
                 .fleetManagerBranch(fleetManagerBranch)
                 .build();
-        return fleetManager;
     }
 }

@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Expenses;
 import com.CarRental.service.ExpensesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/expenses")
 public class ExpensesController {
     @Autowired
-    @Qualifier("ExpensesServiceImpl")
-    private ExpensesService service;
+    private ExpensesService expensesService;
+    //@Qualifier("ExpensesServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Expenses create(Expenses expenses) {
-        return service.create(expenses);
+    public Expenses create(@RequestBody Expenses expenses) {
+        return expensesService.create(expenses);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Expenses update(Expenses expenses) {
-        return service.update(expenses);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Expenses update(@RequestBody Expenses expenses) {
+        return expensesService.update(expenses);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Expenses read(@PathVariable String id) {
-        return service.read(id);
+        return expensesService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Expenses> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        expensesService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Expenses> getAll() {
+        return expensesService.getAll();
     }
 
 }

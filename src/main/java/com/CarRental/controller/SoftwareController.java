@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Software;
 import com.CarRental.service.SoftwareService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/software")
 public class SoftwareController {
     @Autowired
-    @Qualifier("SoftwareServiceImpl")
-    private SoftwareService service;
+    private SoftwareService softwareService;
+    //@Qualifier("SoftwareServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Software create(Software software) {
-        return service.create(software);
+    public Software create(@RequestBody Software software) {
+        return softwareService.create(software);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Software update(Software software) {
-        return service.update(software);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Software update(@RequestBody Software software) {
+        return softwareService.update(software);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Software read(@PathVariable String id) {
-        return service.read(id);
+        return softwareService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Software> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        softwareService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Software> getAll() {
+        return softwareService.getAll();
     }
 
 }

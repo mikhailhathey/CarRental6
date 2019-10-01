@@ -2,51 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.VehicleSellingPrice;
 import com.CarRental.repositories.VehicleSellingPriceRepository;
-import com.CarRental.repositories.impl.VehicleSellingPriceRepositoryImpl;
 import com.CarRental.service.VehicleSellingPriceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("VehicleSellingPriceServiceImpl")
 public class VehicleSellingPriceServiceImpl implements VehicleSellingPriceService {
+
     @Autowired
+    private VehicleSellingPriceRepository vehicleSellingPriceRepository;
 
-    private static VehicleSellingPriceServiceImpl service = null;
-    private VehicleSellingPriceRepository repository;
-
-    private VehicleSellingPriceServiceImpl() {
-        this.repository = VehicleSellingPriceRepositoryImpl.getRepository();
-    }
-
-    public static VehicleSellingPriceServiceImpl getService(){
-        if (service == null) service = new VehicleSellingPriceServiceImpl();
-        return service;
+    @Override
+    public List<VehicleSellingPrice> getAll() {
+        return this.vehicleSellingPriceRepository.findAll();
     }
 
     @Override
     public VehicleSellingPrice create(VehicleSellingPrice vehicleSellingPrice) {
-        return this.repository.create(vehicleSellingPrice);
+        return this.vehicleSellingPriceRepository.save(vehicleSellingPrice);
+    }
+
+    @Override
+    public VehicleSellingPrice read(String vehicleSellingPriceId) {
+        Optional<VehicleSellingPrice> byId = this.vehicleSellingPriceRepository.findById(vehicleSellingPriceId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public VehicleSellingPrice update(VehicleSellingPrice vehicleSellingPrice) {
-        return this.repository.update(vehicleSellingPrice);
+        return this.vehicleSellingPriceRepository.save(vehicleSellingPrice);
     }
 
     @Override
-    public void delete(String s) {
-        this.repository.delete(s);
-    }
-
-    @Override
-    public VehicleSellingPrice read(String s) {
-        return this.repository.read(s);
-    }
-
-    @Override
-    public Set<VehicleSellingPrice> getAll() {
-        return this.repository.getAll();
+    public void delete(String vehicleSellingPriceId) {
+        this.vehicleSellingPriceRepository.deleteById(vehicleSellingPriceId);
     }
 }

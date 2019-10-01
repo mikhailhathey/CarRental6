@@ -1,12 +1,21 @@
 package com.CarRental.domain;
 
-public class Staff {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Staff implements Comparable<Staff>{
+
+    @Id
     private String staffId;
     private String staffName;
     private String staffContact;
     private String staffEmail;
     private String staffIDNumber;
+
+    private Staff(){
+    }
 
     public String getStaffId() {
         return staffId;
@@ -48,17 +57,41 @@ public class Staff {
         this.staffIDNumber = staffIDNumber;
     }
 
-
-    private Staff(){
-
-    }
-
     public Staff(Builder builder) {
         this.staffId = builder.staffId;
         this.staffName = builder.staffName;
         this.staffContact = builder.staffContact;
         this.staffEmail = builder.staffEmail;
         this.staffIDNumber = builder.staffIDNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Staff)) return false;
+        Staff staff = (Staff) o;
+        return getStaffId().equals(staff.getStaffId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getStaffId());
+    }
+
+    @Override
+    public String toString() {
+        return "Staff{" +
+                "staffId='" + staffId + '\'' +
+                ", staffName='" + staffName + '\'' +
+                ", staffContact='" + staffContact + '\'' +
+                ", staffEmail='" + staffEmail + '\'' +
+                ", staffIDNumber='" + staffIDNumber + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Staff staff) {
+        return this.staffId.compareTo(staff.staffId);
     }
 
     public static class Builder{

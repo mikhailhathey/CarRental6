@@ -1,11 +1,11 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.Hardware;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface HardwareRepository extends JpaRepository<Hardware, String> {
 
-
-public interface HardwareRepository extends CrudRepository<Hardware, String> {
-
-    Set<Hardware> getAll();
+    //Set<Hardware> getAll();
 }

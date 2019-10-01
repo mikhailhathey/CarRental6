@@ -2,51 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.RentalTerm;
 import com.CarRental.repositories.RentalTermRepository;
-import com.CarRental.repositories.impl.RentalTermRepositoryImpl;
 import com.CarRental.service.RentalTermService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("RentalTermServiceImpl")
 public class RentalTermServiceImpl implements RentalTermService {
+
     @Autowired
+    private RentalTermRepository rentalTermRepository;
 
-    private static RentalTermServiceImpl service = null;
-    private RentalTermRepository repository;
-
-    private RentalTermServiceImpl() {
-        this.repository = RentalTermRepositoryImpl.getRepository();
-    }
-
-    public static RentalTermServiceImpl getService(){
-        if (service == null) service = new RentalTermServiceImpl();
-        return service;
+    @Override
+    public List<RentalTerm> getAll() {
+        return this.rentalTermRepository.findAll();
     }
 
     @Override
     public RentalTerm create(RentalTerm rentalTerm) {
-        return this.repository.create(rentalTerm);
+        return this.rentalTermRepository.save(rentalTerm);
+    }
+
+    @Override
+    public RentalTerm read(String rentalTermId) {
+        Optional<RentalTerm> byId = this.rentalTermRepository.findById(rentalTermId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public RentalTerm update(RentalTerm rentalTerm) {
-        return this.repository.update(rentalTerm);
+        return this.rentalTermRepository.save(rentalTerm);
     }
 
     @Override
-    public void delete(String s) {
-        this.repository.delete(s);
-    }
-
-    @Override
-    public RentalTerm read(String s) {
-        return this.repository.read(s);
-    }
-
-    @Override
-    public Set<RentalTerm> getAll() {
-        return this.repository.getAll();
+    public void delete(String rentalTermId) {
+        this.rentalTermRepository.deleteById(rentalTermId);
     }
 }

@@ -1,7 +1,13 @@
 package com.CarRental.domain;
 
-public class FleetManager {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class FleetManager implements Comparable<FleetManager>{
+
+    @Id
     private String fleetManagerId;
     private String fleetManagerNumber;
     private String fleetManagerClass;
@@ -9,12 +15,15 @@ public class FleetManager {
     private String fleetManagerContact;
     private String fleetManagerBranch;
 
+    private FleetManager(){
+    }
+
     //fleetManagerId, fleetManagerNumber, fleetManagerClass, fleetManagerDays, fleetManagerContact, fleetManagerBranch
     public String getFleetManagerId() {
         return fleetManagerId;
     }
 
-    public void setId(String fleetManagerId) {
+    public void setFleetManagerId(String fleetManagerId) {
         this.fleetManagerId = fleetManagerId;
     }
 
@@ -58,10 +67,6 @@ public class FleetManager {
         this.fleetManagerBranch = fleetManagerBranch;
     }
 
-    private FleetManager(){
-
-    }
-
     public FleetManager(Builder builder) {
         this.fleetManagerId = builder.fleetManagerId;
         this.fleetManagerNumber = builder.fleetManagerNumber;
@@ -69,6 +74,36 @@ public class FleetManager {
         this.fleetManagerDays = builder.fleetManagerDays;
         this.fleetManagerContact = builder.fleetManagerContact;
         this.fleetManagerBranch = builder.fleetManagerBranch;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof FleetManager)) return false;
+        FleetManager fleetManager = (FleetManager) o;
+        return getFleetManagerId().equals(fleetManager.getFleetManagerId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFleetManagerId());
+    }
+
+    @Override
+    public String toString() {
+        return "FleetManager{" +
+                "fleetManagerId='" + fleetManagerId + '\'' +
+                ", fleetManagerNumber='" + fleetManagerNumber + '\'' +
+                ", fleetManagerClass='" + fleetManagerClass + '\'' +
+                ", fleetManagerDays='" + fleetManagerDays + '\'' +
+                ", fleetManagerContact='" + fleetManagerContact + '\'' +
+                ", fleetManagerBranch='" + fleetManagerBranch + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(FleetManager fleetManager) {
+        return this.fleetManagerId.compareTo(fleetManager.fleetManagerId);
     }
 
     public static class Builder{

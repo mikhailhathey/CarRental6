@@ -1,12 +1,29 @@
 package com.CarRental.domain;
 
-public class Car {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Car implements Comparable<Car>{
+
+    @Id
     private String carId;
     private String vinNumber;
     private String manufacturerName;
     private String modelName;
     private String yearModel;
+
+    private Car(){
+    }
+
+    public Car(Builder builder) {
+        this.carId = builder.carId;
+        this.vinNumber = builder.vinNumber;
+        this.manufacturerName = builder.manufacturerName;
+        this.modelName = builder.modelName;
+        this.yearModel = builder.yearModel;
+    }
 
     public String getCarId() {
         return carId;
@@ -48,17 +65,33 @@ public class Car {
         this.yearModel = yearModel;
     }
 
-
-    private Car(){
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car)) return false;
+        Car car = (Car) o;
+        return getCarId().equals(car.getCarId());
     }
 
-    public Car(Builder builder) {
-        this.carId = builder.carId;
-        this.vinNumber = builder.vinNumber;
-        this.manufacturerName = builder.manufacturerName;
-        this.modelName = builder.modelName;
-        this.yearModel = builder.yearModel;
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCarId());
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "carId='" + carId + '\'' +
+                ", vinNumber='" + vinNumber + '\'' +
+                ", manufacturerName='" + manufacturerName + '\'' +
+                ", modelName='" + modelName + '\'' +
+                ", yearModel='" + yearModel + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Car car) {
+        return this.carId.compareTo(car.carId);
     }
 
     public static class Builder{

@@ -1,13 +1,13 @@
 package com.CarRental.repositories;
 
 import com.CarRental.domain.BranchLocation;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Set;
+@Repository
+public interface BranchLocationRepository extends JpaRepository<BranchLocation, String> {
 
-
-public interface BranchLocationRepository extends CrudRepository<BranchLocation, String> {
-
-    Set<BranchLocation> getAll();
+    //Set<BranchLocation> getAll();
     //public List<BranchLocation> findByAge(int age);
     //public List<BranchLocation> findById(String id);
 

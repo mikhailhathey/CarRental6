@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Profit;
 
-import java.util.Set;
+import java.util.List;
 
-public interface ProfitService extends CrudService<Profit, String>{
-    Set<Profit> getAll();
+public interface ProfitService extends IService<Profit, String>{
+    List<Profit> getAll();
 }

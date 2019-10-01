@@ -2,51 +2,42 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Profit;
 import com.CarRental.repositories.ProfitRepository;
-import com.CarRental.repositories.impl.ProfitRepositoryImpl;
 import com.CarRental.service.ProfitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service("ProfitServiceImpl")
 public class ProfitServiceImpl implements ProfitService {
+
     @Autowired
+    private ProfitRepository profitRepository;
 
-    private static ProfitServiceImpl service = null;
-    private ProfitRepository repository;
-
-    private ProfitServiceImpl() {
-        this.repository = ProfitRepositoryImpl.getRepository();
-    }
-
-    public static ProfitServiceImpl getService(){
-        if (service == null) service = new ProfitServiceImpl();
-        return service;
+    @Override
+    public List<Profit> getAll() {
+        return this.profitRepository.findAll();
     }
 
     @Override
     public Profit create(Profit profit) {
-        return this.repository.create(profit);
+        return this.profitRepository.save(profit);
+    }
+
+    @Override
+    public Profit read(String profitId) {
+        Optional<Profit> byId = this.profitRepository.findById(profitId);
+        return byId.orElseThrow(RuntimeException::new);
     }
 
     @Override
     public Profit update(Profit profit) {
-        return this.repository.update(profit);
+        return this.profitRepository.save(profit);
     }
 
     @Override
-    public void delete(String s) {
-        this.repository.delete(s);
-    }
-
-    @Override
-    public Profit read(String s) {
-        return this.repository.read(s);
-    }
-
-    @Override
-    public Set<Profit> getAll() {
-        return this.repository.getAll();
+    public void delete(String profitId) {
+        this.profitRepository.deleteById(profitId);
     }
 }

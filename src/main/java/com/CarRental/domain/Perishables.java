@@ -1,11 +1,20 @@
 package com.CarRental.domain;
 
-public class Perishables {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.Objects;
 
+@Entity
+public class Perishables implements Comparable<Perishables>{
+
+    @Id
     private String perishablesId;
     private String perishableName;
     private String perishableExpiryDate;
     private String perishableQuantity;
+
+    private Perishables(){
+    }
 
     public String getPerishablesId() {
         return perishablesId;
@@ -39,16 +48,39 @@ public class Perishables {
         this.perishableQuantity = perishableQuantity;
     }
 
-
-    private Perishables(){
-
-    }
-
     public Perishables(Builder builder) {
         this.perishablesId = builder.perishablesId;
         this.perishableName = builder.perishableName;
         this.perishableExpiryDate = builder.perishableExpiryDate;
         this.perishableQuantity = builder.perishableQuantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Perishables)) return false;
+        Perishables perishables = (Perishables) o;
+        return getPerishablesId().equals(perishables.getPerishablesId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getPerishablesId());
+    }
+
+    @Override
+    public String toString() {
+        return "Perishables{" +
+                "perishablesId='" + perishablesId + '\'' +
+                ", perishableName='" + perishableName + '\'' +
+                ", perishableExpiryDate='" + perishableExpiryDate + '\'' +
+                ", perishableQuantity='" + perishableQuantity + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Perishables perishables) {
+        return this.perishablesId.compareTo(perishables.perishablesId);
     }
 
     public static class Builder{

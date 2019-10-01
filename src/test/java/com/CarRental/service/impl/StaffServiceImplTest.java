@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.Staff;
 import com.CarRental.factories.StaffFactory;
-import com.CarRental.repositories.impl.StaffRepositoryImpl;
+import com.CarRental.service.StaffService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class StaffServiceImplTest {
+  @Autowired
+  @Qualifier("StaffServiceImpl")
+  private StaffService staffService;
+  private Staff staff;
+  private Set<Staff> staffs = new HashSet<>();
 
-    private StaffRepositoryImpl repository;
-    private Staff staff;
+  @Before
+  public void setUp() {
+      staff = staffService.create(StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont"));
+      staffs.add(staff);
+  }
 
-    private Staff getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      Staff createStaff = staffService.create(StaffFactory.buildStaff(
+              "345", "August", "April", "200000", "Claremont"));
+      staffs.add(createStaff);
+      Assert.assertEquals(createStaff, staffService.read(createStaff.getStaffId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = StaffRepositoryImpl.getRepository();
-        this.staff = StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont");
-    }
+  @Test
+  public void read() {
+      Staff readTestStaff = staffService.create(StaffFactory.buildStaff(
+              "345", "August", "April", "200000", "Claremont"));
+      Assert.assertEquals(readTestStaff, staffService.read(readTestStaff.getStaffId()));
+  }
 
-    @Test
-    public void a_create() {
-        Staff created = this.repository.create(this.staff);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.staff);
-    }
+  @Test
+  public void update() {
+      String newStaffName = "Test";
+      Staff updateStaff = staffService.update(new Staff.Builder().copy(staff).staffName(newStaffName).build());
+      staffs.add(updateStaff);
+      Assert.assertEquals(updateStaff, staffService.read(updateStaff.getStaffId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newStaffName = "Application Development Theory 3";
-        Staff updated = new Staff.Builder().copy(getSaved()).staffId(newStaffName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newStaffName, updated.getStaffId());
-    }
+  @Test
+  public void delete() {
+      staffs.addAll(staffService.getAll());
+      Staff deleteStaff = staffService.create(StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont"));
+      staffs.add(deleteStaff);
+      staffs.remove(deleteStaff);
+      staffService.delete(deleteStaff.getStaffId());
+      Assert.assertEquals(staffs.size(), staffService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        Staff saved = getSaved();
-        this.repository.delete(saved.getStaffId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        Staff saved = getSaved();
-        Staff read = this.repository.read(saved.getStaffId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<Staff> staffs = this.repository.getAll();
-        System.out.println("In getall, all = " + staffs);
-    }
+  @Test
+  public void getAll() {
+      List<Staff> staffSet = staffService.getAll();
+      Assert.assertEquals(staffSet.size(), staffService.getAll().size());
+  }
 }
+//"345", "August", "April", "200000", "Claremont"

@@ -2,8 +2,8 @@ package com.CarRental.service;
 
 import com.CarRental.domain.Admin;
 
-import java.util.Set;
+import java.util.List;
 
-public interface AdminService extends CrudService<Admin, String>{
-    Set<Admin> getAll();
+public interface AdminService extends IService<Admin, String>{
+    List<Admin> getAll();
 }

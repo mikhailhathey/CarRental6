@@ -2,66 +2,72 @@ package com.CarRental.service.impl;
 
 import com.CarRental.domain.BranchLocation;
 import com.CarRental.factories.BranchLocationFactory;
-import com.CarRental.repositories.impl.BranchLocationRepositoryImpl;
+import com.CarRental.service.BranchLocationService;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@SpringBootTest
+@RunWith(SpringRunner.class)
 public class BranchLocationServiceImplTest {
+  @Autowired
+  @Qualifier("BranchLocationServiceImpl")
+  private BranchLocationService branchLocationService;
+  private BranchLocation branchLocation;
+  private Set<BranchLocation> branchLocations = new HashSet<>();
 
-    private BranchLocationRepositoryImpl repository;
-    private BranchLocation branchLocation;
+  @Before
+  public void setUp() {
+      branchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager"));
+      branchLocations.add(branchLocation);
+  }
 
-    private BranchLocation getSaved(){
-        return this.repository.getAll().iterator().next();
-    }
+  @Test
+  public void create() {
+      BranchLocation createBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation(
+              "123", "TestBranch", "TestManager"));
+      branchLocations.add(createBranchLocation);
+      Assert.assertEquals(createBranchLocation, branchLocationService.read(createBranchLocation.getBranchLocationId()));
+  }
 
-    @Before
-    public void setUp() throws Exception {
-        this.repository = BranchLocationRepositoryImpl.getRepository();
-        this.branchLocation = BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager");
-    }
+  @Test
+  public void read() {
+      BranchLocation readTestBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation(
+              "123", "TestBranch", "TestManager"));
+      Assert.assertEquals(readTestBranchLocation, branchLocationService.read(readTestBranchLocation.getBranchLocationId()));
+  }
 
-    @Test
-    public void a_create() {
-        BranchLocation created = this.repository.create(this.branchLocation);
-        System.out.println("In create, created = " + created);
-        Assert.assertNotNull(created);
-        Assert.assertSame(created, this.branchLocation);
-    }
+  @Test
+  public void update() {
+      String newBranchName = "Test";
+      BranchLocation updateBranchLocation = branchLocationService.update(new BranchLocation.Builder().copy(branchLocation).branchName(newBranchName).build());
+      branchLocations.add(updateBranchLocation);
+      Assert.assertEquals(updateBranchLocation, branchLocationService.read(updateBranchLocation.getBranchLocationId()));
+  }
 
-    @Test
-    public void c_update() {
-        String newBranchLocationName = "Application Development Theory 3";
-        BranchLocation updated = new BranchLocation.Builder().copy(getSaved()).branchLocationId(newBranchLocationName).build();
-        System.out.println("In update, updated = " + updated);
-        this.repository.update(updated);
-        Assert.assertSame(newBranchLocationName, updated.getBranchLocationId());
-    }
+  @Test
+  public void delete() {
+      branchLocations.addAll(branchLocationService.getAll());
+      BranchLocation deleteBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager"));
+      branchLocations.add(deleteBranchLocation);
+      branchLocations.remove(deleteBranchLocation);
+      branchLocationService.delete(deleteBranchLocation.getBranchLocationId());
+      Assert.assertEquals(branchLocations.size(), branchLocationService.getAll().size());
+  }
 
-    @Test
-    public void e_delete() {
-        BranchLocation saved = getSaved();
-        this.repository.delete(saved.getBranchLocationId());
-        d_getAll();
-    }
-
-    @Test
-    public void b_read() {
-        BranchLocation saved = getSaved();
-        BranchLocation read = this.repository.read(saved.getBranchLocationId());
-        System.out.println("In read, read = "+ read);
-        Assert.assertSame(read, saved);
-    }
-
-    @Test
-    public void d_getAll() {
-        Set<BranchLocation> branchLocations = this.repository.getAll();
-        System.out.println("In getall, all = " + branchLocations);
-    }
+  @Test
+  public void getAll() {
+      List<BranchLocation> branchLocationSet = branchLocationService.getAll();
+      Assert.assertEquals(branchLocationSet.size(), branchLocationService.getAll().size());
+  }
 }
+//"123", "TestBranch", "TestManager"

@@ -3,47 +3,45 @@ package com.CarRental.controller;
 import com.CarRental.domain.Car;
 import com.CarRental.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 
 @RestController
 @RequestMapping("/car")
 public class CarController {
     @Autowired
-    @Qualifier("CarServiceImpl")
-    private CarService service;
+    private CarService carService;
+    //@Qualifier("CarServiceImpl")
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     @ResponseBody
-    public Car create(Car car) {
-        return service.create(car);
+    public Car create(@RequestBody Car car) {
+        return carService.create(car);
     }
 
-    @GetMapping("/update")
+    @PutMapping("/update")
     @ResponseBody
-    public Car update(Car car) {
-        return service.update(car);
-    }
-
-    @GetMapping("/delete/{id}")
-    @ResponseBody
-    public void delete(@PathVariable String id) {
-        service.delete(id);
-
+    public Car update(@RequestBody Car car) {
+        return carService.update(car);
     }
 
     @GetMapping("/read/{id}")
     @ResponseBody
     public Car read(@PathVariable String id) {
-        return service.read(id);
+        return carService.read(id);
     }
 
-    @GetMapping("/getAll")
+    @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public Set<Car> getAll() {
-        return service.getAll();
+    public void delete(@PathVariable String id) {
+        carService.delete(id);
+    }
+
+    @GetMapping("/getAll/all")
+    @ResponseBody
+    public List<Car> getAll() {
+        return carService.getAll();
     }
 
 }
