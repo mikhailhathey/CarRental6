@@ -54,7 +54,7 @@ public class AssetsControllerTest {
         ResponseEntity<Assets> result = null;
         try{
             Assets assets = AssetsFactory.buildAssets("456", "Volkswagen Polo", "Cape Town CBD", "Vehicle");
-            result = restTemplate.withBasicAuth("user", "admin")
+            result = restTemplate.withBasicAuth("user", "user")
                     .postForEntity(BASE_URL + "/create/newAssets", assets, Assets.class);
 
         }catch (Exception e){

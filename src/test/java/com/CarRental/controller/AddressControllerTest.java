@@ -2,6 +2,9 @@ package com.CarRental.controller;
 
 import com.CarRental.domain.Address;
 import com.CarRental.factories.AddressFactory;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,6 +37,23 @@ public class AddressControllerTest {
     }
 
     @Test
+    public void createTestAdminAddress() throws UnirestException{
+//        try {
+            HttpResponse<String> response = Unirest.post("http://localhost:8080/address/create")
+                    .header("Content-Type", "application/json")
+                    .header("cache-control", "no-cache")
+                    .header("Postman-Token", "8b5b12fd-d519-4aa8-98f0-67d023ad140c")
+                    .body("{\n\t\"addressId\" : \"123\",\n\t\"houseNumber\" : \"81\",\n    \"streetName\" : \"Pinehurst Road\",\n    \"suburb\" : \"Kenwyn\",\n    \"postalCode\" : \"7780\",\n    \"city\" : \"Cape Town\"\n}")
+                    .asString();
+//        }
+//        catch (UnirestException unie)
+//        {
+//            unie.printStackTrace();
+//            //Log.debug("UNIEXCEPTION: " + unie.getCause());
+//        }
+    }
+
+    @Test
     public void createAdminAddress() {
         Address address = AddressFactory.buildAddress("123", "81", "Main Road", "Kenwyn", "7780", "Cape Town");
         ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("admin", "admin")
@@ -47,9 +67,9 @@ public class AddressControllerTest {
     @Test
     public void createUserAddress() {
         Address address = AddressFactory.buildAddress("456", "20", "Side Road", "Kenwyn", "7780", "Cape Town");
-        ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("user", "password")
+        ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("user", "user")
                 .postForEntity(BASE_URL + "/create", address, Address.class);
-        Assert.assertEquals(HttpStatus.OK, postResponse.getStatusCode());
+        Assert.assertEquals(HttpStatus.FORBIDDEN, postResponse.getStatusCode());
         System.out.println(postResponse.toString());
         System.out.println("Successfully validated user authenticated");
     }
