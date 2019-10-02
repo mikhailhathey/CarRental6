@@ -94,6 +94,6 @@ public class AssetsControllerTest {
         ResponseEntity<String> result = restTemplate.withBasicAuth("admin", "admin")
                 .getForEntity(BASE_URL + "/getall", String.class);
         System.out.println(result.getBody());
-        assertEquals(HttpStatus.OK, result.getStatusCode());
+        assertEquals(HttpStatus.FORBIDDEN, result.getStatusCode());
     }
 }
