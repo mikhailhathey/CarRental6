@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/address")
 public class AddressController {
@@ -21,7 +22,7 @@ public class AddressController {
         return addressService.create(address);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public Address update(@RequestBody Address address) {
         return addressService.update(address);

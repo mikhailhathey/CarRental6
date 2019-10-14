@@ -7,6 +7,10 @@ import java.util.Objects;
 @Entity
 public class Admin implements Comparable<Admin>{
 
+/*  @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name="system-uuid", strategy = "uuid")
+    @Column(name="admin_id")*/
     @Id
     private String adminId;
     private String adminName;

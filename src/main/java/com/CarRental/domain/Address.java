@@ -1,12 +1,15 @@
 package com.CarRental.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 public class Address implements Comparable<Address> {
 
+/*    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name="system-uuid", strategy = "uuid")
+    @Column(name="address_id")*/
     @Id
     private String addressId;
     private String houseNumber;
@@ -27,6 +30,8 @@ public class Address implements Comparable<Address> {
         this.city = builder.city;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public String getAddressId() {
         return addressId;
     }
@@ -35,6 +40,7 @@ public class Address implements Comparable<Address> {
         this.addressId = addressId;
     }
 
+    @Column(name = "house_number", nullable = false)
     public String getHouseNumber() {
         return houseNumber;
     }
@@ -43,6 +49,7 @@ public class Address implements Comparable<Address> {
         this.houseNumber = houseNumber;
     }
 
+    @Column(name = "street", nullable = false)
     public String getStreetName() {
         return streetName;
     }
@@ -51,6 +58,7 @@ public class Address implements Comparable<Address> {
         this.streetName = streetName;
     }
 
+    @Column(name = "suburb", nullable = false)
     public String getSuburb() {
         return suburb;
     }
@@ -59,6 +67,7 @@ public class Address implements Comparable<Address> {
         this.suburb = suburb;
     }
 
+    @Column(name = "postal_code", nullable = false)
     public String getPostalCode() {
         return postalCode;
     }
@@ -67,6 +76,7 @@ public class Address implements Comparable<Address> {
         this.postalCode = postalCode;
     }
 
+    @Column(name = "city", nullable = false)
     public String getCity() {
         return city;
     }
