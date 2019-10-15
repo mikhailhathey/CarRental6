@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/staffType")
 public class StaffTypeController {
@@ -28,13 +29,13 @@ public class StaffTypeController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public StaffType read(@PathVariable String id) {
+    public StaffType read(@PathVariable Integer id) {
         return staffTypeService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         staffTypeService.delete(id);
     }
 

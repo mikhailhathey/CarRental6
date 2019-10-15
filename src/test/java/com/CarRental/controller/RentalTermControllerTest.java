@@ -41,7 +41,7 @@ public class RentalTermControllerTest {
 
     @Test
     public void testCreateRentalTerm() {
-        RentalTerm rentalTerm = RentalTermFactory.buildRentalTerm("324", "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD");
+        RentalTerm rentalTerm = RentalTermFactory.buildRentalTerm(324, "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD");
         ResponseEntity<RentalTerm> postResponse = restTemplate.postForEntity(baseURL + "/create", rentalTerm, RentalTerm.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

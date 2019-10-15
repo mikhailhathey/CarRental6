@@ -41,7 +41,7 @@ public class BranchLocationControllerTest {
 
     @Test
     public void testCreateBranchLocation() {
-        BranchLocation branchLocation = BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager");
+        BranchLocation branchLocation = BranchLocationFactory.buildBranchLocation(123, "TestBranch", "TestManager");
         ResponseEntity<BranchLocation> postResponse = restTemplate.postForEntity(baseURL + "/create", branchLocation, BranchLocation.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

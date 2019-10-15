@@ -26,8 +26,8 @@ public class StaffTypeServiceImpl implements StaffTypeService {
     }
 
     @Override
-    public StaffType read(String staffTypeId) {
-        Optional<StaffType> byId = this.staffTypeRepository.findById(staffTypeId);
+    public StaffType read(Integer staffTypeId) {
+        Optional<StaffType> byId = this.staffTypeRepository.findById(String.valueOf(staffTypeId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class StaffTypeServiceImpl implements StaffTypeService {
     }
 
     @Override
-    public void delete(String staffTypeId) {
-        this.staffTypeRepository.deleteById(staffTypeId);
+    public void delete(Integer staffTypeId) {
+        this.staffTypeRepository.deleteById(String.valueOf(staffTypeId));
     }
 }

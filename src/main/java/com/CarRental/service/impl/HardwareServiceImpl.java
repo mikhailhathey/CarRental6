@@ -26,8 +26,8 @@ public class HardwareServiceImpl implements HardwareService {
     }
 
     @Override
-    public Hardware read(String hardwareId) {
-        Optional<Hardware> byId = this.hardwareRepository.findById(hardwareId);
+    public Hardware read(Integer hardwareId) {
+        Optional<Hardware> byId = this.hardwareRepository.findById(String.valueOf(hardwareId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class HardwareServiceImpl implements HardwareService {
     }
 
     @Override
-    public void delete(String hardwareId) {
-        this.hardwareRepository.deleteById(hardwareId);
+    public void delete(Integer hardwareId) {
+        this.hardwareRepository.deleteById(String.valueOf(hardwareId));
     }
 }

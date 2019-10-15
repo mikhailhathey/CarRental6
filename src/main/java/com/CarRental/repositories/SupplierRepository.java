@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SupplierRepository extends JpaRepository<Supplier, String> {
+    //Optional<Supplier> findById(Integer supplierId);
+
+    //void deleteById(Integer supplierId);
 
     //Set<Supplier> getAll();
 }

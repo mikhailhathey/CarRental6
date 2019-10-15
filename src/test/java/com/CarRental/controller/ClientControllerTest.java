@@ -41,7 +41,7 @@ public class ClientControllerTest {
 
     @Test
     public void testCreateClient() {
-        Client client = ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Street Road");
+        Client client = ClientFactory.buildClient(1234, "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Street Road");
         ResponseEntity<Client> postResponse = restTemplate.postForEntity(baseURL + "/create", client, Client.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

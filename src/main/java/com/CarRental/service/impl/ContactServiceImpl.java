@@ -26,8 +26,8 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Contact read(String contactId) {
-        Optional<Contact> byId = this.contactRepository.findById(contactId);
+    public Contact read(Integer contactId) {
+        Optional<Contact> byId = this.contactRepository.findById(String.valueOf(contactId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public void delete(String contactId) {
-        this.contactRepository.deleteById(contactId);
+    public void delete(Integer contactId) {
+        this.contactRepository.deleteById(String.valueOf(contactId));
     }
 }

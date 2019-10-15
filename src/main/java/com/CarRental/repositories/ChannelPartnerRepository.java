@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ChannelPartnerRepository extends JpaRepository<ChannelPartner, String> {
+    //Optional<ChannelPartner> findById(Integer channelPartnerId);
+
+    //void deleteById(Integer channelPartnerId);
 
     //Set<ChannelPartner> getAll();
     //public List<ChannelPartner> findByAge(int age);

@@ -26,8 +26,8 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Client read(String clientId) {
-        Optional<Client> byId = this.clientRepository.findById(clientId);
+    public Client read(Integer clientId) {
+        Optional<Client> byId = this.clientRepository.findById(String.valueOf(clientId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public void delete(String clientId) {
-        this.clientRepository.deleteById(clientId);
+    public void delete(Integer clientId) {
+        this.clientRepository.deleteById(String.valueOf(clientId));
     }
 }

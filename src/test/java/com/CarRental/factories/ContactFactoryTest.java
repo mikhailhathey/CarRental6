@@ -20,7 +20,7 @@ public class ContactFactoryTest {
 
     @Test
     public void buildCar() {
-        Contact contact = ContactFactory.buildContact("123456", "13443975", "2345972398745", "Fiesta@ford.co.za");
+        Contact contact = ContactFactory.buildContact(123456, "13443975", "2345972398745", "Fiesta@ford.co.za");
         System.out.println(contact);
         Assert.assertNotNull(contact.getContactId());
     }

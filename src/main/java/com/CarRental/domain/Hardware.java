@@ -1,25 +1,27 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class Hardware implements Comparable<Hardware>{
 
-    @Id
-    private String hardwareId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer hardwareId;
     private String hardwareName;
     private String hardwarePrice;
 
     private Hardware(){
     }
 
-    public String getHardwareId() {
+    public Integer getHardwareId() {
         return hardwareId;
     }
 
-    public void setHardwareId(String hardwareId) {
+    public void setHardwareId(Integer hardwareId) {
         this.hardwareId = hardwareId;
     }
 
@@ -74,11 +76,11 @@ public class Hardware implements Comparable<Hardware>{
 
     public static class Builder{
 
-        private String hardwareId;
+        private Integer hardwareId;
         private String hardwareName;
         private String hardwarePrice;
 
-        public Builder hardwareId(String value)
+        public Builder hardwareId(Integer value)
         {
             this.hardwareId = value;
             return this;

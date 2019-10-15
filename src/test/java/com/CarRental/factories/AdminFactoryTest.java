@@ -20,7 +20,7 @@ public class AdminFactoryTest extends TestCase {
 
     @Test
     public void buildAdmin() {
-        Admin admin = AdminFactory.buildAdmin("123", "AdminUser", "Password123");
+        Admin admin = AdminFactory.buildAdmin(123, "AdminUser", "Password123");
         System.out.println(admin);
         Assert.assertNotNull(admin.getAdminId());
     }

@@ -4,7 +4,7 @@ import com.CarRental.domain.Claims;
 
 public class ClaimsFactory {
 
-    public static Claims buildClaims(String claimsId, String claimProvider, String claimValue, String claimReason)
+    public static Claims buildClaims(Integer claimsId, String claimProvider, String claimValue, String claimReason)
     {
         return new Claims.Builder()
                 .claimsId(claimsId)

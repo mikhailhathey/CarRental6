@@ -4,7 +4,7 @@ import com.CarRental.domain.Supplier;
 
 public class SupplierFactory {
 
-    public static Supplier buildSupplier(String supplierId, String supplierName, String supplierContact, String supplierEmail)
+    public static Supplier buildSupplier(Integer supplierId, String supplierName, String supplierContact, String supplierEmail)
     {
         return new Supplier.Builder()
                 .supplierId(supplierId)

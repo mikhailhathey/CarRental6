@@ -26,8 +26,8 @@ public class FleetManagerServiceImpl implements FleetManagerService {
     }
 
     @Override
-    public FleetManager read(String fleetManagerId) {
-        Optional<FleetManager> byId = this.fleetManagerRepository.findById(fleetManagerId);
+    public FleetManager read(Integer fleetManagerId) {
+        Optional<FleetManager> byId = this.fleetManagerRepository.findById(String.valueOf(fleetManagerId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class FleetManagerServiceImpl implements FleetManagerService {
     }
 
     @Override
-    public void delete(String fleetManagerId) {
-        this.fleetManagerRepository.deleteById(fleetManagerId);
+    public void delete(Integer fleetManagerId) {
+        this.fleetManagerRepository.deleteById(String.valueOf(fleetManagerId));
     }
 }

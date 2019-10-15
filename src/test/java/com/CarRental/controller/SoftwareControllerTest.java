@@ -41,7 +41,7 @@ public class SoftwareControllerTest {
 
     @Test
     public void testCreateSoftware() {
-        Software software = SoftwareFactory.buildSoftware("769", "Pascal", "2.6", "3000");
+        Software software = SoftwareFactory.buildSoftware(769, "Pascal", "2.6", "3000");
         ResponseEntity<Software> postResponse = restTemplate.postForEntity(baseURL + "/create", software, Software.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface HardwareRepository extends JpaRepository<Hardware, String> {
+    //Optional<Hardware> findById(Integer hardwareId);
+
+    //void deleteById(Integer hardwareId);
 
     //Set<Hardware> getAll();
 }

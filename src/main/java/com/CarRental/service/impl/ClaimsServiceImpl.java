@@ -26,8 +26,8 @@ public class ClaimsServiceImpl implements ClaimsService {
     }
 
     @Override
-    public Claims read(String claimsId) {
-        Optional<Claims> byId = this.claimsRepository.findById(claimsId);
+    public Claims read(Integer claimsId) {
+        Optional<Claims> byId = this.claimsRepository.findById(String.valueOf(claimsId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class ClaimsServiceImpl implements ClaimsService {
     }
 
     @Override
-    public void delete(String claimsId) {
-        this.claimsRepository.deleteById(claimsId);
+    public void delete(Integer claimsId) {
+        this.claimsRepository.deleteById(String.valueOf(claimsId));
     }
 }

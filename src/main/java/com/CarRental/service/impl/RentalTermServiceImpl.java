@@ -26,8 +26,8 @@ public class RentalTermServiceImpl implements RentalTermService {
     }
 
     @Override
-    public RentalTerm read(String rentalTermId) {
-        Optional<RentalTerm> byId = this.rentalTermRepository.findById(rentalTermId);
+    public RentalTerm read(Integer rentalTermId) {
+        Optional<RentalTerm> byId = this.rentalTermRepository.findById(String.valueOf(rentalTermId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class RentalTermServiceImpl implements RentalTermService {
     }
 
     @Override
-    public void delete(String rentalTermId) {
-        this.rentalTermRepository.deleteById(rentalTermId);
+    public void delete(Integer rentalTermId) {
+        this.rentalTermRepository.deleteById(String.valueOf(rentalTermId));
     }
 }

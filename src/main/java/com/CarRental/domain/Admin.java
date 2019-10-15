@@ -1,6 +1,8 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
@@ -11,8 +13,8 @@ public class Admin implements Comparable<Admin>{
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="admin_id")*/
-    @Id
-    private String adminId;
+@Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer adminId;
     private String adminName;
     private String adminPassword;
 
@@ -26,11 +28,11 @@ public class Admin implements Comparable<Admin>{
         this.adminPassword = builder.adminPassword;
     }
 
-    public String getAdminId() {
+    public Integer getAdminId() {
         return adminId;
     }
 
-    public void setAdminId(String adminId) {
+    public void setAdminId(Integer adminId) {
         this.adminId = adminId;
     }
 
@@ -78,11 +80,11 @@ public class Admin implements Comparable<Admin>{
     }
 
     public static class Builder{
-        private String adminId;
+        private Integer adminId;
         private String adminName;
         private String adminPassword;
 
-        public Builder adminId(String value){
+        public Builder adminId(Integer value){
             this.adminId = value;
             return this;
         }

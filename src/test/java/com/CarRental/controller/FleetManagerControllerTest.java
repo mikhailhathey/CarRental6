@@ -41,7 +41,7 @@ public class FleetManagerControllerTest {
 
     @Test
     public void testCreateFleetManager() {
-        FleetManager fleetManager = FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth");
+        FleetManager fleetManager = FleetManagerFactory.buildFleetManager(123456, "400", "Vans", "20", "JohnnyTest", "Kenilworth");
         ResponseEntity<FleetManager> postResponse = restTemplate.postForEntity(baseURL + "/create", fleetManager, FleetManager.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

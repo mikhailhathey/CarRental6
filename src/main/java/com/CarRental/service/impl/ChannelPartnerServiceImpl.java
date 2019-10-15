@@ -26,8 +26,8 @@ public class ChannelPartnerServiceImpl implements ChannelPartnerService {
     }
 
     @Override
-    public ChannelPartner read(String channelPartnerId) {
-        Optional<ChannelPartner> byId = this.channelPartnerRepository.findById(channelPartnerId);
+    public ChannelPartner read(Integer channelPartnerId) {
+        Optional<ChannelPartner> byId = this.channelPartnerRepository.findById(String.valueOf(channelPartnerId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class ChannelPartnerServiceImpl implements ChannelPartnerService {
     }
 
     @Override
-    public void delete(String channelPartnerId) {
-        this.channelPartnerRepository.deleteById(channelPartnerId);
+    public void delete(Integer channelPartnerId) {
+        this.channelPartnerRepository.deleteById(String.valueOf(channelPartnerId));
     }
 }

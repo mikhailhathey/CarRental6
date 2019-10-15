@@ -26,8 +26,8 @@ public class RevenueServiceImpl implements RevenueService {
     }
 
     @Override
-    public Revenue read(String revenueId) {
-        Optional<Revenue> byId = this.revenueRepository.findById(revenueId);
+    public Revenue read(Integer revenueId) {
+        Optional<Revenue> byId = this.revenueRepository.findById(String.valueOf(revenueId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class RevenueServiceImpl implements RevenueService {
     }
 
     @Override
-    public void delete(String revenueId) {
-        this.revenueRepository.deleteById(revenueId);
+    public void delete(Integer revenueId) {
+        this.revenueRepository.deleteById(String.valueOf(revenueId));
     }
 }

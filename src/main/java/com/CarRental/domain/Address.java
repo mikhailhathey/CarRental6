@@ -10,8 +10,8 @@ public class Address implements Comparable<Address> {
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="address_id")*/
-    @Id
-    private String addressId;
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer addressId;
     private String houseNumber;
     private String streetName;
     private String suburb;
@@ -30,13 +30,12 @@ public class Address implements Comparable<Address> {
         this.city = builder.city;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public String getAddressId() {
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    public Integer getAddressId() {
         return addressId;
     }
 
-    public void setAddressId(String addressId) {
+    public void setAddressId(Integer addressId) {
         this.addressId = addressId;
     }
 
@@ -117,14 +116,14 @@ public class Address implements Comparable<Address> {
 
     public static class Builder{
 
-        private String addressId;
+        private Integer addressId;
         private String houseNumber;
         private String streetName;
         private String suburb;
         private String postalCode;
         private String city;
 
-        public Builder addressId(String value)
+        public Builder addressId(Integer value)
         {
             this.addressId = value;
             return this;

@@ -41,7 +41,7 @@ public class CarControllerTest {
 
     @Test
     public void testCreateCar() {
-        Car car = CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016");
+        Car car = CarFactory.buildCar(123456, "13443975", "Ford", "Fiesta", "2016");
         ResponseEntity<Car> postResponse = restTemplate.postForEntity(baseURL + "/create", car, Car.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

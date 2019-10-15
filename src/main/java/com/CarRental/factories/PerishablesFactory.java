@@ -4,7 +4,7 @@ import com.CarRental.domain.Perishables;
 
 public class PerishablesFactory {
 
-    public static Perishables buildPerishables(String perishablesId, String perishableName, String perishableExpiryDate, String perishableQuantity)
+    public static Perishables buildPerishables(Integer perishablesId, String perishableName, String perishableExpiryDate, String perishableQuantity)
     {
         return new Perishables.Builder()
                 .perishablesId(perishablesId)

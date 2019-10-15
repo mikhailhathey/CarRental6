@@ -26,8 +26,8 @@ public class VehicleSellingPriceServiceImpl implements VehicleSellingPriceServic
     }
 
     @Override
-    public VehicleSellingPrice read(String vehicleSellingPriceId) {
-        Optional<VehicleSellingPrice> byId = this.vehicleSellingPriceRepository.findById(vehicleSellingPriceId);
+    public VehicleSellingPrice read(Integer vehicleSellingPriceId) {
+        Optional<VehicleSellingPrice> byId = this.vehicleSellingPriceRepository.findById(String.valueOf(vehicleSellingPriceId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class VehicleSellingPriceServiceImpl implements VehicleSellingPriceServic
     }
 
     @Override
-    public void delete(String vehicleSellingPriceId) {
-        this.vehicleSellingPriceRepository.deleteById(vehicleSellingPriceId);
+    public void delete(Integer vehicleSellingPriceId) {
+        this.vehicleSellingPriceRepository.deleteById(String.valueOf(vehicleSellingPriceId));
     }
 }

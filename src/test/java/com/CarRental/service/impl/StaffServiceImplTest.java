@@ -27,14 +27,14 @@ public class StaffServiceImplTest {
 
   @Before
   public void setUp() {
-      staff = staffService.create(StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont"));
+      staff = staffService.create(StaffFactory.buildStaff(345, "August", "April", "200000", "Claremont"));
       staffs.add(staff);
   }
 
   @Test
   public void create() {
       Staff createStaff = staffService.create(StaffFactory.buildStaff(
-              "345", "August", "April", "200000", "Claremont"));
+              345, "August", "April", "200000", "Claremont"));
       staffs.add(createStaff);
       Assert.assertEquals(createStaff, staffService.read(createStaff.getStaffId()));
   }
@@ -42,7 +42,7 @@ public class StaffServiceImplTest {
   @Test
   public void read() {
       Staff readTestStaff = staffService.create(StaffFactory.buildStaff(
-              "345", "August", "April", "200000", "Claremont"));
+              345, "August", "April", "200000", "Claremont"));
       Assert.assertEquals(readTestStaff, staffService.read(readTestStaff.getStaffId()));
   }
 
@@ -57,7 +57,7 @@ public class StaffServiceImplTest {
   @Test
   public void delete() {
       staffs.addAll(staffService.getAll());
-      Staff deleteStaff = staffService.create(StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont"));
+      Staff deleteStaff = staffService.create(StaffFactory.buildStaff(345, "August", "April", "200000", "Claremont"));
       staffs.add(deleteStaff);
       staffs.remove(deleteStaff);
       staffService.delete(deleteStaff.getStaffId());

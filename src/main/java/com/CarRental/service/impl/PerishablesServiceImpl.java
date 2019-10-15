@@ -26,8 +26,8 @@ public class PerishablesServiceImpl implements PerishablesService {
     }
 
     @Override
-    public Perishables read(String perishablesId) {
-        Optional<Perishables> byId = this.perishablesRepository.findById(perishablesId);
+    public Perishables read(Integer perishablesId) {
+        Optional<Perishables> byId = this.perishablesRepository.findById(String.valueOf(perishablesId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class PerishablesServiceImpl implements PerishablesService {
     }
 
     @Override
-    public void delete(String perishablesId) {
-        this.perishablesRepository.deleteById(perishablesId);
+    public void delete(Integer perishablesId) {
+        this.perishablesRepository.deleteById(String.valueOf(perishablesId));
     }
 }

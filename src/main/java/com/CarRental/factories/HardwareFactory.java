@@ -4,7 +4,7 @@ import com.CarRental.domain.Hardware;
 
 public class HardwareFactory {
 
-    public static Hardware buildHardware(String hardwareId, String hardwareName, String hardwarePrice)
+    public static Hardware buildHardware(Integer hardwareId, String hardwareName, String hardwarePrice)
     {
         return new Hardware.Builder()
                 .hardwareId(hardwareId)

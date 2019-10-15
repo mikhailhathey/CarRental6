@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/assets")
 public class AssetsController {
@@ -20,7 +21,7 @@ public class AssetsController {
         return assetsService.create(assets);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public Assets update(@RequestBody Assets assets) {
         return assetsService.update(assets);
@@ -28,13 +29,13 @@ public class AssetsController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Assets read(@PathVariable String id) {
+    public Assets read(@PathVariable Integer id) {
         return assetsService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         assetsService.delete(id);
     }
 

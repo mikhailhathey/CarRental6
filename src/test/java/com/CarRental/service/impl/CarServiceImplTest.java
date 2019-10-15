@@ -27,14 +27,14 @@ public class CarServiceImplTest {
 
   @Before
   public void setUp() {
-      car = carService.create(CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016"));
+      car = carService.create(CarFactory.buildCar(123456, "13443975", "Ford", "Fiesta", "2016"));
       cars.add(car);
   }
 
   @Test
   public void create() {
       Car createCar = carService.create(CarFactory.buildCar(
-              "123456", "13443975", "Ford", "Fiesta", "2016"));
+              123456, "13443975", "Ford", "Fiesta", "2016"));
       cars.add(createCar);
       Assert.assertEquals(createCar, carService.read(createCar.getCarId()));
   }
@@ -42,7 +42,7 @@ public class CarServiceImplTest {
   @Test
   public void read() {
       Car readTestCar = carService.create(CarFactory.buildCar(
-              "123456", "13443975", "Ford", "Fiesta", "2016"));
+              123456, "13443975", "Ford", "Fiesta", "2016"));
       Assert.assertEquals(readTestCar, carService.read(readTestCar.getCarId()));
   }
 
@@ -57,7 +57,7 @@ public class CarServiceImplTest {
   @Test
   public void delete() {
       cars.addAll(carService.getAll());
-      Car deleteCar = carService.create(CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016"));
+      Car deleteCar = carService.create(CarFactory.buildCar(123456, "13443975", "Ford", "Fiesta", "2016"));
       cars.add(deleteCar);
       cars.remove(deleteCar);
       carService.delete(deleteCar.getCarId());

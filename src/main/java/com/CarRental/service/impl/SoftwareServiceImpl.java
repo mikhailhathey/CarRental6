@@ -26,8 +26,8 @@ public class SoftwareServiceImpl implements SoftwareService {
     }
 
     @Override
-    public Software read(String softwareId) {
-        Optional<Software> byId = this.softwareRepository.findById(softwareId);
+    public Software read(Integer softwareId) {
+        Optional<Software> byId = this.softwareRepository.findById(String.valueOf(softwareId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class SoftwareServiceImpl implements SoftwareService {
     }
 
     @Override
-    public void delete(String softwareId) {
-        this.softwareRepository.deleteById(softwareId);
+    public void delete(Integer softwareId) {
+        this.softwareRepository.deleteById(String.valueOf(softwareId));
     }
 }

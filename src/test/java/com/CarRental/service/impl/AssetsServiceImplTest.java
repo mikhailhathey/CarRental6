@@ -27,14 +27,14 @@ public class AssetsServiceImplTest {
 
   @Before
   public void setUp() {
-      assets = assetsService.create(AssetsFactory.buildAssets("123", "DSLR Camera", "Cupboard", "Camera"));
+      assets = assetsService.create(AssetsFactory.buildAssets(123, "DSLR Camera", "Cupboard", "Camera"));
       assetss.add(assets);
   }
 
   @Test
   public void create() {
       Assets createAssets = assetsService.create(AssetsFactory.buildAssets(
-              "456", "Drone", "Shelf", "Camera"));
+              456, "Drone", "Shelf", "Camera"));
       assetss.add(createAssets);
       Assert.assertEquals(createAssets, assetsService.read(createAssets.getAssetsId()));
   }
@@ -42,7 +42,7 @@ public class AssetsServiceImplTest {
   @Test
   public void read() {
       Assets readTestAssets = assetsService.create(AssetsFactory.buildAssets(
-              "789", "GoPro", "Cabinet", "Camera"));
+              789, "GoPro", "Cabinet", "Camera"));
       Assert.assertEquals(readTestAssets, assetsService.read(readTestAssets.getAssetsId()));
   }
 
@@ -57,7 +57,7 @@ public class AssetsServiceImplTest {
   @Test
   public void delete() {
       assetss.addAll(assetsService.getAll());
-      Assets deleteAssets = assetsService.create(AssetsFactory.buildAssets("123", "Point and Shoot", "Tabletop", "Camera"));
+      Assets deleteAssets = assetsService.create(AssetsFactory.buildAssets(123, "Point and Shoot", "Tabletop", "Camera"));
       assetss.add(deleteAssets);
       assetss.remove(deleteAssets);
       assetsService.delete(deleteAssets.getAssetsId());

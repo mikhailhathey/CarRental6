@@ -22,7 +22,7 @@ public class HardwareFactoryTest {
 
     @Test
     public void buildHardware() {
-        Hardware hardware = HardwareFactory.buildHardware("456", "Laptop", "4500");
+        Hardware hardware = HardwareFactory.buildHardware(456, "Laptop", "4500");
         System.out.println(hardware);
         Assert.assertNotNull(hardware.getHardwareId());
     }

@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ExpensesRepository extends JpaRepository<Expenses, String> {
+    //Optional<Expenses> findById(Integer expensesId);
+
+    //void deleteById(Integer expensesId);
 
     //Set<Expenses> getAll();
 }

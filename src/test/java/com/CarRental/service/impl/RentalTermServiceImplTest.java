@@ -27,14 +27,14 @@ public class RentalTermServiceImplTest {
 
   @Before
   public void setUp() {
-      rentalTerm = rentalTermService.create(RentalTermFactory.buildRentalTerm("324", "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
+      rentalTerm = rentalTermService.create(RentalTermFactory.buildRentalTerm(324, "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
       rentalTerms.add(rentalTerm);
   }
 
   @Test
   public void create() {
       RentalTerm createRentalTerm = rentalTermService.create(RentalTermFactory.buildRentalTerm(
-              "324", "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
+              324, "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
       rentalTerms.add(createRentalTerm);
       Assert.assertEquals(createRentalTerm, rentalTermService.read(createRentalTerm.getRentalTermId()));
   }
@@ -42,7 +42,7 @@ public class RentalTermServiceImplTest {
   @Test
   public void read() {
       RentalTerm readTestRentalTerm = rentalTermService.create(RentalTermFactory.buildRentalTerm(
-              "324", "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
+              324, "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
       Assert.assertEquals(readTestRentalTerm, rentalTermService.read(readTestRentalTerm.getRentalTermId()));
   }
 
@@ -57,7 +57,7 @@ public class RentalTermServiceImplTest {
   @Test
   public void delete() {
       rentalTerms.addAll(rentalTermService.getAll());
-      RentalTerm deleteRentalTerm = rentalTermService.create(RentalTermFactory.buildRentalTerm("324", "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
+      RentalTerm deleteRentalTerm = rentalTermService.create(RentalTermFactory.buildRentalTerm(324, "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD"));
       rentalTerms.add(deleteRentalTerm);
       rentalTerms.remove(deleteRentalTerm);
       rentalTermService.delete(deleteRentalTerm.getRentalTermId());

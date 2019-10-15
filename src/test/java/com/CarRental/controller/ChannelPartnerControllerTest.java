@@ -41,7 +41,7 @@ public class ChannelPartnerControllerTest {
 
     @Test
     public void testCreateChannelPartner() {
-        ChannelPartner channelPartner = ChannelPartnerFactory.buildChannelPartner("1234", "Microsoft", "John", "john@microsoft.com");
+        ChannelPartner channelPartner = ChannelPartnerFactory.buildChannelPartner(1234, "Microsoft", "John", "john@microsoft.com");
         ResponseEntity<ChannelPartner> postResponse = restTemplate.postForEntity(baseURL + "/create", channelPartner, ChannelPartner.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

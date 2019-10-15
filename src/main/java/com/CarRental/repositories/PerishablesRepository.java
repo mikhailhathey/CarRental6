@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PerishablesRepository extends JpaRepository<Perishables, String> {
+    //Optional<Perishables> findById(Integer perishablesId);
+
+    //void deleteById(Integer perishablesId);
 
     //Set<Perishables> getAll();
 }

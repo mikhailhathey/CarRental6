@@ -26,8 +26,8 @@ public class InfrastructureServiceImpl implements InfrastructureService {
     }
 
     @Override
-    public Infrastructure read(String infrastructureId) {
-        Optional<Infrastructure> byId = this.infrastructureRepository.findById(infrastructureId);
+    public Infrastructure read(Integer infrastructureId) {
+        Optional<Infrastructure> byId = this.infrastructureRepository.findById(String.valueOf(infrastructureId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class InfrastructureServiceImpl implements InfrastructureService {
     }
 
     @Override
-    public void delete(String infrastructureId) {
-        this.infrastructureRepository.deleteById(infrastructureId);
+    public void delete(Integer infrastructureId) {
+        this.infrastructureRepository.deleteById(String.valueOf(infrastructureId));
     }
 }

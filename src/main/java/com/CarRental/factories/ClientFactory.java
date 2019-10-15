@@ -4,7 +4,7 @@ import com.CarRental.domain.Client;
 
 public class ClientFactory {
 
-    public static Client buildClient(String clientId, String clientCell, String clientName, String clientEmail, String clientWebsite, String clientAddress)
+    public static Client buildClient(Integer clientId, String clientCell, String clientName, String clientEmail, String clientWebsite, String clientAddress)
     {
         return new Client.Builder()
                 .clientId(clientId)

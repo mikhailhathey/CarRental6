@@ -26,8 +26,8 @@ public class AssetsServiceImpl implements AssetsService {
     }
 
     @Override
-    public Assets read(String assetsId) {
-        Optional<Assets> byId = this.assetsRepository.findById(assetsId);
+    public Assets read(Integer assetsId) {
+        Optional<Assets> byId = this.assetsRepository.findById(String.valueOf(assetsId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class AssetsServiceImpl implements AssetsService {
     }
 
     @Override
-    public void delete(String assetsId) {
-        this.assetsRepository.deleteById(assetsId);
+    public void delete(Integer assetsId) {
+        this.assetsRepository.deleteById(String.valueOf(assetsId));
     }
 }

@@ -22,7 +22,7 @@ public class ProfitFactoryTest {
 
     @Test
     public void buildProfit() {
-        Profit profit = ProfitFactory.buildProfit("789", "100000", "120000");
+        Profit profit = ProfitFactory.buildProfit(789, "100000", "120000");
         System.out.println(profit);
         Assert.assertNotNull(profit.getProfitId());
     }

@@ -1,25 +1,27 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class VehiclePurchasePrice implements Comparable<VehiclePurchasePrice>{
 
-    @Id
-    private String vehiclePurchasePriceId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer vehiclePurchasePriceId;
     private String vehicleYearModel;
     private String vehiclePrice;
 
     private VehiclePurchasePrice(){
     }
 
-    public String getVehiclePurchasePriceId() {
+    public Integer getVehiclePurchasePriceId() {
         return vehiclePurchasePriceId;
     }
 
-    public void setVehiclePurchasePriceId(String vehiclePurchasePriceId) {
+    public void setVehiclePurchasePriceId(Integer vehiclePurchasePriceId) {
         this.vehiclePurchasePriceId = vehiclePurchasePriceId;
     }
 
@@ -74,11 +76,11 @@ public class VehiclePurchasePrice implements Comparable<VehiclePurchasePrice>{
 
     public static class Builder{
 
-        private String vehiclePurchasePriceId;
+        private Integer vehiclePurchasePriceId;
         private String vehicleYearModel;
         private String vehiclePrice;
 
-        public Builder vehiclePurchasePriceId(String value)
+        public Builder vehiclePurchasePriceId(Integer value)
         {
             this.vehiclePurchasePriceId = value;
             return this;

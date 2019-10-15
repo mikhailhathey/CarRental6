@@ -26,8 +26,8 @@ public class RentalValueServiceImpl implements RentalValueService {
     }
 
     @Override
-    public RentalValue read(String rentalValueId) {
-        Optional<RentalValue> byId = this.rentalValueRepository.findById(rentalValueId);
+    public RentalValue read(Integer rentalValueId) {
+        Optional<RentalValue> byId = this.rentalValueRepository.findById(String.valueOf(rentalValueId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class RentalValueServiceImpl implements RentalValueService {
     }
 
     @Override
-    public void delete(String rentalValueId) {
-        this.rentalValueRepository.deleteById(rentalValueId);
+    public void delete(Integer rentalValueId) {
+        this.rentalValueRepository.deleteById(String.valueOf(rentalValueId));
     }
 }

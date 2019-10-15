@@ -1,25 +1,27 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class Region implements Comparable<Region>{
 
-    @Id
-    private String regionId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer regionId;
     private String regionName;
     private String regionLocation;
 
     private Region() {
     }
 
-    public String getRegionId() {
+    public Integer getRegionId() {
         return regionId;
     }
 
-    public void setRegionId(String regionId) {
+    public void setRegionId(Integer regionId) {
         this.regionId = regionId;
     }
 
@@ -73,11 +75,11 @@ public class Region implements Comparable<Region>{
     }
 
     public static class Builder{
-        private String regionId;
+        private Integer regionId;
         private String regionName;
         private String regionLocation;
 
-        public Builder regionId(String value){
+        public Builder regionId(Integer value){
             this.regionId = value;
             return this;
         }

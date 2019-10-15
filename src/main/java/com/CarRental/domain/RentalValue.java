@@ -1,25 +1,27 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class RentalValue implements Comparable<RentalValue>{
 
-    @Id
-    private String rentalValueId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer rentalValueId;
     private String rentalValueClass;
     private String rentalValueAmount;
 
     private RentalValue() {
     }
 
-    public String getRentalValueId() {
+    public Integer getRentalValueId() {
         return rentalValueId;
     }
 
-    public void setRentalValueId(String rentalValueId) {
+    public void setRentalValueId(Integer rentalValueId) {
         this.rentalValueId = rentalValueId;
     }
 
@@ -73,11 +75,11 @@ public class RentalValue implements Comparable<RentalValue>{
     }
 
     public static class Builder{
-        private String rentalValueId;
+        private Integer rentalValueId;
         private String rentalValueClass;
         private String rentalValueAmount;
 
-        public Builder rentalValueId(String value){
+        public Builder rentalValueId(Integer value){
             this.rentalValueId = value;
             return this;
         }

@@ -30,7 +30,7 @@ public class AddressControllerTest {
 
     @Before
     public void setUp() {
-        Address address = AddressFactory.buildAddress("123", "81", "Main Road", "Kenwyn", "7780", "Cape Town");
+        Address address = AddressFactory.buildAddress(123, "81", "Main Road", "Kenwyn", "7780", "Cape Town");
         ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("admin", "admin")
                 .postForEntity(BASE_URL + "/create", address, Address.class);
         System.out.println(postResponse.toString());
@@ -55,7 +55,7 @@ public class AddressControllerTest {
 
     @Test
     public void createAdminAddress() {
-        Address address = AddressFactory.buildAddress("123", "81", "Main Road", "Kenwyn", "7780", "Cape Town");
+        Address address = AddressFactory.buildAddress(123, "81", "Main Road", "Kenwyn", "7780", "Cape Town");
         ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("admin", "admin")
                 .postForEntity(BASE_URL + "/create", address, Address.class);
         Assert.assertEquals(HttpStatus.OK, postResponse.getStatusCode());
@@ -66,7 +66,7 @@ public class AddressControllerTest {
 
     @Test
     public void createUserAddress() {
-        Address address = AddressFactory.buildAddress("456", "20", "Side Road", "Kenwyn", "7780", "Cape Town");
+        Address address = AddressFactory.buildAddress(456, "20", "Side Road", "Kenwyn", "7780", "Cape Town");
         ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("user", "user")
                 .postForEntity(BASE_URL + "/create", address, Address.class);
         Assert.assertEquals(HttpStatus.FORBIDDEN, postResponse.getStatusCode());
@@ -78,7 +78,7 @@ public class AddressControllerTest {
     public void updateAddress() {
         Map<String, String> parameters = new HashMap<>();
         parameters.put("id", "456");
-        Address address = AddressFactory.buildAddress("789", "45", "Left Road", "Crawford", "7780", "Cape Town");
+        Address address = AddressFactory.buildAddress(789, "45", "Left Road", "Crawford", "7780", "Cape Town");
         restTemplate.put(BASE_URL + "/update/", parameters, address);
     }
 
@@ -92,7 +92,7 @@ public class AddressControllerTest {
 
     @Test
     public void delete() {
-        Address address = AddressFactory.buildAddress("456", "20", "Side Road", "Kenwyn", "7780", "Cape Town");
+        Address address = AddressFactory.buildAddress(456, "20", "Side Road", "Kenwyn", "7780", "Cape Town");
         ResponseEntity<Address> postResponse = restTemplate.withBasicAuth("admin", "admin")
                 .postForEntity(BASE_URL + "/create", address, Address.class);
         Map<String, String> parameters = new HashMap<>();

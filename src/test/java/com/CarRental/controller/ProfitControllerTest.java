@@ -41,7 +41,7 @@ public class ProfitControllerTest {
 
     @Test
     public void testCreateProfit() {
-        Profit profit = ProfitFactory.buildProfit("789", "100000", "120000");
+        Profit profit = ProfitFactory.buildProfit(789, "100000", "120000");
         ResponseEntity<Profit> postResponse = restTemplate.postForEntity(baseURL + "/create", profit, Profit.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

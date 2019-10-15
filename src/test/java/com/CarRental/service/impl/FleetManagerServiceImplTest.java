@@ -27,14 +27,14 @@ public class FleetManagerServiceImplTest {
 
   @Before
   public void setUp() {
-      fleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+      fleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager(123456, "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
       fleetManagers.add(fleetManager);
   }
 
   @Test
   public void create() {
       FleetManager createFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager(
-              "123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+              123456, "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
       fleetManagers.add(createFleetManager);
       Assert.assertEquals(createFleetManager, fleetManagerService.read(createFleetManager.getFleetManagerId()));
   }
@@ -42,7 +42,7 @@ public class FleetManagerServiceImplTest {
   @Test
   public void read() {
       FleetManager readTestFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager(
-              "123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+              123456, "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
       Assert.assertEquals(readTestFleetManager, fleetManagerService.read(readTestFleetManager.getFleetManagerId()));
   }
 
@@ -57,7 +57,7 @@ public class FleetManagerServiceImplTest {
   @Test
   public void delete() {
       fleetManagers.addAll(fleetManagerService.getAll());
-      FleetManager deleteFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
+      FleetManager deleteFleetManager = fleetManagerService.create(FleetManagerFactory.buildFleetManager(123456, "400", "Vans", "20", "JohnnyTest", "Kenilworth"));
       fleetManagers.add(deleteFleetManager);
       fleetManagers.remove(deleteFleetManager);
       fleetManagerService.delete(deleteFleetManager.getFleetManagerId());

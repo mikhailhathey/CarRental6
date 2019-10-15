@@ -41,7 +41,7 @@ public class HardwareControllerTest {
 
     @Test
     public void testCreateHardware() {
-        Hardware hardware = HardwareFactory.buildHardware("456", "Laptop", "4500");
+        Hardware hardware = HardwareFactory.buildHardware(456, "Laptop", "4500");
         ResponseEntity<Hardware> postResponse = restTemplate.postForEntity(baseURL + "/create", hardware, Hardware.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

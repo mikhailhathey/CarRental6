@@ -26,8 +26,8 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public Admin read(String adminId) {
-        Optional<Admin> byId = this.adminRepository.findById(adminId);
+    public Admin read(Integer adminId) {
+        Optional<Admin> byId = this.adminRepository.findById(String.valueOf(adminId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public void delete(String adminId) {
-        this.adminRepository.deleteById(adminId);
+    public void delete(Integer adminId) {
+        this.adminRepository.deleteById(String.valueOf(adminId));
     }
 }

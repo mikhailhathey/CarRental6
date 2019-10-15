@@ -41,7 +41,7 @@ public class SupplierControllerTest {
 
     @Test
     public void testCreateSupplier() {
-        Supplier supplier = SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com");
+        Supplier supplier = SupplierFactory.buildSupplier(453, "Makro", "Johan", "johan@makro.com");
         ResponseEntity<Supplier> postResponse = restTemplate.postForEntity(baseURL + "/create", supplier, Supplier.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class ChannelPartner implements Comparable<ChannelPartner> {
 
-    @Id
-    private String channelPartnerId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer channelPartnerId;
     private String channelPartnerName;
     private String channelPartnerContact;
     private String channelPartnerEmail;
@@ -23,11 +25,11 @@ public class ChannelPartner implements Comparable<ChannelPartner> {
         this.channelPartnerEmail = builder.channelPartnerEmail;
     }
 
-    public String getChannelPartnerId() {
+    public Integer getChannelPartnerId() {
         return channelPartnerId;
     }
 
-    public void setChannelPartnerId(String channelPartnerId) {
+    public void setChannelPartnerId(Integer channelPartnerId) {
         this.channelPartnerId = channelPartnerId;
     }
 
@@ -77,12 +79,12 @@ public class ChannelPartner implements Comparable<ChannelPartner> {
 
     public static class Builder{
 
-        private String channelPartnerId;
+        private Integer channelPartnerId;
         private String channelPartnerName;
         private String channelPartnerContact;
         private String channelPartnerEmail;
 
-        public Builder channelPartnerId(String value){
+        public Builder channelPartnerId(Integer value){
             this.channelPartnerId = value;
             return this;
         }

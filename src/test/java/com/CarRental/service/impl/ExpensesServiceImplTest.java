@@ -27,14 +27,14 @@ public class ExpensesServiceImplTest {
 
   @Before
   public void setUp() {
-      expenses = expensesService.create(ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+      expenses = expensesService.create(ExpensesFactory.buildExpenses(123456, "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
       expensess.add(expenses);
   }
 
   @Test
   public void create() {
       Expenses createExpenses = expensesService.create(ExpensesFactory.buildExpenses(
-              "123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+              123456, "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
       expensess.add(createExpenses);
       Assert.assertEquals(createExpenses, expensesService.read(createExpenses.getExpensesId()));
   }
@@ -42,7 +42,7 @@ public class ExpensesServiceImplTest {
   @Test
   public void read() {
       Expenses readTestExpenses = expensesService.create(ExpensesFactory.buildExpenses(
-              "123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+              123456, "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
       Assert.assertEquals(readTestExpenses, expensesService.read(readTestExpenses.getExpensesId()));
   }
 
@@ -57,7 +57,7 @@ public class ExpensesServiceImplTest {
   @Test
   public void delete() {
       expensess.addAll(expensesService.getAll());
-      Expenses deleteExpenses = expensesService.create(ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
+      Expenses deleteExpenses = expensesService.create(ExpensesFactory.buildExpenses(123456, "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales"));
       expensess.add(deleteExpenses);
       expensess.remove(deleteExpenses);
       expensesService.delete(deleteExpenses.getExpensesId());

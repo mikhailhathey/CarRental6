@@ -27,14 +27,14 @@ public class VehicleSellingPriceServiceImplTest {
 
   @Before
   public void setUp() {
-      vehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice("452", "2016", "180000"));
+      vehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice(452, "2016", "180000"));
       vehicleSellingPrices.add(vehicleSellingPrice);
   }
 
   @Test
   public void create() {
       VehicleSellingPrice createVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice(
-              "452", "2016", "180000"));
+              452, "2016", "180000"));
       vehicleSellingPrices.add(createVehicleSellingPrice);
       Assert.assertEquals(createVehicleSellingPrice, vehicleSellingPriceService.read(createVehicleSellingPrice.getVehicleSellingPriceId()));
   }
@@ -42,7 +42,7 @@ public class VehicleSellingPriceServiceImplTest {
   @Test
   public void read() {
       VehicleSellingPrice readTestVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice(
-              "452", "2016", "180000"));
+              452, "2016", "180000"));
       Assert.assertEquals(readTestVehicleSellingPrice, vehicleSellingPriceService.read(readTestVehicleSellingPrice.getVehicleSellingPriceId()));
   }
 
@@ -57,7 +57,7 @@ public class VehicleSellingPriceServiceImplTest {
   @Test
   public void delete() {
       vehicleSellingPrices.addAll(vehicleSellingPriceService.getAll());
-      VehicleSellingPrice deleteVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice("452", "2016", "180000"));
+      VehicleSellingPrice deleteVehicleSellingPrice = vehicleSellingPriceService.create(VehicleSellingPriceFactory.buildVehicleSellingPrice(452, "2016", "180000"));
       vehicleSellingPrices.add(deleteVehicleSellingPrice);
       vehicleSellingPrices.remove(deleteVehicleSellingPrice);
       vehicleSellingPriceService.delete(deleteVehicleSellingPrice.getVehicleSellingPriceId());

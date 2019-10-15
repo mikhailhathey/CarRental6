@@ -27,14 +27,14 @@ public class RentalValueServiceImplTest {
 
   @Before
   public void setUp() {
-      rentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue("902", "Bus", "4000"));
+      rentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue(902, "Bus", "4000"));
       rentalValues.add(rentalValue);
   }
 
   @Test
   public void create() {
       RentalValue createRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue(
-              "902", "Bus", "4000"));
+              902, "Bus", "4000"));
       rentalValues.add(createRentalValue);
       Assert.assertEquals(createRentalValue, rentalValueService.read(createRentalValue.getRentalValueId()));
   }
@@ -42,7 +42,7 @@ public class RentalValueServiceImplTest {
   @Test
   public void read() {
       RentalValue readTestRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue(
-              "902", "Bus", "4000"));
+              902, "Bus", "4000"));
       Assert.assertEquals(readTestRentalValue, rentalValueService.read(readTestRentalValue.getRentalValueId()));
   }
 
@@ -57,7 +57,7 @@ public class RentalValueServiceImplTest {
   @Test
   public void delete() {
       rentalValues.addAll(rentalValueService.getAll());
-      RentalValue deleteRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue("902", "Bus", "4000"));
+      RentalValue deleteRentalValue = rentalValueService.create(RentalValueFactory.buildRentalValue(902, "Bus", "4000"));
       rentalValues.add(deleteRentalValue);
       rentalValues.remove(deleteRentalValue);
       rentalValueService.delete(deleteRentalValue.getRentalValueId());

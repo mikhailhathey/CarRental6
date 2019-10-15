@@ -27,14 +27,14 @@ public class ChannelPartnerServiceImplTest {
 
   @Before
   public void setUp() {
-      channelPartner = channelPartnerService.create(ChannelPartnerFactory.buildChannelPartner("1234", "Microsoft", "John", "john@microsoft.com"));
+      channelPartner = channelPartnerService.create(ChannelPartnerFactory.buildChannelPartner(1234, "Microsoft", "John", "john@microsoft.com"));
       channelPartners.add(channelPartner);
   }
 
   @Test
   public void create() {
       ChannelPartner createChannelPartner = channelPartnerService.create(ChannelPartnerFactory.buildChannelPartner(
-              "1234", "Microsoft", "John", "john@microsoft.com"));
+              1234, "Microsoft", "John", "john@microsoft.com"));
       channelPartners.add(createChannelPartner);
       Assert.assertEquals(createChannelPartner, channelPartnerService.read(createChannelPartner.getChannelPartnerId()));
   }
@@ -42,7 +42,7 @@ public class ChannelPartnerServiceImplTest {
   @Test
   public void read() {
       ChannelPartner readTestChannelPartner = channelPartnerService.create(ChannelPartnerFactory.buildChannelPartner(
-              "1234", "Microsoft", "John", "john@microsoft.com"));
+              1234, "Microsoft", "John", "john@microsoft.com"));
       Assert.assertEquals(readTestChannelPartner, channelPartnerService.read(readTestChannelPartner.getChannelPartnerId()));
   }
 
@@ -57,7 +57,7 @@ public class ChannelPartnerServiceImplTest {
   @Test
   public void delete() {
       channelPartners.addAll(channelPartnerService.getAll());
-      ChannelPartner deleteChannelPartner = channelPartnerService.create(ChannelPartnerFactory.buildChannelPartner("1234", "Microsoft", "John", "john@microsoft.com"));
+      ChannelPartner deleteChannelPartner = channelPartnerService.create(ChannelPartnerFactory.buildChannelPartner(1234, "Microsoft", "John", "john@microsoft.com"));
       channelPartners.add(deleteChannelPartner);
       channelPartners.remove(deleteChannelPartner);
       channelPartnerService.delete(deleteChannelPartner.getChannelPartnerId());

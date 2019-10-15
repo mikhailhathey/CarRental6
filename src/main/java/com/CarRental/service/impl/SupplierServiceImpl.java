@@ -26,8 +26,8 @@ public class SupplierServiceImpl implements SupplierService {
     }
 
     @Override
-    public Supplier read(String supplierId) {
-        Optional<Supplier> byId = this.supplierRepository.findById(supplierId);
+    public Supplier read(Integer supplierId) {
+        Optional<Supplier> byId = this.supplierRepository.findById(String.valueOf(supplierId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class SupplierServiceImpl implements SupplierService {
     }
 
     @Override
-    public void delete(String supplierId) {
-        this.supplierRepository.deleteById(supplierId);
+    public void delete(Integer supplierId) {
+        this.supplierRepository.deleteById(String.valueOf(supplierId));
     }
 }

@@ -41,7 +41,7 @@ public class RevenueControllerTest {
 
     @Test
     public void testCreateRevenue() {
-        Revenue revenue = RevenueFactory.buildRevenue("345", "August", "April", "200000", "Claremont");
+        Revenue revenue = RevenueFactory.buildRevenue(345, "August", "April", "200000", "Claremont");
         ResponseEntity<Revenue> postResponse = restTemplate.postForEntity(baseURL + "/create", revenue, Revenue.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

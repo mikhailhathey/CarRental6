@@ -41,7 +41,7 @@ public class ClaimsControllerTest {
 
     @Test
     public void testCreateClaims() {
-        Claims claims = ClaimsFactory.buildClaims("1234", "Discovery", "12000", "Stolen");
+        Claims claims = ClaimsFactory.buildClaims(1234, "Discovery", "12000", "Stolen");
         ResponseEntity<Claims> postResponse = restTemplate.postForEntity(baseURL + "/create", claims, Claims.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class Supplier implements Comparable<Supplier>{
 
-    @Id
-    private String supplierId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer supplierId;
     private String supplierName;
     private String supplierContact;
     private String supplierEmail;
@@ -16,11 +18,11 @@ public class Supplier implements Comparable<Supplier>{
     private Supplier(){
     }
 
-    public String getSupplierId() {
+    public Integer getSupplierId() {
         return supplierId;
     }
 
-    public void setSupplierId(String supplierId) {
+    public void setSupplierId(Integer supplierId) {
         this.supplierId = supplierId;
     }
 
@@ -85,12 +87,12 @@ public class Supplier implements Comparable<Supplier>{
 
     public static class Builder{
 
-        private String supplierId;
+        private Integer supplierId;
         private String supplierName;
         private String supplierContact;
         private String supplierEmail;
 
-        public Builder supplierId(String value)
+        public Builder supplierId(Integer value)
         {
             this.supplierId = value;
             return this;

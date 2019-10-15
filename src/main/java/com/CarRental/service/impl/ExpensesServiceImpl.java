@@ -26,8 +26,8 @@ public class ExpensesServiceImpl implements ExpensesService {
     }
 
     @Override
-    public Expenses read(String expensesId) {
-        Optional<Expenses> byId = this.expensesRepository.findById(expensesId);
+    public Expenses read(Integer expensesId) {
+        Optional<Expenses> byId = this.expensesRepository.findById(String.valueOf(expensesId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class ExpensesServiceImpl implements ExpensesService {
     }
 
     @Override
-    public void delete(String expensesId) {
-        this.expensesRepository.deleteById(expensesId);
+    public void delete(Integer expensesId) {
+        this.expensesRepository.deleteById(String.valueOf(expensesId));
     }
 }

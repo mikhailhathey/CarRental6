@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class StaffFactoryTest {
 
     public void testBuildStaff(){
@@ -22,7 +20,7 @@ public class StaffFactoryTest {
 
     @Test
     public void buildStaff() {
-        Staff staff = StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont");
+        Staff staff = StaffFactory.buildStaff(345, "August", "April", "200000", "Claremont");
         System.out.println(staff);
         Assert.assertNotNull(staff.getStaffId());
     }

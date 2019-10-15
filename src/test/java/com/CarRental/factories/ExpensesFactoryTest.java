@@ -20,7 +20,7 @@ public class ExpensesFactoryTest {
 
     @Test
     public void buildExpenses() {
-        Expenses expenses = ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales");
+        Expenses expenses = ExpensesFactory.buildExpenses(123456, "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales");
         System.out.println(expenses);
         Assert.assertNotNull(expenses.getExpensesId());
     }

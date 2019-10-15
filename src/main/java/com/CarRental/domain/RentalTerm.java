@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class RentalTerm implements Comparable<RentalTerm>{
 
-    @Id
-    private String rentalTermId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer rentalTermId;
     private String rentalTermNumber;
     private String rentalTermClass;
     private String rentalTermDays;
@@ -19,11 +21,11 @@ public class RentalTerm implements Comparable<RentalTerm>{
     }
 
     //rentalTermId, rentalTermNumber, rentalTermClass, rentalTermDays, rentalTermContact, rentalTermBranch
-    public String getRentalTermId() {
+    public Integer getRentalTermId() {
         return rentalTermId;
     }
 
-    public void setRentalTermId(String rentalTermId) {
+    public void setRentalTermId(Integer rentalTermId) {
         this.rentalTermId = rentalTermId;
     }
 
@@ -108,14 +110,14 @@ public class RentalTerm implements Comparable<RentalTerm>{
 
     public static class Builder{
 
-        private String rentalTermId;
+        private Integer rentalTermId;
         private String rentalTermNumber;
         private String rentalTermClass;
         private String rentalTermDays;
         private String rentalTermContact;
         private String rentalTermBranch;
 
-        public Builder rentalTermId(String value)
+        public Builder rentalTermId(Integer value)
         {
             this.rentalTermId = value;
             return this;

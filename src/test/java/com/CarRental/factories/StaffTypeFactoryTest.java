@@ -22,7 +22,7 @@ public class StaffTypeFactoryTest {
 
     @Test
     public void buildStaffType() {
-        StaffType staffType = StaffTypeFactory.buildStaffType("765", "Customer Care", "200000");
+        StaffType staffType = StaffTypeFactory.buildStaffType(765, "Customer Care", "200000");
         System.out.println(staffType);
         Assert.assertNotNull(staffType.getStaffTypeId());
     }

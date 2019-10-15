@@ -27,14 +27,14 @@ public class PerishablesServiceImplTest {
 
   @Before
   public void setUp() {
-      perishables = perishablesService.create(PerishablesFactory.buildPerishables("567", "Bread", "12/05/2019", "5"));
+      perishables = perishablesService.create(PerishablesFactory.buildPerishables(567, "Bread", "12/05/2019", "5"));
       perishabless.add(perishables);
   }
 
   @Test
   public void create() {
       Perishables createPerishables = perishablesService.create(PerishablesFactory.buildPerishables(
-              "567", "Bread", "12/05/2019", "5"));
+              567, "Bread", "12/05/2019", "5"));
       perishabless.add(createPerishables);
       Assert.assertEquals(createPerishables, perishablesService.read(createPerishables.getPerishablesId()));
   }
@@ -42,7 +42,7 @@ public class PerishablesServiceImplTest {
   @Test
   public void read() {
       Perishables readTestPerishables = perishablesService.create(PerishablesFactory.buildPerishables(
-              "567", "Bread", "12/05/2019", "5"));
+              567, "Bread", "12/05/2019", "5"));
       Assert.assertEquals(readTestPerishables, perishablesService.read(readTestPerishables.getPerishablesId()));
   }
 
@@ -57,7 +57,7 @@ public class PerishablesServiceImplTest {
   @Test
   public void delete() {
       perishabless.addAll(perishablesService.getAll());
-      Perishables deletePerishables = perishablesService.create(PerishablesFactory.buildPerishables("567", "Bread", "12/05/2019", "5"));
+      Perishables deletePerishables = perishablesService.create(PerishablesFactory.buildPerishables(567, "Bread", "12/05/2019", "5"));
       perishabless.add(deletePerishables);
       perishabless.remove(deletePerishables);
       perishablesService.delete(deletePerishables.getPerishablesId());

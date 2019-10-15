@@ -40,7 +40,7 @@ public class AssetsControllerTest {
 
     @Test
     public void createAssets() {
-        Assets assets = AssetsFactory.buildAssets("456", "Volkswagen Polo", "Cape Town CBD", "Vehicle");
+        Assets assets = AssetsFactory.buildAssets(456, "Volkswagen Polo", "Cape Town CBD", "Vehicle");
         ResponseEntity<Assets> result = restTemplate.withBasicAuth("admin", "admin")
                 .postForEntity(BASE_URL + "/create/newAssets", assets, Assets.class);
         System.out.println(result.getBody());
@@ -53,7 +53,7 @@ public class AssetsControllerTest {
     public void createUserAssets() {
         ResponseEntity<Assets> result = null;
         try{
-            Assets assets = AssetsFactory.buildAssets("456", "Volkswagen Polo", "Cape Town CBD", "Vehicle");
+            Assets assets = AssetsFactory.buildAssets(456, "Volkswagen Polo", "Cape Town CBD", "Vehicle");
             result = restTemplate.withBasicAuth("user", "user")
                     .postForEntity(BASE_URL + "/create/newAssets", assets, Assets.class);
 

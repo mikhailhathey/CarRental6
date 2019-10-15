@@ -41,7 +41,7 @@ public class InfrastructureControllerTest {
 
     @Test
     public void testCreateInfrastructure() {
-        Infrastructure infrastructure = InfrastructureFactory.buildInfrastructure("789", "Dimension Data", "Network Servers", "50000");
+        Infrastructure infrastructure = InfrastructureFactory.buildInfrastructure(789, "Dimension Data", "Network Servers", "50000");
         ResponseEntity<Infrastructure> postResponse = restTemplate.postForEntity(baseURL + "/create", infrastructure, Infrastructure.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

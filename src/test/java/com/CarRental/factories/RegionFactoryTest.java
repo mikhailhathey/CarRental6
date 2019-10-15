@@ -22,7 +22,7 @@ public class RegionFactoryTest {
 
     @Test
     public void buildRegion() {
-        Region region = RegionFactory.buildRegion("765", "Hatfield", "Pretoria");
+        Region region = RegionFactory.buildRegion(765, "Hatfield", "Pretoria");
         System.out.println(region);
         Assert.assertNotNull(region.getRegionId());
     }

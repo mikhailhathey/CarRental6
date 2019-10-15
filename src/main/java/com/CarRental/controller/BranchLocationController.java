@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/branchLocation")
 public class BranchLocationController {
@@ -20,7 +21,7 @@ public class BranchLocationController {
         return branchLocationService.create(branchLocation);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public BranchLocation update(@RequestBody BranchLocation branchLocation) {
         return branchLocationService.update(branchLocation);
@@ -28,13 +29,13 @@ public class BranchLocationController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public BranchLocation read(@PathVariable String id) {
+    public BranchLocation read(@PathVariable Integer id) {
         return branchLocationService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         branchLocationService.delete(id);
     }
 

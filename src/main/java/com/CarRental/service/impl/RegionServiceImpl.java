@@ -26,8 +26,8 @@ public class RegionServiceImpl implements RegionService {
     }
 
     @Override
-    public Region read(String regionId) {
-        Optional<Region> byId = this.regionRepository.findById(regionId);
+    public Region read(Integer regionId) {
+        Optional<Region> byId = this.regionRepository.findById(String.valueOf(regionId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class RegionServiceImpl implements RegionService {
     }
 
     @Override
-    public void delete(String regionId) {
-        this.regionRepository.deleteById(regionId);
+    public void delete(Integer regionId) {
+        this.regionRepository.deleteById(String.valueOf(regionId));
     }
 }

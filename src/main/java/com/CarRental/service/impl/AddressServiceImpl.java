@@ -26,8 +26,8 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public Address read(String addressId) {
-        Optional<Address> byId = this.addressRepository.findById(addressId);
+    public Address read(Integer addressId) {
+        Optional<Address> byId = this.addressRepository.findById(String.valueOf(addressId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public void delete(String addressId) {
-        this.addressRepository.deleteById(addressId);
+    public void delete(Integer addressId) {
+        this.addressRepository.deleteById(String.valueOf(addressId));
     }
 }

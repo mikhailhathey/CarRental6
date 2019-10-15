@@ -26,8 +26,8 @@ public class BranchLocationServiceImpl implements BranchLocationService {
     }
 
     @Override
-    public BranchLocation read(String branchLocationId) {
-        Optional<BranchLocation> byId = this.branchLocationRepository.findById(branchLocationId);
+    public BranchLocation read(Integer branchLocationId) {
+        Optional<BranchLocation> byId = this.branchLocationRepository.findById(String.valueOf(branchLocationId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class BranchLocationServiceImpl implements BranchLocationService {
     }
 
     @Override
-    public void delete(String branchLocationId) {
-        this.branchLocationRepository.deleteById(branchLocationId);
+    public void delete(Integer branchLocationId) {
+        this.branchLocationRepository.deleteById(String.valueOf(branchLocationId));
     }
 }

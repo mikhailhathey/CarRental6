@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, String> {
+    //Optional<Admin> findById(Integer adminId);
+
+    //void deleteById(Integer adminId);
 
     //Set<Admin> getAll();
 }

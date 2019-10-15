@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StaffRepository extends JpaRepository<Staff, String> {
+    //Optional<Staff> findById(Integer staffId);
+
+    //void deleteById(Integer staffId);
 
     //Set<Staff> getAll();
 }

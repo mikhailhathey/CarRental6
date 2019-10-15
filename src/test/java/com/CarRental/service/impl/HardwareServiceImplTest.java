@@ -27,14 +27,14 @@ public class HardwareServiceImplTest {
 
   @Before
   public void setUp() {
-      hardware = hardwareService.create(HardwareFactory.buildHardware("456", "Laptop", "4500"));
+      hardware = hardwareService.create(HardwareFactory.buildHardware(456, "Laptop", "4500"));
       hardwares.add(hardware);
   }
 
   @Test
   public void create() {
       Hardware createHardware = hardwareService.create(HardwareFactory.buildHardware(
-              "456", "Laptop", "4500"));
+              456, "Laptop", "4500"));
       hardwares.add(createHardware);
       Assert.assertEquals(createHardware, hardwareService.read(createHardware.getHardwareId()));
   }
@@ -42,7 +42,7 @@ public class HardwareServiceImplTest {
   @Test
   public void read() {
       Hardware readTestHardware = hardwareService.create(HardwareFactory.buildHardware(
-              "456", "Laptop", "4500"));
+              456, "Laptop", "4500"));
       Assert.assertEquals(readTestHardware, hardwareService.read(readTestHardware.getHardwareId()));
   }
 
@@ -57,7 +57,7 @@ public class HardwareServiceImplTest {
   @Test
   public void delete() {
       hardwares.addAll(hardwareService.getAll());
-      Hardware deleteHardware = hardwareService.create(HardwareFactory.buildHardware("456", "Laptop", "4500"));
+      Hardware deleteHardware = hardwareService.create(HardwareFactory.buildHardware(456, "Laptop", "4500"));
       hardwares.add(deleteHardware);
       hardwares.remove(deleteHardware);
       hardwareService.delete(deleteHardware.getHardwareId());

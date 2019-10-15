@@ -22,7 +22,7 @@ public class SupplierFactoryTest {
 
     @Test
     public void buildSupplier() {
-        Supplier supplier = SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com");
+        Supplier supplier = SupplierFactory.buildSupplier(453, "Makro", "Johan", "johan@makro.com");
         System.out.println(supplier);
         Assert.assertNotNull(supplier.getSupplierId());
     }

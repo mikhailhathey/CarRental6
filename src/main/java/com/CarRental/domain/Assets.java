@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class Assets implements Comparable<Assets> {
 
-    @Id
-    private String assetsId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer assetsId;
     private String assetsName;
     private String assetsLocation;
     private String assetsType;
@@ -23,11 +25,11 @@ public class Assets implements Comparable<Assets> {
         this.assetsType = builder.assetsType;
     }
 
-    public String getAssetsId() {
+    public Integer getAssetsId() {
         return assetsId;
     }
 
-    public void setAssetsId(String assetsId) {
+    public void setAssetsId(Integer assetsId) {
         this.assetsId = assetsId;
     }
 
@@ -85,12 +87,12 @@ public class Assets implements Comparable<Assets> {
 
     public static class Builder{
 
-        private String assetsId;
+        private Integer assetsId;
         private String assetsName;
         private String assetsLocation;
         private String assetsType;
 
-        public Builder assetsId(String value){
+        public Builder assetsId(Integer value){
             this.assetsId = value;
             return this;
         }

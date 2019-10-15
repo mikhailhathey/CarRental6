@@ -27,14 +27,14 @@ public class StaffTypeServiceImplTest {
 
   @Before
   public void setUp() {
-      staffType = staffTypeService.create(StaffTypeFactory.buildStaffType("765", "Customer Care", "200000"));
+      staffType = staffTypeService.create(StaffTypeFactory.buildStaffType(765, "Customer Care", "200000"));
       staffTypes.add(staffType);
   }
 
   @Test
   public void create() {
       StaffType createStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType(
-              "765", "Customer Care", "200000"));
+              765, "Customer Care", "200000"));
       staffTypes.add(createStaffType);
       Assert.assertEquals(createStaffType, staffTypeService.read(createStaffType.getStaffTypeId()));
   }
@@ -42,7 +42,7 @@ public class StaffTypeServiceImplTest {
   @Test
   public void read() {
       StaffType readTestStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType(
-              "765", "Customer Care", "200000"));
+              765, "Customer Care", "200000"));
       Assert.assertEquals(readTestStaffType, staffTypeService.read(readTestStaffType.getStaffTypeId()));
   }
 
@@ -57,7 +57,7 @@ public class StaffTypeServiceImplTest {
   @Test
   public void delete() {
       staffTypes.addAll(staffTypeService.getAll());
-      StaffType deleteStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType("765", "Customer Care", "200000"));
+      StaffType deleteStaffType = staffTypeService.create(StaffTypeFactory.buildStaffType(765, "Customer Care", "200000"));
       staffTypes.add(deleteStaffType);
       staffTypes.remove(deleteStaffType);
       staffTypeService.delete(deleteStaffType.getStaffTypeId());

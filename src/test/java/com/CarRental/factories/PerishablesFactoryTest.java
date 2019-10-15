@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class PerishablesFactoryTest {
 
     public void testBuildPerishables(){
@@ -22,7 +20,7 @@ public class PerishablesFactoryTest {
 
     @Test
     public void buildPerishables() {
-        Perishables perishables = PerishablesFactory.buildPerishables("567", "Bread", "12/05/2019", "5");
+        Perishables perishables = PerishablesFactory.buildPerishables(567, "Bread", "12/05/2019", "5");
         System.out.println(perishables);
         Assert.assertNotNull(perishables.getPerishablesId());
     }

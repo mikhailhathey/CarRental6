@@ -27,7 +27,7 @@ public class AddressServiceImplTest {
 
     @Before
     public void setUp() {
-        address = addressService.create(AddressFactory.buildAddress("246", "8", "Stock",
+        address = addressService.create(AddressFactory.buildAddress(246, "8", "Stock",
                 "Lansdowne", "7764", "Cape Town"));
         addresses.add(address);
     }
@@ -35,7 +35,7 @@ public class AddressServiceImplTest {
     @Test
     public void create() {
         Address createAddress = addressService.create(AddressFactory.buildAddress(
-                "357", "24", "Brockhurst",
+                357, "24", "Brockhurst",
                 "Constantia", "7720", "Cape Town"));
         addresses.add(createAddress);
         Assert.assertEquals(createAddress, addressService.read(createAddress.getAddressId()));
@@ -44,7 +44,7 @@ public class AddressServiceImplTest {
     @Test
     public void read() {
         Address readTestAddress = addressService.create(AddressFactory.buildAddress(
-                "786", "99", "Main",
+                786, "99", "Main",
                 "Laudium", "7786", "Pretoria"));
         Assert.assertEquals(readTestAddress, addressService.read(readTestAddress.getAddressId()));
     }
@@ -60,7 +60,7 @@ public class AddressServiceImplTest {
     @Test
     public void delete() {
         addresses.addAll(addressService.getAll());
-        Address deleteAddress = addressService.create(AddressFactory.buildAddress("468", "68", "Forest",
+        Address deleteAddress = addressService.create(AddressFactory.buildAddress(468, "68", "Forest",
                 "Newlands", "7804", "Cape Town"));
         addresses.add(deleteAddress);
         addresses.remove(deleteAddress);

@@ -26,8 +26,8 @@ public class VehiclePurchasePriceServiceImpl implements VehiclePurchasePriceServ
     }
 
     @Override
-    public VehiclePurchasePrice read(String vehiclePurchasePriceId) {
-        Optional<VehiclePurchasePrice> byId = this.vehiclePurchasePriceRepository.findById(vehiclePurchasePriceId);
+    public VehiclePurchasePrice read(Integer vehiclePurchasePriceId) {
+        Optional<VehiclePurchasePrice> byId = this.vehiclePurchasePriceRepository.findById(String.valueOf(vehiclePurchasePriceId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class VehiclePurchasePriceServiceImpl implements VehiclePurchasePriceServ
     }
 
     @Override
-    public void delete(String vehiclePurchasePriceId) {
-        this.vehiclePurchasePriceRepository.deleteById(vehiclePurchasePriceId);
+    public void delete(Integer vehiclePurchasePriceId) {
+        this.vehiclePurchasePriceRepository.deleteById(String.valueOf(vehiclePurchasePriceId));
     }
 }

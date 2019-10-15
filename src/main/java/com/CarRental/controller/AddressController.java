@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/address")
 public class AddressController {
-
     @Autowired
     private AddressService addressService;
     //@Qualifier("AddressServiceImpl")
@@ -30,13 +29,13 @@ public class AddressController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Address read(@PathVariable String id) {
+    public Address read(@PathVariable Integer id) {
         return addressService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         addressService.delete(id);
     }
 

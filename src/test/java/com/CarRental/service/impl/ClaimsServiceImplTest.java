@@ -27,14 +27,14 @@ public class ClaimsServiceImplTest {
 
   @Before
   public void setUp() {
-      claims = claimsService.create(ClaimsFactory.buildClaims("1234", "Discovery", "12000", "Stolen"));
+      claims = claimsService.create(ClaimsFactory.buildClaims(1234, "Discovery", "12000", "Stolen"));
       claimss.add(claims);
   }
 
   @Test
   public void create() {
       Claims createClaims = claimsService.create(ClaimsFactory.buildClaims(
-              "1234", "Discovery", "12000", "Stolen"));
+              1234, "Discovery", "12000", "Stolen"));
       claimss.add(createClaims);
       Assert.assertEquals(createClaims, claimsService.read(createClaims.getClaimsId()));
   }
@@ -42,7 +42,7 @@ public class ClaimsServiceImplTest {
   @Test
   public void read() {
       Claims readTestClaims = claimsService.create(ClaimsFactory.buildClaims(
-              "1234", "Discovery", "12000", "Stolen"));
+              1234, "Discovery", "12000", "Stolen"));
       Assert.assertEquals(readTestClaims, claimsService.read(readTestClaims.getClaimsId()));
   }
 
@@ -57,7 +57,7 @@ public class ClaimsServiceImplTest {
   @Test
   public void delete() {
       claimss.addAll(claimsService.getAll());
-      Claims deleteClaims = claimsService.create(ClaimsFactory.buildClaims("1234", "Discovery", "12000", "Stolen"));
+      Claims deleteClaims = claimsService.create(ClaimsFactory.buildClaims(1234, "Discovery", "12000", "Stolen"));
       claimss.add(deleteClaims);
       claimss.remove(deleteClaims);
       claimsService.delete(deleteClaims.getClaimsId());

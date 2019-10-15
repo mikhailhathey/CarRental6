@@ -4,7 +4,7 @@ import com.CarRental.domain.Revenue;
 
 public class RevenueFactory {
 
-    public static Revenue buildRevenue(String revenueId, String revenueMonth, String revenuePeriod, String revenueAmount, String revenueBranch)
+    public static Revenue buildRevenue(Integer revenueId, String revenueMonth, String revenuePeriod, String revenueAmount, String revenueBranch)
     {
         return new Revenue.Builder()
                 .revenueId(revenueId)

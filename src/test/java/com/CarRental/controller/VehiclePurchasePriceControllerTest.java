@@ -41,7 +41,7 @@ public class VehiclePurchasePriceControllerTest {
 
     @Test
     public void testCreateVehiclePurchasePrice() {
-        VehiclePurchasePrice vehiclePurchasePrice = VehiclePurchasePriceFactory.buildVehiclePurchasePrice("452", "2016", "160000");
+        VehiclePurchasePrice vehiclePurchasePrice = VehiclePurchasePriceFactory.buildVehiclePurchasePrice(452, "2016", "160000");
         ResponseEntity<VehiclePurchasePrice> postResponse = restTemplate.postForEntity(baseURL + "/create", vehiclePurchasePrice, VehiclePurchasePrice.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

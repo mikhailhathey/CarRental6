@@ -4,7 +4,7 @@ import com.CarRental.domain.RentalTerm;
 
 public class RentalTermFactory {
 
-    public static RentalTerm buildRentalTerm(String rentalTermId, String rentalTermNumber, String rentalTermClass, String rentalTermDays, String rentalTermContact, String rentalTermBranch)
+    public static RentalTerm buildRentalTerm(Integer rentalTermId, String rentalTermNumber, String rentalTermClass, String rentalTermDays, String rentalTermContact, String rentalTermBranch)
     {
         return new RentalTerm.Builder()
                 .rentalTermId(rentalTermId)

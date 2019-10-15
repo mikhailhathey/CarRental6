@@ -27,14 +27,14 @@ public class SoftwareServiceImplTest {
 
   @Before
   public void setUp() {
-      software = softwareService.create(SoftwareFactory.buildSoftware("769", "Pascal", "2.6", "3000"));
+      software = softwareService.create(SoftwareFactory.buildSoftware(769, "Pascal", "2.6", "3000"));
       softwares.add(software);
   }
 
   @Test
   public void create() {
       Software createSoftware = softwareService.create(SoftwareFactory.buildSoftware(
-              "769", "Pascal", "2.6", "3000"));
+              769, "Pascal", "2.6", "3000"));
       softwares.add(createSoftware);
       Assert.assertEquals(createSoftware, softwareService.read(createSoftware.getSoftwareId()));
   }
@@ -42,7 +42,7 @@ public class SoftwareServiceImplTest {
   @Test
   public void read() {
       Software readTestSoftware = softwareService.create(SoftwareFactory.buildSoftware(
-              "769", "Pascal", "2.6", "3000"));
+              769, "Pascal", "2.6", "3000"));
       Assert.assertEquals(readTestSoftware, softwareService.read(readTestSoftware.getSoftwareId()));
   }
 
@@ -57,7 +57,7 @@ public class SoftwareServiceImplTest {
   @Test
   public void delete() {
       softwares.addAll(softwareService.getAll());
-      Software deleteSoftware = softwareService.create(SoftwareFactory.buildSoftware("769", "Pascal", "2.6", "3000"));
+      Software deleteSoftware = softwareService.create(SoftwareFactory.buildSoftware(769, "Pascal", "2.6", "3000"));
       softwares.add(deleteSoftware);
       softwares.remove(deleteSoftware);
       softwareService.delete(deleteSoftware.getSoftwareId());

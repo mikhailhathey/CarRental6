@@ -41,7 +41,7 @@ public class RentalValueControllerTest {
 
     @Test
     public void testCreateRentalValue() {
-        RentalValue rentalValue = RentalValueFactory.buildRentalValue("902", "Bus", "4000");
+        RentalValue rentalValue = RentalValueFactory.buildRentalValue(902, "Bus", "4000");
         ResponseEntity<RentalValue> postResponse = restTemplate.postForEntity(baseURL + "/create", rentalValue, RentalValue.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

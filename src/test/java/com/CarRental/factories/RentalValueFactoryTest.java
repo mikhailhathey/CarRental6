@@ -22,7 +22,7 @@ public class RentalValueFactoryTest {
 
     @Test
     public void buildRentalValue() {
-        RentalValue region = RentalValueFactory.buildRentalValue("902", "Bus", "4000");
+        RentalValue region = RentalValueFactory.buildRentalValue(902, "Bus", "4000");
         System.out.println(region);
         Assert.assertNotNull(region.getRentalValueId());
     }

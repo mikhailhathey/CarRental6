@@ -4,7 +4,7 @@ import com.CarRental.domain.FleetManager;
 
 public class FleetManagerFactory {
 
-    public static FleetManager buildFleetManager(String fleetManagerId, String fleetManagerNumber, String fleetManagerClass, String fleetManagerDays, String fleetManagerContact, String fleetManagerBranch)
+    public static FleetManager buildFleetManager(Integer fleetManagerId, String fleetManagerNumber, String fleetManagerClass, String fleetManagerDays, String fleetManagerContact, String fleetManagerBranch)
     {
         return new FleetManager.Builder()
                 .fleetManagerId(fleetManagerId)

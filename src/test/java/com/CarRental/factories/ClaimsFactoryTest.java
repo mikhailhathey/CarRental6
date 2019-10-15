@@ -1,8 +1,6 @@
 package com.CarRental.factories;
 
 import com.CarRental.domain.Claims;
-
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +20,7 @@ public class ClaimsFactoryTest {
 
     @Test
     public void buildClaims() {
-        Claims claims = ClaimsFactory.buildClaims("1234", "Discovery", "12000", "Stolen");
+        Claims claims = ClaimsFactory.buildClaims(1234, "Discovery", "12000", "Stolen");
         System.out.println(claims);
         Assert.assertNotNull(claims.getClaimsId());
     }

@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class Claims implements Comparable<Claims> {
 
-    @Id
-    private String claimsId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer claimsId;
     private String claimProvider;
     private String claimValue;
     private String claimReason;
@@ -16,11 +18,11 @@ public class Claims implements Comparable<Claims> {
     private Claims() {
     }
 
-    public String getClaimsId() {
+    public Integer getClaimsId() {
         return claimsId;
     }
 
-    public void setClaimsId(String claimsId) {
+    public void setClaimsId(Integer claimsId) {
         this.claimsId = claimsId;
     }
 
@@ -85,12 +87,12 @@ public class Claims implements Comparable<Claims> {
 
     public static class Builder{
 
-        private String claimsId;
+        private Integer claimsId;
         private String claimProvider;
         private String claimValue;
         private String claimReason;
 
-        public Builder claimsId(String value){
+        public Builder claimsId(Integer value){
             this.claimsId = value;
             return this;
         }

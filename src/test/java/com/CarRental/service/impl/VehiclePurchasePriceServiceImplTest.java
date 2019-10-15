@@ -27,14 +27,14 @@ public class VehiclePurchasePriceServiceImplTest {
 
   @Before
   public void setUp() {
-      vehiclePurchasePrice = vehiclePurchasePriceService.create(VehiclePurchasePriceFactory.buildVehiclePurchasePrice("452", "2016", "160000"));
+      vehiclePurchasePrice = vehiclePurchasePriceService.create(VehiclePurchasePriceFactory.buildVehiclePurchasePrice(452, "2016", "160000"));
       vehiclePurchasePrices.add(vehiclePurchasePrice);
   }
 
   @Test
   public void create() {
       VehiclePurchasePrice createVehiclePurchasePrice = vehiclePurchasePriceService.create(VehiclePurchasePriceFactory.buildVehiclePurchasePrice(
-              "452", "2016", "160000"));
+              452, "2016", "160000"));
       vehiclePurchasePrices.add(createVehiclePurchasePrice);
       Assert.assertEquals(createVehiclePurchasePrice, vehiclePurchasePriceService.read(createVehiclePurchasePrice.getVehiclePurchasePriceId()));
   }
@@ -42,7 +42,7 @@ public class VehiclePurchasePriceServiceImplTest {
   @Test
   public void read() {
       VehiclePurchasePrice readTestVehiclePurchasePrice = vehiclePurchasePriceService.create(VehiclePurchasePriceFactory.buildVehiclePurchasePrice(
-              "452", "2016", "160000"));
+              452, "2016", "160000"));
       Assert.assertEquals(readTestVehiclePurchasePrice, vehiclePurchasePriceService.read(readTestVehiclePurchasePrice.getVehiclePurchasePriceId()));
   }
 
@@ -57,7 +57,7 @@ public class VehiclePurchasePriceServiceImplTest {
   @Test
   public void delete() {
       vehiclePurchasePrices.addAll(vehiclePurchasePriceService.getAll());
-      VehiclePurchasePrice deleteVehiclePurchasePrice = vehiclePurchasePriceService.create(VehiclePurchasePriceFactory.buildVehiclePurchasePrice("452", "2016", "160000"));
+      VehiclePurchasePrice deleteVehiclePurchasePrice = vehiclePurchasePriceService.create(VehiclePurchasePriceFactory.buildVehiclePurchasePrice(452, "2016", "160000"));
       vehiclePurchasePrices.add(deleteVehiclePurchasePrice);
       vehiclePurchasePrices.remove(deleteVehiclePurchasePrice);
       vehiclePurchasePriceService.delete(deleteVehiclePurchasePrice.getVehiclePurchasePriceId());

@@ -41,7 +41,7 @@ public class ExpensesControllerTest {
 
     @Test
     public void testCreateExpenses() {
-        Expenses expenses = ExpensesFactory.buildExpenses("123456", "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales");
+        Expenses expenses = ExpensesFactory.buildExpenses(123456, "12000", "24/03/2019", "Fiesta@ford.co.za", "Sales");
         ResponseEntity<Expenses> postResponse = restTemplate.postForEntity(baseURL + "/create", expenses, Expenses.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

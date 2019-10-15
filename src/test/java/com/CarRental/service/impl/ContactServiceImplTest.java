@@ -27,14 +27,14 @@ public class ContactServiceImplTest {
 
   @Before
   public void setUp() {
-      contact = contactService.create(ContactFactory.buildContact("123456", "13443975", "2345972398745", "Fiesta@ford.co.za"));
+      contact = contactService.create(ContactFactory.buildContact(123456, "13443975", "2345972398745", "Fiesta@ford.co.za"));
       contacts.add(contact);
   }
 
   @Test
   public void create() {
       Contact createContact = contactService.create(ContactFactory.buildContact(
-              "123456", "13443975", "2345972398745", "Fiesta@ford.co.za"));
+              123456, "13443975", "2345972398745", "Fiesta@ford.co.za"));
       contacts.add(createContact);
       Assert.assertEquals(createContact, contactService.read(createContact.getContactId()));
   }
@@ -42,7 +42,7 @@ public class ContactServiceImplTest {
   @Test
   public void read() {
       Contact readTestContact = contactService.create(ContactFactory.buildContact(
-              "123456", "13443975", "2345972398745", "Fiesta@ford.co.za"));
+              123456, "13443975", "2345972398745", "Fiesta@ford.co.za"));
       Assert.assertEquals(readTestContact, contactService.read(readTestContact.getContactId()));
   }
 
@@ -57,7 +57,7 @@ public class ContactServiceImplTest {
   @Test
   public void delete() {
       contacts.addAll(contactService.getAll());
-      Contact deleteContact = contactService.create(ContactFactory.buildContact("123456", "13443975", "2345972398745", "Fiesta@ford.co.za"));
+      Contact deleteContact = contactService.create(ContactFactory.buildContact(123456, "13443975", "2345972398745", "Fiesta@ford.co.za"));
       contacts.add(deleteContact);
       contacts.remove(deleteContact);
       contactService.delete(deleteContact.getContactId());

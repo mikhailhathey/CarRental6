@@ -41,7 +41,7 @@ public class RegionControllerTest {
 
     @Test
     public void testCreateRegion() {
-        Region region = RegionFactory.buildRegion("765", "Hatfield", "Pretoria");
+        Region region = RegionFactory.buildRegion(765, "Hatfield", "Pretoria");
         ResponseEntity<Region> postResponse = restTemplate.postForEntity(baseURL + "/create", region, Region.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

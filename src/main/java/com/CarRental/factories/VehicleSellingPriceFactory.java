@@ -4,7 +4,7 @@ import com.CarRental.domain.VehicleSellingPrice;
 
 public class VehicleSellingPriceFactory {
 
-    public static VehicleSellingPrice buildVehicleSellingPrice(String vehicleSellingPriceId, String vehicleYearModel, String vehiclePrice)
+    public static VehicleSellingPrice buildVehicleSellingPrice(Integer vehicleSellingPriceId, String vehicleYearModel, String vehiclePrice)
     {
         return new VehicleSellingPrice.Builder()
                 .vehicleSellingPriceId(vehicleSellingPriceId)

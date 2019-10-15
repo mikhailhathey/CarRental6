@@ -27,13 +27,13 @@ public class AdminServiceImplTest {
 
   @Before
   public void setUp() {
-      admin = adminService.create(AdminFactory.buildAdmin("123", "AdminUser", "Password123"));
+      admin = adminService.create(AdminFactory.buildAdmin(123, "AdminUser", "Password123"));
       admins.add(admin);
   }
 
   @Test
   public void create() {
-      Admin createAdmin = adminService.create(AdminFactory.buildAdmin("456", "TestUser", "Password456"));
+      Admin createAdmin = adminService.create(AdminFactory.buildAdmin(456, "TestUser", "Password456"));
       admins.add(createAdmin);
       Assert.assertEquals(createAdmin, adminService.read(createAdmin.getAdminId()));
   }
@@ -41,7 +41,7 @@ public class AdminServiceImplTest {
   @Test
   public void read() {
       Admin readTestAdmin = adminService.create(AdminFactory.buildAdmin(
-              "789", "ReadUser", "Password789"));
+              789, "ReadUser", "Password789"));
       Assert.assertEquals(readTestAdmin, adminService.read(readTestAdmin.getAdminId()));
   }
 
@@ -56,7 +56,7 @@ public class AdminServiceImplTest {
   @Test
   public void delete() {
       admins.addAll(adminService.getAll());
-      Admin deleteAdmin = adminService.create(AdminFactory.buildAdmin("567", "GetUser", "Password567"));
+      Admin deleteAdmin = adminService.create(AdminFactory.buildAdmin(567, "GetUser", "Password567"));
       admins.add(deleteAdmin);
       admins.remove(deleteAdmin);
       adminService.delete(deleteAdmin.getAdminId());

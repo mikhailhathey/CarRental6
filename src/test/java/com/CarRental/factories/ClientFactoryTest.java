@@ -24,7 +24,7 @@ public class ClientFactoryTest {
 
     @Test
     public void buildClient() {
-        Client client = ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Street Road");
+        Client client = ClientFactory.buildClient(1234, "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Street Road");
         System.out.println(client);
         Assert.assertNotNull(client.getClientId());
     }

@@ -20,7 +20,7 @@ public class AssetsFactoryTest extends TestCase {
 
     @Test
     public void buildAssets() {
-        Assets assets = AssetsFactory.buildAssets("123", "DSLR Camera", "Cupboard", "Camera");
+        Assets assets = AssetsFactory.buildAssets(123, "DSLR Camera", "Cupboard", "Camera");
         System.out.println(assets);
         Assert.assertNotNull(assets.getAssetsId());
     }

@@ -1,11 +1,9 @@
 package com.CarRental.factories;
 
         import com.CarRental.domain.RentalTerm;
-        import org.junit.Assert;
-        import org.junit.Before;
-        import org.junit.Test;
-
-        import static org.junit.Assert.*;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 public class RentalTermFactoryTest {
 
@@ -22,7 +20,7 @@ public class RentalTermFactoryTest {
 
     @Test
     public void buildRentalTerm() {
-        RentalTerm rentalTerm = RentalTermFactory.buildRentalTerm("324", "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD");
+        RentalTerm rentalTerm = RentalTermFactory.buildRentalTerm(324, "12", "Passenger", "20", "JohnnyTest", "Cape Town CBD");
         System.out.println(rentalTerm);
         Assert.assertNotNull(rentalTerm.getRentalTermId());
     }

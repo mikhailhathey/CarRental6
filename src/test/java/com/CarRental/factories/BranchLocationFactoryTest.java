@@ -19,7 +19,7 @@ public class BranchLocationFactoryTest {
 
     @Test
     public void buildBranchLocation() {
-        BranchLocation branchLocation = BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager");
+        BranchLocation branchLocation = BranchLocationFactory.buildBranchLocation(123, "TestBranch", "TestManager");
         System.out.println(branchLocation);
         Assert.assertNotNull(branchLocation.getBranchLocationId());
     }

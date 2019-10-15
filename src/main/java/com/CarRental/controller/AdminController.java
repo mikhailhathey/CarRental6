@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
@@ -20,7 +21,7 @@ public class AdminController {
         return adminService.create(admin);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public Admin update(@RequestBody Admin admin) {
         return adminService.update(admin);
@@ -28,13 +29,13 @@ public class AdminController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Admin read(@PathVariable String id) {
+    public Admin read(@PathVariable Integer id) {
         return adminService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         adminService.delete(id);
     }
 

@@ -21,7 +21,7 @@ public class CarFactoryTest {
 
     @Test
     public void buildCar() {
-        Car car = CarFactory.buildCar("123456", "13443975", "Ford", "Fiesta", "2016");
+        Car car = CarFactory.buildCar(123456, "13443975", "Ford", "Fiesta", "2016");
         System.out.println(car);
         Assert.assertNotNull(car.getCarId());
     }

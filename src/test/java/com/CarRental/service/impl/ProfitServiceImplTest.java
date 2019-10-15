@@ -27,14 +27,14 @@ public class ProfitServiceImplTest {
 
   @Before
   public void setUp() {
-      profit = profitService.create(ProfitFactory.buildProfit("789", "100000", "120000"));
+      profit = profitService.create(ProfitFactory.buildProfit(789, "100000", "120000"));
       profits.add(profit);
   }
 
   @Test
   public void create() {
       Profit createProfit = profitService.create(ProfitFactory.buildProfit(
-              "789", "100000", "120000"));
+              789, "100000", "120000"));
       profits.add(createProfit);
       Assert.assertEquals(createProfit, profitService.read(createProfit.getProfitId()));
   }
@@ -42,7 +42,7 @@ public class ProfitServiceImplTest {
   @Test
   public void read() {
       Profit readTestProfit = profitService.create(ProfitFactory.buildProfit(
-              "789", "100000", "120000"));
+              789, "100000", "120000"));
       Assert.assertEquals(readTestProfit, profitService.read(readTestProfit.getProfitId()));
   }
 
@@ -57,7 +57,7 @@ public class ProfitServiceImplTest {
   @Test
   public void delete() {
       profits.addAll(profitService.getAll());
-      Profit deleteProfit = profitService.create(ProfitFactory.buildProfit("789", "100000", "120000"));
+      Profit deleteProfit = profitService.create(ProfitFactory.buildProfit(789, "100000", "120000"));
       profits.add(deleteProfit);
       profits.remove(deleteProfit);
       profitService.delete(deleteProfit.getProfitId());

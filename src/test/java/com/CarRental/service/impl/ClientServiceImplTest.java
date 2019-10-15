@@ -27,14 +27,14 @@ public class ClientServiceImplTest {
 
   @Before
   public void setUp() {
-      client = clientService.create(ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+      client = clientService.create(ClientFactory.buildClient(1234, "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
       clients.add(client);
   }
 
   @Test
   public void create() {
       Client createClient = clientService.create(ClientFactory.buildClient(
-              "1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+              1234, "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
       clients.add(createClient);
       Assert.assertEquals(createClient, clientService.read(createClient.getClientId()));
   }
@@ -42,7 +42,7 @@ public class ClientServiceImplTest {
   @Test
   public void read() {
       Client readTestClient = clientService.create(ClientFactory.buildClient(
-              "1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+              1234, "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
       Assert.assertEquals(readTestClient, clientService.read(readTestClient.getClientId()));
   }
 
@@ -57,7 +57,7 @@ public class ClientServiceImplTest {
   @Test
   public void delete() {
       clients.addAll(clientService.getAll());
-      Client deleteClient = clientService.create(ClientFactory.buildClient("1234", "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
+      Client deleteClient = clientService.create(ClientFactory.buildClient(1234, "082123456789", "Clientele", "test@clientele.com", "clientele.co.za", "1 Client Road"));
       clients.add(deleteClient);
       clients.remove(deleteClient);
       clientService.delete(deleteClient.getClientId());

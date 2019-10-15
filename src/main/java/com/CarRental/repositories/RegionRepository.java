@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RegionRepository extends JpaRepository<Region, String> {
+    //Optional<Region> findById(Integer regionId);
+
+    //void deleteById(Integer regionId);
 
     //Set<Region> getAll();
 }

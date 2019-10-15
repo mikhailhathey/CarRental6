@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class VehicleSellingPriceFactoryTest {
 
     public void testBuildVehicleSellingPrice(){
@@ -22,7 +20,7 @@ public class VehicleSellingPriceFactoryTest {
 
     @Test
     public void buildVehicleSellingPrice() {
-        VehicleSellingPrice vehicleSellingPrice = VehicleSellingPriceFactory.buildVehicleSellingPrice("452", "2016", "180000");
+        VehicleSellingPrice vehicleSellingPrice = VehicleSellingPriceFactory.buildVehicleSellingPrice(452, "2016", "180000");
         System.out.println(vehicleSellingPrice);
         Assert.assertNotNull(vehicleSellingPrice.getVehicleSellingPriceId());
     }

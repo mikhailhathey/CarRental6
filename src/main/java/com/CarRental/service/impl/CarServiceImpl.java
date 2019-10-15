@@ -26,8 +26,8 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public Car read(String carId) {
-        Optional<Car> byId = this.carRepository.findById(carId);
+    public Car read(Integer carId) {
+        Optional<Car> byId = this.carRepository.findById(String.valueOf(carId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public void delete(String carId) {
-        this.carRepository.deleteById(carId);
+    public void delete(Integer carId) {
+        this.carRepository.deleteById(String.valueOf(carId));
     }
 }

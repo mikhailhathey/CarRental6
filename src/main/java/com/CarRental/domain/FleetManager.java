@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class FleetManager implements Comparable<FleetManager>{
 
-    @Id
-    private String fleetManagerId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer fleetManagerId;
     private String fleetManagerNumber;
     private String fleetManagerClass;
     private String fleetManagerDays;
@@ -19,11 +21,11 @@ public class FleetManager implements Comparable<FleetManager>{
     }
 
     //fleetManagerId, fleetManagerNumber, fleetManagerClass, fleetManagerDays, fleetManagerContact, fleetManagerBranch
-    public String getFleetManagerId() {
+    public Integer getFleetManagerId() {
         return fleetManagerId;
     }
 
-    public void setFleetManagerId(String fleetManagerId) {
+    public void setFleetManagerId(Integer fleetManagerId) {
         this.fleetManagerId = fleetManagerId;
     }
 
@@ -108,14 +110,14 @@ public class FleetManager implements Comparable<FleetManager>{
 
     public static class Builder{
 
-        private String fleetManagerId;
+        private Integer fleetManagerId;
         private String fleetManagerNumber;
         private String fleetManagerClass;
         private String fleetManagerDays;
         private String fleetManagerContact;
         private String fleetManagerBranch;
 
-        public Builder fleetManagerId(String value)
+        public Builder fleetManagerId(Integer value)
         {
             this.fleetManagerId = value;
             return this;

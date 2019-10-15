@@ -20,7 +20,7 @@ public class FleetManagerFactoryTest {
 
     @Test
     public void buildExpenses() {
-        FleetManager fleetManager = FleetManagerFactory.buildFleetManager("123456", "400", "Vans", "20", "JohnnyTest", "Kenilworth");
+        FleetManager fleetManager = FleetManagerFactory.buildFleetManager(123456, "400", "Vans", "20", "JohnnyTest", "Kenilworth");
         System.out.println(fleetManager);
         Assert.assertNotNull(fleetManager.getFleetManagerId());
     }

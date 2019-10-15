@@ -27,14 +27,13 @@ public class SupplierServiceImplTest {
 
   @Before
   public void setUp() {
-      supplier = supplierService.create(SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com"));
+      supplier = supplierService.create(SupplierFactory.buildSupplier(453, "Makro", "Johan", "johan@makro.com"));
       suppliers.add(supplier);
   }
 
   @Test
   public void create() {
-      Supplier createSupplier = supplierService.create(SupplierFactory.buildSupplier(
-              "453", "Makro", "Johan", "johan@makro.com"));
+      Supplier createSupplier = supplierService.create(SupplierFactory.buildSupplier(453, "Makro", "Johan", "johan@makro.com"));
       suppliers.add(createSupplier);
       Assert.assertEquals(createSupplier, supplierService.read(createSupplier.getSupplierId()));
   }
@@ -42,7 +41,7 @@ public class SupplierServiceImplTest {
   @Test
   public void read() {
       Supplier readTestSupplier = supplierService.create(SupplierFactory.buildSupplier(
-              "453", "Makro", "Johan", "johan@makro.com"));
+              453, "Makro", "Johan", "johan@makro.com"));
       Assert.assertEquals(readTestSupplier, supplierService.read(readTestSupplier.getSupplierId()));
   }
 
@@ -57,7 +56,7 @@ public class SupplierServiceImplTest {
   @Test
   public void delete() {
       suppliers.addAll(supplierService.getAll());
-      Supplier deleteSupplier = supplierService.create(SupplierFactory.buildSupplier("453", "Makro", "Johan", "johan@makro.com"));
+      Supplier deleteSupplier = supplierService.create(SupplierFactory.buildSupplier(453, "Makro", "Johan", "johan@makro.com"));
       suppliers.add(deleteSupplier);
       suppliers.remove(deleteSupplier);
       supplierService.delete(deleteSupplier.getSupplierId());

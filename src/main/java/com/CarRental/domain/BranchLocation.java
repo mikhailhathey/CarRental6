@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class BranchLocation implements Comparable<BranchLocation> {
 
-    @Id
-    private String branchLocationId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer branchLocationId;
     private String branchName;
     private String branchManager;
 
@@ -21,11 +23,11 @@ public class BranchLocation implements Comparable<BranchLocation> {
         this.branchManager = builder.branchManager;
     }
 
-    public String getBranchLocationId() {
+    public Integer getBranchLocationId() {
         return branchLocationId;
     }
 
-    public void setBranchLocationId(String branchLocationId) {
+    public void setBranchLocationId(Integer branchLocationId) {
         this.branchLocationId = branchLocationId;
     }
 
@@ -73,11 +75,11 @@ public class BranchLocation implements Comparable<BranchLocation> {
     }
 
     public static class Builder{
-        private String branchLocationId;
+        private Integer branchLocationId;
         private String branchName;
         private String branchManager;
 
-        public Builder branchLocationId(String value){
+        public Builder branchLocationId(Integer value){
             this.branchLocationId = value;
             return this;
         }

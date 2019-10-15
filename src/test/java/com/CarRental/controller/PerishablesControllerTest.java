@@ -41,7 +41,7 @@ public class PerishablesControllerTest {
 
     @Test
     public void testCreatePerishables() {
-        Perishables perishables = PerishablesFactory.buildPerishables("567", "Bread", "12/05/2019", "5");
+        Perishables perishables = PerishablesFactory.buildPerishables(567, "Bread", "12/05/2019", "5");
         ResponseEntity<Perishables> postResponse = restTemplate.postForEntity(baseURL + "/create", perishables, Perishables.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

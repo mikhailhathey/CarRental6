@@ -4,7 +4,7 @@ import com.CarRental.domain.Car;
 
 public class CarFactory {
 
-    public static Car buildCar(String carId, String vinNumber, String manufacturerName, String modelName, String yearModel)
+    public static Car buildCar(Integer carId, String vinNumber, String manufacturerName, String modelName, String yearModel)
     {
         return new Car.Builder()
                 .carId(carId)

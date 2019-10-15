@@ -4,7 +4,7 @@ import com.CarRental.domain.RentalValue;
 
 public class RentalValueFactory {
 
-    public static RentalValue buildRentalValue(String rentalValueId, String rentalValueClass, String rentalValueAmount)
+    public static RentalValue buildRentalValue(Integer rentalValueId, String rentalValueClass, String rentalValueAmount)
     {
         return new RentalValue.Builder()
                 .rentalValueId(rentalValueId)

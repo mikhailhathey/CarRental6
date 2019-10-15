@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AssetsRepository extends JpaRepository<Assets, String> {
+    //void deleteById(Integer assetsId);
+
+    //Optional<Assets> findById(Integer assetsId);
 
     //Assets retrieveByDesc(String addressDesc);
     //Set<Assets> getAll();

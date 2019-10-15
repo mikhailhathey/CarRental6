@@ -41,7 +41,7 @@ public class StaffControllerTest {
 
     @Test
     public void testCreateStaff() {
-        Staff address = StaffFactory.buildStaff("345", "August", "April", "200000", "Claremont");
+        Staff address = StaffFactory.buildStaff(345, "August", "April", "200000", "Claremont");
         ResponseEntity<Staff> postResponse = restTemplate.postForEntity(baseURL + "/create", address, Staff.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

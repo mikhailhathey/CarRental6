@@ -27,14 +27,14 @@ public class InfrastructureServiceImplTest {
 
   @Before
   public void setUp() {
-      infrastructure = infrastructureService.create(InfrastructureFactory.buildInfrastructure("789", "Dimension Data", "Network Servers", "50000"));
+      infrastructure = infrastructureService.create(InfrastructureFactory.buildInfrastructure(789, "Dimension Data", "Network Servers", "50000"));
       infrastructures.add(infrastructure);
   }
 
   @Test
   public void create() {
       Infrastructure createInfrastructure = infrastructureService.create(InfrastructureFactory.buildInfrastructure(
-              "789", "Dimension Data", "Network Servers", "50000"));
+              789, "Dimension Data", "Network Servers", "50000"));
       infrastructures.add(createInfrastructure);
       Assert.assertEquals(createInfrastructure, infrastructureService.read(createInfrastructure.getInfrastructureId()));
   }
@@ -42,7 +42,7 @@ public class InfrastructureServiceImplTest {
   @Test
   public void read() {
       Infrastructure readTestInfrastructure = infrastructureService.create(InfrastructureFactory.buildInfrastructure(
-              "789", "Dimension Data", "Network Servers", "50000"));
+              789, "Dimension Data", "Network Servers", "50000"));
       Assert.assertEquals(readTestInfrastructure, infrastructureService.read(readTestInfrastructure.getInfrastructureId()));
   }
 
@@ -57,7 +57,7 @@ public class InfrastructureServiceImplTest {
   @Test
   public void delete() {
       infrastructures.addAll(infrastructureService.getAll());
-      Infrastructure deleteInfrastructure = infrastructureService.create(InfrastructureFactory.buildInfrastructure("789", "Dimension Data", "Network Servers", "50000"));
+      Infrastructure deleteInfrastructure = infrastructureService.create(InfrastructureFactory.buildInfrastructure(789, "Dimension Data", "Network Servers", "50000"));
       infrastructures.add(deleteInfrastructure);
       infrastructures.remove(deleteInfrastructure);
       infrastructureService.delete(deleteInfrastructure.getInfrastructureId());

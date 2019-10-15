@@ -41,7 +41,7 @@ public class ContactControllerTest {
 
     @Test
     public void testCreateContact() {
-        Contact contact = ContactFactory.buildContact("123456", "13443975", "2345972398745", "Fiesta@ford.co.za");
+        Contact contact = ContactFactory.buildContact(123456, "13443975", "2345972398745", "Fiesta@ford.co.za");
         ResponseEntity<Contact> postResponse = restTemplate.postForEntity(baseURL + "/create", contact, Contact.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

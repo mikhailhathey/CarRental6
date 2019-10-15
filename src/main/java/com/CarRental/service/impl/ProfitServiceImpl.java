@@ -26,8 +26,8 @@ public class ProfitServiceImpl implements ProfitService {
     }
 
     @Override
-    public Profit read(String profitId) {
-        Optional<Profit> byId = this.profitRepository.findById(profitId);
+    public Profit read(Integer profitId) {
+        Optional<Profit> byId = this.profitRepository.findById(String.valueOf(profitId));
         return byId.orElseThrow(RuntimeException::new);
     }
 
@@ -37,7 +37,7 @@ public class ProfitServiceImpl implements ProfitService {
     }
 
     @Override
-    public void delete(String profitId) {
-        this.profitRepository.deleteById(profitId);
+    public void delete(Integer profitId) {
+        this.profitRepository.deleteById(String.valueOf(profitId));
     }
 }

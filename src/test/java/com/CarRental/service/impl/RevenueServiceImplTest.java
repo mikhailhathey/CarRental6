@@ -27,14 +27,14 @@ public class RevenueServiceImplTest {
 
   @Before
   public void setUp() {
-      revenue = revenueService.create(RevenueFactory.buildRevenue("345", "August", "April", "200000", "Claremont"));
+      revenue = revenueService.create(RevenueFactory.buildRevenue(345, "August", "April", "200000", "Claremont"));
       revenues.add(revenue);
   }
 
   @Test
   public void create() {
       Revenue createRevenue = revenueService.create(RevenueFactory.buildRevenue(
-              "345", "August", "April", "200000", "Claremont"));
+              345, "August", "April", "200000", "Claremont"));
       revenues.add(createRevenue);
       Assert.assertEquals(createRevenue, revenueService.read(createRevenue.getRevenueId()));
   }
@@ -42,7 +42,7 @@ public class RevenueServiceImplTest {
   @Test
   public void read() {
       Revenue readTestRevenue = revenueService.create(RevenueFactory.buildRevenue(
-              "345", "August", "April", "200000", "Claremont"));
+              345, "August", "April", "200000", "Claremont"));
       Assert.assertEquals(readTestRevenue, revenueService.read(readTestRevenue.getRevenueId()));
   }
 
@@ -57,7 +57,7 @@ public class RevenueServiceImplTest {
   @Test
   public void delete() {
       revenues.addAll(revenueService.getAll());
-      Revenue deleteRevenue = revenueService.create(RevenueFactory.buildRevenue("345", "August", "April", "200000", "Claremont"));
+      Revenue deleteRevenue = revenueService.create(RevenueFactory.buildRevenue(345, "August", "April", "200000", "Claremont"));
       revenues.add(deleteRevenue);
       revenues.remove(deleteRevenue);
       revenueService.delete(deleteRevenue.getRevenueId());

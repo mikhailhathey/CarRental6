@@ -1,14 +1,16 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class Perishables implements Comparable<Perishables>{
 
-    @Id
-    private String perishablesId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer perishablesId;
     private String perishableName;
     private String perishableExpiryDate;
     private String perishableQuantity;
@@ -16,11 +18,11 @@ public class Perishables implements Comparable<Perishables>{
     private Perishables(){
     }
 
-    public String getPerishablesId() {
+    public Integer getPerishablesId() {
         return perishablesId;
     }
 
-    public void setPerishablesId(String perishablesId) {
+    public void setPerishablesId(Integer perishablesId) {
         this.perishablesId = perishablesId;
     }
 
@@ -85,12 +87,12 @@ public class Perishables implements Comparable<Perishables>{
 
     public static class Builder{
 
-        private String perishablesId;
+        private Integer perishablesId;
         private String perishableName;
         private String perishableExpiryDate;
         private String perishableQuantity;
 
-        public Builder perishablesId(String value)
+        public Builder perishablesId(Integer value)
         {
             this.perishablesId = value;
             return this;

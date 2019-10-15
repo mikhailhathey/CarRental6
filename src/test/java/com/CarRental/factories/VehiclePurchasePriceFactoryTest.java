@@ -22,7 +22,7 @@ public class VehiclePurchasePriceFactoryTest {
 
     @Test
     public void buildVehiclePurchasePrice() {
-        VehiclePurchasePrice vehiclePurchasePrice = VehiclePurchasePriceFactory.buildVehiclePurchasePrice("452", "2016", "160000");
+        VehiclePurchasePrice vehiclePurchasePrice = VehiclePurchasePriceFactory.buildVehiclePurchasePrice(452, "2016", "160000");
         System.out.println(vehiclePurchasePrice);
         Assert.assertNotNull(vehiclePurchasePrice.getVehiclePurchasePriceId());
     }

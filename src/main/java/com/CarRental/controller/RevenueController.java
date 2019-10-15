@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/revenue")
 public class RevenueController {
@@ -28,13 +29,13 @@ public class RevenueController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Revenue read(@PathVariable String id) {
+    public Revenue read(@PathVariable Integer id) {
         return revenueService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         revenueService.delete(id);
     }
 

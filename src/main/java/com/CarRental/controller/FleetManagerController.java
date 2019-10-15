@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/fleetManager")
 public class FleetManagerController {
@@ -20,7 +21,7 @@ public class FleetManagerController {
         return fleetManagerService.create(fleetManager);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public FleetManager update(@RequestBody FleetManager fleetManager) {
         return fleetManagerService.update(fleetManager);
@@ -28,13 +29,13 @@ public class FleetManagerController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public FleetManager read(@PathVariable String id) {
+    public FleetManager read(@PathVariable Integer id) {
         return fleetManagerService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         fleetManagerService.delete(id);
     }
 

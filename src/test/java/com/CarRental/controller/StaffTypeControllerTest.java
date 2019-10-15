@@ -41,7 +41,7 @@ public class StaffTypeControllerTest {
 
     @Test
     public void testCreateStaffType() {
-        StaffType staffType = StaffTypeFactory.buildStaffType("765", "Customer Care", "200000");
+        StaffType staffType = StaffTypeFactory.buildStaffType(765, "Customer Care", "200000");
         ResponseEntity<StaffType> postResponse = restTemplate.postForEntity(baseURL + "/create", staffType, StaffType.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());

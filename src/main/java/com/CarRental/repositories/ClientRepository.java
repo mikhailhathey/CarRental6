@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ClientRepository extends JpaRepository<Client, String> {
+    //Optional<Client> findById(Integer clientId);
+
+    //void deleteById(Integer clientId);
 
     //Set<Client> getAll();
     //public List<Client> findByAge(int age);

@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ClaimsRepository extends JpaRepository<Claims, String> {
+    //Optional<Claims> findById(Integer claimsId);
+
+    //void deleteById(Integer claimsId);
 
     //Set<Claims> getAll();
     //public List<Claims> findByAge(int age);

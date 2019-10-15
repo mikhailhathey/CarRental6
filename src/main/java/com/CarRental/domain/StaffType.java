@@ -1,25 +1,27 @@
 package com.CarRental.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
 public class StaffType implements Comparable<StaffType>{
 
-    @Id
-    private String staffTypeId;
+    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer staffTypeId;
     private String staffTypeJobRole;
     private String staffTypeJobRoleSalary;
 
     private StaffType(){
     }
 
-    public String getStaffTypeId() {
+    public Integer getStaffTypeId() {
         return staffTypeId;
     }
 
-    public void setStaffTypeId(String staffTypeId) {
+    public void setStaffTypeId(Integer staffTypeId) {
         this.staffTypeId = staffTypeId;
     }
 
@@ -74,11 +76,11 @@ public class StaffType implements Comparable<StaffType>{
 
     public static class Builder{
 
-        private String staffTypeId;
+        private Integer staffTypeId;
         private String staffTypeJobRole;
         private String staffTypeJobRoleSalary;
 
-        public Builder staffTypeId(String value)
+        public Builder staffTypeId(Integer value)
         {
             this.staffTypeId = value;
             return this;

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/claims")
 public class ClaimsController {
@@ -20,7 +21,7 @@ public class ClaimsController {
         return claimsService.create(claims);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     @ResponseBody
     public Claims update(@RequestBody Claims claims) {
         return claimsService.update(claims);
@@ -28,13 +29,13 @@ public class ClaimsController {
 
     @GetMapping("/read/{id}")
     @ResponseBody
-    public Claims read(@PathVariable String id) {
+    public Claims read(@PathVariable Integer id) {
         return claimsService.read(id);
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseBody
-    public void delete(@PathVariable String id) {
+    public void delete(@PathVariable Integer id) {
         claimsService.delete(id);
     }
 

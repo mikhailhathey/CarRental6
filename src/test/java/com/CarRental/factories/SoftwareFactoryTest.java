@@ -22,7 +22,7 @@ public class SoftwareFactoryTest {
 
     @Test
     public void buildSoftware() {
-        Software software = SoftwareFactory.buildSoftware("769", "Pascal", "2.6", "3000");
+        Software software = SoftwareFactory.buildSoftware(769, "Pascal", "2.6", "3000");
         System.out.println(software);
         Assert.assertNotNull(software.getSoftwareId());
     }

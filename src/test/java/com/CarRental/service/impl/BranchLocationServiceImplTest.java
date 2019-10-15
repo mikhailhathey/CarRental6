@@ -27,14 +27,14 @@ public class BranchLocationServiceImplTest {
 
   @Before
   public void setUp() {
-      branchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager"));
+      branchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation(123, "TestBranch", "TestManager"));
       branchLocations.add(branchLocation);
   }
 
   @Test
   public void create() {
       BranchLocation createBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation(
-              "123", "TestBranch", "TestManager"));
+              123, "TestBranch", "TestManager"));
       branchLocations.add(createBranchLocation);
       Assert.assertEquals(createBranchLocation, branchLocationService.read(createBranchLocation.getBranchLocationId()));
   }
@@ -42,7 +42,7 @@ public class BranchLocationServiceImplTest {
   @Test
   public void read() {
       BranchLocation readTestBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation(
-              "123", "TestBranch", "TestManager"));
+              123, "TestBranch", "TestManager"));
       Assert.assertEquals(readTestBranchLocation, branchLocationService.read(readTestBranchLocation.getBranchLocationId()));
   }
 
@@ -57,7 +57,7 @@ public class BranchLocationServiceImplTest {
   @Test
   public void delete() {
       branchLocations.addAll(branchLocationService.getAll());
-      BranchLocation deleteBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation("123", "TestBranch", "TestManager"));
+      BranchLocation deleteBranchLocation = branchLocationService.create(BranchLocationFactory.buildBranchLocation(123, "TestBranch", "TestManager"));
       branchLocations.add(deleteBranchLocation);
       branchLocations.remove(deleteBranchLocation);
       branchLocationService.delete(deleteBranchLocation.getBranchLocationId());

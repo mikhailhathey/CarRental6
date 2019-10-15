@@ -4,7 +4,7 @@ import com.CarRental.domain.Admin;
 
 public class AdminFactory {
 
-    public static Admin buildAdmin(String adminId, String adminName, String adminPassword)
+    public static Admin buildAdmin(Integer adminId, String adminName, String adminPassword)
     {
         return new Admin.Builder()
                 .adminId(adminId)

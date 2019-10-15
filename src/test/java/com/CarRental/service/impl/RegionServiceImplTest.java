@@ -27,14 +27,14 @@ public class RegionServiceImplTest {
 
   @Before
   public void setUp() {
-      region = regionService.create(RegionFactory.buildRegion("765", "Hatfield", "Pretoria"));
+      region = regionService.create(RegionFactory.buildRegion(765, "Hatfield", "Pretoria"));
       regions.add(region);
   }
 
   @Test
   public void create() {
       Region createRegion = regionService.create(RegionFactory.buildRegion(
-              "765", "Hatfield", "Pretoria"));
+              765, "Hatfield", "Pretoria"));
       regions.add(createRegion);
       Assert.assertEquals(createRegion, regionService.read(createRegion.getRegionId()));
   }
@@ -42,7 +42,7 @@ public class RegionServiceImplTest {
   @Test
   public void read() {
       Region readTestRegion = regionService.create(RegionFactory.buildRegion(
-              "765", "Hatfield", "Pretoria"));
+              765, "Hatfield", "Pretoria"));
       Assert.assertEquals(readTestRegion, regionService.read(readTestRegion.getRegionId()));
   }
 
@@ -57,7 +57,7 @@ public class RegionServiceImplTest {
   @Test
   public void delete() {
       regions.addAll(regionService.getAll());
-      Region deleteRegion = regionService.create(RegionFactory.buildRegion("765", "Hatfield", "Pretoria"));
+      Region deleteRegion = regionService.create(RegionFactory.buildRegion(765, "Hatfield", "Pretoria"));
       regions.add(deleteRegion);
       regions.remove(deleteRegion);
       regionService.delete(deleteRegion.getRegionId());
